@@ -1,4 +1,8 @@
+import { ReactNode } from "react";
+
 // Generated with util/create-component.js
 export interface ButtonProps {
-    foo: string;
+  size?: "small" | "medium" | "large";
+  variant?: "primary" | "danger" | "success";
+  children: ReactNode;
 }
