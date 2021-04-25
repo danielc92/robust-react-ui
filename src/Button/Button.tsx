@@ -6,10 +6,13 @@ import { ButtonProps } from "./Button.types";
 import "./Button.scss";
 import classNames from "classnames";
 
-const Button = ({ size, children, variant }: ButtonProps) => {
+const Button = ({ size, children, variant, handleClick }: ButtonProps) => {
   return (
     <button
       data-testid="Button"
+      onClick={(e) => {
+        handleClick ? handleClick(e) : {};
+      }}
       className={classNames({
         "dcui-button": true,
         "dcui-button--small": size === "small",
