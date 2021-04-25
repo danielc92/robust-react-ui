@@ -1,22 +1,20 @@
 # Button
 
-`~src/Button`
+Source: `~src/Button`.
 
-❎ - Button can be toggled (required aria)
-✅ - Button can accept a function
-✅ - Button colour can be changed
-✅ - Button size can be changed
+- [ ] Button can be toggled (required aria)
+- [x] Button can accept a function
+- [x] Button colour can be changed
+- [x] Button size can be changed
 
 # Landmarks
 
-- ✅ Compound component for `main` (<main>)
-- ✅ Compound component for `region` (<section>)
-- ❎ Compound component for `navigation` (<nav>)
-- ❎ Compound component for `search` (<div>)
-- ✅ Compound component for `complementary` (<aside>)
-- ❎ Compound component for `banner` (<div>)
-- ✅ Compound component for `contentinfo` (<footer>)
+Source: `~src/Landmark`.
 
-# [EmojiGuide](https://emojiguide.org/)
-
-✅❎
+- [x] Compound component for `main` (<main>)
+- [x] Compound component for `region` (<section>)
+- [x] Compound component for `complementary` (<aside>)
+- [x] Compound component for `contentinfo` (<footer>)
+- [ ] Compound component for `navigation` (<nav>)
+- [ ] Compound component for `search` (<div>)
+- [ ] Compound component for `banner` (<div>)
