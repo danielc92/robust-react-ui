@@ -1,0 +1,25 @@
+// Generated with util/create-component.js
+@import "../variables.scss";
+@import "../typography.scss";
+
+:root {
+  --button-padding-1: 3rem;
+  --button-padding-2: 5rem;
+  --button-padding-3: 6rem;
+
+}
+.dcui-button {
+  @include font-defaults;
+
+  &--small {
+    padding : var(--button-padding-1);
+  }
+
+  &--default {
+    padding : var(--button-padding-1);
+  }
+
+  &--large {
+padding : var(--button-padding-3);
+  }
+}
