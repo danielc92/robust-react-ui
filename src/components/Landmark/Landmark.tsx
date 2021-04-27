@@ -15,37 +15,35 @@ interface MainProps {
   children: ReactNode;
 }
 
-const Main = ({ children }: MainProps) => {
-  <main>{children}</main>;
-};
+const Main = ({ children }: MainProps) => <main>{children}</main>;
 
 interface RegionProps {
   children: ReactNode;
   ariaLabelledBy?: string;
 }
-const Region = ({ children, ariaLabelledBy }: RegionProps) => {
-  <section aria-labelledby={ariaLabelledBy ? ariaLabelledBy : ""}>
+const Region = ({ children, ariaLabelledBy }: RegionProps) => (
+  <section aria-labelledby={ariaLabelledBy ? ariaLabelledBy : null}>
     {children}
-  </section>;
-};
+  </section>
+);
 
 interface ComplementaryProps {
   children: ReactNode;
   ariaLabelledBy?: string;
 }
-const Complementary = ({ children, ariaLabelledBy }: ComplementaryProps) => {
+const Complementary = ({ children, ariaLabelledBy }: ComplementaryProps) => (
   <aside aria-labelledby={ariaLabelledBy ? ariaLabelledBy : ""}>
     {children}
-  </aside>;
-};
+  </aside>
+);
 
 interface ContentInfoProps {
   children: ReactNode;
 }
 
-const ContentInfo = ({ children }: ContentInfoProps) => {
-  <footer>{children}</footer>;
-};
+const ContentInfo = ({ children }: ContentInfoProps) => (
+  <footer>{children}</footer>
+);
 
 Landmark.Region = Region;
 Landmark.Main = Main;
