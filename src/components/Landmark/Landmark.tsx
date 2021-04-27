@@ -20,9 +20,15 @@ const Main = ({ children }: MainProps) => <main>{children}</main>;
 interface RegionProps {
   children: ReactNode;
   ariaLabelledBy?: string;
+  ariaLabel?: string;
 }
-const Region = ({ children, ariaLabelledBy }: RegionProps) => (
-  <section aria-labelledby={ariaLabelledBy ? ariaLabelledBy : null}>
+const Region = ({ children, ariaLabelledBy, ariaLabel }: RegionProps) => (
+  <section
+    aria-labelledby={
+      ariaLabelledBy && ariaLabelledBy.length > 0 ? ariaLabelledBy : null
+    }
+    aria-label={ariaLabel && ariaLabel.length > 0 ? ariaLabel : null}
+  >
     {children}
   </section>
 );
