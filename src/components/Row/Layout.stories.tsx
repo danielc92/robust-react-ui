@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from "react";
-import Row from "./Row";
+import Row from "./Layout";
 
 export default {
-    title: "Row"
+  title: "Row",
 };
 
 export const WithBar = () => <Row foo="bar" />;

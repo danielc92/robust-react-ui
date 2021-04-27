@@ -2,7 +2,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Row from "./Row";
+import Row from "./Layout";
 import { RowProps } from "./Row.types";
 
 describe("Test Component", () => {
@@ -10,7 +10,7 @@ describe("Test Component", () => {
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      foo: "bar",
     };
   });
 
