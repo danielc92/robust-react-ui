@@ -5,7 +5,12 @@ import sass from "rollup-plugin-sass";
 import copy from "rollup-plugin-copy";
 
 export default {
-  input: ["src/index.ts", "src/Button/index.ts"],
+  input: [
+    "src/index.ts",
+    "src/components/Button/index.ts",
+    "src/components/Landmark/index.ts",
+    "src/components/Layout/index.ts",
+  ],
   output: [
     {
       dir: "build",
