@@ -1,0 +1,14 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+.dcui-row {
+  display: flex;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.dcui-column {
+}
