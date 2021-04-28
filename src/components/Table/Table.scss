@@ -2,8 +2,52 @@
 @import "../../variables.scss";
 @import "../../typography.scss";
 
-.foo-bar {
-  @include font-defaults;
+:root {
+  --table-background-colour: var(--colour-white);
+  --table-stripe-colour: var(--colour-light-grey);
+  --table-border-colour: transparent;
+  --table-cell-padding: var(--space-m);
+  --table-border-radius: var(--global-border-radius);
+  --table-cell-colour: var(--colour-dark-black);
+  --table-header-colour: var(--colour-white);
+  --table-header-background-colour: var(--colour-primary);
+}
+.dcui-table {
+  font-family: var(--primary-font-family);
+  width: 100%;
+  background-color: var(--table-background-colour);
+  border-collapse: collapse;
+  border-width: 0.1px;
+  border-radius: var(--table-border-radius);
+  border-color: var(--table-border-colour);
+  border-style: dashed;
 
-  color: $harvey-green;
+  &--striped &__body &__row {
+    &:nth-child(odd) {
+      background: var(--table-stripe-colour);
+    }
+  }
+
+  &__head {
+  }
+
+  &__row {
+  }
+  &__header {
+    color: var(--table-header-colour);
+    background-color: var(--table-header-background-colour);
+  }
+  &__cell {
+    color: var(--table-cell-colour);
+    &--centered {
+      text-align: center;
+    }
+  }
+  &__cell,
+  &__header {
+    border-width: 0.1px;
+    border-color: var(--table-border-colour);
+    border-style: solid;
+    padding: var(--table-cell-padding);
+  }
 }
