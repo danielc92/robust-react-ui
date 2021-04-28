@@ -4,8 +4,19 @@
   --colour-danger: #a84c32;
   --colour-success: #30a14c;
   --colour-white: #ffffff;
+  --colour-light-grey: #f2f2f2;
   --colour-dark-black: #1f1f1f;
 
   //border
-  --global-border-radius: 4px;
+  --global-border-radius: 0.25rem;
+
+  // spacing
+  --space-xxs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1rem;
+  --space-l: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 6rem;
+  --space-xxxl: 8rem;
 }
