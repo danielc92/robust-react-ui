@@ -10,6 +10,7 @@ export default {
     "src/components/Button/index.ts",
     "src/components/Landmark/index.ts",
     "src/components/Layout/index.ts",
+    "src/components/Table.index.ts",
   ],
   output: [
     {
