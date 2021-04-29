@@ -1,0 +1,65 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+:root {
+  --header-font-size-h1: 3rem;
+  --header-font-size-h2: 2rem;
+  --header-font-size-h3: 1.6rem;
+  --header-font-size-h4: 1.4rem;
+  --header-font-size-h5: 1.2rem;
+  --header-font-size-h6: 1rem;
+  --header-font-color: var(--colour-dark-black);
+  --header-jumbo-multiplier: 1.5;
+}
+.dcui-header {
+  color: --header-font-color;
+  &__1 {
+    font-size: var(--header-font-size-h1);
+    &--jumbo {
+      font-size: calc(
+        var(--header-font-size-h1) * var(--header-jumbo-multiplier)
+      );
+    }
+  }
+  &__2 {
+    font-size: var(--header-font-size-h2);
+    &--jumbo {
+      font-size: calc(
+        var(--header-font-size-h2) * var(--header-jumbo-multiplier)
+      );
+    }
+  }
+  &__3 {
+    font-size: var(--header-font-size-h3);
+    &--jumbo {
+      font-size: calc(
+        var(--header-font-size-h3) * var(--header-jumbo-multiplier)
+      );
+    }
+  }
+  &__4 {
+    font-size: var(--header-font-size-h4);
+    &--jumbo {
+      font-size: calc(
+        var(--header-font-size-h4) * var(--header-jumbo-multiplier)
+      );
+    }
+  }
+  &__5 {
+    font-size: var(--header-font-size-h5);
+    &--jumbo {
+      font-size: calc(
+        var(--header-font-size-h5) * var(--header-jumbo-multiplier)
+      );
+    }
+  }
+  &__6 {
+    font-size: var(--header-font-size-h6);
+    &--jumbo {
+      font-size: calc(
+        var(--header-font-size-h6) * var(--header-jumbo-multiplier)
+      );
+    }
+  }
+}
