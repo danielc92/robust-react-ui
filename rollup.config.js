@@ -11,6 +11,7 @@ export default {
     "src/components/Landmark/index.ts",
     "src/components/Layout/index.ts",
     "src/components/Table/index.ts",
+    "src/components/Typography/index.ts",
   ],
   output: [
     {
