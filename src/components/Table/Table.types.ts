@@ -4,6 +4,10 @@ import { ReactNode } from "react";
 export interface TableProps {
   children: ReactNode;
   striped?: boolean;
+  centerCellContent?: boolean;
+  id?: string;
+  ariaLabel?: string;
+  ariaDescribedBy?: string;
 }
 
 export interface TableHeadProps {
@@ -18,6 +22,9 @@ export interface TableCellProps {
 }
 export interface TableHeaderProps {
   children: ReactNode;
+  scope?: "column" | "row";
+  colSpan?: number;
+  rowSpan?: number;
 }
 
 export interface TableHeadProps {
@@ -25,5 +32,9 @@ export interface TableHeadProps {
 }
 
 export interface TableBodyProps {
+  children: ReactNode;
+}
+
+export interface TableFootProps {
   children: ReactNode;
 }

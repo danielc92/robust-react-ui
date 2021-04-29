@@ -5,12 +5,14 @@
 :root {
   --table-background-colour: var(--colour-white);
   --table-stripe-colour: var(--colour-light-grey);
-  --table-border-colour: transparent;
+  --table-border-colour: var(--colour-light-grey);
   --table-cell-padding: var(--space-m);
   --table-border-radius: var(--global-border-radius);
   --table-cell-colour: var(--colour-dark-black);
   --table-header-colour: var(--colour-white);
   --table-header-background-colour: var(--colour-primary);
+  --table-foot-background: var(--colour-primary);
+  --table-foot-color: var(--colour-white);
 }
 .dcui-table {
   font-family: var(--primary-font-family);
@@ -22,18 +24,16 @@
   border-color: var(--table-border-colour);
   border-style: dashed;
 
+  &--center-cells &__cell {
+    text-align: center;
+  }
   &--striped &__body &__row {
     &:nth-child(odd) {
       background: var(--table-stripe-colour);
     }
   }
 
-  &__head {
-  }
-
-  &__row {
-  }
-  &__header {
+  &__header[scope="column"] {
     color: var(--table-header-colour);
     background-color: var(--table-header-background-colour);
   }
@@ -42,6 +42,10 @@
     &--centered {
       text-align: center;
     }
+  }
+  &__foot &__cell {
+    color: var(--table-foot-color);
+    background-color: var(--table-foot-background);
   }
   &__cell,
   &__header {
