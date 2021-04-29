@@ -3,16 +3,42 @@
 @import "../../typography.scss";
 
 :root {
-  --header-font-size-h1: 3rem;
-  --header-font-size-h2: 2rem;
-  --header-font-size-h3: 1.6rem;
-  --header-font-size-h4: 1.4rem;
-  --header-font-size-h5: 1.2rem;
+  --header-font-size-h1: 3.5rem;
+  --header-font-size-h2: 2.5rem;
+  --header-font-size-h3: 2rem;
+  --header-font-size-h4: 1.6rem;
+  --header-font-size-h5: 1.5rem;
   --header-font-size-h6: 1rem;
   --header-font-color: var(--colour-dark-black);
   --header-jumbo-multiplier: 1.5;
+
+  --paragraph-font-size-sm: 1rem;
+  --paragraph-font-size-md: 1.125rem;
+  --paragraph-font-size-lg: 1.375rem;
+  --paragraph-line-height-sm: 1.6;
+  --paragraph-line-height-md: 1.7;
+  --paragraph-line-height-lg: 1.8;
+  --paragraph-font-color: var(--colour-dark-black);
+}
+
+.dcui-para {
+  color: var(--paragraph-font-color);
+  font-family: var(--font-family-primary);
+  &--small {
+    font-size: var(--paragraph-font-size-sm);
+    line-height: var(--paragraph-line-height-sm);
+  }
+  &--medium {
+    font-size: var(--paragraph-font-size-md);
+    line-height: var(--paragraph-line-height-md);
+  }
+  &--large {
+    font-size: var(--paragraph-font-size-lg);
+    line-height: var(--paragraph-line-height-lg);
+  }
 }
 .dcui-header {
+  font-family: var(--font-family-primary);
   color: --header-font-color;
   &__1 {
     font-size: var(--header-font-size-h1);
@@ -22,6 +48,7 @@
       );
     }
   }
+
   &__2 {
     font-size: var(--header-font-size-h2);
     &--jumbo {
