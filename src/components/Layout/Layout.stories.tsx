@@ -11,22 +11,41 @@ export default {
 export const ContainerSmall = () => (
   <Layout.Container size="small">
     <Typography.Paragraph>
-      Max width container Max width container Max width container Max width
-      container Max width container Max width container Max width container Max
-      width container Max width container Max width container Max width
-      container Max width container Max width container Max width container Max
-      width container Max width container
+      Do consequat eu aliqua nisi. Magna in ipsum eiusmod tempor do quis
+      consectetur dolore dolor. Ullamco consectetur nostrud officia sint
+      adipisicing amet ad sunt amet in pariatur anim. Reprehenderit officia eu
+      deserunt non eu culpa quis duis do anim id laboris. Ullamco do commodo
+      culpa sunt sunt labore Lorem occaecat do fugiat adipisicing ut. Duis culpa
+      reprehenderit ex eiusmod ullamco. Reprehenderit laborum id consequat culpa
+      laborum pariatur officia officia voluptate eiusmod irure tempor.
+    </Typography.Paragraph>
+    <Typography.Paragraph>
+      Do consequat eu aliqua nisi. Magna in ipsum eiusmod tempor do quis
+      consectetuReprehenderit laborum id consequat culpa laborum pariatur
+      officia officia voluptate eiusmod irure tempor.
+    </Typography.Paragraph>
+    <Typography.Paragraph>
+      Do consequat eu aliqua nisi. Magna in ipsum eiusmod tempor do quis
+      consectetur dolore dolor. Ullamco consectetur nostrud officia sint
+      adipisicing amet ad sunt amet in pariatur anim. Reprehenderit officia eu
+      deserunt non eu culpa quis duis do anim id laboris. Ullamco do commodo
+      culpa sunt sunt labore Lorem occaecat do fugiat adipisicing ut. Duis culpa
+      reprehenderit ex eiusmod ullamco. Reprehenderit laborum id consequat culpa
+      laborum pariatur officia officia voluptate eiusmod irure tempor.
     </Typography.Paragraph>
   </Layout.Container>
 );
 export const ContainerLarge = () => (
   <Layout.Container size="large">
     <Typography.Paragraph>
-      Max width container Max width container Max width container Max width
-      container Max width container Max width container Max width container Max
-      width container Max width container Max width container Max width
-      container Max width container Max width container Max width container Max
-      width container Max width container
+      Aliqua id labore culpa nisi amet consequat deserunt veniam. Magna
+      cupidatat excepteur mollit excepteur ut ipsum. Cillum anim laborum ea eu
+      mollit fugiat officia et irure magna.
+    </Typography.Paragraph>
+    <Typography.Paragraph>
+      Aliqua id labore culpa nisi amet consequat deserunt veniam. Magna
+      cupidatat excepteur mollit excepteur ut ipsum. Cillum anim laborum ea eu
+      mollit fugiat officia et irure magna.
     </Typography.Paragraph>
   </Layout.Container>
 );
