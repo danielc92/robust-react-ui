@@ -16,15 +16,22 @@ interface HeadingProps {
   jumbo?: boolean;
 }
 
-const getHeaderClass = (level: HeadingLevel, jumbo: boolean) => {
+const getHeaderClass = (level: HeadingLevel | null, jumbo: boolean) => {
+  const levelCalc = !level ? 1 : level;
   return classNames({
     "dcui-header": true,
-    [`dcui-header__${level}`]: true,
-    [`dcui-header__${level}--jumbo`]: jumbo,
+    [`dcui-header__${levelCalc}`]: true,
+    [`dcui-header__${levelCalc}--jumbo`]: jumbo,
   });
 };
 
 const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
+  if (!level || level === 1)
+    return (
+      <h1 id={id ? id : null} className={getHeaderClass(level, jumbo)}>
+        {children}
+      </h1>
+    );
   if (level === 2)
     return (
       <h2 className={getHeaderClass(level, jumbo)} id={id ? id : null}>
@@ -55,12 +62,6 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
         {children}
       </h6>
     );
-
-  return (
-    <h1 id={id ? id : null} className={getHeaderClass(level, jumbo)}>
-      {children}
-    </h1>
-  );
 };
 
 interface ParagraphProps {
