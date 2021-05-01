@@ -48,7 +48,7 @@ const Body = ({ children }: TableBodyProps) => (
 const Header = ({ children, colSpan, rowSpan, scope }: TableHeaderProps) => (
   <th
     className="dcui-table__header"
-    scope={scope ? scope : "column"}
+    scope={scope ? scope : "col"}
     rowSpan={rowSpan ? rowSpan : null}
     colSpan={colSpan ? colSpan : null}
   >
