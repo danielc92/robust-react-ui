@@ -42,7 +42,9 @@
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@rollup/plugin-commonjs": "^11.1.0",
-    "@storybook/react": "^5.3.19",
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.2",
     "@types/jest": "^24.0.24",
@@ -61,10 +63,10 @@
     "rollup-plugin-typescript2": "^0.27.0",
     "sass-loader": "^8.0.0",
     "ts-jest": "^24.2.0",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "rollup-plugin-sass": "^1.2.2"
   },
   "dependencies": {
-    "classnames": "^2.3.1",
-    "rollup-plugin-sass": "^1.2.2"
+    "classnames": "^2.3.1"
   }
 }
