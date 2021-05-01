@@ -22,7 +22,7 @@ export interface TableCellProps {
 }
 export interface TableHeaderProps {
   children: ReactNode;
-  scope?: "column" | "row";
+  scope?: "col" | "row";
   colSpan?: number;
   rowSpan?: number;
 }
