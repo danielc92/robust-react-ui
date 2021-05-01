@@ -12,6 +12,7 @@ export default {
     "src/components/Layout/index.ts",
     "src/components/Table/index.ts",
     "src/components/Typography/index.ts",
+    "src/components/TabList/index.ts",
   ],
   output: [
     {
