@@ -2,7 +2,6 @@
 import React from "react";
 import Typography from "../Typography/Typography";
 import Layout from "./Layout";
-import Row from "./Layout";
 
 export default {
   title: "Layout",
