@@ -6,13 +6,20 @@ import { ButtonProps } from "./Button.types";
 import "./Button.scss";
 import classNames from "classnames";
 
-const Button = ({ size, children, variant, handleClick }: ButtonProps) => {
-  return (
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    { children, id, ariaControls, size, variant, tabIndex, handleClick },
+    ref
+  ) => (
     <button
+      tabIndex={tabIndex ? tabIndex : null}
+      aria-controls={ariaControls ? ariaControls : null}
+      id={id ? id : null}
       data-testid="Button"
       onClick={(e) => {
         handleClick ? handleClick(e) : {};
       }}
+      ref={ref}
       className={classNames({
         "dcui-button": true,
         "dcui-button--small": size === "small",
@@ -25,7 +32,9 @@ const Button = ({ size, children, variant, handleClick }: ButtonProps) => {
     >
       {children}
     </button>
-  );
-};
+  )
+);
+
+Button.displayName = "Button";
 
 export default Button;
