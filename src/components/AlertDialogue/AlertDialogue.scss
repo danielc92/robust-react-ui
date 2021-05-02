@@ -1,0 +1,41 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+:root {
+  --modal-content-padding: var(--space-l) var(--space-xl);
+  --modal-overlay-background: rgba(0, 0, 0, 0.3);
+  --modal-content-background-colour: var(--colour-white);
+  --modal-border-radius: var(--global-border-radius);
+}
+.dcui-modal {
+  &__overlay {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: var(--modal-overlay-background);
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__content {
+    padding: var(--modal-content-padding);
+    max-width: 640px;
+    background-color: var(--modal-content-background-colour);
+    border-radius: var(--modal-border-radius);
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    .dcui-button {
+      margin-right: var(--space-m);
+    }
+  }
+}
