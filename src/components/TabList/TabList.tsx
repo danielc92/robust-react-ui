@@ -1,11 +1,12 @@
 // Generated with util/create-component.js
-import React, { useEffect, useState } from "react";
+// Component design from https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
+import React, { createRef, useEffect, useState } from "react";
 
 import { TabListProps } from "./TabList.types";
 
 import "./TabList.scss";
 import classNames from "classnames";
-import { KEY_CODES, KEY_CODES_TRANS } from "../../constants";
+import { KEY_CODES } from "../../constants";
 
 const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
   const [activeTab, setActiveTab] = useState<{
@@ -13,19 +14,37 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
     tabIndex: number;
   } | null>(null);
 
+  const arrLength = tabs.length;
+
+  const [tabRefs, setTabRefs] = React.useState([]);
+  const [tabPanelRefs, setTabPanelRefs] = React.useState([]);
+
   useEffect(() => {
     if (tabs.length > 0)
       setActiveTab({
         tabIndex: 0,
         tabName: tabs[0].tabId,
       });
-  }, [tabs]);
+
+    setTabRefs((tabRefs) =>
+      Array(arrLength)
+        .fill(null)
+        .map((_, i) => tabRefs[i] || createRef())
+    );
+
+    setTabPanelRefs((tabPanelRefs) =>
+      Array(arrLength)
+        .fill(null)
+        .map((_, i) => tabPanelRefs[i] || createRef())
+    );
+  }, [arrLength]);
 
   const selectFirstTab = () => {
     setActiveTab({
       tabIndex: 0,
       tabName: tabs[0].tabId,
     });
+    tabRefs[0].current.focus();
   };
   const selectLastTab = () => {
     const lastIndex = tabs.length - 1;
@@ -33,6 +52,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
       tabIndex: lastIndex,
       tabName: tabs[lastIndex].tabId,
     });
+    tabRefs[lastIndex].current.focus();
   };
 
   const selectNextTab = () => {
@@ -44,8 +64,10 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
         tabIndex: nextIndex,
         tabName: tabs[nextIndex].tabId,
       });
+      tabRefs[nextIndex].current.focus();
     }
   };
+
   const selectPreviousTab = () => {
     if (activeTab.tabIndex === 0) {
       selectLastTab();
@@ -55,18 +77,30 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
         tabIndex: nextIndex,
         tabName: tabs[nextIndex].tabId,
       });
+      tabRefs[nextIndex].current.focus();
     }
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+  const focusTabPanel = (index: number) => {
+    tabPanelRefs[index].current.focus();
+  };
+
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    index: number
+  ) => {
     event.preventDefault();
-    console.log(event.keyCode);
-    const _keyName = KEY_CODES[event.keyCode];
-    console.log(_keyName);
+    const keyName = KEY_CODES[event.keyCode];
 
-    if (_keyName === "right arrow") selectNextTab();
+    if (keyName === "right arrow") selectNextTab();
 
-    if (_keyName === "left arrow") selectPreviousTab();
+    if (keyName === "left arrow") selectPreviousTab();
+
+    if (keyName === "home") selectFirstTab();
+
+    if (keyName === "end") selectLastTab();
+
+    if (keyName === "tab") focusTabPanel(index);
   };
 
   return (
@@ -84,9 +118,11 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
       >
         {tabs.map((t, index) => (
           <button
+            tabIndex={activeTab?.tabName !== t.tabId ? -1 : null}
+            ref={tabRefs[index]}
             key={t.tabId}
             onKeyDown={(event: React.KeyboardEvent<HTMLButtonElement>) =>
-              handleKeyDown(event)
+              handleKeyDown(event, index)
             }
             onClick={() =>
               setActiveTab({
@@ -107,8 +143,9 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
           </button>
         ))}
       </div>
-      {tabs.map((x) => (
+      {tabs.map((x, i) => (
         <div
+          ref={tabPanelRefs[i]}
           key={x.tabId}
           className={classNames({
             "dcui-tablist__panel": true,

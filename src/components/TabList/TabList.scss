@@ -1,29 +1,37 @@
 // Generated with util/create-component.js
 @import "../../variables.scss";
 @import "../../typography.scss";
-
+:root {
+  --tab-active-background-color: var(--colour-white);
+  --tab-background-colour: var(--colour-light-grey);
+  --tab-active-border-top: 4px solid var(--colour-primary);
+  --tab-border-top: 4px solid var(--colour-light-grey);
+}
 .dcui-tablist {
   font-family: var(--font-family-primary);
   box-sizing: border-box;
-  border: 1px solid red;
   &--full-width {
     width: 100%;
   }
   &__button-group {
-    border: 1px solid green;
   }
   &__button {
-    padding: 0.5rem;
+    cursor: pointer;
+    padding: var(--space-s) var(--space-m);
     font-size: 1rem;
     border: none;
-    background: #fff;
+    background: var(--tab-background-colour);
+    box-sizing: border-box;
+    border-top: var(--tab-border-top);
     &--active {
-      color: red;
+      font-weight: bold;
+      border-top: var(--tab-active-border-top);
+      background-color: var(--tab-active-background-colour);
     }
   }
   &__panel {
-    border: 1px solid blue;
-
+    background: var(--tab-active-background-colour);
+    box-sizing: border-box;
     padding: var(--space-m);
     &--hidden {
       display: none;
