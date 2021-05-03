@@ -5,10 +5,6 @@ export interface AlertDialogueProps {
   bodyText: string;
   confirmButtonText: string;
   cancelButtonText: string;
-  handleCloseAction: (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => void;
-  handleConfirmAction: (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => void;
+  handleCloseAction: () => void;
+  handleConfirmAction: () => void;
 }

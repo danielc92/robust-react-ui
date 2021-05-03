@@ -29,6 +29,7 @@ const AlertDialogue = ({
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Escape") {
+      handleCloseAction();
     }
   };
 
