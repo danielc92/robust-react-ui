@@ -14,6 +14,7 @@ export default {
     "src/components/Typography/index.ts",
     "src/components/TabList/index.ts",
     "src/components/AlertDialogue/index.ts",
+    "src/components/Form/index.ts",
   ],
   output: [
     {
