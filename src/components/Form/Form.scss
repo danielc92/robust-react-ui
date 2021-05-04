@@ -3,6 +3,8 @@
 @import "../../typography.scss";
 
 :root {
+  // form
+  --form-background-colour: var(--colour-white);
   // submit
   --submit-button-padding-y-sm: 0.5rem;
   --submit-button-padding-x-sm: 0.75rem;
@@ -14,19 +16,34 @@
   --submit-button-padding-x-lg: 4rem;
 
   // fieldset
+  --fieldset-font-size: 1.2rem;
+  --fieldset-border: 1px solid #f2f2f2;
+  --fieldset-font-family: var(--font-family-primary);
 
   // label
   --label-font-size: 1rem;
   --label-font-family: var(--font-family-primary);
   --label-font-weight: bold;
   --label-margin: var(--space-xs);
-  // input text
-
-  //text area
+  // input text, input password, textarea
+  --input-border-style: solid;
+  --input-border-color: rgb(223, 223, 223);
+  --input-border-width: 2px;
+  --input-padding-y: var(--space-xs);
+  --input-padding-x: var(--space-xs);
+  --input-font-family: var(--font-family-primary);
+  --input-color: var(--colour-black);
+  --input-placeholder-colour: grey;
+  --input-font-size: 1rem;
+  --input-margin-bottom: 1.5rem;
+  --input-border-radius: var(--global-border-radius);
+  --input-default-width: 200px;
 }
+
 .dcui-form {
-  padding: 1rem;
-  background: #f2f2f2;
+  box-sizing: border-box;
+  padding: 0;
+  background: var(--form-background-colour);
   &__label {
     display: block;
     font-weight: var(--label-font-weight);
@@ -36,34 +53,86 @@
     font-family: var(--label-font-family);
   }
   &__fieldset {
-    border-color: rgb(221, 221, 221);
+    border: var(--fieldset-border);
   }
 
-  &__input[type="text"],
-  &__input[type="password"] {
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(223, 223, 223);
-    display: block;
-    padding: 0.5rem;
-    font-family: var(--font-family-primary);
-    color: var(--colour-black);
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    border-radius: var(--global-border-radius);
-    &::placeholder {
-      font-family: var(--font-family-primary);
-      font-size: 1rem;
-      color: grey;
+  &__input {
+    &--full-width {
+      width: 100%;
     }
   }
+  &__input[type="text"],
+  &__input[type="password"] {
+    width: var(--input-default-width);
+    box-sizing: border-box;
+    display: block;
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
+    border-color: var(--input-border-color);
+    padding: var(--input-padding-y) var(--input-padding-x);
+    font-family: var(--input-font-family);
+    color: var(--input-color);
+    font-size: var(--input-font-size);
+    margin-bottom: var(--input-margin-bottom);
+    border-radius: var(--input-border-radius);
+
+    &::placeholder {
+      color: var(--input-placeholder-colour);
+    }
+  }
+
+  &__select {
+    width: var(--input-default-width);
+    box-sizing: border-box;
+    display: block;
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
+    border-color: var(--input-border-color);
+    padding: var(--input-padding-y) var(--input-padding-x);
+    font-family: var(--input-font-family);
+    color: var(--input-color);
+    font-size: var(--input-font-size);
+    margin-bottom: var(--input-margin-bottom);
+    border-radius: var(--input-border-radius);
+
+    line-height: calc(var(--input-font-size) * 1.5);
+
+    &--full-width {
+      width: 100%;
+    }
+  }
+
+  &__textarea {
+    width: var(--input-default-width);
+    box-sizing: border-box;
+    display: block;
+
+    border-style: var(--input-border-style);
+    border-width: var(--input-border-width);
+    border-color: var(--input-border-color);
+    padding: var(--input-padding-y) var(--input-padding-x);
+    font-family: var(--input-font-family);
+    color: var(--input-color);
+    font-size: var(--input-font-size);
+    margin-bottom: var(--input-margin-bottom);
+    border-radius: var(--input-border-radius);
+
+    line-height: calc(var(--input-font-size) * 1.5);
+    &--full-width {
+      width: 100%;
+    }
+    &::placeholder {
+      color: var(--input-placeholder-colour);
+    }
+  }
+
   &__fieldset {
-    font-size: 1.2rem;
     padding: var(--space-m);
-    font-family: var(--font-family-primary);
+    font-size: var(--fieldset-font-size);
+    font-family: var(--fieldset-font-family);
+
     font-weight: bold;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--input-margin-bottom);
   }
   &__submit {
     display: block;
