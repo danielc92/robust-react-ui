@@ -5,7 +5,7 @@
 :root {
   --modal-content-padding: var(--space-l) var(--space-xl);
   --modal-overlay-background: rgba(0, 0, 0, 0.3);
-  --modal-content-background-colour: var(--colour-white);
+  --modal-content-background-color: var(--color-white);
   --modal-border-radius: var(--global-border-radius);
 }
 .dcui-modal {
@@ -28,7 +28,7 @@
   &__content {
     padding: var(--modal-content-padding);
     max-width: 640px;
-    background-color: var(--modal-content-background-colour);
+    background-color: var(--modal-content-background-color);
     border-radius: var(--modal-border-radius);
   }
   &__actions {

@@ -36,15 +36,15 @@
 
   // theming
   &--primary {
-    background-color: var(--colour-primary);
-    color: var(--colour-white);
+    background-color: var(--color-primary);
+    color: var(--color-white);
   }
   &--danger {
-    background-color: var(--colour-danger);
-    color: var(--colour-white);
+    background-color: var(--color-danger);
+    color: var(--color-white);
   }
   &--success {
-    background-color: var(--colour-success);
-    color: var(--colour-white);
+    background-color: var(--color-success);
+    color: var(--color-white);
   }
 }
