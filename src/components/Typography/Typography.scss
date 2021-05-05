@@ -39,7 +39,7 @@
 }
 .dcui-header {
   font-family: var(--font-family-primary);
-  color: --header-font-color;
+  color: var(--header-font-color);
   &__1 {
     font-size: var(--header-font-size-h1);
     &--jumbo {

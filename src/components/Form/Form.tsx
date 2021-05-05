@@ -25,7 +25,9 @@ interface FormLegendProps {
   title: string;
 }
 const Legend = ({ id, title }: FormLegendProps) => (
-  <legend id={id}>{title}</legend>
+  <legend className="dcui-form__legend" id={id}>
+    {title}
+  </legend>
 );
 
 interface FormFieldSetProps {

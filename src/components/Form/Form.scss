@@ -19,9 +19,10 @@
   --fieldset-font-size: 1.2rem;
   --fieldset-border: 1px solid #f2f2f2;
   --fieldset-font-family: var(--font-family-primary);
-
+  --fieldset-color: var(--color-dark-black);
   // label
   --label-font-size: 1rem;
+  --label-font-color: var(--color-dark-black);
   --label-font-family: var(--font-family-primary);
   --label-font-weight: bold;
   --label-margin: var(--space-xs);
@@ -44,8 +45,10 @@
   box-sizing: border-box;
   padding: 0;
   background: var(--form-background-color);
+
   &__label {
     display: block;
+    color: var(--label-font-color);
     font-weight: var(--label-font-weight);
     margin-right: var(--label-margin);
     margin-bottom: var(--label-margin);
@@ -181,7 +184,7 @@
     padding: var(--space-m);
     font-size: var(--fieldset-font-size);
     font-family: var(--fieldset-font-family);
-
+    color: var(--fieldset-color);
     font-weight: bold;
     margin-bottom: var(--input-margin-bottom);
   }
