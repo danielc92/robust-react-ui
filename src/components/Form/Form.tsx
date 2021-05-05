@@ -53,6 +53,8 @@ interface FormInputProps {
   handleOnChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleOnBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   fullWidth?: boolean;
+  error?: boolean;
+  errorMessage?: string;
 }
 
 const Input = ({
@@ -63,25 +65,39 @@ const Input = ({
   handleOnBlur,
   type,
   fullWidth,
+  error,
+  errorMessage,
 }: FormInputProps) => (
-  <input
-    className={classNames({
-      "dcui-form__input": true,
-      "dcui-form__input--full-width": fullWidth,
-    })}
-    type={type ? type : "text"}
-    placeholder={placeholder}
-    id={id}
-    value={value}
-    onChange={handleOnChange}
-    onBlur={handleOnBlur ? handleOnBlur : () => {}}
-  />
+  <div className="dcui-form__input-wrapper">
+    <input
+      className={classNames({
+        "dcui-form__input": true,
+        "dcui-form__input--full-width": fullWidth,
+        "dcui-form__input--has-error": error,
+      })}
+      type={type ? type : "text"}
+      placeholder={placeholder}
+      id={id}
+      value={value}
+      onChange={handleOnChange}
+      onBlur={handleOnBlur ? handleOnBlur : () => {}}
+    />
+    <p
+      className={classNames({
+        "dcui-form__input-error": true,
+        "dcui-form__input-error--hidden": !error,
+      })}
+    >
+      {errorMessage}
+    </p>
+  </div>
 );
 
 interface FormSelectOptionProps {
   displayValue: string;
   keyValue: string;
 }
+
 interface FormSelectProps {
   id: string;
   multiple?: boolean;
@@ -125,6 +141,9 @@ interface FormTextAreaProps {
   handleOnBlur?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;
   rows?: number;
   fullWidth?: boolean;
+  error?: boolean;
+  errorMessage?: string;
+  disabled?: boolean;
 }
 
 const TextArea = ({
@@ -135,19 +154,34 @@ const TextArea = ({
   handleOnChange,
   handleOnBlur,
   fullWidth,
+  error,
+  errorMessage,
+  disabled,
 }: FormTextAreaProps) => (
-  <textarea
-    className={classNames({
-      "dcui-form__textarea": true,
-      "dcui-form__textarea--full-width": fullWidth,
-    })}
-    rows={rows ? rows : 8}
-    value={value}
-    id={id}
-    placeholder={placeholder}
-    onChange={handleOnChange}
-    onBlur={handleOnBlur ? handleOnBlur : () => {}}
-  />
+  <div className="dcui-form__textarea-wrapper">
+    <textarea
+      disabled={disabled}
+      className={classNames({
+        "dcui-form__textarea": true,
+        "dcui-form__textarea--full-width": fullWidth,
+        "dcui-form__textarea--has-error": error,
+      })}
+      rows={rows ? rows : 8}
+      value={value}
+      id={id}
+      placeholder={placeholder}
+      onChange={handleOnChange}
+      onBlur={handleOnBlur ? handleOnBlur : () => {}}
+    />
+    <p
+      className={classNames({
+        "dcui-form__textarea-error": true,
+        "dcui-form__textarea-error--hidden": !error,
+      })}
+    >
+      {errorMessage}
+    </p>
+  </div>
 );
 interface FormSubmitProps {
   size?: "small" | "medium" | "large";

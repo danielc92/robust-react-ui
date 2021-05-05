@@ -57,12 +57,30 @@
   }
 
   &__input {
+    margin-bottom: 0.5rem;
     &--full-width {
       width: 100%;
     }
   }
+
+  &__input-wrapper {
+    margin-bottom: var(--input-margin-bottom);
+  }
+  &__input-error {
+    font-family: var(--input-font-family);
+    color: var(--color-danger);
+    font-size: 1rem;
+    margin: 0;
+
+    &--hidden {
+      display: none;
+    }
+  }
   &__input[type="text"],
   &__input[type="password"] {
+    &:disabled {
+      cursor: not-allowed;
+    }
     width: var(--input-default-width);
     box-sizing: border-box;
     display: block;
@@ -73,8 +91,13 @@
     font-family: var(--input-font-family);
     color: var(--input-color);
     font-size: var(--input-font-size);
-    margin-bottom: var(--input-margin-bottom);
+
     border-radius: var(--input-border-radius);
+
+    &.dcui-form__input--has-error {
+      border-color: var(--color-danger);
+      color: var(--color-danger);
+    }
 
     &::placeholder {
       color: var(--input-placeholder-color);
@@ -97,12 +120,35 @@
 
     line-height: calc(var(--input-font-size) * 1.5);
 
+    &:disabled {
+      cursor: not-allowed;
+    }
     &--full-width {
       width: 100%;
     }
   }
 
+  &__textarea-error {
+    font-family: var(--input-font-family);
+    color: var(--color-danger);
+    font-size: 1rem;
+    margin: 0;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__textarea-wrapper {
+    margin-bottom: var(--input-margin-bottom);
+  }
+
   &__textarea {
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    margin-bottom: 0.5rem;
     width: var(--input-default-width);
     box-sizing: border-box;
     display: block;
@@ -114,10 +160,15 @@
     font-family: var(--input-font-family);
     color: var(--input-color);
     font-size: var(--input-font-size);
-    margin-bottom: var(--input-margin-bottom);
     border-radius: var(--input-border-radius);
 
     line-height: calc(var(--input-font-size) * 1.5);
+
+    &.dcui-form__textarea--has-error {
+      border-color: var(--color-danger);
+      color: var(--color-danger);
+    }
+
     &--full-width {
       width: 100%;
     }
