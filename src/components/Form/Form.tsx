@@ -55,6 +55,7 @@ interface FormInputProps {
   fullWidth?: boolean;
   error?: boolean;
   errorMessage?: string;
+  disabled?: boolean;
 }
 
 const Input = ({
@@ -67,9 +68,11 @@ const Input = ({
   fullWidth,
   error,
   errorMessage,
+  disabled,
 }: FormInputProps) => (
   <div className="dcui-form__input-wrapper">
     <input
+      disabled={disabled}
       className={classNames({
         "dcui-form__input": true,
         "dcui-form__input--full-width": fullWidth,
@@ -105,6 +108,7 @@ interface FormSelectProps {
   values: Array<FormSelectOptionProps>;
   handleOnChange: (event: React.FocusEvent<HTMLSelectElement>) => void;
   handleOnBlur?: (event: React.FocusEvent<HTMLSelectElement>) => void;
+  disabled?: boolean;
 }
 
 const Select = ({
@@ -114,6 +118,7 @@ const Select = ({
   selectedValue,
   values,
   multiple,
+  disabled,
 }: FormSelectProps) => (
   <select
     value={selectedValue}
@@ -122,6 +127,7 @@ const Select = ({
     className={classNames({
       "dcui-form__select": true,
     })}
+    disabled={disabled}
     onChange={handleOnChange}
     onBlur={handleOnBlur ? handleOnBlur : () => {}}
   >
