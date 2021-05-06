@@ -3,25 +3,36 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import Typography from "./Typography";
-import { TypographyProps } from "./Typography.types";
+import { ParagraphProps } from "./Typography.types";
 
-describe("Test Component", () => {
-  let props: TypographyProps;
+describe("Paragraph Suite", () => {
+  let props: ParagraphProps;
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      children: "hello world",
+      id: "para",
+      size: "large",
     };
   });
 
-  const renderComponent = () => render(<Typography {...props} />);
+  const renderComponent = () => render(<Typography.Paragraph {...props} />);
 
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
+  it("should render text correct", () => {
     const { getByTestId } = renderComponent();
+    const component = getByTestId("Paragraph");
+    expect(component).toHaveTextContent("hello world");
+  });
 
-    const component = getByTestId("Typography");
+  it("should contain correct base class", () => {
+    const { getByTestId } = renderComponent();
+    const component = getByTestId("Paragraph");
+    expect(component).toHaveClass("dcui-para");
+  });
 
-    expect(component).toHaveTextContent("harvey was here");
+  it("should contain the large class modifier", () => {
+    const { getByTestId } = renderComponent();
+    const component = getByTestId("Paragraph");
+    expect(component).toHaveClass("dcui-para--large");
   });
 });
