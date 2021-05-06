@@ -25,6 +25,22 @@
   border-color: var(--table-border-color);
   border-style: dashed;
 
+  &__cell,
+  &__header {
+    border-width: 0.1px;
+    border-color: var(--table-border-color);
+    border-style: solid;
+    padding: var(--table-cell-padding);
+  }
+
+  &__cell {
+    color: var(--table-cell-color);
+
+    &--centered {
+      text-align: center;
+    }
+  }
+
   &--center-cells &__cell {
     text-align: center;
   }
@@ -40,24 +56,8 @@
     background-color: var(--table-header-background-color);
   }
 
-  &__cell {
-    color: var(--table-cell-color);
-
-    &--centered {
-      text-align: center;
-    }
-  }
-
   &__foot &__cell {
     color: var(--table-foot-color);
     background-color: var(--table-foot-background);
-  }
-
-  &__cell,
-  &__header {
-    border-width: 0.1px;
-    border-color: var(--table-border-color);
-    border-style: solid;
-    padding: var(--table-cell-padding);
   }
 }

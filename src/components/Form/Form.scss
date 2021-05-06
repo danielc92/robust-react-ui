@@ -56,6 +56,12 @@
 
   &__fieldset {
     border: var(--fieldset-border);
+    padding: var(--space-m);
+    font-size: var(--fieldset-font-size);
+    font-family: var(--fieldset-font-family);
+    color: var(--fieldset-color);
+    font-weight: bold;
+    margin-bottom: var(--input-margin-bottom);
   }
 
   &__input {
@@ -179,15 +185,6 @@
     &::placeholder {
       color: var(--input-placeholder-color);
     }
-  }
-
-  &__fieldset {
-    padding: var(--space-m);
-    font-size: var(--fieldset-font-size);
-    font-family: var(--fieldset-font-family);
-    color: var(--fieldset-color);
-    font-weight: bold;
-    margin-bottom: var(--input-margin-bottom);
   }
 
   &__submit {
