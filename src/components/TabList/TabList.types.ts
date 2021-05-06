@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 export interface TabListTab {
   tabId: string;
   buttonLabel: string;
-  ariaControlsId: string;
+  buttonId: string;
   tabContent: string | ReactNode;
 }
 export interface TabListProps {

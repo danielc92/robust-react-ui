@@ -136,8 +136,8 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
             })}
             role="tab"
             aria-selected={activeTab?.tabName === t.tabId ? "true" : "false"}
-            aria-controls={t.ariaControlsId}
-            id={t.tabId}
+            aria-controls={t.tabId}
+            id={t.buttonId}
           >
             {t.buttonLabel}
           </button>
@@ -153,7 +153,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
           })}
           tabIndex={0}
           role="tabpanel"
-          id={x.ariaControlsId}
+          id={x.tabId}
           aria-labelledby={x.tabId}
         >
           {x.tabContent}
