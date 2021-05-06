@@ -14,6 +14,7 @@
   --table-foot-background: var(--color-primary);
   --table-foot-color: var(--color-white);
 }
+
 .dcui-table {
   font-family: var(--font-family-primary);
   width: 100%;
@@ -27,6 +28,7 @@
   &--center-cells &__cell {
     text-align: center;
   }
+
   &--striped &__body &__row {
     &:nth-child(odd) {
       background: var(--table-stripe-color);
@@ -37,16 +39,20 @@
     color: var(--table-header-color);
     background-color: var(--table-header-background-color);
   }
+
   &__cell {
     color: var(--table-cell-color);
+
     &--centered {
       text-align: center;
     }
   }
+
   &__foot &__cell {
     color: var(--table-foot-color);
     background-color: var(--table-foot-background);
   }
+
   &__cell,
   &__header {
     border-width: 0.1px;

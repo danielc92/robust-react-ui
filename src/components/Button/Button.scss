@@ -5,10 +5,8 @@
 :root {
   --button-padding-y-sm: 0.5rem;
   --button-padding-x-sm: 0.75rem;
-
   --button-padding-y-md: 1rem;
   --button-padding-x-md: 2rem;
-
   --button-padding-y-lg: 1.4rem;
   --button-padding-x-lg: 4rem;
 }
@@ -39,10 +37,12 @@
     background-color: var(--color-primary);
     color: var(--color-white);
   }
+
   &--danger {
     background-color: var(--color-danger);
     color: var(--color-white);
   }
+
   &--success {
     background-color: var(--color-success);
     color: var(--color-white);

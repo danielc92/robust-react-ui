@@ -1,20 +1,25 @@
 // Generated with util/create-component.js
 @import "../../variables.scss";
 @import "../../typography.scss";
+
 :root {
   --tab-active-background-color: var(--color-white);
   --tab-background-color: var(--color-light-grey);
   --tab-active-border-top: 4px solid var(--color-primary);
   --tab-border-top: 4px solid var(--color-light-grey);
 }
+
 .dcui-tablist {
   font-family: var(--font-family-primary);
   box-sizing: border-box;
+
   &--full-width {
     width: 100%;
   }
+
   &__button-group {
   }
+
   &__button {
     cursor: pointer;
     padding: var(--space-s) var(--space-m);
@@ -23,16 +28,19 @@
     background: var(--tab-background-color);
     box-sizing: border-box;
     border-top: var(--tab-border-top);
+
     &--active {
       font-weight: bold;
       border-top: var(--tab-active-border-top);
       background-color: var(--tab-active-background-color);
     }
   }
+
   &__panel {
     background: var(--tab-active-background-color);
     box-sizing: border-box;
     padding: var(--space-m);
+
     &--hidden {
       display: none;
     }

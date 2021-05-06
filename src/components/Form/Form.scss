@@ -8,10 +8,8 @@
   // submit
   --submit-button-padding-y-sm: 0.5rem;
   --submit-button-padding-x-sm: 0.75rem;
-
   --submit-button-padding-y-md: 1rem;
   --submit-button-padding-x-md: 2rem;
-
   --submit-button-padding-y-lg: 1.4rem;
   --submit-button-padding-x-lg: 4rem;
 
@@ -55,12 +53,14 @@
     font-size: var(--label-font-size);
     font-family: var(--label-font-family);
   }
+
   &__fieldset {
     border: var(--fieldset-border);
   }
 
   &__input {
     margin-bottom: 0.5rem;
+
     &--full-width {
       width: 100%;
     }
@@ -69,6 +69,7 @@
   &__input-wrapper {
     margin-bottom: var(--input-margin-bottom);
   }
+
   &__input-error {
     font-family: var(--input-font-family);
     color: var(--color-danger);
@@ -79,11 +80,13 @@
       display: none;
     }
   }
+
   &__input[type="text"],
   &__input[type="password"] {
     &:disabled {
       cursor: not-allowed;
     }
+
     width: var(--input-default-width);
     box-sizing: border-box;
     display: block;
@@ -94,7 +97,6 @@
     font-family: var(--input-font-family);
     color: var(--input-color);
     font-size: var(--input-font-size);
-
     border-radius: var(--input-border-radius);
 
     &.dcui-form__input--has-error {
@@ -120,12 +122,12 @@
     font-size: var(--input-font-size);
     margin-bottom: var(--input-margin-bottom);
     border-radius: var(--input-border-radius);
-
     line-height: calc(var(--input-font-size) * 1.5);
 
     &:disabled {
       cursor: not-allowed;
     }
+
     &--full-width {
       width: 100%;
     }
@@ -155,7 +157,6 @@
     width: var(--input-default-width);
     box-sizing: border-box;
     display: block;
-
     border-style: var(--input-border-style);
     border-width: var(--input-border-width);
     border-color: var(--input-border-color);
@@ -164,7 +165,6 @@
     color: var(--input-color);
     font-size: var(--input-font-size);
     border-radius: var(--input-border-radius);
-
     line-height: calc(var(--input-font-size) * 1.5);
 
     &.dcui-form__textarea--has-error {
@@ -175,6 +175,7 @@
     &--full-width {
       width: 100%;
     }
+
     &::placeholder {
       color: var(--input-placeholder-color);
     }
@@ -188,6 +189,7 @@
     font-weight: bold;
     margin-bottom: var(--input-margin-bottom);
   }
+
   &__submit {
     display: block;
     text-transform: uppercase;
@@ -198,17 +200,20 @@
     cursor: pointer;
 
     &--small {
-      padding: var(--submit-button-padding-y-sm)
+      padding:
+        var(--submit-button-padding-y-sm)
         var(--submit-button-padding-x-sm);
     }
 
     &--medium {
-      padding: var(--submit-button-padding-y-md)
+      padding:
+        var(--submit-button-padding-y-md)
         var(--submit-button-padding-x-md);
     }
 
     &--large {
-      padding: var(--submit-button-padding-y-lg)
+      padding:
+        var(--submit-button-padding-y-lg)
         var(--submit-button-padding-x-lg);
     }
 
@@ -216,10 +221,12 @@
       background-color: var(--color-primary);
       color: var(--color-white);
     }
+
     &--danger {
       background-color: var(--color-danger);
       color: var(--color-white);
     }
+
     &--success {
       background-color: var(--color-success);
       color: var(--color-white);

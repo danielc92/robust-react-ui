@@ -8,6 +8,7 @@
   --modal-content-background-color: var(--color-white);
   --modal-border-radius: var(--global-border-radius);
 }
+
 .dcui-modal {
   &__overlay {
     display: none;
@@ -20,6 +21,7 @@
     justify-content: center;
     align-items: center;
     background: var(--modal-overlay-background);
+
     &--active {
       display: flex;
     }
@@ -31,9 +33,11 @@
     background-color: var(--modal-content-background-color);
     border-radius: var(--modal-border-radius);
   }
+
   &__actions {
     display: flex;
     justify-content: flex-end;
+
     .dcui-button {
       margin-right: var(--space-m);
     }
