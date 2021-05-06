@@ -14,7 +14,8 @@
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
     "generate": "node ./util/create-component",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "stylelint-fix": ".\\node_modules\\.bin\\stylelint --fix \"**/*.scss\""
   },
   "repository": {
     "type": "git",
