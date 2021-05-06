@@ -6,7 +6,7 @@ export default {
   title: "Table",
 };
 
-export const TableBasic = () => (
+export const Basic = () => (
   <Table>
     <Table.Head>
       <Table.Row>
@@ -39,7 +39,7 @@ export const TableBasic = () => (
   </Table>
 );
 
-export const TableCentered = () => (
+export const Centered = () => (
   <Table centerCellContent>
     <Table.Head>
       <Table.Row>
@@ -72,7 +72,7 @@ export const TableCentered = () => (
   </Table>
 );
 
-export const TableStriped = () => (
+export const Striped = () => (
   <Table striped>
     <Table.Head>
       <Table.Row>
@@ -105,7 +105,7 @@ export const TableStriped = () => (
   </Table>
 );
 
-export const TableWithRowSpan = () => (
+export const WithRowSpan = () => (
   <Table striped>
     <Table.Head>
       <Table.Row>

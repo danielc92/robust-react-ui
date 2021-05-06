@@ -3,9 +3,17 @@ import React from "react";
 import AlertDialogue from "./AlertDialogue";
 
 export default {
-    title: "AlertDialogue"
+  title: "AlertDialogue",
 };
 
-export const WithBar = () => <AlertDialogue foo="bar" />;
-
-export const WithBaz = () => <AlertDialogue foo="baz" />;
+export const Basic = () => (
+  <AlertDialogue
+    handleCloseAction={() => alert("Closing...")}
+    handleConfirmAction={() => alert("Confiming...")}
+    bodyText="Consectetur culpa consequat id labore magna excepteur laboris magna et sint. Adipisicing cupidatat officia consequat qui est quis voluptate cillum adipisicing. Esse in sunt ipsum ea ad laboris culpa ea sint. Esse magna elit exercitation id ullamco laboris elit excepteur "
+    titleText="Lorem Ipsum Delore"
+    open
+    cancelButtonText="Close"
+    confirmButtonText="Ok"
+  />
+);
