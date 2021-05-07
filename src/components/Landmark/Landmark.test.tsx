@@ -5,23 +5,75 @@ import { render } from "@testing-library/react";
 import Landmark from "./Landmark";
 import { LandmarkProps } from "./Landmark.types";
 
-describe("Test Component", () => {
+describe("Landmark Suite", () => {
   let props: LandmarkProps;
 
-  beforeEach(() => {
-    props = {
-      foo: "bar"
-    };
+  beforeEach(() => {});
+  const renderMain = () => render(<Landmark.Main>some content</Landmark.Main>);
+  const renderRegion = () =>
+    render(<Landmark.Region>some content</Landmark.Region>);
+  const renderComplementary = () =>
+    render(<Landmark.Complementary>some content</Landmark.Complementary>);
+  const renderContentInfo = () =>
+    render(<Landmark.ContentInfo>some content</Landmark.ContentInfo>);
+
+  it("Complementary should render correct text", () => {
+    const { getByTestId } = renderComplementary();
+
+    const component = getByTestId("Complementary");
+
+    expect(component).toHaveTextContent("some content");
   });
 
-  const renderComponent = () => render(<Landmark {...props} />);
+  it("Complementary should render a <aside> tag", () => {
+    const { getByTestId } = renderComplementary();
 
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
-    const { getByTestId } = renderComponent();
+    const component = getByTestId("Complementary");
 
-    const component = getByTestId("Landmark");
+    expect(component.nodeName).toEqual("ASIDE");
+  });
 
-    expect(component).toHaveTextContent("harvey was here");
+  it("Contentinfo should render correct text", () => {
+    const { getByTestId } = renderContentInfo();
+
+    const component = getByTestId("ContentInfo");
+
+    expect(component).toHaveTextContent("some content");
+  });
+
+  it("Contentinfo should render a <footer> tag", () => {
+    const { getByTestId } = renderContentInfo();
+
+    const component = getByTestId("ContentInfo");
+
+    expect(component.nodeName).toEqual("FOOTER");
+  });
+
+  it("Main should render correct text", () => {
+    const { getByTestId } = renderMain();
+
+    const component = getByTestId("Main");
+
+    expect(component).toHaveTextContent("some content");
+  });
+  it("Main should render a <main> tag", () => {
+    const { getByTestId } = renderMain();
+
+    const component = getByTestId("Main");
+
+    expect(component.nodeName).toEqual("MAIN");
+  });
+  it("Region should render correct text", () => {
+    const { getByTestId } = renderRegion();
+
+    const component = getByTestId("Region");
+    expect(component).toHaveTextContent("some content");
+  });
+  it("Region should render a <section> tag", () => {
+    const { getByTestId } = renderRegion();
+
+    const component = getByTestId("Region");
+
+    expect(component.nodeName).toEqual("SECTION");
   });
 });
