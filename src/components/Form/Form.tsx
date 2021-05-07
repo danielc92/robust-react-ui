@@ -98,9 +98,70 @@ const Input = ({
   </div>
 );
 
+export interface FormCheckboxGroupProps {
+  id: string;
+  values: CheckboxOptionProps[];
+  ariaLabelledBy: string;
+  handleCheckboxClick: (keyValue: string, checkedValue: boolean) => void;
+}
+
+const CheckboxGroup = ({
+  id,
+
+  values,
+  ariaLabelledBy,
+  handleCheckboxClick,
+}: FormCheckboxGroupProps) => {
+  // const handleKeyDown = (
+  //   event: React.KeyboardEvent<HTMLDivElement>,
+  //   key: string,
+  //   checked: boolean
+  // ) => {
+  //   console.log(event, key, checked);
+  //   if (event.keyCode === 32) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //     handleCheckboxClick(key, checked);
+  //   }
+  // };
+  return (
+    <div role="group" aria-labelledby={ariaLabelledBy}>
+      <ul className="dcui-form__checkbox-group" data-testid="CheckboxGroup">
+        {values.map((v, i) => (
+          <li key={`checkbox-item-${i}`}>
+            <div
+              onKeyDown={(event) => {
+                if (event.keyCode === 32) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  handleCheckboxClick(v.keyValue, !v.checked);
+                }
+              }}
+              onClick={() => handleCheckboxClick(v.keyValue, !v.checked)}
+              className="dcui-form__checkbox"
+              data-testid="Checkbox"
+              role="checkbox"
+              aria-checked={v.checked ? "true" : "false"}
+              tabIndex={0}
+            >
+              {v.displayValue}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
 interface FormSelectOptionProps {
   displayValue: string;
   keyValue: string;
+}
+
+export interface CheckboxOptionProps {
+  displayValue: string;
+  keyValue: string;
+  checked: boolean;
 }
 
 interface FormSelectProps {
@@ -222,4 +283,5 @@ Form.Label = Label;
 Form.Input = Input;
 Form.TextArea = TextArea;
 Form.Select = Select;
+Form.CheckboxGroup = CheckboxGroup;
 export default Form;
