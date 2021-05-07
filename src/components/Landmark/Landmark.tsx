@@ -6,7 +6,7 @@ import { LandmarkProps } from "./Landmark.types";
 import "./Landmark.scss";
 
 const Landmark = ({ children }: LandmarkProps) => (
-  <div data-testid="Landmark" className="foo-bar">
+  <div data-testid="Landmark" className="dcui-landmark">
     {children}
   </div>
 );
@@ -15,7 +15,11 @@ interface MainProps {
   children: ReactNode;
 }
 
-const Main = ({ children }: MainProps) => <main>{children}</main>;
+const Main = ({ children }: MainProps) => (
+  <main data-testid="Main" className="dcui-landmark__main">
+    {children}
+  </main>
+);
 
 interface RegionProps {
   children: ReactNode;
@@ -24,6 +28,8 @@ interface RegionProps {
 }
 const Region = ({ children, ariaLabelledBy, ariaLabel }: RegionProps) => (
   <section
+    data-testid="Region"
+    className="dcui-landmark__region"
     aria-labelledby={
       ariaLabelledBy && ariaLabelledBy.length > 0 ? ariaLabelledBy : null
     }
@@ -38,7 +44,11 @@ interface ComplementaryProps {
   ariaLabelledBy?: string;
 }
 const Complementary = ({ children, ariaLabelledBy }: ComplementaryProps) => (
-  <aside aria-labelledby={ariaLabelledBy ? ariaLabelledBy : ""}>
+  <aside
+    data-testid="Complementary"
+    className="dcui-landmark__complementary"
+    aria-labelledby={ariaLabelledBy ? ariaLabelledBy : ""}
+  >
     {children}
   </aside>
 );
@@ -48,7 +58,9 @@ interface ContentInfoProps {
 }
 
 const ContentInfo = ({ children }: ContentInfoProps) => (
-  <footer>{children}</footer>
+  <footer data-testid="ContentInfo" className="dcui-landmark__contentinfo">
+    {children}
+  </footer>
 );
 
 Landmark.Region = Region;
