@@ -5,23 +5,28 @@ import { render } from "@testing-library/react";
 import AlertDialogue from "./AlertDialogue";
 import { AlertDialogueProps } from "./AlertDialogue.types";
 
-describe("Test Component", () => {
+describe("AlertDialogue Suite", () => {
   let props: AlertDialogueProps;
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      bodyText: "modal body text content",
+      titleText: "modal title",
+      cancelButtonText: "Cancel",
+      confirmButtonText: "Confirm",
+      open: true,
+      handleCloseAction: () => {},
+      handleConfirmAction: () => {},
     };
   });
 
   const renderComponent = () => render(<AlertDialogue {...props} />);
 
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
-    const { getByTestId } = renderComponent();
-
+  it("should render the correct base class", () => {
+    const { getByTestId, debug } = renderComponent();
+    debug();
     const component = getByTestId("AlertDialogue");
 
-    expect(component).toHaveTextContent("harvey was here");
+    expect(component).toHaveClass("dcui-modal__overlay");
   });
 });
