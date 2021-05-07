@@ -5,23 +5,9 @@ import { render } from "@testing-library/react";
 import Form from "./Form";
 import { FormProps } from "./Form.types";
 
-describe("Test Component", () => {
+describe("Form Suite", () => {
   let props: FormProps;
-
-  beforeEach(() => {
-    props = {
-      foo: "bar"
-    };
-  });
-
-  const renderComponent = () => render(<Form {...props} />);
-
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
-    const { getByTestId } = renderComponent();
-
-    const component = getByTestId("Form");
-
-    expect(component).toHaveTextContent("harvey was here");
+  it("dummy", () => {
+    expect(1).toEqual(1);
   });
 });
