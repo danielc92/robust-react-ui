@@ -48,9 +48,11 @@ The goal is to keep components names, behaviour, html structure, and js logic as
   - Landmark.ContentInfo
 - Button
 - Table
-  - Table Row
-  - Table Cell
-  - Table
+  - Table.Row
+  - Table.Cell
+  - Table.Head
+  - Table.Header
+  - Table.Foot
 - AlertDialogue (modal)
 - Form
   - Form.FieldSet
