@@ -10,18 +10,53 @@ describe("Test Component", () => {
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      children: "click me",
+      id: "buttonid",
+      size: "medium",
     };
   });
 
   const renderComponent = () => render(<Button {...props} />);
 
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
+  it("should render the correct text", () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId("Button");
 
-    expect(component).toHaveTextContent("harvey was here");
+    expect(component).toHaveTextContent("click me");
+  });
+
+  it("should render the correct base class", () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Button");
+
+    expect(component).toHaveClass("dcui-button");
+  });
+
+  it("should render the correct variant class", () => {
+    props.variant = "danger";
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Button");
+
+    expect(component).toHaveClass("dcui-button--danger");
+  });
+
+  it("should render the correct variant class (2)", () => {
+    props.variant = "success";
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Button");
+
+    expect(component).toHaveClass("dcui-button--success");
+  });
+
+  it("should render the default primary modifier", () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Button");
+
+    expect(component).toHaveClass("dcui-button--primary");
   });
 });
