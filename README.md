@@ -39,19 +39,38 @@ The goal is to keep components names, behaviour, html structure, and js logic as
 - Keep it simple
 - Use native html elements whenever possible, as opposed to enforcing role attributes on `<div>` elements.
 
-### Component list
+## In progress/built
 
+- Landmark
+  - Landmark.Main
+  - Landmark.Region
+  - Landmark.Complementary
+  - Landmark.ContentInfo
 - Button
-- Table (includes smaller components, Table.Row, Table.Body, Table.Cell etc)
-- Alert (modal)
-- AlertDialogue (toast)
-- Input
-- RadioGroup
-- Select
-- Paragraph
-- Span
-- Link
-- Heading
+- Table
+  - Table Row
+  - Table Cell
+  - Table
+- AlertDialogue (modal)
+- Form
+  - Form.FieldSet
+  - Form.Legend
+  - Form.Label
+  - Form.Input
+  - Form.TextArea
+  - Form.Select
+- Typography
+  - Paragraph
+  - Heading
+
+## Of interest
+
+- Menu (high priority)
+  - Menu.Item
+- Feed
+  - Feed.Article
+- ProgressBar (https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)
+- Search (medium-high priority)
 
 # Base repo
 

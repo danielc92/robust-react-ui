@@ -42,6 +42,7 @@ const Column = ({ children, size }: ColumnProps) => (
 
 const Container = ({ children, size }: ContainerProps) => (
   <div
+    data-testid="Container"
     className={classNames({
       "dcui-container": true,
       "dcui-container--small": size === "small",
