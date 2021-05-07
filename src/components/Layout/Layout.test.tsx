@@ -3,25 +3,38 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import Row from "./Layout";
-import { RowProps } from "./Row.types";
+import { RowProps } from "./Layout.types";
+import Layout from "./Layout";
 
-describe("Test Component", () => {
+describe("Layout Suite", () => {
   let props: RowProps;
 
-  beforeEach(() => {
-    props = {
-      foo: "bar",
-    };
-  });
+  beforeEach(() => {});
 
-  const renderComponent = () => render(<Row {...props} />);
+  const renderRow = () =>
+    render(
+      <Layout.Row>
+        <Layout.Column>content 1</Layout.Column>
+        <Layout.Column>content 2</Layout.Column>
+        <Layout.Column>content 3</Layout.Column>
+      </Layout.Row>
+    );
 
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
-    const { getByTestId } = renderComponent();
+  const renderContainer = () =>
+    render(<Layout.Container>some content</Layout.Container>);
+
+  it("Row should render correct class", () => {
+    const { getByTestId } = renderRow();
 
     const component = getByTestId("Row");
 
-    expect(component).toHaveTextContent("harvey was here");
+    expect(component).toHaveClass("dcui-row");
+  });
+  it("Container should render correct class", () => {
+    const { getByTestId } = renderContainer();
+
+    const component = getByTestId("Container");
+
+    expect(component).toHaveClass("dcui-container");
   });
 });
