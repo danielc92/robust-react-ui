@@ -10,18 +10,42 @@ describe("Test Component", () => {
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      children: "around the world",
+      href: "https://google.com.au",
+      ariaLabel: "a link to the world map",
     };
   });
 
   const renderComponent = () => render(<Link {...props} />);
 
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
+  it("should render with an aria-label attribute", () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId("Link");
 
-    expect(component).toHaveTextContent("harvey was here");
+    expect(component.hasAttribute("aria-label")).toBeTruthy();
+  });
+
+  it("should render with correct text", () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Link");
+
+    expect(component).toHaveTextContent("around the world");
+  });
+
+  it("should render with a href", () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Link");
+
+    expect(component.hasAttribute("href")).toBeTruthy();
+  });
+  it("should render with correct base class", () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Link");
+
+    expect(component).toHaveClass("dcui-link");
   });
 });
