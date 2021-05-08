@@ -3,6 +3,30 @@
   "extends": ["stylelint-config-standard", "stylelint-a11y/recommended"],
   "rules": {
     "order/order": ["custom-properties", "declarations"],
-    "order/properties-order": []
+    "order/properties-order": [
+      "background",
+      "background-color",
+      "border",
+      "border-color",
+      "border-radius",
+      "border-width",
+      "color",
+      "display",
+      "font-decoration",
+      "font-family",
+      "font-size",
+      "font-weight",
+      "padding",
+      "padding-top",
+      "padding-right",
+      "padding-bottom",
+      "padding-left",
+      "position",
+      "margin",
+      "margin-top",
+      "margin-right",
+      "margin-bottom",
+      "margin-left"
+    ]
   }
 }
