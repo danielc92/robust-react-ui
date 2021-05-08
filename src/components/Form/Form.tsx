@@ -84,6 +84,8 @@ const Input = ({
         "dcui-form__input": true,
         "dcui-form__input--full-width": fullWidth,
         "dcui-form__input--has-error": error,
+        "dcui-form__input--disabled": disabled,
+        "dcui-form__input--o": disabled, // override class
       })}
       type={type ? type : "text"}
       placeholder={placeholder}
@@ -194,6 +196,8 @@ const Select = ({
     multiple={multiple ? multiple : null}
     className={classNames({
       "dcui-form__select": true,
+      "dcui-form__select--disabled": disabled,
+      "dcui-form__select--o": disabled, // override class
     })}
     disabled={disabled}
     onChange={handleOnChange}
@@ -239,6 +243,8 @@ const TextArea = ({
         "dcui-form__textarea": true,
         "dcui-form__textarea--full-width": fullWidth,
         "dcui-form__textarea--has-error": error,
+        "dcui-form__textarea--disabled": disabled,
+        "dcui-form__textarea--o": disabled, // override class
       })}
       rows={rows ? rows : 8}
       value={value}
