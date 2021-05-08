@@ -1,0 +1,33 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+:root {
+  --link-font-size-sm: 1rem;
+  --link-font-size-md: 1.125rem;
+  --link-font-size-lg: 1.375rem;
+  --link-line-height-sm: 1.6;
+  --link-line-height-md: 1.7;
+  --link-line-height-lg: 1.8;
+  --link-font-color: var(--color-primary);
+}
+
+.dcui-link {
+  color: var(--link-font-color);
+  font-family: var(--font-family-primary);
+
+  &--small {
+    font-size: var(--link-font-size-sm);
+    line-height: var(--link-line-height-sm);
+  }
+
+  &--medium {
+    font-size: var(--link-font-size-md);
+    line-height: var(--link-line-height-md);
+  }
+
+  &--large {
+    font-size: var(--link-font-size-lg);
+    line-height: var(--link-line-height-lg);
+  }
+}
