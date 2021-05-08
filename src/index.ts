@@ -6,11 +6,13 @@ import Typography from "./components/Typography";
 import TabList from "./components/TabList";
 import AlertDialogue from "./components/AlertDialogue";
 import Form from "./components/Form";
+import Link from "./components/Link";
 export {
   Button,
   AlertDialogue,
   Landmark,
   Layout,
+  Link,
   Table,
   TabList,
   Typography,
