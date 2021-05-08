@@ -61,6 +61,7 @@ The goal is to keep components names, behaviour, html structure, and js logic as
   - Form.Input
   - Form.TextArea
   - Form.Select
+  - Form.CheckboxGroup
 - Typography
   - Paragraph
   - Heading
