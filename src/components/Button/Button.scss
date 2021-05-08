@@ -12,11 +12,11 @@
 }
 
 .dcui-button {
-  text-transform: uppercase;
-  font-weight: bold;
-  box-sizing: border-box;
-  border-radius: var(--global-border-radius);
   border: 0;
+  border-radius: var(--global-border-radius);
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box;
   cursor: pointer;
 
   // size

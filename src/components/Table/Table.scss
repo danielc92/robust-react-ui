@@ -16,21 +16,21 @@
 }
 
 .dcui-table {
+  background-color: var(--table-background-color);
+  border-color: var(--table-border-color);
+  border-radius: var(--table-border-radius);
+  border-width: 0.1px;
   font-family: var(--font-family-primary);
   width: 100%;
-  background-color: var(--table-background-color);
   border-collapse: collapse;
-  border-width: 0.1px;
-  border-radius: var(--table-border-radius);
-  border-color: var(--table-border-color);
   border-style: dashed;
 
   &__cell,
   &__header {
-    border-width: 0.1px;
     border-color: var(--table-border-color);
-    border-style: solid;
+    border-width: 0.1px;
     padding: var(--table-cell-padding);
+    border-style: solid;
   }
 
   &__cell {
@@ -52,12 +52,12 @@
   }
 
   &__header[scope="column"] {
-    color: var(--table-header-color);
     background-color: var(--table-header-background-color);
+    color: var(--table-header-color);
   }
 
   &__foot &__cell {
-    color: var(--table-foot-color);
     background-color: var(--table-foot-background);
+    color: var(--table-foot-color);
   }
 }

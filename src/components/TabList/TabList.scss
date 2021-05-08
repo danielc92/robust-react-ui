@@ -18,18 +18,18 @@
   }
 
   &__button {
-    cursor: pointer;
-    padding: var(--space-s) var(--space-m);
-    font-size: 1rem;
-    border: none;
     background: var(--tab-background-color);
+    border: none;
+    font-size: 1rem;
+    padding: var(--space-s) var(--space-m);
+    cursor: pointer;
     box-sizing: border-box;
     border-top: var(--tab-border-top);
 
     &--active {
+      background-color: var(--tab-active-background-color);
       font-weight: bold;
       border-top: var(--tab-active-border-top);
-      background-color: var(--tab-active-background-color);
     }
   }
 

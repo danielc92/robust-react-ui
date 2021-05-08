@@ -11,6 +11,7 @@
 
 .dcui-modal {
   &__overlay {
+    background: var(--modal-overlay-background);
     display: none;
     position: fixed;
     overflow-y: auto;
@@ -20,7 +21,6 @@
     left: 0;
     justify-content: center;
     align-items: center;
-    background: var(--modal-overlay-background);
 
     &--active {
       display: flex;
@@ -28,10 +28,10 @@
   }
 
   &__content {
-    padding: var(--modal-content-padding);
-    max-width: 640px;
     background-color: var(--modal-content-background-color);
     border-radius: var(--modal-border-radius);
+    padding: var(--modal-content-padding);
+    max-width: 640px;
   }
 
   &__actions {
