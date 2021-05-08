@@ -68,6 +68,7 @@
     "stylelint": "^13.13.1",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.2"
   },
