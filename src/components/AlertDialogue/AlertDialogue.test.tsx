@@ -23,8 +23,8 @@ describe("AlertDialogue Suite", () => {
   const renderComponent = () => render(<AlertDialogue {...props} />);
 
   it("should render the correct base class", () => {
-    const { getByTestId, debug } = renderComponent();
-    debug();
+    const { getByTestId } = renderComponent();
+
     const component = getByTestId("AlertDialogue");
 
     expect(component).toHaveClass("dcui-modal__overlay");
