@@ -39,10 +39,15 @@ const FieldSet = ({ children }: FormFieldSetProps) => (
 
 interface FormLabelProps {
   title: string;
-  htmlFor: string;
+  htmlFor?: string;
+  id?: string;
 }
-const Label = ({ title, htmlFor }: FormLabelProps) => (
-  <label className="dcui-form__label" htmlFor={htmlFor}>
+const Label = ({ title, id, htmlFor }: FormLabelProps) => (
+  <label
+    className="dcui-form__label"
+    htmlFor={htmlFor ? htmlFor : null}
+    id={id ? id : null}
+  >
     {title}
   </label>
 );
