@@ -3,12 +3,12 @@
 @import "../../typography.scss";
 
 :root {
-  --link-font-size-sm: 1rem;
-  --link-font-size-md: 1.125rem;
-  --link-font-size-lg: 1.375rem;
-  --link-line-height-sm: 1.6;
-  --link-line-height-md: 1.7;
-  --link-line-height-lg: 1.8;
+  --link-font-size-sm: var(--font-size-small);
+  --link-font-size-md: var(--font-size-medium);
+  --link-font-size-lg: var(--font-size-large);
+  --link-line-height-sm: var(--font-line-height-small);
+  --link-line-height-md: var(--font-line-height-medium);
+  --link-line-height-lg: var(--font-line-height-large);
   --link-font-color: var(--color-primary);
 }
 

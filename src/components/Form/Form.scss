@@ -16,12 +16,12 @@
   //legend
   --legend-font-weight: bold;
   // fieldset
-  --fieldset-font-size: 1.2rem;
+  --fieldset-font-size: var(--font-size-medium);
   --fieldset-border: 1px solid #f2f2f2;
   --fieldset-font-family: var(--font-family-primary);
   --fieldset-color: var(--color-charcoal);
   // label
-  --label-font-size: 1rem;
+  --label-font-size: var(--font-size-small);
   --label-font-color: var(--color-charcoal);
   --label-font-family: var(--font-family-primary);
   --label-font-weight: bold;
@@ -97,7 +97,7 @@
   &__input-error {
     color: var(--color-danger);
     font-family: var(--input-font-family);
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     margin: 0;
 
     &--hidden {
@@ -177,7 +177,7 @@
   &__textarea-error {
     color: var(--color-danger);
     font-family: var(--input-font-family);
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     margin: 0;
 
     &--hidden {
@@ -354,7 +354,7 @@
   &__checkbox {
     color: var(--color-charcoal);
     font-family: var(--font-family-primary);
-    font-size: 1rem;
+    font-size: var(--font-size-small);
     font-weight: normal;
   }
 }

@@ -11,18 +11,19 @@
   --header-font-size-h6: 1rem;
   --header-font-color: var(--color-charcoal);
   --header-jumbo-multiplier: 1.5;
-  --paragraph-font-size-sm: 1rem;
-  --paragraph-font-size-md: 1.125rem;
-  --paragraph-font-size-lg: 1.375rem;
-  --paragraph-line-height-sm: 1.6;
-  --paragraph-line-height-md: 1.7;
-  --paragraph-line-height-lg: 1.8;
+  --paragraph-font-size-sm: var(--font-size-small);
+  --paragraph-font-size-md: var(--font-size-medium);
+  --paragraph-font-size-lg: var(--font-size-large);
+  --paragraph-line-height-sm: var(--font-line-height-small);
+  --paragraph-line-height-md: var(--font-line-height-medium);
+  --paragraph-line-height-lg: var(--font-line-height-large);
   --paragraph-font-color: var(--color-charcoal);
 }
 
 .dcui-para {
   color: var(--paragraph-font-color);
   font-family: var(--font-family-primary);
+  margin: var(--font-margin);
 
   &--small {
     font-size: var(--paragraph-font-size-sm);
@@ -43,15 +44,15 @@
 .dcui-header {
   color: var(--header-font-color);
   font-family: var(--font-family-primary);
+  margin: var(--font-margin);
 
   &__1 {
     font-size: var(--header-font-size-h1);
 
     &--jumbo {
-      font-size:
-        calc(
-          var(--header-font-size-h1) * var(--header-jumbo-multiplier)
-        );
+      font-size: calc(
+        var(--header-font-size-h1) * var(--header-jumbo-multiplier)
+      );
     }
   }
 
@@ -59,10 +60,9 @@
     font-size: var(--header-font-size-h2);
 
     &--jumbo {
-      font-size:
-        calc(
-          var(--header-font-size-h2) * var(--header-jumbo-multiplier)
-        );
+      font-size: calc(
+        var(--header-font-size-h2) * var(--header-jumbo-multiplier)
+      );
     }
   }
 
@@ -70,10 +70,9 @@
     font-size: var(--header-font-size-h3);
 
     &--jumbo {
-      font-size:
-        calc(
-          var(--header-font-size-h3) * var(--header-jumbo-multiplier)
-        );
+      font-size: calc(
+        var(--header-font-size-h3) * var(--header-jumbo-multiplier)
+      );
     }
   }
 
@@ -81,10 +80,9 @@
     font-size: var(--header-font-size-h4);
 
     &--jumbo {
-      font-size:
-        calc(
-          var(--header-font-size-h4) * var(--header-jumbo-multiplier)
-        );
+      font-size: calc(
+        var(--header-font-size-h4) * var(--header-jumbo-multiplier)
+      );
     }
   }
 
@@ -92,10 +90,9 @@
     font-size: var(--header-font-size-h5);
 
     &--jumbo {
-      font-size:
-        calc(
-          var(--header-font-size-h5) * var(--header-jumbo-multiplier)
-        );
+      font-size: calc(
+        var(--header-font-size-h5) * var(--header-jumbo-multiplier)
+      );
     }
   }
 
@@ -103,10 +100,9 @@
     font-size: var(--header-font-size-h6);
 
     &--jumbo {
-      font-size:
-        calc(
-          var(--header-font-size-h6) * var(--header-jumbo-multiplier)
-        );
+      font-size: calc(
+        var(--header-font-size-h6) * var(--header-jumbo-multiplier)
+      );
     }
   }
 }
