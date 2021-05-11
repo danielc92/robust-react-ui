@@ -1,0 +1,26 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+.dcui-image {
+  &--responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  &--responsive-restrict-width {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &--bordered {
+    border-color: var(--color-primary);
+    border-width: 2px;
+    border-style: solid;
+  }
+}
