@@ -7,12 +7,17 @@ import TabList from "./components/TabList";
 import AlertDialogue from "./components/AlertDialogue";
 import Form from "./components/Form";
 import Link from "./components/Link";
+import Image from "./components/Image";
+import Navigation from "./components/Navigation";
+
 export {
   Button,
+  Navigation,
   AlertDialogue,
   Landmark,
   Layout,
   Link,
+  Image,
   Table,
   TabList,
   Typography,

@@ -7,15 +7,17 @@ import copy from "rollup-plugin-copy";
 export default {
   input: [
     "src/index.ts",
+    "src/components/AlertDialogue/index.ts",
     "src/components/Button/index.ts",
+    "src/components/Form/index.ts",
+    "src/components/Image/index.ts",
     "src/components/Landmark/index.ts",
     "src/components/Layout/index.ts",
-    "src/components/Table/index.ts",
-    "src/components/Typography/index.ts",
-    "src/components/TabList/index.ts",
-    "src/components/AlertDialogue/index.ts",
-    "src/components/Form/index.ts",
     "src/components/Link/index.ts",
+    "src/components/Navigation/index.ts",
+    "src/components/Table/index.ts",
+    "src/components/TabList/index.ts",
+    "src/components/Typography/index.ts",
   ],
   output: [
     {
