@@ -2,3 +2,95 @@
 @import "../../variables.scss";
 @import "../../typography.scss";
 
+:root {
+  --nav-background-color: rgb(248, 245, 245);
+  --nav-link-color: var(--color-primary);
+  --nav-font-family: var(--font-family-primary);
+  --nav-font-weight: bold;
+}
+
+.dcui-navigation {
+  box-sizing: border-box;
+
+  .dcui-navigation__dropdown-item:hover,
+  .dcui-navigation__dropdown-item:focus {
+    > .dcui-navigation__dropdown {
+      display: block;
+    }
+  }
+
+  &__menu-link {
+    padding: 1rem;
+  }
+
+  &__dropdown-item {
+    display: block;
+    padding: 1rem;
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    box-sizing: border-box;
+    // padding: 0.75rem;
+  }
+
+  &__menu-link:focus,
+  &__dropdown-link:focus {
+    background: yellow;
+  }
+
+  &__menu-link,
+  &__dropdown-link {
+    text-transform: uppercase;
+    color: var(--nav-link-color);
+    font-family: var(--nav-font-family);
+    font-weight: var(--nav-font-weight);
+    text-decoration: none;
+  }
+
+  &__menu-item:hover,
+  &__menu-item:focus {
+    > .dcui-navigation__dropdown {
+      display: block;
+    }
+  }
+
+  &__dropdown {
+    width: 10rem;
+    background-color: var(--nav-background-color);
+    display: none;
+    padding: 0;
+    position: absolute;
+    margin: 0;
+    box-sizing: border-box;
+    top: 2rem;
+    left: 0;
+    z-index: 100;
+
+    &--showing {
+      display: block;
+    }
+
+    &--right {
+      top: 0;
+      left: 10rem;
+    }
+  }
+
+  &__menubar {
+    background-color: var(--nav-background-color);
+    font-size: 110%;
+    padding: 1rem;
+    box-sizing: border-box;
+    list-style: none;
+
+    > li {
+      display: inline;
+      position: relative;
+    }
+  }
+
+  &__dropdown-divider {
+    box-sizing: border-box;
+  }
+}
