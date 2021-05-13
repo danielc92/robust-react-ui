@@ -50,9 +50,10 @@
     font-size: var(--header-font-size-h1);
 
     &--jumbo {
-      font-size: calc(
-        var(--header-font-size-h1) * var(--header-jumbo-multiplier)
-      );
+      font-size:
+        calc(
+          var(--header-font-size-h1) * var(--header-jumbo-multiplier)
+        );
     }
   }
 
@@ -60,9 +61,10 @@
     font-size: var(--header-font-size-h2);
 
     &--jumbo {
-      font-size: calc(
-        var(--header-font-size-h2) * var(--header-jumbo-multiplier)
-      );
+      font-size:
+        calc(
+          var(--header-font-size-h2) * var(--header-jumbo-multiplier)
+        );
     }
   }
 
@@ -70,9 +72,10 @@
     font-size: var(--header-font-size-h3);
 
     &--jumbo {
-      font-size: calc(
-        var(--header-font-size-h3) * var(--header-jumbo-multiplier)
-      );
+      font-size:
+        calc(
+          var(--header-font-size-h3) * var(--header-jumbo-multiplier)
+        );
     }
   }
 
@@ -80,9 +83,10 @@
     font-size: var(--header-font-size-h4);
 
     &--jumbo {
-      font-size: calc(
-        var(--header-font-size-h4) * var(--header-jumbo-multiplier)
-      );
+      font-size:
+        calc(
+          var(--header-font-size-h4) * var(--header-jumbo-multiplier)
+        );
     }
   }
 
@@ -90,9 +94,10 @@
     font-size: var(--header-font-size-h5);
 
     &--jumbo {
-      font-size: calc(
-        var(--header-font-size-h5) * var(--header-jumbo-multiplier)
-      );
+      font-size:
+        calc(
+          var(--header-font-size-h5) * var(--header-jumbo-multiplier)
+        );
     }
   }
 
@@ -100,9 +105,10 @@
     font-size: var(--header-font-size-h6);
 
     &--jumbo {
-      font-size: calc(
-        var(--header-font-size-h6) * var(--header-jumbo-multiplier)
-      );
+      font-size:
+        calc(
+          var(--header-font-size-h6) * var(--header-jumbo-multiplier)
+        );
     }
   }
 }
