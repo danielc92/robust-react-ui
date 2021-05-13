@@ -241,17 +241,20 @@
     cursor: pointer;
 
     &--small {
-      padding: var(--submit-button-padding-y-sm)
+      padding:
+        var(--submit-button-padding-y-sm)
         var(--submit-button-padding-x-sm);
     }
 
     &--medium {
-      padding: var(--submit-button-padding-y-md)
+      padding:
+        var(--submit-button-padding-y-md)
         var(--submit-button-padding-x-md);
     }
 
     &--large {
-      padding: var(--submit-button-padding-y-lg)
+      padding:
+        var(--submit-button-padding-y-lg)
         var(--submit-button-padding-x-lg);
     }
 
