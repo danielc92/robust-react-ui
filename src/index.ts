@@ -8,11 +8,12 @@ import AlertDialogue from "./components/AlertDialogue";
 import Form from "./components/Form";
 import Link from "./components/Link";
 import Image from "./components/Image";
-import Navigation from "./components/Navigation";
+
+import NavigationBar from "./components/NavigationBar";
 
 export {
   Button,
-  Navigation,
+  NavigationBar,
   AlertDialogue,
   Landmark,
   Layout,
