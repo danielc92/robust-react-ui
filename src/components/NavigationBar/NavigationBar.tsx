@@ -13,7 +13,7 @@ const STYLES = {
   },
 };
 
-const FOCUS_DELAY = 500;
+const FOCUS_DELAY = 200;
 type Dir = "LEFT" | "RIGHT" | "UP" | "DOWN";
 interface TransformedNavigationNode {
   menuOpen?: boolean;
@@ -27,13 +27,13 @@ interface TransformedNavigationNode {
 }
 const NavigationBar = ({ data }: NavigationBarProps) => {
   const [nodes, setNodes] = useState<TransformedNavigationNode[]>([]);
-
+  const [closeAll, setCloseAll] = useState(false);
   useEffect(() => {
     let nodes = [];
 
     const getNode = (x: NavigationData, i: number) => {
       let o: Partial<TransformedNavigationNode> = {};
-      if (x.children) {
+      if (x.children && x.children.length && x.children.length > 0) {
         o.menuOpen = false;
         o.hasMenu = true;
       } else {
@@ -51,10 +51,10 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
       const node = getNode(x, i);
       nodes.push(node);
       x.children?.forEach((x2, i2) => {
-        const node = { ...getNode(x2, i2), menuId: i };
+        const node = { ...getNode(x2, i2), menuId: x.id };
         nodes.push(node);
         x2.children?.forEach((x3, i3) => {
-          const node = { ...getNode(x3, i3), menuId: i };
+          const node = { ...getNode(x3, i3), menuId: x.id };
           nodes.push(node);
         });
       });
@@ -63,26 +63,36 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
     setNodes(nodes);
   }, []);
 
+  const closeAllMenuButOne = (id: number) => {
+    console.log("Closing all but ", id);
+    setNodes((nodes) =>
+      nodes.map((n) => {
+        if (n.id === id) {
+          return { ...n, menuOpen: true };
+        } else {
+          return { ...n, menuOpen: false };
+        }
+      })
+    );
+  };
+
   const traverseTopLevelMenu = (id, dir: Dir) => {
     const menuNodes = nodes.filter((x) => x.parentId === null);
     const max = menuNodes.length - 1;
+    const ord = menuNodes.find((x) => x.id === id).order;
+    const next = ord === max ? 0 : ord + 1;
+    const prev = ord === 0 ? max : ord - 1;
+
     if (dir === "LEFT") {
-      if (id === 0) {
-        const nextOrder = max;
-        menuNodes.find((x) => x.order === nextOrder).ref.current.focus();
-      } else {
-        const nextOrder = id - 1;
-        menuNodes.find((x) => x.order === nextOrder).ref.current.focus();
-      }
+      const m = menuNodes.find((x) => x.order === prev);
+      m.ref.current.focus();
+      if (closeAll) closeAllMenuButOne(m.id);
     }
+
     if (dir === "RIGHT") {
-      if (id === max) {
-        const nextOrder = max;
-        menuNodes.find((x) => x.order === 0).ref.current.focus();
-      } else {
-        const nextOrder = id + 1;
-        menuNodes.find((x) => x.order === nextOrder).ref.current.focus();
-      }
+      const m = menuNodes.find((x) => x.order === next);
+      m.ref.current.focus();
+      if (closeAll) closeAllMenuButOne(m.id);
     }
   };
 
@@ -171,16 +181,21 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
   const handleRightPress = (node: NavigationData) => {
     // if has children open the menu
     const foundNode = nodes.find((n) => n.id === node.id);
+    console.log("handle right", foundNode);
     if (foundNode.hasMenu) {
+      console.log("expanding next menu");
+
       // open menu
       openMenu(node.id);
       //  focus on the first
 
       setTimeout(() => {
-        nodes.find((n) => n.parentId === node.id).ref.current.focus();
+        nodes.find((n) => n.parentId === node.id)?.ref?.current?.focus();
       }, FOCUS_DELAY);
     } else {
       // else navigate to the next nav item
+      console.log("moving to next menu item", foundNode.menuId);
+      if (!closeAll) setCloseAll(true);
       traverseTopLevelMenu(foundNode.menuId, "RIGHT");
     }
   };
@@ -203,11 +218,11 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                   e.preventDefault();
                   //left
                   if (e.keyCode === 37) {
-                    traverseTopLevelMenu(_ai, "LEFT");
+                    traverseTopLevelMenu(a.id, "LEFT");
                   }
                   //right
                   if (e.keyCode === 39) {
-                    traverseTopLevelMenu(_ai, "RIGHT");
+                    traverseTopLevelMenu(a.id, "RIGHT");
                   }
                   //enter
                   if (e.keyCode === 13) openMenu(a.id);
@@ -284,6 +299,21 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                                   className="dcui-nav__dropdown-item"
                                 >
                                   <a
+                                    onKeyDown={(e) => {
+                                      e.preventDefault();
+                                      // up
+                                      if (e.keyCode === 38) {
+                                        focusUpNode(c);
+                                      }
+                                      // down
+                                      if (e.keyCode === 40) {
+                                        focusDownNode(c);
+                                      }
+
+                                      if (e.keyCode === 39) {
+                                        handleRightPress(c);
+                                      }
+                                    }}
                                     ref={n3?.ref}
                                     id={c.id.toString()}
                                     role="menuitem"
