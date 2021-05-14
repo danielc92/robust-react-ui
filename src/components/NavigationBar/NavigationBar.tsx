@@ -13,7 +13,7 @@ const STYLES = {
   },
 };
 
-const FOCUS_DELAY = 100;
+const FOCUS_DELAY = 500;
 type Dir = "LEFT" | "RIGHT" | "UP" | "DOWN";
 interface TransformedNavigationNode {
   menuOpen?: boolean;
@@ -23,6 +23,7 @@ interface TransformedNavigationNode {
   ref: React.RefObject<any>;
   order: number;
   name: string;
+  menuId?: number;
 }
 const NavigationBar = ({ data }: NavigationBarProps) => {
   const [nodes, setNodes] = useState<TransformedNavigationNode[]>([]);
@@ -50,10 +51,10 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
       const node = getNode(x, i);
       nodes.push(node);
       x.children?.forEach((x2, i2) => {
-        const node = getNode(x2, i2);
+        const node = { ...getNode(x2, i2), menuId: i };
         nodes.push(node);
         x2.children?.forEach((x3, i3) => {
-          const node = getNode(x3, i3);
+          const node = { ...getNode(x3, i3), menuId: i };
           nodes.push(node);
         });
       });
@@ -101,7 +102,9 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
 
     // focus on first child
     setTimeout(() => {
-      nodes.find((n) => n.parentId === id).ref.current.focus();
+      const exists = nodes.find((n) => n.parentId === id);
+      console.log(exists, "NODE");
+      exists?.ref?.current?.focus();
     }, FOCUS_DELAY);
   };
 
@@ -137,6 +140,28 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
     }
   };
 
+  const closeMenu = (id: number) => {
+    setNodes((nodes) =>
+      nodes.map((n) => {
+        if (n.id === id) {
+          return {
+            ...n,
+            menuOpen: false,
+          };
+        } else {
+          return n;
+        }
+      })
+    );
+
+    // focus on first child
+    setTimeout(() => {
+      const exists = nodes.find((n) => n.id === id);
+      console.log(exists, "NODE");
+      exists?.ref?.current?.focus();
+    }, FOCUS_DELAY);
+  };
+
   const handleLeftPress = (node: NavigationData) => {
     // if has children has parent
     // close the current dropdown
@@ -145,7 +170,19 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
   };
   const handleRightPress = (node: NavigationData) => {
     // if has children open the menu
-    // else navigate to the next nav item
+    const foundNode = nodes.find((n) => n.id === node.id);
+    if (foundNode.hasMenu) {
+      // open menu
+      openMenu(node.id);
+      //  focus on the first
+
+      setTimeout(() => {
+        nodes.find((n) => n.parentId === node.id).ref.current.focus();
+      }, FOCUS_DELAY);
+    } else {
+      // else navigate to the next nav item
+      traverseTopLevelMenu(foundNode.menuId, "RIGHT");
+    }
   };
 
   return (
@@ -217,6 +254,10 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                             if (e.keyCode === 40) {
                               focusDownNode(b);
                             }
+
+                            if (e.keyCode === 39) {
+                              handleRightPress(b);
+                            }
                           }}
                         >
                           {b.linkName}
@@ -224,28 +265,38 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                         {/* 2nd dropdown level*/}
                         {b.children && (
                           <ul
-                            className="dcui-nav__dropdown dcui-nav__dropdown--nested"
+                            className={classNames({
+                              "dcui-nav__dropdown": true,
+                              "dcui-nav__dropdown--nested": true,
+                              "dcui-nav__dropdown--open": nodes.find(
+                                (n) => n.id === b.id
+                              )?.menuOpen,
+                            })}
                             role="menu"
                             aria-label={b.linkName}
                             style={STYLES.DROPDOWN_LEVEL2}
                           >
-                            {b.children.map((c, _ci) => (
-                              <li
-                                role="none"
-                                className="dcui-nav__dropdown-item"
-                              >
-                                <a
-                                  id={c.id.toString()}
-                                  role="menuitem"
-                                  href={c.linkHref}
-                                  aria-haspopup="true"
-                                  aria-expanded="false"
-                                  tabIndex={-1}
+                            {b.children.map((c, _ci) => {
+                              const n3 = nodes.find((n) => n.id === c.id);
+                              return (
+                                <li
+                                  role="none"
+                                  className="dcui-nav__dropdown-item"
                                 >
-                                  {c.linkName}
-                                </a>
-                              </li>
-                            ))}
+                                  <a
+                                    ref={n3?.ref}
+                                    id={c.id.toString()}
+                                    role="menuitem"
+                                    href={c.linkHref}
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    tabIndex={-1}
+                                  >
+                                    {c.linkName}
+                                  </a>
+                                </li>
+                              );
+                            })}
                           </ul>
                         )}
                       </li>
