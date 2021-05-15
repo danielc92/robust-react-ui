@@ -17,7 +17,12 @@ interface TransformedNavigationNode {
   menuId?: number;
   lv: number;
 }
-const NavigationBar = ({ data, onEnterLinkHandler }: NavigationBarProps) => {
+const NavigationBar = ({
+  data,
+  onEnterLinkHandler,
+  ariaLabel,
+  id,
+}: NavigationBarProps) => {
   const [nodes, setNodes] = useState<TransformedNavigationNode[]>([]);
   const [closeAll, setCloseAll] = useState(false);
   useEffect(() => {
@@ -140,27 +145,6 @@ const NavigationBar = ({ data, onEnterLinkHandler }: NavigationBarProps) => {
     }
   };
 
-  const closeMenu = (id: number) => {
-    setNodes((nodes) =>
-      nodes.map((n) => {
-        if (n.id === id) {
-          return {
-            ...n,
-            menuOpen: false,
-          };
-        } else {
-          return n;
-        }
-      })
-    );
-
-    // focus on first child
-    setTimeout(() => {
-      const exists = nodes.find((n) => n.id === id);
-      exists?.ref?.current?.focus();
-    }, FOCUS_DELAY);
-  };
-
   const handleLeftPress = (node: NavigationData) => {
     // if has children has parent close the current dropdown
     // focus on parent node
@@ -232,10 +216,10 @@ const NavigationBar = ({ data, onEnterLinkHandler }: NavigationBarProps) => {
     <nav
       className="dcui-nav"
       data-testid="NavigationBar"
-      aria-label="Mythical University"
+      aria-label={ariaLabel}
     >
       {/* Root nav bar */}
-      <ul id="menubar1" role="menubar" aria-label="Mythical University">
+      <ul id={id ? id : null} role="menubar" aria-label={ariaLabel}>
         {data.map((a, _ai) => {
           const n = nodes.find((n) => n.id === a.id);
           return (

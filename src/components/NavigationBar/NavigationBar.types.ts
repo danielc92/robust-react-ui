@@ -10,4 +10,6 @@ export interface NavigationData {
 export interface NavigationBarProps {
   data: NavigationData[];
   onEnterLinkHandler?: (href: string) => void;
+  ariaLabel: string;
+  id?: string;
 }
