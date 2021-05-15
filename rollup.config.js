@@ -14,7 +14,7 @@ export default {
     "src/components/Landmark/index.ts",
     "src/components/Layout/index.ts",
     "src/components/Link/index.ts",
-    "src/components/Navigation/index.ts",
+    "src/components/NavigationBar/index.ts",
     "src/components/Table/index.ts",
     "src/components/TabList/index.ts",
     "src/components/Typography/index.ts",

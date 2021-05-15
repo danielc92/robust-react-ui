@@ -1,0 +1,115 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+:root {
+  --nav-bar-background-color: #f2f2f2;
+  --nav-bar-color: var(--color-primary);
+  --nav-bar-background-color-focus: #e4e2e2;
+  --nav-menu-width: 200px;
+  --nav-font-weight: bold;
+  --nav-text-transform: normal;
+}
+
+.dcui-nav {
+  font-family: var(--font-family-primary);
+  box-sizing: border-box;
+
+  > * {
+    box-sizing: border-box;
+  }
+
+  .dcui-nav__menu-item:hover,
+  .dcui-nav__menu-item:focus {
+    > .dcui-nav__dropdown {
+      display: block;
+    }
+  }
+
+  .dcui-nav__dropdown-item {
+    position: relative;
+  }
+
+  .dcui-nav__dropdown-item,
+  .dcui-nav__menu-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dcui-nav__dropdown {
+    top: 1.8rem;
+    left: 0;
+    display: none;
+    width: var(--nav-menu-width);
+    position: absolute;
+  }
+
+  .dcui-nav__dropdown-item:hover,
+  .dcui-nav__dropdown-item:focus {
+    > .dcui-nav__dropdown {
+      display: block;
+    }
+  }
+
+  .dcui-nav__menu-item [role="menuitem"] {
+    padding: 1rem 1.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .dcui-nav__dropdown-item [role="menuitem"],
+  .dcui-nav__menu-item [role="menuitem"] {
+    color: var(--nav-bar-color);
+    font-weight: var(--nav-font-weight);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: var(--nav-text-transform);
+  }
+
+  .dcui-nav__dropdown.dcui-nav__dropdown--open {
+    display: block;
+  }
+
+  .dcui-nav__dropdown.dcui-nav__dropdown--nested {
+    top: 0;
+    left: var(--nav-menu-width);
+  }
+
+  ul[role="menubar"] {
+    background-color: var(--nav-bar-background-color);
+    font-size: 1rem;
+    padding: 1rem;
+    list-style: none;
+  }
+
+  ul[role="menubar"] ul[role="menu"] li a {
+    display: block;
+    width: var(--nav-menu-width);
+  }
+
+  ul[role="menubar"] [role="menuitem"],
+  ul[role="menubar"] [role="separator"] {
+    background-color: var(--nav-bar-background-color);
+  }
+
+  ul[role="menubar"] [role="menuitem"]:focus,
+  ul[role="menubar"] [role="menuitem"]:hover,
+  ul[role="menubar"] [role="separator"]:focus,
+  ul[role="menubar"] [role="separator"]:hover {
+    background-color: var(--nav-bar-background-color-focus);
+  }
+
+  ul[role="menubar"] ul[role="menu"] {
+    padding: 0;
+    position: absolute;
+    margin: 0;
+  }
+
+  ul[role="menubar"] > li {
+    display: inline;
+    position: relative;
+  }
+}

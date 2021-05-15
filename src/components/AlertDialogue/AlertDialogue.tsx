@@ -1,5 +1,5 @@
 // Generated with util/create-component.js
-import React, { createRef, useEffect } from "react";
+import React, { useEffect } from "react";
 
 import { AlertDialogueProps } from "./AlertDialogue.types";
 
