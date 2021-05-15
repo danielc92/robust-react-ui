@@ -10,7 +10,8 @@
       "border",
       "border-color",
       "border-radius",
-
+      "border-width",
+      "color",
       "display",
       "font-decoration",
       "font-family",
