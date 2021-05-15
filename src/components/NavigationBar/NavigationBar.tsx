@@ -17,7 +17,7 @@ interface TransformedNavigationNode {
   menuId?: number;
   lv: number;
 }
-const NavigationBar = ({ data }: NavigationBarProps) => {
+const NavigationBar = ({ data, onEnterLinkHandler }: NavigationBarProps) => {
   const [nodes, setNodes] = useState<TransformedNavigationNode[]>([]);
   const [closeAll, setCloseAll] = useState(false);
   useEffect(() => {
@@ -56,7 +56,6 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
   }, []);
 
   const closeAllMenuButOne = (id: number) => {
-    console.log("Closing all but ", id);
     setNodes((nodes) =>
       nodes.map((n) => {
         if (n.id === id) {
@@ -105,7 +104,6 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
     // focus on first child
     setTimeout(() => {
       const exists = nodes.find((n) => n.parentId === id);
-      console.log(exists, "NODE");
       exists?.ref?.current?.focus();
     }, FOCUS_DELAY);
   };
@@ -159,7 +157,6 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
     // focus on first child
     setTimeout(() => {
       const exists = nodes.find((n) => n.id === id);
-      console.log(exists, "NODE");
       exists?.ref?.current?.focus();
     }, FOCUS_DELAY);
   };
@@ -168,7 +165,6 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
     // if has children has parent close the current dropdown
     // focus on parent node
     const foundNode = nodes.find((n) => n.id === node.id);
-    console.log("handle left", foundNode);
     const parentNode = nodes.find((n) => n.id === node.parentId);
 
     if (foundNode.lv > 2) {
@@ -187,7 +183,6 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
     } else {
       // else navigate to the previous TOPLEVEL nav item
 
-      console.log("moving to next menu item", foundNode);
       if (!closeAll) setCloseAll(true);
       traverseTopLevelMenu(foundNode.menuId, "LEFT");
     }
@@ -195,10 +190,7 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
   const handleRightPress = (node: NavigationData) => {
     // if has children open the menu
     const foundNode = nodes.find((n) => n.id === node.id);
-    console.log("handle right", foundNode);
     if (foundNode.hasMenu) {
-      console.log("expanding next menu");
-
       // open menu
       openMenu(node.id);
       //  focus on the first
@@ -208,9 +200,19 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
       }, FOCUS_DELAY);
     } else {
       // else navigate to the next TOPLEVEL nav item
-      console.log("moving to next menu item", foundNode.menuId);
       if (!closeAll) setCloseAll(true);
       traverseTopLevelMenu(foundNode.menuId, "RIGHT");
+    }
+  };
+
+  const defaultLinkHandler = (href: string) => {
+    if (onEnterLinkHandler) {
+      onEnterLinkHandler(href);
+      return;
+    }
+    if (typeof window !== "undefined") {
+      window.location.href = href;
+      return;
     }
   };
 
@@ -236,13 +238,13 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
       <ul id="menubar1" role="menubar" aria-label="Mythical University">
         {data.map((a, _ai) => {
           const n = nodes.find((n) => n.id === a.id);
-          console.log(n?.ref, "LOOOL", document.activeElement);
           return (
             <li role="none" className="dcui-nav__menu-item">
               <a
                 ref={n?.ref}
                 onKeyDown={(e) => {
                   e.preventDefault();
+
                   //left
                   if (e.keyCode === 37) {
                     traverseTopLevelMenu(a.id, "LEFT");
@@ -252,7 +254,13 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                     traverseTopLevelMenu(a.id, "RIGHT");
                   }
                   //enter
-                  if (e.keyCode === 13) openMenu(a.id);
+                  if (e.keyCode === 13) {
+                    if (n.hasMenu) {
+                      openMenu(a.id);
+                    } else {
+                      defaultLinkHandler(a.linkHref);
+                    }
+                  }
                 }}
                 role="menuitem"
                 aria-haspopup={n?.hasMenu ? "true" : "false"}
@@ -319,6 +327,15 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                             if (e.keyCode === 27) {
                               closeAllAndFocusTopMenu(b);
                             }
+
+                            //enter
+                            if (e.keyCode === 13) {
+                              if (n2.hasMenu) {
+                                handleRightPress(b);
+                              } else {
+                                defaultLinkHandler(b.linkHref);
+                              }
+                            }
                           }}
                         >
                           {b.linkName}
@@ -363,6 +380,15 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                                       //left or escape
                                       if (e.keyCode === 37 || e.keyCode == 27) {
                                         handleLeftPress(c);
+                                      }
+
+                                      //enter
+                                      if (e.keyCode === 13) {
+                                        if (n3.hasMenu) {
+                                          handleRightPress(c);
+                                        } else {
+                                          defaultLinkHandler(c.linkHref);
+                                        }
                                       }
                                     }}
                                     ref={n3?.ref}

@@ -9,4 +9,5 @@ export interface NavigationData {
 }
 export interface NavigationBarProps {
   data: NavigationData[];
+  onEnterLinkHandler?: (href: string) => void;
 }
