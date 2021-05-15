@@ -3,10 +3,14 @@
 @import "../../typography.scss";
 
 .dcui-nav {
+  box-sizing: border-box;
+  > * {
+    box-sizing: border-box;
+  }
   ul[role="menubar"] {
     margin: 10px;
     padding: 10px;
-    font-size: 110%;
+    font-size: 1rem;
     list-style: none;
     background-color: #eee;
   }
@@ -25,17 +29,17 @@
     background-repeat: repeat-x;
   }
 
-  // .dcui-nav__menu-item:hover {
-  //   > .dcui-nav__dropdown {
-  //     display: block;
-  //   }
-  // }
+  .dcui-nav__menu-item:hover {
+    > .dcui-nav__dropdown {
+      display: block;
+    }
+  }
 
-  // .dcui-nav__dropdown-item:hover {
-  //   > .dcui-nav__dropdown {
-  //     display: block;
-  //   }
-  // }
+  .dcui-nav__dropdown-item:hover {
+    > .dcui-nav__dropdown {
+      display: block;
+    }
+  }
 
   .dcui-nav__dropdown-item {
     position: relative;

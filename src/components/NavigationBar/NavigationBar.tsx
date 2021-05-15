@@ -4,16 +4,7 @@ import { NavigationBarProps, NavigationData } from "./NavigationBar.types";
 import "./NavigationBar.scss";
 import classNames from "classnames";
 
-const STYLES = {
-  DROPDOWN_LEVEL1: {
-    border: "1px solid black",
-  },
-  DROPDOWN_LEVEL2: {
-    border: "1px solid black",
-  },
-};
-
-const FOCUS_DELAY = 200;
+const FOCUS_DELAY = 120;
 type Dir = "LEFT" | "RIGHT" | "UP" | "DOWN";
 interface TransformedNavigationNode {
   menuOpen?: boolean;
@@ -24,6 +15,7 @@ interface TransformedNavigationNode {
   order: number;
   name: string;
   menuId?: number;
+  lv: number;
 }
 const NavigationBar = ({ data }: NavigationBarProps) => {
   const [nodes, setNodes] = useState<TransformedNavigationNode[]>([]);
@@ -48,13 +40,13 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
     };
 
     data.forEach((x, i) => {
-      const node = getNode(x, i);
+      const node = { ...getNode(x, i), lv: 1 };
       nodes.push(node);
       x.children?.forEach((x2, i2) => {
-        const node = { ...getNode(x2, i2), menuId: x.id };
+        const node = { ...getNode(x2, i2), menuId: x.id, lv: 2 };
         nodes.push(node);
         x2.children?.forEach((x3, i3) => {
-          const node = { ...getNode(x3, i3), menuId: x.id };
+          const node = { ...getNode(x3, i3), menuId: x.id, lv: 3 };
           nodes.push(node);
         });
       });
@@ -76,10 +68,10 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
     );
   };
 
-  const traverseTopLevelMenu = (id, dir: Dir) => {
+  const traverseTopLevelMenu = (menuId, dir: Dir) => {
     const menuNodes = nodes.filter((x) => x.parentId === null);
     const max = menuNodes.length - 1;
-    const ord = menuNodes.find((x) => x.id === id).order;
+    const ord = menuNodes.find((x) => x.id === menuId).order;
     const next = ord === max ? 0 : ord + 1;
     const prev = ord === 0 ? max : ord - 1;
 
@@ -173,10 +165,32 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
   };
 
   const handleLeftPress = (node: NavigationData) => {
-    // if has children has parent
-    // close the current dropdown
+    // if has children has parent close the current dropdown
     // focus on parent node
-    // else navigate to the previous nav item
+    const foundNode = nodes.find((n) => n.id === node.id);
+    console.log("handle left", foundNode);
+    const parentNode = nodes.find((n) => n.id === node.parentId);
+
+    if (foundNode.lv > 2) {
+      setNodes((nodes) =>
+        nodes.map((n) => {
+          if (n.id === node.parentId) {
+            return { ...n, menuOpen: false };
+          }
+          return n;
+        })
+      );
+
+      setTimeout(() => {
+        nodes.find((n) => n.id === node.parentId)?.ref?.current?.focus();
+      }, FOCUS_DELAY);
+    } else {
+      // else navigate to the previous TOPLEVEL nav item
+
+      console.log("moving to next menu item", foundNode);
+      if (!closeAll) setCloseAll(true);
+      traverseTopLevelMenu(foundNode.menuId, "LEFT");
+    }
   };
   const handleRightPress = (node: NavigationData) => {
     // if has children open the menu
@@ -193,11 +207,23 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
         nodes.find((n) => n.parentId === node.id)?.ref?.current?.focus();
       }, FOCUS_DELAY);
     } else {
-      // else navigate to the next nav item
+      // else navigate to the next TOPLEVEL nav item
       console.log("moving to next menu item", foundNode.menuId);
       if (!closeAll) setCloseAll(true);
       traverseTopLevelMenu(foundNode.menuId, "RIGHT");
     }
+  };
+
+  const closeAllAndFocusTopMenu = (node: NavigationData) => {
+    // node.parentId
+
+    setNodes((nodes) =>
+      nodes.map((x) => {
+        return { ...x, menuOpen: false };
+      })
+    );
+
+    nodes.find((n) => n.id === node.parentId).ref.current.focus();
   };
 
   return (
@@ -210,6 +236,7 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
       <ul id="menubar1" role="menubar" aria-label="Mythical University">
         {data.map((a, _ai) => {
           const n = nodes.find((n) => n.id === a.id);
+          console.log(n?.ref, "LOOOL", document.activeElement);
           return (
             <li role="none" className="dcui-nav__menu-item">
               <a
@@ -228,8 +255,10 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                   if (e.keyCode === 13) openMenu(a.id);
                 }}
                 role="menuitem"
-                aria-haspopup="true"
-                aria-expanded="false"
+                aria-haspopup={n?.hasMenu ? "true" : "false"}
+                aria-expanded={
+                  !n?.hasMenu ? null : n?.menuOpen ? "true" : "false"
+                }
                 href={a.linkHref}
                 tabIndex={0}
               >
@@ -245,7 +274,6 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                   })}
                   role="menu"
                   aria-label={a.linkName}
-                  style={STYLES.DROPDOWN_LEVEL1}
                 >
                   {a.children.map((b, _bi) => {
                     const n2 = nodes.find((n) => n.id === b.id);
@@ -256,8 +284,14 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                           id={b.id.toString()}
                           role="menuitem"
                           href={b.linkHref}
-                          aria-haspopup="true"
-                          aria-expanded="false"
+                          aria-haspopup={n2?.hasMenu ? "true" : "false"}
+                          aria-expanded={
+                            !n2?.hasMenu
+                              ? null
+                              : n2?.menuOpen
+                              ? "true"
+                              : "false"
+                          }
                           tabIndex={-1}
                           onKeyDown={(e) => {
                             e.preventDefault();
@@ -270,8 +304,20 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                               focusDownNode(b);
                             }
 
+                            //right
                             if (e.keyCode === 39) {
                               handleRightPress(b);
+                            }
+
+                            //left
+                            if (e.keyCode === 37) {
+                              handleLeftPress(b);
+                            }
+
+                            //escape
+
+                            if (e.keyCode === 27) {
+                              closeAllAndFocusTopMenu(b);
                             }
                           }}
                         >
@@ -289,7 +335,6 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                             })}
                             role="menu"
                             aria-label={b.linkName}
-                            style={STYLES.DROPDOWN_LEVEL2}
                           >
                             {b.children.map((c, _ci) => {
                               const n3 = nodes.find((n) => n.id === c.id);
@@ -310,16 +355,22 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                                         focusDownNode(c);
                                       }
 
+                                      //right
                                       if (e.keyCode === 39) {
                                         handleRightPress(c);
+                                      }
+
+                                      //left or escape
+                                      if (e.keyCode === 37 || e.keyCode == 27) {
+                                        handleLeftPress(c);
                                       }
                                     }}
                                     ref={n3?.ref}
                                     id={c.id.toString()}
                                     role="menuitem"
                                     href={c.linkHref}
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
+                                    aria-haspopup="false"
+                                    aria-expanded={null}
                                     tabIndex={-1}
                                   >
                                     {c.linkName}
