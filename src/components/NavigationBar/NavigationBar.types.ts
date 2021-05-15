@@ -4,7 +4,7 @@ export interface NavigationData {
   parentId: null | number;
   id: number;
   linkName: string;
-  linkHref: string;
+  linkHref?: string;
   children?: NavigationData[];
 }
 export interface NavigationBarProps {

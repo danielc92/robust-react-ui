@@ -259,7 +259,7 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                 aria-expanded={
                   !n?.hasMenu ? null : n?.menuOpen ? "true" : "false"
                 }
-                href={a.linkHref}
+                href={a.linkHref ? a.linkHref : "#"}
                 tabIndex={0}
               >
                 {a.linkName}
@@ -283,7 +283,7 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                           ref={n2?.ref}
                           id={b.id.toString()}
                           role="menuitem"
-                          href={b.linkHref}
+                          href={b.linkHref ? b.linkHref : "#"}
                           aria-haspopup={n2?.hasMenu ? "true" : "false"}
                           aria-expanded={
                             !n2?.hasMenu
@@ -368,7 +368,7 @@ const NavigationBar = ({ data }: NavigationBarProps) => {
                                     ref={n3?.ref}
                                     id={c.id.toString()}
                                     role="menuitem"
-                                    href={c.linkHref}
+                                    href={c.linkHref ? c.linkHref : "#"}
                                     aria-haspopup="false"
                                     aria-expanded={null}
                                     tabIndex={-1}
