@@ -227,8 +227,6 @@ const NavigationBar = ({
               <a
                 ref={n?.ref}
                 onKeyDown={(e) => {
-                  e.preventDefault();
-
                   //left
                   if (e.keyCode === 37) {
                     traverseTopLevelMenu(a.id, "LEFT");
