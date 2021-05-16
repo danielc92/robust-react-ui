@@ -1,4 +1,7 @@
 // Generated with util/create-component.js
 export interface AutoCompleteProps {
-    foo: string;
+  options: string[];
+  onSearchFunction: (searchTerm: string) => void;
+  labelText: string;
+  labelId: string;
 }
