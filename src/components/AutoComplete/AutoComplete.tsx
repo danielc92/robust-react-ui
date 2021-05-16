@@ -23,9 +23,9 @@ const AutoComplete = ({
       id="ex1-label"
       className="dcui-autocomplete__label"
     >
-      Choice 1 Fruit or Vegetable
+      {labelText}
     </label>
-    <div>
+    <div className="dcui-autocomplete__wrapper">
       <div
         role="combobox"
         aria-expanded="true"
@@ -39,21 +39,33 @@ const AutoComplete = ({
           aria-controls="ex1-listbox"
           id="ex1-input"
           aria-activedescendant=""
+          onChange={(e) => {
+            e.preventDefault();
+            onSearchFunction(e.target.value);
+          }}
         />
       </div>
       <ul
         aria-labelledby="ex1-label"
         role="listbox"
         id="ex1-listbox"
-        className="dcui-autocomplete__listbox"
+        className={classNames({
+          "dcui-autocomplete__listbox": true,
+          "dcui-autocomplete__listbox--show": options.length > 0,
+        })}
       >
-        <li
-          className="dcui-autocomplete__result"
-          role="option"
-          id="result-item-0"
-        >
-          Apple
-        </li>
+        {options.map((option, i) => {
+          const resultId = `result-item-${i + 1}`;
+          return (
+            <li
+              className="dcui-autocomplete__result"
+              role="option"
+              id={resultId}
+            >
+              {option}
+            </li>
+          );
+        })}
       </ul>
     </div>
   </div>
