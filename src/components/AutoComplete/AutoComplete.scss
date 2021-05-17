@@ -4,16 +4,17 @@
 
 .dcui-autocomplete {
   box-sizing: border-box;
-
+  margin-bottom: var(--global-space-under);
   &__listbox {
+    background: #f2f2f2;
+    display: none;
+    padding: 0;
+    position: absolute;
+    margin: 0;
     list-style: none;
     box-sizing: border-box;
     width: var(--input-default-width);
-    margin: 0;
-    padding: 0;
-    background: #f2f2f2;
-    position: absolute;
-    display: none;
+    z-index: 1;
 
     &--show {
       display: block;
@@ -24,6 +25,11 @@
     box-sizing: border-box;
     font-family: var(--font-family-primary);
     padding: 0.75rem 0.5rem;
+    &--selected {
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-weight: bold;
+    }
   }
 
   &__label {
