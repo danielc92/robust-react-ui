@@ -223,7 +223,11 @@ const NavigationBar = ({
         {data.map((a, _ai) => {
           const n = nodes.find((n) => n.id === a.id);
           return (
-            <li role="none" className="dcui-nav__menu-item">
+            <li
+              role="none"
+              className="dcui-nav__menu-item"
+              key={`menuitem${_ai}`}
+            >
               <a
                 ref={n?.ref}
                 onKeyDown={(e) => {
@@ -268,7 +272,11 @@ const NavigationBar = ({
                   {a.children.map((b, _bi) => {
                     const n2 = nodes.find((n) => n.id === b.id);
                     return (
-                      <li role="none" className="dcui-nav__dropdown-item">
+                      <li
+                        role="none"
+                        className="dcui-nav__dropdown-item"
+                        key={`dropitem${_bi}`}
+                      >
                         <a
                           ref={n2?.ref}
                           id={b.id.toString()}
@@ -341,6 +349,7 @@ const NavigationBar = ({
                                 <li
                                   role="none"
                                   className="dcui-nav__dropdown-item"
+                                  key={`dropitem2nd${_ci}`}
                                 >
                                   <a
                                     onKeyDown={(e) => {
