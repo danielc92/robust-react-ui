@@ -9,7 +9,9 @@ const AutoComplete = ({
   labelId,
   labelText,
   options,
-  onSearchFunction,
+  value,
+  onChangeFunction,
+  onSelectOptionFunction,
 }: AutoCompleteProps) => {
   const [refs, setRefs] = useState<
     { option: string; i: number; selected: boolean; id: string }[]
@@ -31,7 +33,7 @@ const AutoComplete = ({
     setOpen(false);
     const selected = refs.find((x) => x.selected);
     if (ref.current && selected) {
-      ref.current.value = selected.option;
+      onSelectOptionFunction(selected.option);
     }
   };
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -51,7 +53,7 @@ const AutoComplete = ({
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     setOpen(true);
-    onSearchFunction(event.target.value);
+    onChangeFunction(event.target.value);
   };
 
   const changePseudoFocus = (index: number) =>
@@ -126,7 +128,7 @@ const AutoComplete = ({
           <input
             data-testid="AutoCompleteInput"
             ref={ref}
-            value={ref?.current?.value}
+            value={value}
             type="text"
             aria-autocomplete="list"
             aria-controls="ex1-listbox"
