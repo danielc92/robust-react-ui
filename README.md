@@ -1,5 +1,7 @@
-![main](https://github.com/danielc92/dc-react-ui/actions/workflows/node.js.yml/badge.svg?branch=main)
-![develop](https://github.com/danielc92/dc-react-ui/actions/workflows/node.js.yml/badge.svg?branch=develop)
+![maintest](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg)
+![mainbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)
+![devtest](https://github.com/danielc92/dc-react-ui/actions/workflows/develop-test.yml/badge.svg)
+![devbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/develop-build.yml/badge.svg)
 
 # DANS REACT UI LIBRARY 🐲
 
