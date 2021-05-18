@@ -8,10 +8,12 @@ import AlertDialogue from "./components/AlertDialogue";
 import Form from "./components/Form";
 import Link from "./components/Link";
 import Image from "./components/Image";
+import AutoComplete from "./components/AutoComplete";
 
 import NavigationBar from "./components/NavigationBar";
 
 export {
+  AutoComplete,
   Button,
   NavigationBar,
   AlertDialogue,
