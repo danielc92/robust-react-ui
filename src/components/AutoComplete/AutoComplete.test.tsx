@@ -5,23 +5,56 @@ import { render } from "@testing-library/react";
 import AutoComplete from "./AutoComplete";
 import { AutoCompleteProps } from "./AutoComplete.types";
 
-describe("Test Component", () => {
+describe("Autocomplete Suite", () => {
   let props: AutoCompleteProps;
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      options: ["banana", "apple", "orange", "pear"],
+      labelId: "my-autocomplete",
+      labelText: "choose food",
+      onSearchFunction: () => console.log("."),
     };
   });
 
   const renderComponent = () => render(<AutoComplete {...props} />);
 
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
+  it("should render with base class", () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId("AutoComplete");
 
-    expect(component).toHaveTextContent("harvey was here");
+    expect(component).toHaveClass("dcui-autocomplete");
+  });
+
+  it("Label should render with correct text", () => {
+    const { getByTestId } = renderComponent();
+    const component = getByTestId("AutoCompleteLabel");
+    expect(component).toHaveTextContent("choose food");
+  });
+
+  it("Label should render with correct class", () => {
+    const { getByTestId } = renderComponent();
+    const component = getByTestId("AutoCompleteLabel");
+    expect(component).toHaveClass("dcui-autocomplete__label");
+  });
+
+  it("Input should render", () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("AutoCompleteInput");
+    expect(component.nodeName).toEqual("INPUT");
+  });
+
+  it("Listbox should render with correct class", () => {
+    const { getByTestId } = renderComponent();
+    const component = getByTestId("AutoCompleteListbox");
+    expect(component).toHaveClass("dcui-autocomplete__listbox");
+  });
+
+  it("Listbox should render with --showing class", () => {
+    const { getByTestId } = renderComponent();
+    const component = getByTestId("AutoCompleteListbox");
+    expect(component).toHaveClass("dcui-autocomplete__listbox--show");
   });
 });
