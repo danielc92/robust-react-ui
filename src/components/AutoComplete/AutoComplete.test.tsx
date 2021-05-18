@@ -48,13 +48,13 @@ describe("Autocomplete Suite", () => {
 
   it("Listbox should render with correct class", () => {
     const { getByTestId } = renderComponent();
-    const component = getByTestId("AutoCompleteListbox");
+    const component = getByTestId("AutoCompleteListBox");
     expect(component).toHaveClass("dcui-autocomplete__listbox");
   });
 
-  it("Listbox should render with --showing class", () => {
+  it("Listbox should render with --show modifier class", () => {
     const { getByTestId } = renderComponent();
-    const component = getByTestId("AutoCompleteListbox");
+    const component = getByTestId("AutoCompleteListBox");
     expect(component).toHaveClass("dcui-autocomplete__listbox--show");
   });
 });
