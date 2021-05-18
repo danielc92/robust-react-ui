@@ -13,7 +13,9 @@ describe("Autocomplete Suite", () => {
       options: ["banana", "apple", "orange", "pear"],
       labelId: "my-autocomplete",
       labelText: "choose food",
-      onSearchFunction: () => console.log("."),
+      value: "term",
+      onSelectOptionFunction: () => console.log("."),
+      onChangeFunction: () => console.log("."),
     };
   });
 
