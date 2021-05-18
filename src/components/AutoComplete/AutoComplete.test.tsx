@@ -21,7 +21,7 @@ describe("Autocomplete Suite", () => {
 
   const renderComponent = () => render(<AutoComplete {...props} />);
 
-  it("should render with base class", () => {
+  it("should render with base class.", () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId("AutoComplete");
