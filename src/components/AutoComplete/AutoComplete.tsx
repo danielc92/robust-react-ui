@@ -108,8 +108,9 @@ const AutoComplete = ({
       id="ex1"
     >
       <label
+        data-testid="AutoCompleteLabel"
         htmlFor="ex1-input"
-        id="ex1-label"
+        id={labelId}
         className="dcui-autocomplete__label"
       >
         {labelText}
@@ -123,6 +124,7 @@ const AutoComplete = ({
           id="ex1-combobox"
         >
           <input
+            data-testid="AutoCompleteInput"
             ref={ref}
             value={ref?.current?.value}
             type="text"
@@ -135,20 +137,23 @@ const AutoComplete = ({
           />
         </div>
         <ul
-          aria-labelledby="ex1-label"
+          aria-labelledby={labelId}
           aria-activedescendant={currentFocus ? currentFocus.id : null}
           role="listbox"
           id="ex1-listbox"
+          data-
           className={classNames({
             "dcui-autocomplete__listbox": true,
             "dcui-autocomplete__listbox--show": options.length > 0,
           })}
+          data-testid="AutoCompleteListBox"
         >
           {open &&
             refs.map((item, i) => {
               const resultId = `result-item-${i + 1}`;
               return (
                 <li
+                  data-testid="AutoCompleteResult"
                   onMouseEnter={() => changePseudoFocus(i)}
                   onClick={() => selectAndCloseMenu()}
                   key={resultId}
