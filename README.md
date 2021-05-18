@@ -1,3 +1,6 @@
+![main](https://github.com/danielc92/dc-react-ui/actions/workflows/node.js.yml/badge.svg?branch=main)
+![develop](https://github.com/danielc92/dc-react-ui/actions/workflows/node.js.yml/badge.svg?branch=develop)
+
 # DANS REACT UI LIBRARY 🐲
 
 # Architecture
