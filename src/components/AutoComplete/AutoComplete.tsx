@@ -14,7 +14,7 @@ const AutoComplete = ({
   onSelectOptionFunction,
   onClearOptionsFunction,
 }: AutoCompleteProps) => {
-  const [refs, setRefs] = useState<
+  const [moddedOptions, setModdedOptions] = useState<
     { option: string; i: number; selected: boolean; id: string }[]
   >([]);
   const [open, setOpen] = useState(false);
@@ -27,12 +27,12 @@ const AutoComplete = ({
       selected: false,
       id: "result_" + i,
     }));
-    setRefs(refList);
+    setModdedOptions(refList);
   }, [options]);
 
   const selectAndCloseMenu = () => {
     setOpen(false);
-    const selected = refs.find((x) => x.selected);
+    const selected = moddedOptions.find((x) => x.selected);
     if (ref.current && selected) {
       onSelectOptionFunction(selected.option);
     }
@@ -53,7 +53,7 @@ const AutoComplete = ({
 
     // end
     if (event.keyCode === 35) {
-      const length = refs.length;
+      const length = moddedOptions.length;
       if (length) {
         changePseudoFocus(length - 1);
       }
@@ -61,7 +61,7 @@ const AutoComplete = ({
 
     // home
     if (event.keyCode === 36) {
-      const length = refs.length;
+      const length = moddedOptions.length;
       if (length) changePseudoFocus(0);
     }
 
@@ -78,8 +78,8 @@ const AutoComplete = ({
   };
 
   const changePseudoFocus = (index: number) =>
-    setRefs(
-      refs.map((x) => {
+    setModdedOptions(
+      moddedOptions.map((x) => {
         if (x.i === index) {
           return { ...x, selected: true };
         }
@@ -88,9 +88,9 @@ const AutoComplete = ({
     );
 
   const switchFocus = (dir: "UP" | "DOWN") => {
-    const length = refs.length;
+    const length = moddedOptions.length;
     const max = length - 1;
-    const anySelected = refs.find((x) => x.selected);
+    const anySelected = moddedOptions.find((x) => x.selected);
 
     // If there are more than 0 items, navigate
     if (length > 0) {
@@ -121,7 +121,7 @@ const AutoComplete = ({
     }
   };
 
-  const currentFocus = refs.find((x) => x.selected);
+  const currentFocus = moddedOptions.find((x) => x.selected);
   return (
     <div
       data-testid="AutoComplete"
@@ -170,7 +170,7 @@ const AutoComplete = ({
           data-testid="AutoCompleteListBox"
         >
           {open &&
-            refs.map((item, i) => {
+            moddedOptions.map((item, i) => {
               return (
                 <li
                   data-testid="AutoCompleteResult"
