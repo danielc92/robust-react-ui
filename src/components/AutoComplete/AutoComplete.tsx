@@ -12,6 +12,7 @@ const AutoComplete = ({
   value,
   onChangeFunction,
   onSelectOptionFunction,
+  onClearOptionsFunction,
 }: AutoCompleteProps) => {
   const [refs, setRefs] = useState<
     { option: string; i: number; selected: boolean; id: string }[]
@@ -48,6 +49,25 @@ const AutoComplete = ({
 
     if (event.keyCode === 13) {
       selectAndCloseMenu();
+    }
+
+    // end
+    if (event.keyCode === 35) {
+      const length = refs.length;
+      if (length) {
+        changePseudoFocus(length - 1);
+      }
+    }
+
+    // home
+    if (event.keyCode === 36) {
+      const length = refs.length;
+      if (length) changePseudoFocus(0);
+    }
+
+    // escape
+    if (event.keyCode === 27) {
+      onClearOptionsFunction();
     }
   };
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
