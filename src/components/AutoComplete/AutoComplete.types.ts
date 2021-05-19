@@ -6,4 +6,5 @@ export interface AutoCompleteProps {
   labelId: string;
   onChangeFunction: (value: string) => void;
   onSelectOptionFunction: (value: string) => void;
+  onClearOptionsFunction: () => void;
 }
