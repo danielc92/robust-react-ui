@@ -68,6 +68,7 @@ const AutoComplete = ({
     // escape
     if (event.keyCode === 27) {
       onClearOptionsFunction();
+      setOpen(false);
     }
   };
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -153,17 +154,15 @@ const AutoComplete = ({
             aria-autocomplete="list"
             aria-controls="ex1-listbox"
             id="ex1-input"
-            aria-activedescendant=""
+            aria-activedescendant={currentFocus ? currentFocus.id : null}
             onChange={handleOnChange}
             onKeyDown={handleKeyDown}
           />
         </div>
         <ul
           aria-labelledby={labelId}
-          aria-activedescendant={currentFocus ? currentFocus.id : null}
           role="listbox"
           id="ex1-listbox"
-          data-
           className={classNames({
             "dcui-autocomplete__listbox": true,
             "dcui-autocomplete__listbox--show": options.length > 0,
@@ -172,20 +171,19 @@ const AutoComplete = ({
         >
           {open &&
             refs.map((item, i) => {
-              const resultId = `result-item-${i + 1}`;
               return (
                 <li
                   data-testid="AutoCompleteResult"
                   onMouseEnter={() => changePseudoFocus(i)}
                   onClick={() => selectAndCloseMenu()}
-                  key={resultId}
+                  key={item.id}
                   className={classNames({
                     "dcui-autocomplete__result": true,
                     "dcui-autocomplete__result--selected":
                       item.id === currentFocus?.id,
                   })}
                   role="option"
-                  id={resultId}
+                  id={item.id}
                   aria-selected={item.id === currentFocus?.id}
                 >
                   {item.option}
