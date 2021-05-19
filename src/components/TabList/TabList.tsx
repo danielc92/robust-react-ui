@@ -118,6 +118,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
       >
         {tabs.map((t, index) => (
           <button
+            data-testid="TabListButton"
             tabIndex={activeTab?.tabName !== t.tabId ? -1 : null}
             ref={tabRefs[index]}
             key={t.tabId}
@@ -145,6 +146,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
       </div>
       {tabs.map((x, i) => (
         <div
+          data-testid="TabListPanel"
           ref={tabPanelRefs[i]}
           key={x.tabId}
           className={classNames({
