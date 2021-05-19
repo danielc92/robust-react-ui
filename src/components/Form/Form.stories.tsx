@@ -7,7 +7,7 @@ export default {
 };
 
 export const FormLayout = () => (
-  <Form handleOnSubmit={() => {}}>
+  <Form onSubmitFunction={() => {}}>
     <Form.FieldSet>
       <Form.Legend id="contact-info" title="Contact Info"></Form.Legend>
       <Form.Label htmlFor="input" title="Example"></Form.Label>

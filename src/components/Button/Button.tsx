@@ -8,7 +8,7 @@ import classNames from "classnames";
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { children, id, ariaControls, size, variant, tabIndex, handleClick },
+    { children, id, ariaControls, size, variant, tabIndex, onClickFunction },
     ref
   ) => (
     <button
@@ -17,7 +17,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       id={id ? id : null}
       data-testid="Button"
       onClick={(e) => {
-        handleClick ? handleClick(e) : {};
+        onClickFunction ? onClickFunction(e) : {};
       }}
       ref={ref}
       className={classNames({

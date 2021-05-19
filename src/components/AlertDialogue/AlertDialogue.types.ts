@@ -5,6 +5,6 @@ export interface AlertDialogueProps {
   bodyText: string;
   confirmButtonText: string;
   cancelButtonText: string;
-  handleCloseAction: () => void;
-  handleConfirmAction: () => void;
+  onCloseActionFunction: () => void;
+  onConfirmActionFunction: () => void;
 }

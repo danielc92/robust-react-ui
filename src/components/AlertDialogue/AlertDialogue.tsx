@@ -14,8 +14,8 @@ const AlertDialogue = ({
   bodyText,
   confirmButtonText,
   cancelButtonText,
-  handleCloseAction,
-  handleConfirmAction,
+  onCloseActionFunction,
+  onConfirmActionFunction,
 }: AlertDialogueProps) => {
   const ref = React.createRef<HTMLButtonElement>();
 
@@ -29,7 +29,7 @@ const AlertDialogue = ({
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.key === "Escape") {
-      handleCloseAction();
+      onCloseActionFunction();
     }
   };
 
@@ -58,12 +58,16 @@ const AlertDialogue = ({
           <Typography.Paragraph>{bodyText}</Typography.Paragraph>
         </div>
         <div className="dcui-modal__actions">
-          <Button variant="danger" ref={ref} handleClick={handleCloseAction}>
+          <Button
+            variant="danger"
+            ref={ref}
+            onClickFunction={onCloseActionFunction}
+          >
             {cancelButtonText}
           </Button>
           <Button
             variant="success"
-            handleClick={handleConfirmAction}
+            onClickFunction={onConfirmActionFunction}
             // aria-controls="notes"
           >
             {confirmButtonText}

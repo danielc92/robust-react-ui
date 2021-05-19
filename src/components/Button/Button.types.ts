@@ -8,5 +8,7 @@ export interface ButtonProps {
   id?: string;
   tabIndex?: number;
   ariaControls?: string;
-  handleClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClickFunction?: (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void;
 }

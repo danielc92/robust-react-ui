@@ -19,7 +19,7 @@ interface TransformedNavigationNode {
 }
 const NavigationBar = ({
   data,
-  onEnterLinkHandler,
+  onEnterLinkFunction,
   ariaLabel,
   id,
 }: NavigationBarProps) => {
@@ -189,9 +189,9 @@ const NavigationBar = ({
     }
   };
 
-  const defaultLinkHandler = (href: string) => {
-    if (onEnterLinkHandler) {
-      onEnterLinkHandler(href);
+  const handleLinkDefaultAction = (href: string) => {
+    if (onEnterLinkFunction) {
+      onEnterLinkFunction(href);
       return;
     }
     if (typeof window !== "undefined") {
@@ -244,7 +244,7 @@ const NavigationBar = ({
                     if (n.hasMenu) {
                       openMenu(a.id);
                     } else {
-                      defaultLinkHandler(a.linkHref);
+                      handleLinkDefaultAction(a.linkHref);
                     }
                   }
                 }}
@@ -323,7 +323,7 @@ const NavigationBar = ({
                               if (n2.hasMenu) {
                                 handleRightPress(b);
                               } else {
-                                defaultLinkHandler(b.linkHref);
+                                handleLinkDefaultAction(b.linkHref);
                               }
                             }
                           }}
@@ -378,7 +378,7 @@ const NavigationBar = ({
                                         if (n3.hasMenu) {
                                           handleRightPress(c);
                                         } else {
-                                          defaultLinkHandler(c.linkHref);
+                                          handleLinkDefaultAction(c.linkHref);
                                         }
                                       }
                                     }}
