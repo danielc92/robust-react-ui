@@ -1,5 +1,5 @@
 // Generated with util/create-component.js
-import React, { ReactNode } from "react";
+import React from "react";
 import {
   HeadingLevel,
   HeadingProps,
@@ -27,7 +27,7 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
     return (
       <h1
         data-testid="Heading"
-        id={id ? id : null}
+        id={id || null}
         className={getHeaderClass(level, jumbo)}
       >
         {children}
@@ -38,7 +38,7 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
       <h2
         data-testid="Heading"
         className={getHeaderClass(level, jumbo)}
-        id={id ? id : null}
+        id={id || null}
       >
         {children}
       </h2>
@@ -47,7 +47,7 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
     return (
       <h3
         data-testid="Heading"
-        id={id ? id : null}
+        id={id || null}
         className={getHeaderClass(level, jumbo)}
       >
         {children}
@@ -57,7 +57,7 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
     return (
       <h4
         data-testid="Heading"
-        id={id ? id : null}
+        id={id || null}
         className={getHeaderClass(level, jumbo)}
       >
         {children}
@@ -67,7 +67,7 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
     return (
       <h5
         data-testid="Heading"
-        id={id ? id : null}
+        id={id || null}
         className={getHeaderClass(level, jumbo)}
       >
         {children}
@@ -77,7 +77,7 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
     return (
       <h6
         data-testid="Heading"
-        id={id ? id : null}
+        id={id || null}
         className={getHeaderClass(level, jumbo)}
       >
         {children}
@@ -93,7 +93,7 @@ const Paragraph = ({ children, id, size }: ParagraphProps) => (
       "dcui-para--medium": size === "medium" || !size,
       "dcui-para--large": size === "large",
     })}
-    id={id ? id : null}
+    id={id || null}
     data-testid="Paragraph"
   >
     {children}

@@ -47,7 +47,7 @@ const Complementary = ({ children, ariaLabelledBy }: ComplementaryProps) => (
   <aside
     data-testid="Complementary"
     className="dcui-landmark__complementary"
-    aria-labelledby={ariaLabelledBy ? ariaLabelledBy : ""}
+    aria-labelledby={ariaLabelledBy || ""}
   >
     {children}
   </aside>

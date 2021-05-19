@@ -9,10 +9,11 @@ import classNames from "classnames";
 import { KEY_CODES } from "../../constants";
 
 const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
-  const [activeTab, setActiveTab] = useState<{
-    tabName: string;
-    tabIndex: number;
-  } | null>(null);
+  const [activeTab, setActiveTab] =
+    useState<{
+      tabName: string;
+      tabIndex: number;
+    } | null>(null);
 
   const arrLength = tabs.length;
 
@@ -113,7 +114,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
     >
       <div
         role="tablist"
-        aria-label={ariaLabel ? ariaLabel : null}
+        aria-label={ariaLabel || null}
         className={classNames({ "dcui-tablist__button-group": true })}
       >
         {tabs.map((t, index) => (

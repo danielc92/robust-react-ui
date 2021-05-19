@@ -8,7 +8,7 @@ import classNames from "classnames";
 
 const Form = ({ children, onSubmitFunction, ariaDescribedBy }: FormProps) => (
   <form
-    aria-describedby={ariaDescribedBy ? ariaDescribedBy : null}
+    aria-describedby={ariaDescribedBy || null}
     data-testid="Form"
     className="dcui-form"
     onSubmit={(event) => {
@@ -43,11 +43,7 @@ interface FormLabelProps {
   id?: string;
 }
 const Label = ({ title, id, htmlFor }: FormLabelProps) => (
-  <label
-    className="dcui-form__label"
-    htmlFor={htmlFor ? htmlFor : null}
-    id={id ? id : null}
-  >
+  <label className="dcui-form__label" htmlFor={htmlFor || null} id={id || null}>
     {title}
   </label>
 );
@@ -87,12 +83,12 @@ const Input = ({
         "dcui-form__input--disabled": disabled,
         "dcui-form__input--o": disabled, // override class
       })}
-      type={type ? type : "text"}
+      type={type || "text"}
       placeholder={placeholder}
       id={id}
       value={value}
       onChange={handleOnChange}
-      onBlur={onBlurFunction ? onBlurFunction : () => {}}
+      onBlur={onBlurFunction || (() => {})}
     />
     <p
       className={classNames({
@@ -105,6 +101,11 @@ const Input = ({
   </div>
 );
 
+export interface CheckboxOptionProps {
+  displayValue: string;
+  keyValue: string;
+  checked: boolean;
+}
 export interface FormCheckboxGroupProps {
   id: string;
   values: CheckboxOptionProps[];
@@ -114,7 +115,6 @@ export interface FormCheckboxGroupProps {
 
 const CheckboxGroup = ({
   id,
-
   values,
   ariaLabelledBy,
   onSelectFunction,
@@ -165,12 +165,6 @@ interface FormSelectOptionProps {
   keyValue: string;
 }
 
-export interface CheckboxOptionProps {
-  displayValue: string;
-  keyValue: string;
-  checked: boolean;
-}
-
 interface FormSelectProps {
   id: string;
   multiple?: boolean;
@@ -193,7 +187,7 @@ const Select = ({
   <select
     value={selectedValue}
     id={id}
-    multiple={multiple ? multiple : null}
+    multiple={multiple || null}
     className={classNames({
       "dcui-form__select": true,
       "dcui-form__select--disabled": disabled,
@@ -201,7 +195,7 @@ const Select = ({
     })}
     disabled={disabled}
     onChange={onChangeFunction}
-    onBlur={onBlurFunction ? onBlurFunction : () => {}}
+    onBlur={onBlurFunction || (() => {})}
   >
     {values.map((v) => (
       <option key={v.keyValue} value={v.keyValue}>
@@ -246,12 +240,12 @@ const TextArea = ({
         "dcui-form__textarea--disabled": disabled,
         "dcui-form__textarea--o": disabled, // override class
       })}
-      rows={rows ? rows : 8}
+      rows={rows || 8}
       value={value}
       id={id}
       placeholder={placeholder}
       onChange={onChangeFunction}
-      onBlur={onBlurFunction ? onBlurFunction : () => {}}
+      onBlur={onBlurFunction || (() => {})}
     />
     <p
       className={classNames({
@@ -273,7 +267,7 @@ const Submit = ({ value, id, size, variant }: FormSubmitProps) => (
   <input
     type="submit"
     value={value}
-    id={id ? id : null}
+    id={id || null}
     data-testid="Button"
     className={classNames({
       "dcui-form__submit": true,

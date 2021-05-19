@@ -3,7 +3,7 @@ import React from "react";
 import Link from "./Link";
 
 export default {
-    title: "Link"
+  title: "Link",
 };
 
 export const WithBar = () => <Link foo="bar" />;

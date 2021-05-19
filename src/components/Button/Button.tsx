@@ -12,9 +12,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => (
     <button
-      tabIndex={tabIndex ? tabIndex : null}
-      aria-controls={ariaControls ? ariaControls : null}
-      id={id ? id : null}
+      tabIndex={tabIndex || null}
+      aria-controls={ariaControls || null}
+      id={id || null}
       data-testid="Button"
       onClick={(e) => {
         onClickFunction ? onClickFunction(e) : {};

@@ -26,10 +26,10 @@ const NavigationBar = ({
   const [nodes, setNodes] = useState<TransformedNavigationNode[]>([]);
   const [closeAll, setCloseAll] = useState(false);
   useEffect(() => {
-    let nodes = [];
+    const nodes = [];
 
     const getNode = (x: NavigationData, i: number) => {
-      let o: Partial<TransformedNavigationNode> = {};
+      const o: Partial<TransformedNavigationNode> = {};
       if (x.children && x.children.length && x.children.length > 0) {
         o.menuOpen = false;
         o.hasMenu = true;
@@ -196,7 +196,6 @@ const NavigationBar = ({
     }
     if (typeof window !== "undefined") {
       window.location.href = href;
-      return;
     }
   };
 
@@ -219,7 +218,7 @@ const NavigationBar = ({
       aria-label={ariaLabel}
     >
       {/* Root nav bar */}
-      <ul id={id ? id : null} role="menubar" aria-label={ariaLabel}>
+      <ul id={id || null} role="menubar" aria-label={ariaLabel}>
         {data.map((a, _ai) => {
           const n = nodes.find((n) => n.id === a.id);
           return (
@@ -231,15 +230,15 @@ const NavigationBar = ({
               <a
                 ref={n?.ref}
                 onKeyDown={(e) => {
-                  //left
+                  // left
                   if (e.keyCode === 37) {
                     traverseTopLevelMenu(a.id, "LEFT");
                   }
-                  //right
+                  // right
                   if (e.keyCode === 39) {
                     traverseTopLevelMenu(a.id, "RIGHT");
                   }
-                  //enter
+                  // enter
                   if (e.keyCode === 13) {
                     if (n.hasMenu) {
                       openMenu(a.id);
@@ -258,7 +257,7 @@ const NavigationBar = ({
               >
                 {a.linkName}
               </a>
-              {/* 1st dropdown level*/}
+              {/* 1st dropdown level */}
               {a.children && (
                 <ul
                   className={classNames({
@@ -302,23 +301,23 @@ const NavigationBar = ({
                               focusDownNode(b);
                             }
 
-                            //right
+                            // right
                             if (e.keyCode === 39) {
                               handleRightPress(b);
                             }
 
-                            //left
+                            // left
                             if (e.keyCode === 37) {
                               handleLeftPress(b);
                             }
 
-                            //escape
+                            // escape
 
                             if (e.keyCode === 27) {
                               closeAllAndFocusTopMenu(b);
                             }
 
-                            //enter
+                            // enter
                             if (e.keyCode === 13) {
                               if (n2.hasMenu) {
                                 handleRightPress(b);
@@ -330,7 +329,7 @@ const NavigationBar = ({
                         >
                           {b.linkName}
                         </a>
-                        {/* 2nd dropdown level*/}
+                        {/* 2nd dropdown level */}
                         {b.children && (
                           <ul
                             className={classNames({
@@ -363,17 +362,17 @@ const NavigationBar = ({
                                         focusDownNode(c);
                                       }
 
-                                      //right
+                                      // right
                                       if (e.keyCode === 39) {
                                         handleRightPress(c);
                                       }
 
-                                      //left or escape
+                                      // left or escape
                                       if (e.keyCode === 37 || e.keyCode == 27) {
                                         handleLeftPress(c);
                                       }
 
-                                      //enter
+                                      // enter
                                       if (e.keyCode === 13) {
                                         if (n3.hasMenu) {
                                           handleRightPress(c);
