@@ -25,6 +25,7 @@
   }
 
   &__button {
+    white-space: nowrap;
     background: var(--tab-background-color);
     border: none;
     font-size: 1rem;
