@@ -39,9 +39,13 @@ This command will create a new folder with the component name and;
 
 After running the above command, for the build to pass, the component must also be import/exported from `src/index.ts` and added to the `input` array in `rollup.config.js`
 
+## Typescript
+
+All components will have defined types/interfaces, through Typescript, this will allow users to figure out how to use components more efficiently. Typing components will provide automatic documentation at the very least. React is the most mature and relied upon front end library to date, and has great integration with Typescript.
+
 ## Storybook
 
-Storybook can be used as an environment to view components in insolation, without importing them into a web app. It also hosts a bunch of useful addons, that can be used to do things such as test accessibility, view component states and more.
+Each component to have its own story, or set of stories in Storybook. This will allow users to get a visual representation of each component, as well as being able to interact with props, without the need for coding upfront. Additionally, Storybook addons such as **a11y-addon** can be used to apply a level of automated accessibility testing.
 
 ### Commands
 
