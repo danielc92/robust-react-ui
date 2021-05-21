@@ -17,6 +17,11 @@ export const ButtonMediumDanger = () => (
 );
 export const ButtonMediumSuccess = () => (
   <Button size="medium" variant="success">
-    Learn more
+    Success Medium
+  </Button>
+);
+export const ButtonMediumSecondary = () => (
+  <Button size="medium" variant="secondary">
+    Secondary Medium
   </Button>
 );

@@ -28,6 +28,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         "dcui-button--primary": variant === "primary" || !variant,
         "dcui-button--danger": variant === "danger",
         "dcui-button--success": variant === "success",
+        "dcui-button--secondary": variant === "secondary",
       })}
     >
       {children}

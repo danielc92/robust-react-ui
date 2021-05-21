@@ -3,7 +3,7 @@ import React from "react";
 // Generated with util/create-component.js
 export interface ButtonProps {
   size?: "small" | "medium" | "large";
-  variant?: "primary" | "danger" | "success";
+  variant?: "primary" | "danger" | "success" | "secondary";
   children: React.ReactNode;
   id?: string;
   tabIndex?: number;
