@@ -1,11 +1,16 @@
 // Generated with util/create-component.js
 import React from "react";
 import Link from "./Link";
+import { LinkProps } from "./Link.types";
 
 export default {
   title: "Link",
 };
 
-export const WithBar = () => <Link foo="bar" />;
+const props: LinkProps = {
+  children: "learn more about",
+  href: "https://github.com/danielc92/dc-react-ui",
+  ariaLabel: "daniels github repo",
+};
 
-export const WithBaz = () => <Link foo="baz" />;
+export const Basic = () => <Link {...props} />;
