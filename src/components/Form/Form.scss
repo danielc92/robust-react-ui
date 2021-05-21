@@ -16,12 +16,12 @@
   //legend
   --legend-font-weight: bold;
   // fieldset
-  --fieldset-font-size: var(--font-size-medium);
+  --fieldset-font-size: var(--font-size-md);
   --fieldset-border: 1px solid #f2f2f2;
   --fieldset-font-family: var(--font-family-primary);
   --fieldset-color: var(--color-charcoal);
   // label
-  --label-font-size: var(--font-size-small);
+  --label-font-size: var(--font-size-sm);
   --label-font-color: var(--color-charcoal);
   --label-font-family: var(--font-family-primary);
   --label-font-weight: bold;
@@ -97,7 +97,7 @@
   &__input-error {
     color: var(--color-danger);
     font-family: var(--input-font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     margin: 0;
 
     &--hidden {
@@ -177,7 +177,7 @@
   &__textarea-error {
     color: var(--color-danger);
     font-family: var(--input-font-family);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     margin: 0;
 
     &--hidden {
@@ -241,20 +241,17 @@
     cursor: pointer;
 
     &--small {
-      padding:
-        var(--submit-button-padding-y-sm)
+      padding: var(--submit-button-padding-y-sm)
         var(--submit-button-padding-x-sm);
     }
 
     &--medium {
-      padding:
-        var(--submit-button-padding-y-md)
+      padding: var(--submit-button-padding-y-md)
         var(--submit-button-padding-x-md);
     }
 
     &--large {
-      padding:
-        var(--submit-button-padding-y-lg)
+      padding: var(--submit-button-padding-y-lg)
         var(--submit-button-padding-x-lg);
     }
 
@@ -357,7 +354,7 @@
   &__checkbox {
     color: var(--color-charcoal);
     font-family: var(--font-family-primary);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
     font-weight: normal;
   }
 }
