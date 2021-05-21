@@ -47,3 +47,4 @@ If you want to contribute, feel free to send me a message.
 - [Index of ARIA Design Pattern Examples](https://www.w3.org/TR/wai-aria-practices/examples/)
 - [ARIA Landmarks](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
 - The base repo for this project was forked [from here](https://blog.harveydelaney.com/creating-your-own-react-component-library/).
+- [Top 50 Google Font Pairings [Handpicked by Pro Designers]](https://www.pagecloud.com/blog/best-google-fonts-pairings)
