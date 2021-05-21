@@ -39,6 +39,10 @@
     font-size: var(--paragraph-font-size-lg);
     line-height: var(--paragraph-line-height-lg);
   }
+
+  &--bolded {
+    font-weight: bold;
+  }
 }
 
 .dcui-header {

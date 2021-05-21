@@ -85,13 +85,14 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
     );
 };
 
-const Paragraph = ({ children, id, size }: ParagraphProps) => (
+const Paragraph = ({ children, id, size, bolded }: ParagraphProps) => (
   <p
     className={classNames({
       "dcui-para": true,
       "dcui-para--small": size === "small",
       "dcui-para--medium": size === "medium" || !size,
       "dcui-para--large": size === "large",
+      "dcui-para--bolded": bolded,
     })}
     id={id || null}
     data-testid="Paragraph"
