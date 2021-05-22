@@ -6,22 +6,54 @@ export default {
   title: "Button",
 };
 
-export const ButtonSmall = () => <Button size="small">Learn more</Button>;
-export const ButtonMedium = () => <Button size="medium">Learn more</Button>;
-export const ButtonLarge = () => <Button size="large">Learn more</Button>;
+export const Small = () => <Button size="small">Learn more</Button>;
+export const Medium = () => <Button size="medium">Learn more</Button>;
+export const Large = () => <Button size="large">Learn more</Button>;
 
-export const ButtonMediumDanger = () => (
+export const DangerSmall = () => (
+  <Button size="small" variant="danger">
+    Learn more
+  </Button>
+);
+export const DangerMedium = () => (
   <Button size="medium" variant="danger">
     Learn more
   </Button>
 );
-export const ButtonMediumSuccess = () => (
-  <Button size="medium" variant="success">
-    Success Medium
+export const DangerLarge = () => (
+  <Button size="large" variant="danger">
+    Learn more
   </Button>
 );
-export const ButtonMediumSecondary = () => (
+
+export const SuccessSmall = () => (
+  <Button size="small" variant="success">
+    Learn more
+  </Button>
+);
+export const SuccessMedium = () => (
+  <Button size="medium" variant="success">
+    Learn more
+  </Button>
+);
+export const SuccessLarge = () => (
+  <Button size="large" variant="success">
+    Learn more
+  </Button>
+);
+
+export const SecondarySmall = () => (
+  <Button size="small" variant="secondary">
+    Learn more
+  </Button>
+);
+export const SecondaryMedium = () => (
   <Button size="medium" variant="secondary">
-    Secondary Medium
+    Learn more
+  </Button>
+);
+export const SecondaryLarge = () => (
+  <Button size="large" variant="secondary">
+    Learn more
   </Button>
 );
