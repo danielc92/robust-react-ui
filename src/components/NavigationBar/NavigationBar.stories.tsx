@@ -56,6 +56,24 @@ const navData = [
             linkName: "Lemon",
             linkHref: sampleLink,
           },
+          {
+            id: 6548,
+            parentId: 5,
+            linkName: "Mango",
+            linkHref: sampleLink,
+          },
+          {
+            id: 289654,
+            parentId: 5,
+            linkName: "Lime",
+            linkHref: sampleLink,
+          },
+          {
+            id: 2544,
+            parentId: 5,
+            linkName: "Grape",
+            linkHref: sampleLink,
+          },
         ],
       },
 
