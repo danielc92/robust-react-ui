@@ -22,11 +22,11 @@ const Form = ({ children, onSubmitFunction, ariaDescribedBy }: FormProps) => (
 
 interface FormLegendProps {
   id: string;
-  title: string;
+  children: ReactNode;
 }
-const Legend = ({ id, title }: FormLegendProps) => (
+const Legend = ({ id, children }: FormLegendProps) => (
   <legend className="dcui-form__legend" id={id}>
-    {title}
+    {children}
   </legend>
 );
 
@@ -38,13 +38,13 @@ const FieldSet = ({ children }: FormFieldSetProps) => (
 );
 
 interface FormLabelProps {
-  title: string;
+  children: ReactNode;
   htmlFor?: string;
   id?: string;
 }
-const Label = ({ title, id, htmlFor }: FormLabelProps) => (
+const Label = ({ children, id, htmlFor }: FormLabelProps) => (
   <label className="dcui-form__label" htmlFor={htmlFor || null} id={id || null}>
-    {title}
+    {children}
   </label>
 );
 
