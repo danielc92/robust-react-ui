@@ -59,14 +59,13 @@ const AlertDialogue = ({
         </div>
         <div className="dcui-modal__actions">
           <Button
-            variant="danger"
+            variant="secondary"
             ref={ref}
             onClickFunction={onCloseActionFunction}
           >
             {cancelButtonText}
           </Button>
           <Button
-            variant="success"
             onClickFunction={onConfirmActionFunction}
             // aria-controls="notes"
           >
