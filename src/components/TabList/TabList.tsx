@@ -8,7 +8,7 @@ import "./TabList.scss";
 import classNames from "classnames";
 import { KEY_CODES } from "../../constants";
 
-const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
+const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
   const [activeTab, setActiveTab] =
     useState<{
       tabName: string;
@@ -110,6 +110,10 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
       className={classNames({
         "dcui-tablist": true,
         "dcui-tablist--full-width": fullWidth,
+        "dcui-tablist--primary": variant === "primary" || !variant,
+        "dcui-tablist--danger": variant === "danger",
+        "dcui-tablist--success": variant === "success",
+        "dcui-tablist--secondary": variant === "secondary",
       })}
     >
       <div

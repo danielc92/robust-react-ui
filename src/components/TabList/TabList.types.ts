@@ -10,6 +10,7 @@ export interface TabListTab {
 }
 export interface TabListProps {
   ariaLabel?: string;
+  variant?: "primary" | "danger" | "success" | "secondary";
   tabs: Array<TabListTab>;
   fullWidth?: boolean;
 }
