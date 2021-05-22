@@ -9,25 +9,25 @@ export default {
 export const FormLayout = () => (
   <Form onSubmitFunction={() => {}}>
     <Form.FieldSet>
-      <Form.Legend id="contact-info" title="Contact Info"></Form.Legend>
-      <Form.Label htmlFor="input" title="Example"></Form.Label>
+      <Form.Legend id="contact-info">Contact Info</Form.Legend>
+      <Form.Label htmlFor="input">Password label</Form.Label>
       <Form.Input
-        id="input"
+        id="password_1"
         value="jimmy123"
         handleOnChange={() => {}}
         placeholder="Password"
         type="password"
       />
-      <Form.Label htmlFor="input" title="Example"></Form.Label>
+      <Form.Label htmlFor="input">First Name</Form.Label>
       <Form.Input
-        id="input"
+        id="first_1"
         value="John Smith"
         handleOnChange={() => {}}
         placeholder="First Name"
       />
-      <Form.Label htmlFor="input" title="Example"></Form.Label>
+      <Form.Label htmlFor="input">Last name</Form.Label>
       <Form.Input
-        id="input"
+        id="last_1"
         value=""
         handleOnChange={() => {}}
         placeholder="Last Name"
