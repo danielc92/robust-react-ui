@@ -9,6 +9,8 @@
   --nav-menu-width: 200px;
   --nav-font-weight: bold;
   --nav-text-transform: normal;
+  --nav-bar-padding-x: 1rem;
+  --nav-bar-padding-y: 1.3rem;
 }
 
 .dcui-nav {
@@ -39,6 +41,7 @@
     > .dcui-nav__dropdown {
       display: block;
     }
+
     > a[role="menuitem"] > .dcui-nav__chevron {
       transform: rotate(90deg);
     }
@@ -102,7 +105,7 @@
   ul[role="menubar"] {
     background-color: var(--nav-bar-background-color);
     font-size: 1rem;
-    padding: 1rem;
+    padding: var(--nav-bar-padding-y) var(--nav-bar-padding-x);
     list-style: none;
   }
 
