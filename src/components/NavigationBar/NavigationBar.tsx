@@ -149,7 +149,6 @@ const NavigationBar = ({
     // if has children has parent close the current dropdown
     // focus on parent node
     const foundNode = nodes.find((n) => n.id === node.id);
-    const parentNode = nodes.find((n) => n.id === node.parentId);
 
     if (foundNode.lv > 2) {
       setNodes((nodes) =>
@@ -368,7 +367,10 @@ const NavigationBar = ({
                                       }
 
                                       // left or escape
-                                      if (e.keyCode === 37 || e.keyCode == 27) {
+                                      if (
+                                        e.keyCode === 37 ||
+                                        e.keyCode === 27
+                                      ) {
                                         handleLeftPress(c);
                                       }
 
