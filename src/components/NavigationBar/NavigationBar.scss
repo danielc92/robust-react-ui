@@ -3,7 +3,7 @@
 @import "../../typography.scss";
 
 :root {
-  --nav-bar-background-color: #f2f2f2;
+  --nav-bar-background-color: var(--color-light-grey);
   --nav-bar-color: var(--color-primary);
   --nav-bar-background-color-focus: #e4e2e2;
   --nav-menu-width: 200px;
