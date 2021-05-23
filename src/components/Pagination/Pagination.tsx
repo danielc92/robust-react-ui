@@ -15,10 +15,11 @@ const Pagination = ({ data, ariaLabel }: PaginationProps) => {
       role="navigation"
       aria-label={ariaLabel || defaultLabel}
     >
-      <ul className="dcui-pagination__wrapper">
+      <ul className="dcui-pagination__wrapper" data-testid="PaginationWrapper">
         {data.map((x, i) => (
           <li key={"page-key" + i.toString()}>
             <a
+              data-testid="PaginationButton"
               className={classNames({
                 "dcui-pagination__button": true,
                 "dcui-pagination__button--current": x.current,

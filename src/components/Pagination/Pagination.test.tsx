@@ -8,19 +8,19 @@ import Pagination from "./Pagination";
 
 import { PaginationProps } from "./Pagination.types";
 
-describe("Test Component", () => {
+describe("Pagination Suite", () => {
   let props: PaginationProps;
 
   beforeEach(() => {
     props = {
       data: [
         {
-          current: true,
+          current: false,
           pageNumber: 1,
           href: "#",
         },
         {
-          current: false,
+          current: true,
           pageNumber: 2,
           href: "#",
         },
@@ -35,11 +35,43 @@ describe("Test Component", () => {
 
   const renderComponent = () => render(<Pagination {...props} />);
 
-  it("should render with base class", () => {
+  it("base should render the correct class", () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId("Pagination");
 
     expect(component).toHaveClass("dcui-pagination");
+  });
+
+  it("wrapper should render the correct class", () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("PaginationWrapper");
+
+    expect(component).toHaveClass("dcui-pagination__wrapper");
+  });
+
+  it("button should render the correct class", () => {
+    const { getAllByTestId } = renderComponent();
+
+    const components = getAllByTestId("PaginationButton");
+
+    expect(components[0]).toHaveClass("dcui-pagination__button");
+  });
+
+  it("button should render the correct class", () => {
+    const { getAllByTestId } = renderComponent();
+
+    const components = getAllByTestId("PaginationButton");
+
+    expect(components[0]).toHaveTextContent("1");
+  });
+
+  it("second button should render the current class", () => {
+    const { getAllByTestId } = renderComponent();
+
+    const components = getAllByTestId("PaginationButton");
+
+    expect(components[1]).toHaveClass("dcui-pagination__button--current");
   });
 });
