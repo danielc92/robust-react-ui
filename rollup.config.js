@@ -19,6 +19,7 @@ export default {
     "src/components/TabList/index.ts",
     "src/components/Typography/index.ts",
     "src/components/AutoComplete/index.ts",
+    "src/components/Pagination/index.ts",
   ],
   output: [
     {

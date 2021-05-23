@@ -9,12 +9,13 @@ import Form from "./components/Form";
 import Link from "./components/Link";
 import Image from "./components/Image";
 import AutoComplete from "./components/AutoComplete";
-
+import Pagination from "./components/Pagination";
 import NavigationBar from "./components/NavigationBar";
 
 export {
   AutoComplete,
   Button,
+  Pagination,
   NavigationBar,
   AlertDialogue,
   Landmark,
