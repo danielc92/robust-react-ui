@@ -1,0 +1,46 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+:root {
+  --pagination-button-margin-right: 0.5rem;
+  --pagination-button-color: var(--color-charcoal);
+  --pagination-button-background-color: var(--color-light-grey);
+  --pagination-button-current-color: var(--color-white);
+  --pagination-button-current-background-color: var(--color-primary);
+  --pagination-button-current-font-weight: bold;
+  --pagination-font-family: var(--font-family-primary);
+  --pagination-button-padding-x: 0.6rem;
+  --pagination-button-padding-y: 0.4rem;
+}
+
+.dcui-pagination {
+  font-family: var(--pagination-font-family);
+  margin-bottom: var(--global-space-under);
+
+  &__wrapper {
+    display: flex;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__button {
+    background-color: var(--pagination-button-background-color);
+    color: var(--pagination-button-color);
+    display: block;
+    font-weight: normal;
+    padding:
+      var(--pagination-button-padding-y)
+      var(--pagination-button-padding-x);
+    margin-right: var(--pagination-button-margin-right);
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+
+    &--current {
+      background-color: var(--pagination-button-current-background-color);
+      color: var(--pagination-button-current-color);
+      font-weight: var(--pagination-button-current-font-weight);
+    }
+  }
+}
