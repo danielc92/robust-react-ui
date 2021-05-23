@@ -255,6 +255,25 @@ const NavigationBar = ({
                 tabIndex={0}
               >
                 {a.linkName}
+                {n?.hasMenu && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={classNames({
+                      "dcui-nav__chevron": true,
+                      "dcui-nav__chevron--expanded": n?.menuOpen,
+                    })}
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                )}
               </a>
               {/* 1st dropdown level */}
               {a.children && (
@@ -327,6 +346,26 @@ const NavigationBar = ({
                           }}
                         >
                           {b.linkName}
+                          {n2?.hasMenu && (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="3"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className={classNames({
+                                "dcui-nav__chevron": true,
+                                "dcui-nav__chevron--submenu": true,
+                                "dcui-nav__chevron--expanded": n2?.menuOpen,
+                              })}
+                            >
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          )}
                         </a>
                         {/* 2nd dropdown level */}
                         {b.children && (

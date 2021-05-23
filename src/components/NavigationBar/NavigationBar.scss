@@ -19,10 +19,28 @@
     box-sizing: border-box;
   }
 
+  &__chevron {
+    color: var(--color-primary);
+    top: -2px;
+    right: 0;
+    position: absolute;
+
+    &--expanded {
+      transform: rotate(90deg);
+    }
+
+    &--submenu {
+      top: 8px;
+    }
+  }
+
   .dcui-nav__menu-item:hover,
   .dcui-nav__menu-item:focus {
     > .dcui-nav__dropdown {
       display: block;
+    }
+    > a[role="menuitem"] > .dcui-nav__chevron {
+      transform: rotate(90deg);
     }
   }
 
@@ -49,6 +67,9 @@
   .dcui-nav__dropdown-item:focus {
     > .dcui-nav__dropdown {
       display: block;
+    }
+    > a[role="menuitem"] > .dcui-nav__chevron {
+      transform: rotate(90deg);
     }
   }
 
