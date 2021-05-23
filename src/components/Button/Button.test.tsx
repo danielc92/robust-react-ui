@@ -59,4 +59,13 @@ describe("Test Component", () => {
 
     expect(component).toHaveClass("dcui-button--primary");
   });
+
+  it("should render the secondary class modifier", () => {
+    props.variant = "secondary";
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Button");
+
+    expect(component).toHaveClass("dcui-button--secondary");
+  });
 });

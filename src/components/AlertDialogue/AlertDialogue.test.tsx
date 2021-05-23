@@ -15,8 +15,8 @@ describe("AlertDialogue Suite", () => {
       cancelButtonText: "Cancel",
       confirmButtonText: "Confirm",
       open: true,
-      handleCloseAction: () => {},
-      handleConfirmAction: () => {},
+      onCloseActionFunction: () => {},
+      onConfirmActionFunction: () => {},
     };
   });
 

@@ -2,6 +2,14 @@
 @import "../../variables.scss";
 @import "../../typography.scss";
 
+:root {
+  --autocomplete-font-family: var(--font-family-primary);
+  --autocomplete-result-focus-color: var(--color-primary);
+  --autocomplete-result-focus-background-color: var(--color-white);
+  --autocomplete-result-padding-x: 0.5rem;
+  --autocomplete-result-padding-y: 0.75rem;
+}
+
 .dcui-autocomplete {
   box-sizing: border-box;
   margin-bottom: var(--global-space-under);
@@ -23,11 +31,12 @@
 
   &__result {
     box-sizing: border-box;
-    font-family: var(--font-family-primary);
-    padding: 0.75rem 0.5rem;
+    font-family: var(--autocomplete-font-family);
+    padding: var(--autocomplete-result-padding-y)
+      var(--autocomplete-result-padding-x);
     &--selected {
-      background: var(--color-primary);
-      color: var(--color-white);
+      background: var(--autocomplete-result-focus-color);
+      color: var(--autocomplete-result-focus-background-color);
       font-weight: bold;
     }
   }

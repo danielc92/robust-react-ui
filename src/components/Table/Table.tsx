@@ -23,9 +23,9 @@ const Table = ({
   ariaLabel,
 }: TableProps) => (
   <table
-    id={id ? id : null}
-    aria-describedby={ariaDescribedBy ? ariaDescribedBy : null}
-    aria-label={ariaLabel ? ariaLabel : null}
+    id={id || null}
+    aria-describedby={ariaDescribedBy || null}
+    aria-label={ariaLabel || null}
     data-testid="Table"
     className={classNames({
       "dcui-table": true,
@@ -48,9 +48,9 @@ const Body = ({ children }: TableBodyProps) => (
 const Header = ({ children, colSpan, rowSpan, scope }: TableHeaderProps) => (
   <th
     className="dcui-table__header"
-    scope={scope ? scope : "col"}
-    rowSpan={rowSpan ? rowSpan : null}
-    colSpan={colSpan ? colSpan : null}
+    scope={scope || "col"}
+    rowSpan={rowSpan || null}
+    colSpan={colSpan || null}
   >
     {children}
   </th>

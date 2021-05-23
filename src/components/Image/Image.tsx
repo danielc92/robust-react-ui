@@ -17,10 +17,10 @@ const Image = ({
   src,
 }: ImageProps) => (
   <img
-    style={style ? style : null}
+    style={style || null}
     alt={alt}
-    width={width ? width : null}
-    height={height ? height : null}
+    width={width || null}
+    height={height || null}
     data-testid="Image"
     src={src}
     className={classNames({

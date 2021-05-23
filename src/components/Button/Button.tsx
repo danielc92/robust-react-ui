@@ -8,16 +8,16 @@ import classNames from "classnames";
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { children, id, ariaControls, size, variant, tabIndex, handleClick },
+    { children, id, ariaControls, size, variant, tabIndex, onClickFunction },
     ref
   ) => (
     <button
-      tabIndex={tabIndex ? tabIndex : null}
-      aria-controls={ariaControls ? ariaControls : null}
-      id={id ? id : null}
+      tabIndex={tabIndex || null}
+      aria-controls={ariaControls || null}
+      id={id || null}
       data-testid="Button"
       onClick={(e) => {
-        handleClick ? handleClick(e) : {};
+        onClickFunction ? onClickFunction(e) : {};
       }}
       ref={ref}
       className={classNames({
@@ -28,6 +28,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         "dcui-button--primary": variant === "primary" || !variant,
         "dcui-button--danger": variant === "danger",
         "dcui-button--success": variant === "success",
+        "dcui-button--secondary": variant === "secondary",
       })}
     >
       {children}

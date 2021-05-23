@@ -51,4 +51,9 @@
     background-color: var(--color-success);
     color: var(--color-white);
   }
+
+  &--secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+  }
 }

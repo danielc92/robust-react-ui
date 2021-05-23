@@ -16,6 +16,7 @@ describe("Autocomplete Suite", () => {
       value: "term",
       onSelectOptionFunction: () => console.log("."),
       onChangeFunction: () => console.log("."),
+      onClearOptionsFunction: () => console.log("."),
     };
   });
 

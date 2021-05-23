@@ -8,11 +8,12 @@ import "./TabList.scss";
 import classNames from "classnames";
 import { KEY_CODES } from "../../constants";
 
-const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
-  const [activeTab, setActiveTab] = useState<{
-    tabName: string;
-    tabIndex: number;
-  } | null>(null);
+const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
+  const [activeTab, setActiveTab] =
+    useState<{
+      tabName: string;
+      tabIndex: number;
+    } | null>(null);
 
   const arrLength = tabs.length;
 
@@ -109,15 +110,20 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
       className={classNames({
         "dcui-tablist": true,
         "dcui-tablist--full-width": fullWidth,
+        "dcui-tablist--primary": variant === "primary" || !variant,
+        "dcui-tablist--danger": variant === "danger",
+        "dcui-tablist--success": variant === "success",
+        "dcui-tablist--secondary": variant === "secondary",
       })}
     >
       <div
         role="tablist"
-        aria-label={ariaLabel ? ariaLabel : null}
+        aria-label={ariaLabel || null}
         className={classNames({ "dcui-tablist__button-group": true })}
       >
         {tabs.map((t, index) => (
           <button
+            data-testid="TabListButton"
             tabIndex={activeTab?.tabName !== t.tabId ? -1 : null}
             ref={tabRefs[index]}
             key={t.tabId}
@@ -145,6 +151,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth }: TabListProps) => {
       </div>
       {tabs.map((x, i) => (
         <div
+          data-testid="TabListPanel"
           ref={tabPanelRefs[i]}
           key={x.tabId}
           className={classNames({

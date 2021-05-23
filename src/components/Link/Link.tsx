@@ -16,8 +16,8 @@ const Link = ({
 }: LinkProps) => (
   <a
     href={href}
-    aria-label={ariaLabel ? ariaLabel : null}
-    aria-describedby={ariaDescribedBy ? ariaDescribedBy : null}
+    aria-label={ariaLabel || null}
+    aria-describedby={ariaDescribedBy || null}
     data-testid="Link"
     className={classNames({
       "dcui-link": true,

@@ -1,10 +1,13 @@
 :root {
   --font-family-primary: "Montserrat", helvetica, arial, sans-serif;
-  --font-size-small: 1rem;
-  --font-size-medium: 1.125rem;
-  --font-size-large: 1.375rem;
-  --font-line-height-small: calc(var(--font-size-small) * 1.5);
-  --font-line-height-medium: calc(var(--font-size-medium) * 1.5);
-  --font-line-height-large: calc(var(--font-size-large) * 1.5);
+  --font-size-sm: 0.8rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xlg: 1.6rem;
+  --font-size-xxlg: 1.8rem;
+  --font-size-xxxlg: 2.25rem;
+  --font-line-height-sm: calc(var(--font-size-sm) * 1.5);
+  --font-line-height-md: calc(var(--font-size-md) * 1.5);
+  --font-line-height-lg: calc(var(--font-size-lg) * 1.5);
   --font-margin: 0 0 var(--global-space-under) 0;
 }

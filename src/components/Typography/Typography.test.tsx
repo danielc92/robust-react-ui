@@ -5,7 +5,7 @@ import { render } from "@testing-library/react";
 import Typography from "./Typography";
 import { HeadingProps, ParagraphProps } from "./Typography.types";
 
-describe("Heading Suit", () => {
+describe("Heading Suite", () => {
   let props: HeadingProps;
 
   beforeEach(() => {
@@ -137,5 +137,11 @@ describe("Paragraph Suite", () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId("Paragraph");
     expect(component).toHaveClass("dcui-para--large");
+  });
+  it("should render with bolded class modifier", () => {
+    props.bolded = true;
+    const { getByTestId } = renderComponent();
+    const component = getByTestId("Paragraph");
+    expect(component).toHaveClass("dcui-para--bolded");
   });
 });
