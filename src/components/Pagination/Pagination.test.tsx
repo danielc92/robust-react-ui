@@ -1,8 +1,11 @@
 // Generated with util/create-component.js
+
 import React from "react";
+
 import { render } from "@testing-library/react";
 
 import Pagination from "./Pagination";
+
 import { PaginationProps } from "./Pagination.types";
 
 describe("Test Component", () => {
@@ -10,18 +13,33 @@ describe("Test Component", () => {
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      data: [
+        {
+          current: true,
+          pageNumber: 1,
+          href: "#",
+        },
+        {
+          current: false,
+          pageNumber: 2,
+          href: "#",
+        },
+        {
+          current: false,
+          pageNumber: 3,
+          href: "#",
+        },
+      ],
     };
   });
 
   const renderComponent = () => render(<Pagination {...props} />);
 
-  it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
+  it("should render with base class", () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId("Pagination");
 
-    expect(component).toHaveTextContent("harvey was here");
+    expect(component).toHaveClass("dcui-pagination");
   });
 });

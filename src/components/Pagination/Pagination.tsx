@@ -1,24 +1,9 @@
 // Generated with util/create-component.js
 
 import classNames from "classnames";
-
 import React from "react";
-
-// import { PaginationProps } from "./Pagination.types";
-
+import { PaginationProps } from "./Pagination.types";
 import "./Pagination.scss";
-
-interface PaginationProps {
-  ariaLabel?: string;
-
-  data: {
-    current: boolean;
-
-    href: string;
-
-    pageNumber: number | string;
-  }[];
-}
 
 const Pagination = ({ data, ariaLabel }: PaginationProps) => {
   const defaultLabel = "Pagination Navigation";

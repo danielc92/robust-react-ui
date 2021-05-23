@@ -1,4 +1,13 @@
 // Generated with util/create-component.js
+
 export interface PaginationProps {
-    foo: string;
+  ariaLabel?: string;
+
+  data: {
+    current: boolean;
+
+    href: string;
+
+    pageNumber: number | string;
+  }[];
 }
