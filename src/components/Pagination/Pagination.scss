@@ -10,8 +10,7 @@
   --pagination-button-current-background-color: var(--color-primary);
   --pagination-button-current-font-weight: bold;
   --pagination-font-family: var(--font-family-primary);
-  --pagination-button-padding-x: 0.6rem;
-  --pagination-button-padding-y: 0.4rem;
+  --pagination-button-width: 2.2rem;
 }
 
 .dcui-pagination {
@@ -27,15 +26,20 @@
   &__button {
     background-color: var(--pagination-button-background-color);
     color: var(--pagination-button-color);
-    display: block;
     font-weight: normal;
-    padding:
-      var(--pagination-button-padding-y)
-      var(--pagination-button-padding-x);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--pagination-button-width);
+    height: var(--pagination-button-width);
     margin-right: var(--pagination-button-margin-right);
     box-sizing: border-box;
     text-decoration: none;
     cursor: pointer;
+
+    &--rounded {
+      border-radius: 50%;
+    }
 
     &--current {
       background-color: var(--pagination-button-current-background-color);
