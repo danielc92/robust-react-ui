@@ -5,7 +5,7 @@ import React from "react";
 import { PaginationProps } from "./Pagination.types";
 import "./Pagination.scss";
 
-const Pagination = ({ data, ariaLabel }: PaginationProps) => {
+const Pagination = ({ data, ariaLabel, rounded }: PaginationProps) => {
   const defaultLabel = "Pagination Navigation";
 
   return (
@@ -23,6 +23,7 @@ const Pagination = ({ data, ariaLabel }: PaginationProps) => {
               className={classNames({
                 "dcui-pagination__button": true,
                 "dcui-pagination__button--current": x.current,
+                "dcui-pagination__button--rounded": rounded,
               })}
               href={x.href}
               aria-label={
@@ -32,7 +33,7 @@ const Pagination = ({ data, ariaLabel }: PaginationProps) => {
               }
               aria-current={x.current ? "true" : null}
             >
-              {x.pageNumber}
+              <span>{x.pageNumber}</span>
             </a>
           </li>
         ))}

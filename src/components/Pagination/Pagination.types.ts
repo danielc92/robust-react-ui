@@ -2,12 +2,11 @@
 
 export interface PaginationButtonProps {
   current: boolean;
-
   href: string;
-
-  pageNumber: number | string;
+  pageNumber: number;
 }
 export interface PaginationProps {
+  rounded?: boolean;
   ariaLabel?: string;
   data: PaginationButtonProps[];
 }
