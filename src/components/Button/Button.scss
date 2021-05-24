@@ -9,8 +9,9 @@
   --button-padding-x-md: 2rem;
   --button-padding-y-lg: 1.4rem;
   --button-padding-x-lg: 4rem;
-  --button-font-size-md: 1rem;
-  --button-font-size-lg: 1.25rem;
+  --button-font-size-sm: var(--font-size-sm);
+  --button-font-size-md: var(--font-size-md);
+  --button-font-size-lg: var(--font-size-lg);
 }
 
 .dcui-button {
@@ -22,7 +23,7 @@
 
   // size
   &--small {
-    font-size: var(--button-font-size-md);
+    font-size: var(--button-font-size-sm);
     padding: var(--button-padding-y-sm) var(--button-padding-x-sm);
   }
 
