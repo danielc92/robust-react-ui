@@ -44,6 +44,7 @@ const Accordion = ({
 
   return (
     <div
+      data-testid="Accordion"
       id="accordionGroup"
       className={classNames({
         "dcui-accordion": true,
@@ -99,11 +100,16 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
       if (event.keyCode === 13) {
         handleSelectPanel();
       }
+
+      // end
+
+      // home
     };
     return (
       <>
-        <h3>
+        <h3 data-testid="AccordionPanel">
           <button
+            data-testid="AccordionTrigger"
             aria-disabled={isCurrent}
             onClick={handleSelectPanel}
             onKeyDown={handleKeyDown}

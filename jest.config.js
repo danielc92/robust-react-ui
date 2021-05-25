@@ -1,7 +1,7 @@
 module.exports = {
   roots: ["src"],
-  collectCoverage: true,
-  verbose: true,
+  collectCoverage: false,
+  verbose: false,
   setupFilesAfterEnv: ["./jest.setup.ts"],
   moduleFileExtensions: ["ts", "tsx", "js"],
   testPathIgnorePatterns: ["node_modules/"],
