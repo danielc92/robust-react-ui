@@ -1,0 +1,73 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+.dcui-accordion {
+  border: 1px solid hsl(0, 0%, 82%);
+  padding: 0;
+  margin: 0;
+  width: 30rem;
+  margin-bottom: var(--global-space-under);
+
+  &--full-width {
+    width: 100%;
+  }
+
+
+  &__icon {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    &--expanded {
+      color: var(--color-primary);
+    }
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0;
+  }
+  &__title {
+ 
+    border: transparent 2px solid;
+    border-radius: 5px;
+    display: block;
+    padding: 0.25em;
+    pointer-events: none;
+    outline: none;
+  }
+
+  &__trigger {
+    cursor: pointer;
+    background-color: var(--color-light-grey);
+    color: var(--color-charcoal);
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 1em 1.5em;
+    position: relative;
+    margin: 0;
+    border-style: none;
+    text-align: left;
+    width: 100%;
+    outline: none;
+
+    &:hover, &:focus {
+      color: var(--color-primary);
+    }
+  }
+
+  &__panel {
+    padding: 1em 1.5em;
+    margin: 0;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+}
+
+
