@@ -64,4 +64,34 @@ describe("Accordion Suite", () => {
 
     expect(component[1]).toHaveTextContent("Plants");
   });
+
+  it("second panel should have text", () => {
+    const { getAllByTestId, debug } = renderComponent();
+
+    const component = getAllByTestId("AccordionPanel");
+    debug();
+    expect(component[0]);
+  });
+
+  it("trigger should be aria-expanded", () => {
+    const { getAllByTestId } = renderComponent();
+
+    const component = getAllByTestId("AccordionTrigger");
+
+    expect(component[0].getAttribute("aria-expanded")).toEqual("false");
+  });
+  it("trigger should be aria-expanded", () => {
+    const { getAllByTestId } = renderComponent();
+
+    const component = getAllByTestId("AccordionTrigger");
+
+    expect(component[1].getAttribute("aria-expanded")).toEqual("true");
+  });
+  it("trigger should have correct class", () => {
+    const { getAllByTestId } = renderComponent();
+
+    const component = getAllByTestId("AccordionTrigger");
+
+    expect(component[0]).toHaveClass("dcui-accordion__trigger");
+  });
 });
