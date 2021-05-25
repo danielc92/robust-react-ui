@@ -26,13 +26,13 @@
   &__button {
     background-color: var(--pagination-button-background-color);
     color: var(--pagination-button-color);
-    font-weight: normal;
     display: flex;
+    font-weight: normal;
+    margin-right: var(--pagination-button-margin-right);
     align-items: center;
     justify-content: center;
     width: var(--pagination-button-width);
     height: var(--pagination-button-width);
-    margin-right: var(--pagination-button-margin-right);
     box-sizing: border-box;
     text-decoration: none;
     cursor: pointer;
