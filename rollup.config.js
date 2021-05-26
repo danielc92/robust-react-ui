@@ -21,6 +21,7 @@ export default {
     "src/components/AutoComplete/index.ts",
     "src/components/Pagination/index.ts",
     "src/components/Accordion/index.ts",
+    "src/components/Alert/index.ts",
   ],
   output: [
     {

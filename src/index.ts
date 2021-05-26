@@ -12,9 +12,11 @@ import AutoComplete from "./components/AutoComplete";
 import Pagination from "./components/Pagination";
 import NavigationBar from "./components/NavigationBar";
 import Accordion from "./components/Accordion";
+import Alert from "./components/Alert";
 
 export {
   Accordion,
+  Alert,
   AutoComplete,
   Button,
   Pagination,
