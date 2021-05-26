@@ -3,40 +3,80 @@
 @import "../../typography.scss";
 
 :root {
-  --alert-padding: 1rem;
+  --alert-padding-y: 1.6rem;
+  --alert-padding-x: 2rem;
   --alert-border-radius: var(--global-border-radius);
   --alert-max-width: 760px;
-  --alert-border-width: 2px;
-  --alert-border-style: solid;
   --alert-shadow: var(--global-shadow);
+  --alert-icon-color: var(--color-white);
+  --alert-primary-color: var(--color-white);
+  --alert-primary-background-color: var(--color-primary);
+  --alert-danger-color: var(--color-white);
+  --alert-danger-background-color: var(--color-danger);
+  --alert-success-color: var(--color-white);
+  --alert-success-background-color: var(--color-success);
 }
 
 .dcui-alert {
   box-sizing: border-box;
   border-radius: var(--alert-border-radius);
-  padding: var(--alert-padding);
+  padding: var(--alert-padding-y) var(--alert-padding-x);
+  position: relative;
   margin-bottom: var(--global-space-under);
   max-width: var(--alert-max-width);
   box-shadow: var(--alert-shadow);
+
   &--full-width {
     max-width: 100%;
   }
 
+  &--hidden {
+    display: none;
+  }
+
+  &__button {
+    background: transparent;
+    border: 0;
+    box-sizing: border-box;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    color: var(--alert-icon-color);
+  }
+
   &--primary {
-    background-color: var(--color-primary-light);
-    border: var(--alert-border-width) var(--alert-border-style)
-      var(--color-primary);
+    background-color: var(--alert-primary-background-color);
+
+    .dcui-para,
+    .dcui-header {
+      color: var(--alert-primary-color);
+    }
   }
 
   &--success {
-    background-color: var(--color-success-light);
-    border: var(--alert-border-width) var(--alert-border-style)
-      var(--color-success);
+    background-color: var(--alert-success-background-color);
+
+    .dcui-para,
+    .dcui-header {
+      color: var(--alert-success-color);
+    }
   }
 
   &--danger {
-    background-color: var(--color-danger-light);
-    border: var(--alert-border-width) var(--alert-border-style)
-      var(--color-danger);
+    background-color: var(--alert-danger-background-color);
+
+    .dcui-para,
+    .dcui-header {
+      color: var(--alert-danger-color);
+    }
   }
 }

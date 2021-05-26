@@ -5,4 +5,6 @@ export interface AlertProps {
   children: ReactNode;
   variant?: "primary" | "success" | "danger";
   fullWidth?: boolean;
+  visible?: boolean;
+  onCloseActionFunction?: (visibleState: boolean) => void;
 }
