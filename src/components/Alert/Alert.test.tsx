@@ -47,6 +47,14 @@ describe("Alert Suite", () => {
 
     expect(component).toHaveClass("dcui-alert--success");
   });
+  it("should render full width modifier class", () => {
+    props.fullWidth = true;
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId("Alert");
+
+    expect(component).toHaveClass("dcui-alert--full-width");
+  });
 
   it("should render correct text", () => {
     const { getByTestId } = renderComponent();
