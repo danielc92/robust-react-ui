@@ -3,6 +3,9 @@
 @import "../../typography.scss";
 
 .dcui-image {
+  box-sizing: border-box;
+  box-shadow: var(--global-shadow);
+
   &--responsive {
     width: 100%;
     height: auto;

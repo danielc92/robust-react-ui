@@ -44,6 +44,7 @@
   --input-margin-bottom: 1.5rem;
   --input-border-radius: var(--global-border-radius);
   --input-default-width: 240px;
+  --input-shadow: var(--global-shadow);
   // Checkbox
   --checkbox-border-style: solid;
   --checkbox-border-width: 1px;
@@ -83,8 +84,8 @@
   }
 
   &__input {
+    box-shadow: var(--input-shadow);
     margin-bottom: 0.5rem;
-
     &--full-width {
       width: 100%;
     }
@@ -143,6 +144,7 @@
   }
 
   &__select {
+    box-shadow: var(--input-shadow);
     background-color: var(--input-background-color);
     border-color: var(--input-border-color);
     border-radius: var(--input-border-radius);
@@ -190,6 +192,7 @@
   }
 
   &__textarea {
+    box-shadow: var(--input-shadow);
     &:disabled {
       cursor: not-allowed;
     }
@@ -241,20 +244,17 @@
     cursor: pointer;
 
     &--small {
-      padding:
-        var(--submit-button-padding-y-sm)
+      padding: var(--submit-button-padding-y-sm)
         var(--submit-button-padding-x-sm);
     }
 
     &--medium {
-      padding:
-        var(--submit-button-padding-y-md)
+      padding: var(--submit-button-padding-y-md)
         var(--submit-button-padding-x-md);
     }
 
     &--large {
-      padding:
-        var(--submit-button-padding-y-lg)
+      padding: var(--submit-button-padding-y-lg)
         var(--submit-button-padding-x-lg);
     }
 
