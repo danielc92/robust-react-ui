@@ -1,0 +1,44 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+:root {
+  --alert-padding: 1rem;
+  --alert-border-radius: var(--global-border-radius);
+  --alert-max-width: 760px;
+  --alert-border-width: 2px;
+  --alert-border-style: solid;
+}
+
+.dcui-alert {
+  box-sizing: border-box;
+  border-radius: var(--alert-border-radius);
+  padding: var(--alert-padding);
+  margin-bottom: var(--global-space-under);
+  max-width: var(--alert-max-width);
+
+  &--full-width {
+    max-width: 100%;
+  }
+
+  &--primary {
+    background-color: var(--color-primary-light);
+    border:
+      var(--alert-border-width) var(--alert-border-style)
+      var(--color-primary);
+  }
+
+  &--success {
+    background-color: var(--color-success-light);
+    border:
+      var(--alert-border-width) var(--alert-border-style)
+      var(--color-success);
+  }
+
+  &--danger {
+    background-color: var(--color-danger-light);
+    border:
+      var(--alert-border-width) var(--alert-border-style)
+      var(--color-danger);
+  }
+}
