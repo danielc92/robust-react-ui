@@ -24,6 +24,7 @@
   width: 100%;
   border-collapse: collapse;
   border-style: dashed;
+  box-shadow: var(--global-shadow);
 
   &__cell,
   &__header {

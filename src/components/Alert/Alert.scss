@@ -8,6 +8,7 @@
   --alert-max-width: 760px;
   --alert-border-width: 2px;
   --alert-border-style: solid;
+  --alert-shadow: var(--global-shadow);
 }
 
 .dcui-alert {
@@ -16,29 +17,26 @@
   padding: var(--alert-padding);
   margin-bottom: var(--global-space-under);
   max-width: var(--alert-max-width);
-
+  box-shadow: var(--alert-shadow);
   &--full-width {
     max-width: 100%;
   }
 
   &--primary {
     background-color: var(--color-primary-light);
-    border:
-      var(--alert-border-width) var(--alert-border-style)
+    border: var(--alert-border-width) var(--alert-border-style)
       var(--color-primary);
   }
 
   &--success {
     background-color: var(--color-success-light);
-    border:
-      var(--alert-border-width) var(--alert-border-style)
+    border: var(--alert-border-width) var(--alert-border-style)
       var(--color-success);
   }
 
   &--danger {
     background-color: var(--color-danger-light);
-    border:
-      var(--alert-border-width) var(--alert-border-style)
+    border: var(--alert-border-width) var(--alert-border-style)
       var(--color-danger);
   }
 }

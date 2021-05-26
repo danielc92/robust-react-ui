@@ -76,6 +76,7 @@
     background: var(--tab-active-background-color);
     box-sizing: border-box;
     padding: var(--space-m);
+    box-shadow: var(--global-shadow);
 
     &--hidden {
       display: none;

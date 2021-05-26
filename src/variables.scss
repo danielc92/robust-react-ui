@@ -14,8 +14,13 @@
   --color-disabled: #d4d4d4;
   --color-disabled-light: rgb(238, 238, 238);
 
-  //border
+  // border
   --global-border-radius: 0;
+
+  // box shadow
+  --global-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
+  // space under
   --global-space-under: 1.5rem;
 
   // spacing
