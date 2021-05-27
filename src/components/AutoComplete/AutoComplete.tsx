@@ -147,6 +147,7 @@ const AutoComplete = ({
           id="ex1-combobox"
         >
           <input
+            onBlur={onClearOptionsFunction}
             data-testid="AutoCompleteInput"
             ref={ref}
             value={value}
