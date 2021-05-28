@@ -32,9 +32,9 @@
 
   &__result {
     box-sizing: border-box;
+    cursor: pointer;
     font-family: var(--autocomplete-font-family);
-    padding:
-      var(--autocomplete-result-padding-y)
+    padding: var(--autocomplete-result-padding-y)
       var(--autocomplete-result-padding-x);
 
     &--selected {
