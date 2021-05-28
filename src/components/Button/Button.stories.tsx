@@ -33,34 +33,50 @@ PrimaryLarge.args = {
   size: "large",
 };
 export const DangerSmall: Story<ButtonProps> = Template.bind({});
-PrimarySmall.args = {
+DangerSmall.args = {
   size: "small",
   variant: "danger",
 };
 
 export const DangerMedium: Story<ButtonProps> = Template.bind({});
-PrimaryMedium.args = {
+DangerMedium.args = {
   variant: "danger",
 };
 
 export const DangerLarge: Story<ButtonProps> = Template.bind({});
-PrimaryLarge.args = {
+DangerLarge.args = {
   size: "large",
   variant: "danger",
 };
 export const SuccessSmall: Story<ButtonProps> = Template.bind({});
-PrimarySmall.args = {
+SuccessSmall.args = {
   size: "small",
   variant: "success",
 };
 
 export const SuccessMedium: Story<ButtonProps> = Template.bind({});
-PrimaryMedium.args = {
+SuccessMedium.args = {
   variant: "success",
 };
 
 export const SuccessLarge: Story<ButtonProps> = Template.bind({});
-PrimaryLarge.args = {
+SuccessLarge.args = {
   size: "large",
   variant: "success",
+};
+export const SecondarySmall: Story<ButtonProps> = Template.bind({});
+SecondarySmall.args = {
+  size: "small",
+  variant: "secondary",
+};
+
+export const SecondaryMedium: Story<ButtonProps> = Template.bind({});
+SecondaryMedium.args = {
+  variant: "secondary",
+};
+
+export const SecondaryLarge: Story<ButtonProps> = Template.bind({});
+SecondaryLarge.args = {
+  size: "large",
+  variant: "secondary",
 };
