@@ -17,7 +17,8 @@ const AutoComplete = ({
   const [moddedOptions, setModdedOptions] = useState<
     { option: string; i: number; selected: boolean; id: string }[]
   >([]);
-  const [open, setOpen] = useState(false);
+  const [mouseIn, setMouseIn] = useState<boolean>(false);
+
   const ref = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -31,11 +32,12 @@ const AutoComplete = ({
   }, [options]);
 
   const selectAndCloseMenu = () => {
-    setOpen(false);
     const selected = moddedOptions.find((x) => x.selected);
     if (ref.current && selected) {
       onSelectOptionFunction(selected.option);
     }
+
+    onClearOptionsFunction();
   };
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     // down
@@ -68,12 +70,11 @@ const AutoComplete = ({
     // escape
     if (event.keyCode === 27) {
       onClearOptionsFunction();
-      setOpen(false);
     }
   };
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
-    setOpen(true);
+
     onChangeFunction(event.target.value);
   };
 
@@ -122,6 +123,7 @@ const AutoComplete = ({
   };
 
   const currentFocus = moddedOptions.find((x) => x.selected);
+  const open = moddedOptions.length > 0;
   return (
     <div
       data-testid="AutoComplete"
@@ -147,7 +149,10 @@ const AutoComplete = ({
           id="ex1-combobox"
         >
           <input
-            onBlur={onClearOptionsFunction}
+            onBlur={(event: React.FocusEvent<HTMLInputElement>) => {
+              event.preventDefault();
+              if (!mouseIn) onClearOptionsFunction();
+            }}
             data-testid="AutoCompleteInput"
             ref={ref}
             value={value}
@@ -166,31 +171,47 @@ const AutoComplete = ({
           id="ex1-listbox"
           className={classNames({
             "dcui-autocomplete__listbox": true,
-            "dcui-autocomplete__listbox--show": options.length > 0,
+            "dcui-autocomplete__listbox--show": open,
           })}
           data-testid="AutoCompleteListBox"
         >
-          {open &&
-            moddedOptions.map((item, i) => {
-              return (
-                <li
-                  data-testid="AutoCompleteResult"
-                  onMouseEnter={() => changePseudoFocus(i)}
-                  onClick={() => selectAndCloseMenu()}
-                  key={item.id}
-                  className={classNames({
-                    "dcui-autocomplete__result": true,
-                    "dcui-autocomplete__result--selected":
-                      item.id === currentFocus?.id,
-                  })}
-                  role="option"
-                  id={item.id}
-                  aria-selected={item.id === currentFocus?.id}
-                >
-                  {item.option}
-                </li>
-              );
-            })}
+          {moddedOptions.map((item, i) => {
+            return (
+              <li
+                data-testid="AutoCompleteResult"
+                onMouseEnter={(
+                  event: React.MouseEvent<HTMLLIElement, MouseEvent>
+                ) => {
+                  event.preventDefault();
+                  setMouseIn(true);
+                  changePseudoFocus(i);
+                }}
+                onMouseLeave={(
+                  event: React.MouseEvent<HTMLLIElement, MouseEvent>
+                ) => {
+                  event.preventDefault();
+                  setMouseIn(false);
+                }}
+                onClick={(
+                  event: React.MouseEvent<HTMLLIElement, MouseEvent>
+                ) => {
+                  event.preventDefault();
+                  selectAndCloseMenu();
+                }}
+                key={item.id}
+                className={classNames({
+                  "dcui-autocomplete__result": true,
+                  "dcui-autocomplete__result--selected":
+                    item.id === currentFocus?.id,
+                })}
+                role="option"
+                id={item.id}
+                aria-selected={item.id === currentFocus?.id}
+              >
+                {item.option}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
