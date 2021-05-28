@@ -18,7 +18,7 @@ const AlertDialogue = ({
   onConfirmActionFunction,
 }: AlertDialogueProps) => {
   const ref = React.createRef<HTMLButtonElement>();
-
+  const ref2 = React.createRef<HTMLButtonElement>();
   const focusOnButton = () => ref.current?.focus();
 
   useEffect(() => {
@@ -33,6 +33,46 @@ const AlertDialogue = ({
     }
   };
 
+  const handleCancelKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>
+  ) => {
+    const { keyCode, shiftKey } = event;
+    if (keyCode === 9) {
+      event.preventDefault();
+      if (shiftKey) {
+        // handle back
+        ref2.current?.focus();
+      } else {
+        // handle tab forward
+        ref2.current?.focus();
+      }
+    }
+    if (keyCode === 38 || keyCode === 40) {
+      // stop vert scrolling
+      event.preventDefault();
+    }
+  };
+
+  const handleConfirmKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>
+  ) => {
+    const { keyCode, shiftKey } = event;
+    if (keyCode === 9) {
+      event.preventDefault();
+      if (shiftKey) {
+        // handle back
+        ref.current?.focus();
+      } else {
+        // handle tab forward
+        ref.current?.focus();
+      }
+    }
+
+    if (keyCode === 38 || keyCode === 40) {
+      // stop vert scrolling
+      event.preventDefault();
+    }
+  };
   return (
     <div
       data-testid="AlertDialogue"
@@ -59,17 +99,20 @@ const AlertDialogue = ({
         </div>
         <div className="dcui-modal__actions">
           <Button
+            onKeyDownFunction={handleCancelKeyDown}
             variant="secondary"
             ref={ref}
             onClickFunction={onCloseActionFunction}
           >
-            {cancelButtonText}
+            {cancelButtonText || "Cancel"}
           </Button>
           <Button
+            onKeyDownFunction={handleConfirmKeyDown}
+            ref={ref2}
             onClickFunction={onConfirmActionFunction}
             // aria-controls="notes"
           >
-            {confirmButtonText}
+            {confirmButtonText || "Confirm"}
           </Button>
         </div>
       </div>
