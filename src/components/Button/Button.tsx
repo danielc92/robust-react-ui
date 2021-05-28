@@ -8,10 +8,20 @@ import classNames from "classnames";
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { children, id, ariaControls, size, variant, tabIndex, onClickFunction },
+    {
+      children,
+      id,
+      ariaControls,
+      size,
+      variant,
+      tabIndex,
+      onClickFunction,
+      onKeyDownFunction,
+    },
     ref
   ) => (
     <button
+      onKeyDown={onKeyDownFunction || null}
       tabIndex={tabIndex || null}
       aria-controls={ariaControls || null}
       id={id || null}

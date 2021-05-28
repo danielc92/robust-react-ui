@@ -66,10 +66,9 @@ describe("Accordion Suite", () => {
   });
 
   it("second panel should have text", () => {
-    const { getAllByTestId, debug } = renderComponent();
+    const { getAllByTestId } = renderComponent();
 
     const component = getAllByTestId("AccordionPanel");
-    debug();
     expect(component[0]);
   });
 

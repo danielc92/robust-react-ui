@@ -56,4 +56,5 @@ If you want to contribute, feel free to send me a message.
 
 ### Misc
 
+- [Javascript event keycode debugger](https://keycode.info/)
 - The base repo for this project was forked [from here](https://blog.harveydelaney.com/creating-your-own-react-component-library/).
