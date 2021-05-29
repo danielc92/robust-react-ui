@@ -335,8 +335,8 @@
     transform-origin: center center;
   }
 
-  [role="checkbox"][aria-checked="mixed"]:active::after,
-  [role="checkbox"][aria-checked="true"]::after {
+  &__checkbox[role="checkbox"][aria-checked="mixed"]:active::after,
+  &__checkbox[role="checkbox"][aria-checked="true"]::after {
     border: solid #fff;
     border-width: 0 0.145em 0.145em 0;
     display: block;
