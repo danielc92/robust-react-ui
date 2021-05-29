@@ -6,7 +6,7 @@ import Typography from "./Typography";
 import { ParagraphProps } from "./Typography.types";
 const { Paragraph } = Typography;
 export default {
-  title: "Typography/Paragraph",
+  title: "Paragraph",
   component: Typography.Paragraph,
   args: {
     children:
