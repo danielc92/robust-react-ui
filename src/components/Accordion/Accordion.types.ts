@@ -14,5 +14,7 @@ export interface AccordionPanelProps {
   _onSelectPanelFunction?: (panelId: string) => void;
   _handleFocusPrevious?: (_index: number) => void;
   _handleFocusNext?: (_index: number) => void;
+  _handleFocusFirst?: () => void;
+  _handleFocusLast?: () => void;
   _index?: number;
 }

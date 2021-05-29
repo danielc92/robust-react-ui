@@ -25,6 +25,12 @@ const Accordion = ({
     const newIndex = _index === max ? 0 : _index + 1;
     refs[newIndex]?.ref?.current?.focus();
   };
+  const _handleFocusFirst = () => {
+    if (refs.length) refs[0]?.ref?.current?.focus();
+  };
+  const _handleFocusLast = () => {
+    if (refs.length) refs[refs.length - 1]?.ref?.current?.focus();
+  };
 
   useEffect(() => {
     if (React.Children.count(children)) {
@@ -57,6 +63,8 @@ const Accordion = ({
           _onSelectPanelFunction: onSelectPanelFunction,
           _handleFocusPrevious,
           _handleFocusNext,
+          _handleFocusFirst,
+          _handleFocusLast,
           _index: i,
           ref: refs.length ? refs[i].ref : null,
         })
@@ -75,6 +83,8 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
       _onSelectPanelFunction,
       _handleFocusPrevious,
       _handleFocusNext,
+      _handleFocusFirst,
+      _handleFocusLast,
       _index,
     },
     ref
@@ -101,9 +111,16 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
         handleSelectPanel();
       }
 
-      // end
-
       // home
+      if (event.keyCode === 36) {
+        event.preventDefault();
+        _handleFocusFirst();
+      }
+      // end
+      if (event.keyCode === 35) {
+        event.preventDefault();
+        _handleFocusLast();
+      }
     };
     return (
       <>
