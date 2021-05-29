@@ -10,7 +10,7 @@ export default {
   component: AutoComplete,
   args: {
     labelId: "colour-autocomplete",
-    labelText: "Choose a colour",
+    labelText: "Search for a colour.",
   },
 } as Meta<AutoCompleteProps>;
 
