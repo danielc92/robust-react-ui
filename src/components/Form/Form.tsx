@@ -58,8 +58,9 @@ const Input = ({
   errorMessage,
   disabled,
 }: FormInputProps) => (
-  <div className="dcui-form__input-wrapper">
+  <div className="dcui-form__input-wrapper" data-testid="InputWrapper">
     <input
+      data-testid="Input"
       disabled={disabled}
       className={classNames({
         "dcui-form__input": true,
@@ -163,8 +164,9 @@ const TextArea = ({
   errorMessage,
   disabled,
 }: FormTextAreaProps) => (
-  <div className="dcui-form__textarea-wrapper">
+  <div className="dcui-form__textarea-wrapper" data-testid="TextAreaWrapper">
     <textarea
+      data-testid="TextArea"
       disabled={disabled}
       className={classNames({
         "dcui-form__textarea": true,
