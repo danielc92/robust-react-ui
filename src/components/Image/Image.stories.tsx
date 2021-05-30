@@ -35,6 +35,11 @@ Bordered.args = {
   bordered: true,
   scaling: "restricted-width",
 };
+export const Blurred: Story<ImageProps> = Template.bind({});
+Blurred.args = {
+  blurred: true,
+  scaling: "restricted-width",
+};
 export const Circular: Story<ImageProps> = Template.bind({});
 Circular.args = {
   circle: true,
