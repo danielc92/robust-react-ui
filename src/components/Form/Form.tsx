@@ -146,7 +146,7 @@ const Select = ({
     onBlur={onBlurFunction || (() => {})}
   >
     {values.map((v) => (
-      <option key={v.keyValue} value={v.keyValue}>
+      <option data-testid="SelectOption" key={v.keyValue} value={v.keyValue}>
         {v.displayValue}
       </option>
     ))}
