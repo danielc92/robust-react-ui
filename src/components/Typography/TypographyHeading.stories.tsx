@@ -6,7 +6,7 @@ import Typography from "./Typography";
 import { HeadingProps } from "./Typography.types";
 const { Heading } = Typography;
 export default {
-  title: "Heading",
+  title: "Components/Typography/Heading",
   component: Typography.Heading,
   args: {
     children: "Example Heading",

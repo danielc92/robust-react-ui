@@ -7,7 +7,7 @@ import { FormInputProps } from "./Form.types";
 const { Input, Label, FieldSet } = Form;
 
 export default {
-  title: "Input",
+  title: "Components/Form/Input",
   component: Input,
   args: {
     id: "input-example",

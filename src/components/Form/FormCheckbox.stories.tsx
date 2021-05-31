@@ -7,7 +7,7 @@ import { CheckboxOptionProps, FormCheckboxGroupProps } from "./Form.types";
 const { CheckboxGroup, Label, FieldSet } = Form;
 
 export default {
-  title: "CheckboxGroup",
+  title: "Components/Form/CheckboxGroup",
   component: CheckboxGroup,
   args: {
     id: "CheckboxGroup-example",

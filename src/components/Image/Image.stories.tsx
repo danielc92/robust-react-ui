@@ -6,7 +6,7 @@ import src from "./assets/xavi-cabrera-kn-UmDZQDjM-unsplash.jpg";
 import { ImageProps } from "./Image.types";
 
 export default {
-  title: "Image",
+  title: "Components/Image",
   component: Image,
   args: {
     alt: "Lego pieces on the floor.",

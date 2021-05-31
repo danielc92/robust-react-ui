@@ -4,7 +4,7 @@ import Typography from "../Typography/Typography";
 import Layout from "./Layout";
 
 export default {
-  title: "Layout",
+  title: "Components/Layout",
 };
 
 export const ContainerSmall = () => (

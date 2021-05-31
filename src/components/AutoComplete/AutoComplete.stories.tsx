@@ -6,7 +6,7 @@ import AutoComplete from "./AutoComplete";
 import { AutoCompleteProps } from "./AutoComplete.types";
 
 export default {
-  title: "AutoComplete",
+  title: "Components/Form/AutoComplete",
   component: AutoComplete,
   args: {
     labelId: "colour-autocomplete",

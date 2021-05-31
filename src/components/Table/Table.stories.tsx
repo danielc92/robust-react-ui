@@ -5,7 +5,7 @@ import Table from "./Table";
 import { TableProps } from "./Table.types";
 
 export default {
-  title: "Table",
+  title: "Components/Table",
   component: Table,
   args: {},
 } as Meta<TableProps>;

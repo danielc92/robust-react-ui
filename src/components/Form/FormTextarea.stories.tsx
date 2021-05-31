@@ -7,7 +7,7 @@ import { FormTextAreaProps } from "./Form.types";
 const { TextArea, Label, FieldSet } = Form;
 
 export default {
-  title: "TextArea",
+  title: "Components/Form/TextArea",
   component: TextArea,
   args: {
     id: "TextArea-example",

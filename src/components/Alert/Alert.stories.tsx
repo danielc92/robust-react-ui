@@ -5,7 +5,7 @@ import { Meta, Story } from "@storybook/react";
 import { AlertProps } from "./Alert.types";
 
 export default {
-  title: "Alert",
+  title: "Components/Alert",
   component: Alert,
   args: {},
 } as Meta<AlertProps>;
