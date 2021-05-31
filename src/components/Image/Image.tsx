@@ -14,6 +14,7 @@ const Image = ({
   style,
   circle,
   bordered,
+  blurred,
   src,
 }: ImageProps) => (
   <img
@@ -29,6 +30,7 @@ const Image = ({
       "dcui-image--responsive-restrict-width": scaling === "restricted-width",
       "dcui-image--circle": circle,
       "dcui-image--bordered": bordered,
+      "dcui-image--blurred": blurred,
     })}
   />
 );

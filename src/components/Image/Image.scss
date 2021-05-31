@@ -26,4 +26,8 @@
     border-width: 2px;
     border-style: solid;
   }
+
+  &--blurred {
+    filter: blur(6px);
+  }
 }
