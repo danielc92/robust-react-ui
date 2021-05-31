@@ -11,4 +11,5 @@ export interface ButtonProps {
   onClickFunction?: (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
+  onKeyDownFunction?: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
 }

@@ -3,7 +3,7 @@ import React from "react";
 import NavigationBar from "./NavigationBar";
 
 export default {
-  title: "NavigationBar",
+  title: "Components/NavigationBar",
 };
 
 const sampleLink = "https://github.com";

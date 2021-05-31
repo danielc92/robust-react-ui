@@ -40,10 +40,11 @@
   --input-font-family: var(--font-family-primary);
   --input-color: var(--color-black);
   --input-placeholder-color: grey;
-  --input-font-size: 1rem;
+  --input-font-size: var(--font-size-md);
   --input-margin-bottom: 1.5rem;
   --input-border-radius: var(--global-border-radius);
   --input-default-width: 240px;
+  --input-shadow: var(--global-shadow);
   // Checkbox
   --checkbox-border-style: solid;
   --checkbox-border-width: 1px;
@@ -83,6 +84,7 @@
   }
 
   &__input {
+    box-shadow: var(--input-shadow);
     margin-bottom: 0.5rem;
 
     &--full-width {
@@ -143,6 +145,7 @@
   }
 
   &__select {
+    box-shadow: var(--input-shadow);
     background-color: var(--input-background-color);
     border-color: var(--input-border-color);
     border-radius: var(--input-border-radius);
@@ -190,6 +193,8 @@
   }
 
   &__textarea {
+    box-shadow: var(--input-shadow);
+
     &:disabled {
       cursor: not-allowed;
     }
@@ -241,17 +246,20 @@
     cursor: pointer;
 
     &--small {
-      padding: var(--submit-button-padding-y-sm)
+      padding:
+        var(--submit-button-padding-y-sm)
         var(--submit-button-padding-x-sm);
     }
 
     &--medium {
-      padding: var(--submit-button-padding-y-md)
+      padding:
+        var(--submit-button-padding-y-md)
         var(--submit-button-padding-x-md);
     }
 
     &--large {
-      padding: var(--submit-button-padding-y-lg)
+      padding:
+        var(--submit-button-padding-y-lg)
         var(--submit-button-padding-x-lg);
     }
 
@@ -287,6 +295,7 @@
     padding-left: 1.4em;
     position: relative;
     cursor: pointer;
+    margin-bottom: 0.25rem;
   }
 
   &__checkbox[role="checkbox"]::before,
@@ -326,8 +335,8 @@
     transform-origin: center center;
   }
 
-  [role="checkbox"][aria-checked="mixed"]:active::after,
-  [role="checkbox"][aria-checked="true"]::after {
+  &__checkbox[role="checkbox"][aria-checked="mixed"]:active::after,
+  &__checkbox[role="checkbox"][aria-checked="true"]::after {
     border: solid #fff;
     border-width: 0 0.145em 0.145em 0;
     display: block;
@@ -354,7 +363,7 @@
   &__checkbox {
     color: var(--color-charcoal);
     font-family: var(--font-family-primary);
-    font-size: var(--font-size-sm);
+    font-size: var(--input-font-size);
     font-weight: normal;
   }
 }

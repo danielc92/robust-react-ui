@@ -6,7 +6,6 @@ import { TabListProps } from "./TabList.types";
 
 import "./TabList.scss";
 import classNames from "classnames";
-import { KEY_CODES } from "../../constants";
 
 const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
   const [activeTab, setActiveTab] =
@@ -90,18 +89,30 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
     event: React.KeyboardEvent<HTMLButtonElement>,
     index: number
   ) => {
-    event.preventDefault();
-    const keyName = KEY_CODES[event.keyCode];
+    const { keyCode } = event;
+    switch (keyCode) {
+      case 39:
+        event.preventDefault();
+        selectNextTab();
+        break;
 
-    if (keyName === "right arrow") selectNextTab();
-
-    if (keyName === "left arrow") selectPreviousTab();
-
-    if (keyName === "home") selectFirstTab();
-
-    if (keyName === "end") selectLastTab();
-
-    if (keyName === "tab") focusTabPanel(index);
+      case 37:
+        event.preventDefault();
+        selectPreviousTab();
+        break;
+      case 36:
+        event.preventDefault();
+        selectFirstTab();
+        break;
+      case 35:
+        event.preventDefault();
+        selectLastTab();
+        break;
+      case 40:
+      case 38:
+        event.preventDefault();
+        break;
+    }
   };
 
   return (

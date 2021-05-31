@@ -6,6 +6,7 @@ export interface NavigationData {
   linkName: string;
   linkHref?: string;
   children?: NavigationData[];
+  hasSeparator?: boolean;
 }
 export interface NavigationBarProps {
   data: NavigationData[];

@@ -4,7 +4,7 @@
 
 :root {
   --modal-content-padding: var(--space-l) var(--space-xl);
-  --modal-overlay-background: rgba(0, 0, 0, 0.3);
+  --modal-overlay-background: rgba(83, 83, 83, 0.137);
   --modal-content-background-color: var(--color-white);
   --modal-border-radius: var(--global-border-radius);
 }
@@ -32,6 +32,7 @@
     border-radius: var(--modal-border-radius);
     padding: var(--modal-content-padding);
     max-width: 640px;
+    box-shadow: var(--global-shadow);
   }
 
   &__actions {

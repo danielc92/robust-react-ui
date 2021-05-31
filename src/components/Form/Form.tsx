@@ -1,7 +1,17 @@
 // Generated with util/create-component.js
-import React, { ReactNode } from "react";
+import React from "react";
 
-import { FormProps } from "./Form.types";
+import {
+  FormCheckboxGroupProps,
+  FormFieldSetProps,
+  FormInputProps,
+  FormLabelProps,
+  FormLegendProps,
+  FormProps,
+  FormSelectProps,
+  FormSubmitProps,
+  FormTextAreaProps,
+} from "./Form.types";
 
 import "./Form.scss";
 import classNames from "classnames";
@@ -20,52 +30,27 @@ const Form = ({ children, onSubmitFunction, ariaDescribedBy }: FormProps) => (
   </form>
 );
 
-interface FormLegendProps {
-  id: string;
-  children: ReactNode;
-}
 const Legend = ({ id, children }: FormLegendProps) => (
   <legend className="dcui-form__legend" id={id}>
     {children}
   </legend>
 );
 
-interface FormFieldSetProps {
-  children: ReactNode;
-}
 const FieldSet = ({ children }: FormFieldSetProps) => (
   <fieldset className="dcui-form__fieldset">{children}</fieldset>
 );
 
-interface FormLabelProps {
-  children: ReactNode;
-  htmlFor?: string;
-  id?: string;
-}
 const Label = ({ children, id, htmlFor }: FormLabelProps) => (
   <label className="dcui-form__label" htmlFor={htmlFor || null} id={id || null}>
     {children}
   </label>
 );
 
-interface FormInputProps {
-  id: string;
-  value: string;
-  placeholder: string;
-  type?: "text" | "password";
-  handleOnChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlurFunction?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  fullWidth?: boolean;
-  error?: boolean;
-  errorMessage?: string;
-  disabled?: boolean;
-}
-
 const Input = ({
   value,
   id,
   placeholder,
-  handleOnChange,
+  onChangeFunction,
   onBlurFunction,
   type,
   fullWidth,
@@ -73,21 +58,22 @@ const Input = ({
   errorMessage,
   disabled,
 }: FormInputProps) => (
-  <div className="dcui-form__input-wrapper">
+  <div className="dcui-form__input-wrapper" data-testid="InputWrapper">
     <input
+      data-testid="Input"
       disabled={disabled}
       className={classNames({
         "dcui-form__input": true,
         "dcui-form__input--full-width": fullWidth,
         "dcui-form__input--has-error": error,
         "dcui-form__input--disabled": disabled,
-        "dcui-form__input--o": disabled, // override class
+        "dcui-form__input--o": disabled,
       })}
       type={type || "text"}
       placeholder={placeholder}
       id={id}
       value={value}
-      onChange={handleOnChange}
+      onChange={onChangeFunction}
       onBlur={onBlurFunction || (() => {})}
     />
     <p
@@ -101,36 +87,12 @@ const Input = ({
   </div>
 );
 
-export interface CheckboxOptionProps {
-  displayValue: string;
-  keyValue: string;
-  checked: boolean;
-}
-export interface FormCheckboxGroupProps {
-  id: string;
-  values: CheckboxOptionProps[];
-  ariaLabelledBy: string;
-  onSelectFunction: (keyValue: string, checkedValue: boolean) => void;
-}
-
 const CheckboxGroup = ({
   id,
   values,
   ariaLabelledBy,
   onSelectFunction,
 }: FormCheckboxGroupProps) => {
-  // const handleKeyDown = (
-  //   event: React.KeyboardEvent<HTMLDivElement>,
-  //   key: string,
-  //   checked: boolean
-  // ) => {
-  //   console.log(event, key, checked);
-  //   if (event.keyCode === 32) {
-  //     event.preventDefault();
-  //     event.stopPropagation();
-  //     onCheckboxClickFunction(key, checked);
-  //   }
-  // };
   return (
     <div role="group" aria-labelledby={ariaLabelledBy}>
       <ul className="dcui-form__checkbox-group" data-testid="CheckboxGroup">
@@ -160,21 +122,6 @@ const CheckboxGroup = ({
   );
 };
 
-interface FormSelectOptionProps {
-  displayValue: string;
-  keyValue: string;
-}
-
-interface FormSelectProps {
-  id: string;
-  multiple?: boolean;
-  selectedValue: string | string[];
-  values: Array<FormSelectOptionProps>;
-  onChangeFunction: (event: React.FocusEvent<HTMLSelectElement>) => void;
-  onBlurFunction?: (event: React.FocusEvent<HTMLSelectElement>) => void;
-  disabled?: boolean;
-}
-
 const Select = ({
   id,
   onBlurFunction,
@@ -185,6 +132,7 @@ const Select = ({
   disabled,
 }: FormSelectProps) => (
   <select
+    data-testid="Select"
     value={selectedValue}
     id={id}
     multiple={multiple || null}
@@ -198,25 +146,12 @@ const Select = ({
     onBlur={onBlurFunction || (() => {})}
   >
     {values.map((v) => (
-      <option key={v.keyValue} value={v.keyValue}>
+      <option data-testid="SelectOption" key={v.keyValue} value={v.keyValue}>
         {v.displayValue}
       </option>
     ))}
   </select>
 );
-
-interface FormTextAreaProps {
-  id: string;
-  value: string;
-  placeholder: string;
-  onChangeFunction: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
-  onBlurFunction?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;
-  rows?: number;
-  fullWidth?: boolean;
-  error?: boolean;
-  errorMessage?: string;
-  disabled?: boolean;
-}
 
 const TextArea = ({
   id,
@@ -230,8 +165,9 @@ const TextArea = ({
   errorMessage,
   disabled,
 }: FormTextAreaProps) => (
-  <div className="dcui-form__textarea-wrapper">
+  <div className="dcui-form__textarea-wrapper" data-testid="TextAreaWrapper">
     <textarea
+      data-testid="TextArea"
       disabled={disabled}
       className={classNames({
         "dcui-form__textarea": true,
@@ -257,12 +193,7 @@ const TextArea = ({
     </p>
   </div>
 );
-interface FormSubmitProps {
-  size?: "small" | "medium" | "large";
-  variant?: "primary" | "danger" | "success";
-  value: string;
-  id?: string;
-}
+
 const Submit = ({ value, id, size, variant }: FormSubmitProps) => (
   <input
     type="submit"

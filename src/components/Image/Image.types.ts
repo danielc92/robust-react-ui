@@ -1,3 +1,4 @@
+import React from "react";
 // Generated with util/create-component.js
 export interface ImageProps {
   height?: number;
@@ -7,5 +8,6 @@ export interface ImageProps {
   style?: React.CSSProperties;
   circle?: boolean;
   bordered?: boolean;
+  blurred?: boolean;
   src: string;
 }

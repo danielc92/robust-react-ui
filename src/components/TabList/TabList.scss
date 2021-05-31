@@ -13,15 +13,16 @@
   --tab-border-color-active-danger: var(--color-danger);
   --tab-border-color-active-secondary: var(--color-secondary);
   --tab-border-color-active-success: var(--color-success);
+  --tab-list-max-width: 760px;
 }
 
 .dcui-tablist {
   font-family: var(--font-family-primary);
   box-sizing: border-box;
   margin-bottom: var(--global-space-under);
-
+max-width: var(--tab-list-max-width);
   &--full-width {
-    width: 100%;
+    max-width: 100%;
   }
 
   &__button-group {
@@ -76,6 +77,7 @@
     background: var(--tab-active-background-color);
     box-sizing: border-box;
     padding: var(--space-m);
+    box-shadow: var(--global-shadow);
 
     &--hidden {
       display: none;

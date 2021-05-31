@@ -149,7 +149,6 @@ const NavigationBar = ({
     // if has children has parent close the current dropdown
     // focus on parent node
     const foundNode = nodes.find((n) => n.id === node.id);
-    const parentNode = nodes.find((n) => n.id === node.parentId);
 
     if (foundNode.lv > 2) {
       setNodes((nodes) =>
@@ -256,6 +255,25 @@ const NavigationBar = ({
                 tabIndex={0}
               >
                 {a.linkName}
+                {n?.hasMenu && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={classNames({
+                      "dcui-nav__chevron": true,
+                      "dcui-nav__chevron--expanded": n?.menuOpen,
+                    })}
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                )}
               </a>
               {/* 1st dropdown level */}
               {a.children && (
@@ -271,132 +289,169 @@ const NavigationBar = ({
                   {a.children.map((b, _bi) => {
                     const n2 = nodes.find((n) => n.id === b.id);
                     return (
-                      <li
-                        role="none"
-                        className="dcui-nav__dropdown-item"
-                        key={`dropitem${_bi}`}
-                      >
-                        <a
-                          ref={n2?.ref}
-                          id={b.id.toString()}
-                          role="menuitem"
-                          href={b.linkHref ? b.linkHref : "#"}
-                          aria-haspopup={n2?.hasMenu ? "true" : "false"}
-                          aria-expanded={
-                            !n2?.hasMenu
-                              ? null
-                              : n2?.menuOpen
-                              ? "true"
-                              : "false"
-                          }
-                          tabIndex={-1}
-                          onKeyDown={(e) => {
-                            e.preventDefault();
-                            // up
-                            if (e.keyCode === 38) {
-                              focusUpNode(b);
+                      <React.Fragment key={`dropitem${_bi}`}>
+                        <li role="none" className="dcui-nav__dropdown-item">
+                          <a
+                            ref={n2?.ref}
+                            id={b.id.toString()}
+                            role="menuitem"
+                            href={b.linkHref ? b.linkHref : "#"}
+                            aria-haspopup={n2?.hasMenu ? "true" : "false"}
+                            aria-expanded={
+                              !n2?.hasMenu
+                                ? null
+                                : n2?.menuOpen
+                                ? "true"
+                                : "false"
                             }
-                            // down
-                            if (e.keyCode === 40) {
-                              focusDownNode(b);
-                            }
-
-                            // right
-                            if (e.keyCode === 39) {
-                              handleRightPress(b);
-                            }
-
-                            // left
-                            if (e.keyCode === 37) {
-                              handleLeftPress(b);
-                            }
-
-                            // escape
-
-                            if (e.keyCode === 27) {
-                              closeAllAndFocusTopMenu(b);
-                            }
-
-                            // enter
-                            if (e.keyCode === 13) {
-                              if (n2.hasMenu) {
-                                handleRightPress(b);
-                              } else {
-                                handleLinkDefaultAction(b.linkHref);
+                            tabIndex={-1}
+                            onKeyDown={(e) => {
+                              e.preventDefault();
+                              // up
+                              if (e.keyCode === 38) {
+                                focusUpNode(b);
                               }
-                            }
-                          }}
-                        >
-                          {b.linkName}
-                        </a>
-                        {/* 2nd dropdown level */}
-                        {b.children && (
-                          <ul
-                            className={classNames({
-                              "dcui-nav__dropdown": true,
-                              "dcui-nav__dropdown--nested": true,
-                              "dcui-nav__dropdown--open": nodes.find(
-                                (n) => n.id === b.id
-                              )?.menuOpen,
-                            })}
-                            role="menu"
-                            aria-label={b.linkName}
+                              // down
+                              if (e.keyCode === 40) {
+                                focusDownNode(b);
+                              }
+
+                              // right
+                              if (e.keyCode === 39) {
+                                handleRightPress(b);
+                              }
+
+                              // left
+                              if (e.keyCode === 37) {
+                                handleLeftPress(b);
+                              }
+
+                              // escape
+
+                              if (e.keyCode === 27) {
+                                closeAllAndFocusTopMenu(b);
+                              }
+
+                              // enter
+                              if (e.keyCode === 13) {
+                                if (n2.hasMenu) {
+                                  handleRightPress(b);
+                                } else {
+                                  handleLinkDefaultAction(b.linkHref);
+                                }
+                              }
+                            }}
                           >
-                            {b.children.map((c, _ci) => {
-                              const n3 = nodes.find((n) => n.id === c.id);
-                              return (
-                                <li
-                                  role="none"
-                                  className="dcui-nav__dropdown-item"
-                                  key={`dropitem2nd${_ci}`}
-                                >
-                                  <a
-                                    onKeyDown={(e) => {
-                                      e.preventDefault();
-                                      // up
-                                      if (e.keyCode === 38) {
-                                        focusUpNode(c);
-                                      }
-                                      // down
-                                      if (e.keyCode === 40) {
-                                        focusDownNode(c);
-                                      }
+                            {b.linkName}
+                            {n2?.hasMenu && (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className={classNames({
+                                  "dcui-nav__chevron": true,
+                                  "dcui-nav__chevron--submenu": true,
+                                  "dcui-nav__chevron--expanded": n2?.menuOpen,
+                                })}
+                              >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                              </svg>
+                            )}
+                          </a>
+                          {/* 2nd dropdown level */}
+                          {b.children && (
+                            <ul
+                              className={classNames({
+                                "dcui-nav__dropdown": true,
+                                "dcui-nav__dropdown--nested": true,
+                                "dcui-nav__dropdown--open": nodes.find(
+                                  (n) => n.id === b.id
+                                )?.menuOpen,
+                              })}
+                              role="menu"
+                              aria-label={b.linkName}
+                            >
+                              {b.children.map((c, _ci) => {
+                                const n3 = nodes.find((n) => n.id === c.id);
+                                return (
+                                  <React.Fragment key={`dropitem2nd${_ci}`}>
+                                    <li
+                                      role="none"
+                                      className="dcui-nav__dropdown-item"
+                                    >
+                                      <a
+                                        onKeyDown={(e) => {
+                                          e.preventDefault();
+                                          // up
+                                          if (e.keyCode === 38) {
+                                            focusUpNode(c);
+                                          }
+                                          // down
+                                          if (e.keyCode === 40) {
+                                            focusDownNode(c);
+                                          }
 
-                                      // right
-                                      if (e.keyCode === 39) {
-                                        handleRightPress(c);
-                                      }
+                                          // right
+                                          if (e.keyCode === 39) {
+                                            handleRightPress(c);
+                                          }
 
-                                      // left or escape
-                                      if (e.keyCode === 37 || e.keyCode == 27) {
-                                        handleLeftPress(c);
-                                      }
+                                          // left or escape
+                                          if (
+                                            e.keyCode === 37 ||
+                                            e.keyCode === 27
+                                          ) {
+                                            handleLeftPress(c);
+                                          }
 
-                                      // enter
-                                      if (e.keyCode === 13) {
-                                        if (n3.hasMenu) {
-                                          handleRightPress(c);
-                                        } else {
-                                          handleLinkDefaultAction(c.linkHref);
-                                        }
-                                      }
-                                    }}
-                                    ref={n3?.ref}
-                                    id={c.id.toString()}
-                                    role="menuitem"
-                                    href={c.linkHref ? c.linkHref : "#"}
-                                    aria-haspopup="false"
-                                    aria-expanded={null}
-                                    tabIndex={-1}
-                                  >
-                                    {c.linkName}
-                                  </a>
-                                </li>
-                              );
-                            })}
-                          </ul>
+                                          // enter
+                                          if (e.keyCode === 13) {
+                                            if (n3.hasMenu) {
+                                              handleRightPress(c);
+                                            } else {
+                                              handleLinkDefaultAction(
+                                                c.linkHref
+                                              );
+                                            }
+                                          }
+                                        }}
+                                        ref={n3?.ref}
+                                        id={c.id.toString()}
+                                        role="menuitem"
+                                        href={c.linkHref ? c.linkHref : "#"}
+                                        aria-haspopup="false"
+                                        aria-expanded={null}
+                                        tabIndex={-1}
+                                      >
+                                        {c.linkName}
+                                      </a>
+                                    </li>
+
+                                    {c.hasSeparator && (
+                                      <li
+                                        role="separator"
+                                        className="dcui-nav__separator"
+                                      ></li>
+                                    )}
+                                  </React.Fragment>
+                                );
+                              })}
+                            </ul>
+                          )}
+                        </li>
+                        {b.hasSeparator && (
+                          <li
+                            role="separator"
+                            className="dcui-nav__separator"
+                          ></li>
                         )}
-                      </li>
+                      </React.Fragment>
                     );
                   })}
                 </ul>

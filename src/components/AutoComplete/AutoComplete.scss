@@ -13,6 +13,7 @@
 .dcui-autocomplete {
   box-sizing: border-box;
   margin-bottom: var(--global-space-under);
+
   &__listbox {
     background: #f2f2f2;
     display: none;
@@ -31,9 +32,11 @@
 
   &__result {
     box-sizing: border-box;
+    cursor: pointer;
     font-family: var(--autocomplete-font-family);
     padding: var(--autocomplete-result-padding-y)
       var(--autocomplete-result-padding-x);
+
     &--selected {
       background: var(--autocomplete-result-focus-color);
       color: var(--autocomplete-result-focus-background-color);
