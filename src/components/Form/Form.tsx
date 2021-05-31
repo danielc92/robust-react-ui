@@ -132,6 +132,7 @@ const Select = ({
   disabled,
 }: FormSelectProps) => (
   <select
+    data-testid="Select"
     value={selectedValue}
     id={id}
     multiple={multiple || null}
