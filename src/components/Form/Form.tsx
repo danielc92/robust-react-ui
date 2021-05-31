@@ -58,8 +58,9 @@ const Input = ({
   errorMessage,
   disabled,
 }: FormInputProps) => (
-  <div className="dcui-form__input-wrapper">
+  <div className="dcui-form__input-wrapper" data-testid="InputWrapper">
     <input
+      data-testid="Input"
       disabled={disabled}
       className={classNames({
         "dcui-form__input": true,
@@ -131,6 +132,7 @@ const Select = ({
   disabled,
 }: FormSelectProps) => (
   <select
+    data-testid="Select"
     value={selectedValue}
     id={id}
     multiple={multiple || null}
@@ -144,7 +146,7 @@ const Select = ({
     onBlur={onBlurFunction || (() => {})}
   >
     {values.map((v) => (
-      <option key={v.keyValue} value={v.keyValue}>
+      <option data-testid="SelectOption" key={v.keyValue} value={v.keyValue}>
         {v.displayValue}
       </option>
     ))}
@@ -163,8 +165,9 @@ const TextArea = ({
   errorMessage,
   disabled,
 }: FormTextAreaProps) => (
-  <div className="dcui-form__textarea-wrapper">
+  <div className="dcui-form__textarea-wrapper" data-testid="TextAreaWrapper">
     <textarea
+      data-testid="TextArea"
       disabled={disabled}
       className={classNames({
         "dcui-form__textarea": true,

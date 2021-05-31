@@ -3,7 +3,7 @@ import React from "react";
 import AlertDialogue from "./AlertDialogue";
 
 export default {
-  title: "AlertDialogue",
+  title: "Components/AlertDialogue",
 };
 
 export const Basic = () => (

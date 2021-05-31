@@ -7,7 +7,7 @@ import { FormSelectProps } from "./Form.types";
 const { Select, Label, FieldSet } = Form;
 
 export default {
-  title: "Select",
+  title: "Components/Form/Select",
   component: Select,
   args: {
     id: "Select-example",

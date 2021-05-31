@@ -6,7 +6,7 @@ import Button from "./Button";
 import { ButtonProps } from "./Button.types";
 
 export default {
-  title: "Button",
+  title: "Components/Button",
   component: Button,
   args: {
     size: "medium",

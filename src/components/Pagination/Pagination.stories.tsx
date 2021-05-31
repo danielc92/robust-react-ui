@@ -6,7 +6,7 @@ import Pagination from "./Pagination";
 import { PaginationProps } from "./Pagination.types";
 
 export default {
-  title: "Pagination",
+  title: "Components/Pagination",
   component: Pagination,
   args: {
     data: [

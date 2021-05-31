@@ -5,7 +5,7 @@ import Typography from "../Typography";
 import { Meta, Story } from "@storybook/react";
 import { TabListProps } from "./TabList.types";
 export default {
-  title: "TabList",
+  title: "Components/TabList",
   component: TabList,
   args: {
     ariaLabel: "Four planets",

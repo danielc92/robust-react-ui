@@ -5,7 +5,7 @@ import { Meta, Story } from "@storybook/react";
 import { AccordionProps } from "./Accordion.types";
 const { Panel } = Accordion;
 export default {
-  title: "Accordion",
+  title: "Components/Accordion",
   component: Accordion,
   args: {},
 } as Meta<AccordionProps>;
