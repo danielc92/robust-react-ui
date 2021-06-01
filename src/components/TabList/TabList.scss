@@ -20,7 +20,8 @@
   font-family: var(--font-family-primary);
   box-sizing: border-box;
   margin-bottom: var(--global-space-under);
-max-width: var(--tab-list-max-width);
+  max-width: var(--tab-list-max-width);
+
   &--full-width {
     max-width: 100%;
   }
