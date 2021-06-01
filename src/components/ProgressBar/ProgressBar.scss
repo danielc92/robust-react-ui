@@ -1,0 +1,65 @@
+// Generated with util/create-component.js
+@import "../../variables.scss";
+@import "../../typography.scss";
+
+:root {
+  --progress-max-width: 760px;
+  --progress-font-family: var(--font-family-primary);
+  --progress-height-small : .9rem;
+  --progress-height-medium : 1.5rem;
+  --progress-height-large : 2.3rem;
+  --progress-border-radius: var(--global-border-radius);
+}
+
+
+.dcui-progress {
+  background-color: var(--color-light-grey);
+  border-radius: var(--progress-border-radius);
+  max-width: var(--progress-max-width);
+  font-family: var(--progress-font-family);
+
+  &.dcui-progress--full-width {
+    max-width: 100%;
+  }
+
+  &--small {
+    height: var(--progress-height-small);
+  }
+
+  &--medium {
+    height: var(--progress-height-medium);
+  }
+
+  &--large {
+    height: var(--progress-height-large);
+  }
+
+  &--success {
+    .dcui-progress__inner {
+      background-color: var(--color-success);
+    }
+  }
+
+  &--secondary {
+    .dcui-progress__inner {
+      background-color: var(--color-secondary);
+    }
+  }
+
+  &--danger {
+    .dcui-progress__inner {
+      background-color: var(--color-danger);
+    }
+  }
+
+  &--primary {
+    .dcui-progress__inner {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__inner {
+    border-radius: var(--progress-border-radius);
+    height: 100%;
+  }
+}
