@@ -13,7 +13,7 @@ import Pagination from "./components/Pagination";
 import NavigationBar from "./components/NavigationBar";
 import Accordion from "./components/Accordion";
 import Alert from "./components/Alert";
-
+import ProgressBar from "./components/ProgressBar";
 export {
   Accordion,
   Alert,
@@ -30,4 +30,5 @@ export {
   TabList,
   Typography,
   Form,
+  ProgressBar,
 };
