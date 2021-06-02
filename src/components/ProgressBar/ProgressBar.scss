@@ -9,16 +9,26 @@
   --progress-height-medium: 1.5rem;
   --progress-height-large: 2.3rem;
   --progress-border-radius: var(--global-border-radius);
+  --progress-background-color: var(--color-light-grey);
+  --progress-inner-background-color-success: var(--color-success);
+  --progress-inner-background-color-secondary: var(--color-secondary);
+  --progress-inner-background-color-danger: var(--color-danger);
+  --progress-inner-background-color-primary: var(--color-primary);
 }
 
 .dcui-progress {
-  background-color: var(--color-light-grey);
+  background-color: var(--progress-background-color);
   border-radius: var(--progress-border-radius);
   max-width: var(--progress-max-width);
   font-family: var(--progress-font-family);
 
   &.dcui-progress--full-width {
     max-width: 100%;
+  }
+
+  &__inner {
+    border-radius: var(--progress-border-radius);
+    height: 100%;
   }
 
   &--small {
@@ -35,30 +45,25 @@
 
   &--success {
     .dcui-progress__inner {
-      background-color: var(--color-success);
+      background-color: var(--progress-inner-background-color-success);
     }
   }
 
   &--secondary {
     .dcui-progress__inner {
-      background-color: var(--color-secondary);
+      background-color: var(--progress-inner-background-color-secondary);
     }
   }
 
   &--danger {
     .dcui-progress__inner {
-      background-color: var(--color-danger);
+      background-color: var(--progress-inner-background-color-danger);
     }
   }
 
   &--primary {
     .dcui-progress__inner {
-      background-color: var(--color-primary);
+      background-color: var(--progress-inner-background-color-primary);
     }
-  }
-
-  &__inner {
-    border-radius: var(--progress-border-radius);
-    height: 100%;
   }
 }
