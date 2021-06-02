@@ -3,14 +3,13 @@
 @import "../../typography.scss";
 
 :root {
-  --progress-max-width: var(  --global-box-width);
+  --progress-max-width: var(--global-box-width);
   --progress-font-family: var(--font-family-primary);
-  --progress-height-small : .9rem;
-  --progress-height-medium : 1.5rem;
-  --progress-height-large : 2.3rem;
+  --progress-height-small: 0.9rem;
+  --progress-height-medium: 1.5rem;
+  --progress-height-large: 2.3rem;
   --progress-border-radius: var(--global-border-radius);
 }
-
 
 .dcui-progress {
   background-color: var(--color-light-grey);
