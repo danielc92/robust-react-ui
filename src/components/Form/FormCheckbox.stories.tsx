@@ -14,34 +14,43 @@ export default {
     placeholder: "Type some text",
     type: "text",
     ariaLabelledBy: "checkbox-label",
+    values: [
+      {
+        displayValue: "Apple",
+        keyValue: "a",
+        checked: false,
+      },
+      {
+        displayValue: "Apricot",
+        keyValue: "a2",
+        checked: false,
+      },
+      {
+        displayValue: "Watermelon",
+        keyValue: "w",
+        checked: false,
+      },
+      {
+        displayValue: "Banana",
+        keyValue: "b",
+        checked: false,
+      },
+      {
+        displayValue: "Peach",
+        keyValue: "p",
+        checked: false,
+      },
+      {
+        displayValue: "Orange",
+        keyValue: "o",
+        checked: false,
+      },
+    ],
   },
 } as Meta<FormCheckboxGroupProps>;
 
 const Template: Story<FormCheckboxGroupProps> = (args) => {
-  const initialValues: CheckboxOptionProps[] = [
-    {
-      displayValue: "Go for apples",
-      keyValue: "a",
-      checked: false,
-    },
-    {
-      displayValue: "Go for watermelon",
-      keyValue: "c",
-      checked: false,
-    },
-    {
-      displayValue: "Go for oranges",
-      keyValue: "b",
-      checked: false,
-    },
-    {
-      displayValue: "Go for banans",
-      keyValue: "d",
-      checked: false,
-    },
-  ];
-
-  const [values, setValues] = useState<CheckboxOptionProps[]>(initialValues);
+  const [values, setValues] = useState<CheckboxOptionProps[]>(args.values);
 
   const onSelectFunction = (keyValue: string, checked: boolean) => {
     setValues(
@@ -55,7 +64,7 @@ const Template: Story<FormCheckboxGroupProps> = (args) => {
   };
   return (
     <FieldSet>
-      <Label id="checkbox-label">CheckboxGroup Label</Label>
+      <Label id="checkbox-label">Choose a fruit</Label>
       <CheckboxGroup
         {...args}
         values={values}
@@ -65,5 +74,40 @@ const Template: Story<FormCheckboxGroupProps> = (args) => {
   );
 };
 
-export const Basic: Story<FormCheckboxGroupProps> = Template.bind({});
-Basic.args = {};
+export const Checked: Story<FormCheckboxGroupProps> = Template.bind({});
+Checked.args = {
+  values: [
+    {
+      displayValue: "Apple",
+      keyValue: "a",
+      checked: true,
+    },
+    {
+      displayValue: "Apricot",
+      keyValue: "a2",
+      checked: true,
+    },
+    {
+      displayValue: "Watermelon",
+      keyValue: "w",
+      checked: true,
+    },
+    {
+      displayValue: "Banana",
+      keyValue: "b",
+      checked: true,
+    },
+    {
+      displayValue: "Peach",
+      keyValue: "p",
+      checked: true,
+    },
+    {
+      displayValue: "Orange",
+      keyValue: "o",
+      checked: true,
+    },
+  ],
+};
+export const Unchecked: Story<FormCheckboxGroupProps> = Template.bind({});
+Unchecked.args = {};
