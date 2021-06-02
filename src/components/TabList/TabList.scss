@@ -13,7 +13,7 @@
   --tab-border-color-active-danger: var(--color-danger);
   --tab-border-color-active-secondary: var(--color-secondary);
   --tab-border-color-active-success: var(--color-success);
-  --tab-list-max-width: 760px;
+  --tab-list-max-width: var(  --global-box-width);
 }
 
 .dcui-tablist {
