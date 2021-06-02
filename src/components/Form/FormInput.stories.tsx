@@ -22,7 +22,9 @@ const Template: Story<FormInputProps> = (args) => {
     setValue(event.target.value);
   return (
     <FieldSet>
-      <Label htmlFor="input-example">Input Label</Label>
+      <Label htmlFor="input-example" required>
+        Input Label
+      </Label>
       <Input {...args} value={value} onChangeFunction={onChangeFunction} />
     </FieldSet>
   );

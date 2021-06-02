@@ -26,6 +26,7 @@
   --label-font-family: var(--font-family-primary);
   --label-font-weight: bold;
   --label-margin: var(--space-xs);
+  --label-required-font-color: var(--color-primary);
   // input text, input password, textarea
   --input-border-style: solid;
   // --input-border-color: rgb(223, 223, 223);
@@ -68,6 +69,10 @@
     font-weight: var(--label-font-weight);
     margin-right: var(--label-margin);
     margin-bottom: var(--label-margin);
+  }
+
+  &__label-required {
+    color: var(--label-required-font-color);
   }
 
   &__fieldset {
