@@ -29,8 +29,11 @@ If you want to contribute, feel free to send me a message.
 ## Components
 
 ```
+├───Accordion
+├───Alert
 ├───AlertDialogue
 ├───AutoComplete
+├───Breadcrumbs
 ├───Button
 ├───Form
 ├───Image
@@ -39,6 +42,8 @@ If you want to contribute, feel free to send me a message.
 ├───Layout
 ├───Link
 ├───NavigationBar
+├───Pagination
+├───ProgressBar
 ├───Table
 ├───TabList
 └───Typography
