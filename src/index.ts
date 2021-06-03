@@ -14,7 +14,9 @@ import NavigationBar from "./components/NavigationBar";
 import Accordion from "./components/Accordion";
 import Alert from "./components/Alert";
 import ProgressBar from "./components/ProgressBar";
+import Breadcrumbs from "./components/Breadcrumbs";
 export {
+  Breadcrumbs,
   Accordion,
   Alert,
   AutoComplete,
