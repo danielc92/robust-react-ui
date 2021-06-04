@@ -4,11 +4,12 @@
 
 :root {
   --nav-bar-background-color: var(--color-light-grey);
-  --nav-bar-color: var(--color-primary);
+  --nav-bar-color: var(--color-charcoal);
   --nav-bar-background-color-focus: #e4e2e2;
   --nav-menu-width: 200px;
   --nav-font-weight: bold;
   --nav-text-transform: normal;
+  --nav-chevron-color: var(--color-charcoal);
 }
 
 .dcui-nav {
@@ -16,6 +17,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0 0 var(--global-space-under) 0;
+
+  > * {
+    box-sizing: border-box;
+  }
 
   ul[role="menubar"] {
     background-color: var(--nav-bar-background-color);
@@ -54,9 +59,7 @@
     position: relative;
   }
 
-  > * {
-    box-sizing: border-box;
-  }
+
 
   &__separator {
     border-top: 1px solid var(--color-charcoal);
@@ -65,27 +68,31 @@
     height: 1px;
   }
 
+
+  &__menu-item--expanded {
+      .dcui-nav__chevron{
+          transform: translateY(-50%) rotate(90deg);
+        }
+
+  }
+
+  .dcui-nav__menu-item.dcui-nav__menu-item--has-menu {
+    >a[role="menuitem"] {
+      padding-right: 2rem ;
+    }
+  }
+
   &__chevron {
-    color: var(--color-primary);
-    top: -2px;
-    right: 0;
+    color: var(--nav-chevron-color);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
     position: absolute;
 
-    &--expanded {
-      transform: rotate(90deg);
-    }
-
-    &--submenu {
-      top: 8px;
-    }
   }
 
-  .dcui-nav__menu-item {
-    > a[role="menuitem"] {
-      line-height: 3rem;
-    }
-  }
-
+  .dcui-nav__dropdown-item:hover,
+  .dcui-nav__dropdown-item:focus,
   .dcui-nav__menu-item:hover,
   .dcui-nav__menu-item:focus {
     > .dcui-nav__dropdown {
@@ -93,7 +100,13 @@
     }
 
     > a[role="menuitem"] > .dcui-nav__chevron {
-      transform: rotate(90deg);
+      transform:  translateY(-50%)     rotate(90deg);
+    }
+  }
+
+  .dcui-nav__menu-item {
+    > a[role="menuitem"] {
+      line-height: 3rem;
     }
   }
 
@@ -116,27 +129,14 @@
     position: absolute;
   }
 
-  .dcui-nav__dropdown-item:hover,
-  .dcui-nav__dropdown-item:focus {
-    > .dcui-nav__dropdown {
-      display: block;
-    }
-
-    > a[role="menuitem"] > .dcui-nav__chevron {
-      transform: rotate(90deg);
-    }
-  }
-
-  .dcui-nav__menu-item [role="menuitem"] {
-    padding: 1rem 1.4rem;
-  }
-
   .dcui-nav__dropdown-item [role="menuitem"],
   .dcui-nav__menu-item [role="menuitem"] {
     color: var(--nav-bar-color);
     font-weight: var(--nav-font-weight);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     list-style: none;
     box-sizing: border-box;
     text-decoration: none;

@@ -223,7 +223,11 @@ const NavigationBar = ({
           return (
             <li
               role="none"
-              className="dcui-nav__menu-item"
+              className={classNames({
+                "dcui-nav__menu-item": true,
+                "dcui-nav__menu-item--expanded": n?.menuOpen,
+                "dcui-nav__menu-item--has-menu": n?.hasMenu,
+              })}
               key={`menuitem${_ai}`}
             >
               <a
@@ -268,7 +272,6 @@ const NavigationBar = ({
                     strokeLinejoin="round"
                     className={classNames({
                       "dcui-nav__chevron": true,
-                      "dcui-nav__chevron--expanded": n?.menuOpen,
                     })}
                   >
                     <polyline points="9 18 15 12 9 6"></polyline>
