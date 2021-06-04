@@ -18,6 +18,7 @@ export default {
     "src/components/NavigationBar/index.ts",
     "src/components/Table/index.ts",
     "src/components/TabList/index.ts",
+    "src/components/Breadcrumbs/index.ts",
     "src/components/Typography/index.ts",
     "src/components/AutoComplete/index.ts",
     "src/components/Pagination/index.ts",

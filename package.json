@@ -15,7 +15,8 @@
     "storybook:export": "build-storybook",
     "generate": "node ./util/create-component",
     "prepublishOnly": "npm run build",
-    "stylelint-fix": ".\\node_modules\\.bin\\stylelint --fix \"**/*.scss\""
+    "stylelint-fix": ".\\node_modules\\.bin\\stylelint --fix \"**/*.scss\"",
+    "chromatic": "npx chromatic"
   },
   "repository": {
     "type": "git",
@@ -56,6 +57,7 @@
     "@typescript-eslint/parser": "^4.24.0",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
+    "chromatic": "^5.8.3",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.2",

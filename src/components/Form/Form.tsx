@@ -40,9 +40,10 @@ const FieldSet = ({ children }: FormFieldSetProps) => (
   <fieldset className="dcui-form__fieldset">{children}</fieldset>
 );
 
-const Label = ({ children, id, htmlFor }: FormLabelProps) => (
+const Label = ({ children, id, htmlFor, required }: FormLabelProps) => (
   <label className="dcui-form__label" htmlFor={htmlFor || null} id={id || null}>
-    {children}
+    <span>{children}</span>
+    {required && <span className="dcui-form__label-required">*</span>}
   </label>
 );
 

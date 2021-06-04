@@ -2,11 +2,27 @@
 @import "../../variables.scss";
 @import "../../typography.scss";
 
+:root {
+  --accordion-border-style: solid;
+  --accordion-border-width: 1px;
+  --accordion-border-color: var(--color-light-grey);
+  --accordion-width: var(--global-box-width);
+  --accordion-expanded-color: var(--color-primary);
+  --accordion-trigger-background-color: var(--color-light-grey);
+  --accordion-trigger-color: var(--color-charcoal);
+  --accordion-trigger-padding-y: 1rem;
+  --accordion-trigger-padding-x: 1rem;
+  --accordion-trigger-font-size: 1rem;
+  --accordion-trigger-focus-color: var(--color-primary);
+}
+
 .dcui-accordion {
-  border: 1px solid hsl(0, 0%, 82%);
+  border-color: var(--accordion-border-color);
+  border-style: var(--accordion-border-style);
+  border-width: var(--accordion-border-width);
   padding: 0;
   margin: 0;
-  width: 30rem;
+  width: var(--accordion-width);
   margin-bottom: var(--global-space-under);
 
   &--full-width {
@@ -22,7 +38,7 @@
     transform: translateY(-50%);
 
     &--expanded {
-      color: var(--color-primary);
+      color: var(--accordion-expanded-color);
     }
   }
 
@@ -42,12 +58,12 @@
 
   &__trigger {
     cursor: pointer;
-    background-color: var(--color-light-grey);
-    color: var(--color-charcoal);
+    background-color: var(--accordion-trigger-background-color);
+    color: var(--accordion-trigger-color);
     display: block;
-    font-size: 1rem;
+    font-size: var(--accordion-trigger-font-size);
     font-weight: normal;
-    padding: 1em 1.5em;
+    padding: var(--accordion-trigger-padding-y) var(--accordion-trigger-padding-x);
     position: relative;
     margin: 0;
     border-style: none;
@@ -57,7 +73,7 @@
 
     &:hover,
     &:focus {
-      color: var(--color-primary);
+      color: var(--accordion-trigger-focus-color);
     }
   }
 
