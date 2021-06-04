@@ -24,6 +24,12 @@
   }
 
   &__button {
+    &:active,
+    &:focus {
+      outline: 0;
+      box-shadow: var(--global-input-focus-shadow);
+    }
+
     background-color: var(--pagination-button-background-color);
     color: var(--pagination-button-color);
     display: flex;

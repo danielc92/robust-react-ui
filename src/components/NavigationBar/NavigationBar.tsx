@@ -209,6 +209,9 @@ const NavigationBar = ({
 
     nodes.find((n) => n.id === node.parentId).ref.current.focus();
   };
+  const handleBlur = () => {
+    setNodes(nodes.map((x) => ({ ...x, menuOpen: false })));
+  };
 
   return (
     <nav
@@ -223,7 +226,11 @@ const NavigationBar = ({
           return (
             <li
               role="none"
-              className="dcui-nav__menu-item"
+              className={classNames({
+                "dcui-nav__menu-item": true,
+                "dcui-nav__menu-item--expanded": n?.menuOpen,
+                "dcui-nav__menu-item--has-menu": n?.hasMenu,
+              })}
               key={`menuitem${_ai}`}
             >
               <a
@@ -268,7 +275,6 @@ const NavigationBar = ({
                     strokeLinejoin="round"
                     className={classNames({
                       "dcui-nav__chevron": true,
-                      "dcui-nav__chevron--expanded": n?.menuOpen,
                     })}
                   >
                     <polyline points="9 18 15 12 9 6"></polyline>
@@ -290,7 +296,13 @@ const NavigationBar = ({
                     const n2 = nodes.find((n) => n.id === b.id);
                     return (
                       <React.Fragment key={`dropitem${_bi}`}>
-                        <li role="none" className="dcui-nav__dropdown-item">
+                        <li
+                          role="none"
+                          className={classNames({
+                            "dcui-nav__dropdown-item": true,
+                            "dcui-nav__dropdown-item--expanded": n2?.menuOpen,
+                          })}
+                        >
                           <a
                             ref={n2?.ref}
                             id={b.id.toString()}
