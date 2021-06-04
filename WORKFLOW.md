@@ -39,6 +39,18 @@ This command will create a new folder with the component name and;
 
 After running the above command, for the build to pass, the component must also be import/exported from `src/index.ts` and added to the `input` array in `rollup.config.js`
 
+### Splitting
+
+For the sake of orgsanisation, if a component has multiple compound components. The underlying folder structure can be as follow;
+```
+index.ts
+- Base (e.g. Table)
+- CompoundComponent1 (e.g. Row)
+- CompoundComponent2 (e.g. Cell)
+- CompoundComponent3 (e.g. TBody)
+- ...
+```
+
 ## Typescript
 
 All components will have defined types/interfaces, through Typescript, this will allow users to figure out how to use components more efficiently. Typing components will provide automatic documentation at the very least. React is the most mature and relied upon front end library to date, and has great integration with Typescript.
