@@ -35,6 +35,12 @@
   }
 
   &__button {
+    &:active,
+    &:focus {
+      outline: 0;
+      box-shadow: var(--alert-focus-shadow);
+    }
+
     background: transparent;
     border: 0;
     box-sizing: border-box;

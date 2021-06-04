@@ -60,6 +60,12 @@
   }
 
   input {
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: var(--global-input-focus-shadow);
+    }
+
     &:disabled {
       cursor: not-allowed;
     }
