@@ -18,14 +18,20 @@
 
   &__item {
     list-style: none;
+
     >a[aria-current="page"] {
-        color: var(--color-charcoal);}
-
-
-    >a {
-      color: var(--breadcrumb-font-color);
+      color: var(--color-charcoal);
     }
 
+    >a {
+      &:hover,
+      &:focus {
+        outline: 0;
+        background-color: var(--link-focus-background-color);
+      }
+
+      color: var(--breadcrumb-font-color);
+    }
   }
 
   &--small {
@@ -48,7 +54,6 @@
     padding: 0;
     margin: 0 0 var(--global-space-under) 0;
   }
-
 
   &__item:not(:last-child)::after {
     color: var(--breadcrumb-separator-color);
