@@ -6,8 +6,6 @@ import Landmark from "./Landmark";
 import { LandmarkProps } from "./Landmark.types";
 
 describe("Landmark Suite", () => {
-  let props: LandmarkProps;
-
   beforeEach(() => {});
   const renderMain = () => render(<Landmark.Main>some content</Landmark.Main>);
   const renderRegion = () =>
