@@ -209,6 +209,9 @@ const NavigationBar = ({
 
     nodes.find((n) => n.id === node.parentId).ref.current.focus();
   };
+  const handleBlur = () => {
+    setNodes(nodes.map((x) => ({ ...x, menuOpen: false })));
+  };
 
   return (
     <nav
@@ -293,7 +296,13 @@ const NavigationBar = ({
                     const n2 = nodes.find((n) => n.id === b.id);
                     return (
                       <React.Fragment key={`dropitem${_bi}`}>
-                        <li role="none" className="dcui-nav__dropdown-item">
+                        <li
+                          role="none"
+                          className={classNames({
+                            "dcui-nav__dropdown-item": true,
+                            "dcui-nav__dropdown-item--expanded": n2?.menuOpen,
+                          })}
+                        >
                           <a
                             ref={n2?.ref}
                             id={b.id.toString()}
