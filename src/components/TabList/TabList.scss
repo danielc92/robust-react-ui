@@ -17,6 +17,12 @@
 }
 
 .dcui-tablist {
+  &:focus-within {
+    .dcui-tablist__button-group {
+      overflow-x: visible;
+    }
+  }
+
   font-family: var(--font-family-primary);
   box-sizing: border-box;
   margin-bottom: var(--global-space-under);
@@ -27,12 +33,19 @@
   }
 
   &__button-group {
-    overflow-x: auto;
     display: flex;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 
   &__button {
+    &:active,
+    &:focus {
+      z-index: 1;
+      outline: 0;
+      box-shadow: var(--global-input-focus-shadow);
+    }
+
     white-space: nowrap;
     background: var(--tab-background-color);
     border: none;
@@ -75,6 +88,13 @@
   }
 
   &__panel {
+    &:active,
+    &:focus {
+      z-index: 1;
+      outline: 0;
+      box-shadow: var(--global-input-focus-shadow);
+    }
+
     background: var(--tab-active-background-color);
     box-sizing: border-box;
     padding: var(--space-m);
