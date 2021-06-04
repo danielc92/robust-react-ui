@@ -1,17 +1,8 @@
 // Generated with util/create-component.js
 import React from "react";
-import {
-  HeadingLevel,
-  HeadingProps,
-  ParagraphProps,
-  TypographyProps,
-} from "./Typography.types";
-import "./Typography.scss";
+import { HeadingLevel, HeadingProps } from "./Heading.types";
+import "./Heading.scss";
 import classNames from "classnames";
-
-const Typography = ({ children }: TypographyProps) => (
-  <React.Fragment>{children}</React.Fragment>
-);
 
 const getHeaderClass = (level: HeadingLevel | null, jumbo: boolean) => {
   const levelCalc = !level ? 1 : level;
@@ -85,24 +76,4 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
     );
 };
 
-const Paragraph = ({ children, id, size, bolded }: ParagraphProps) => (
-  <p
-    className={classNames({
-      "dcui-para": true,
-      "dcui-para--small": size === "small",
-      "dcui-para--medium": size === "medium" || !size,
-      "dcui-para--large": size === "large",
-      "dcui-para--bolded": bolded,
-    })}
-    id={id || null}
-    data-testid="Paragraph"
-  >
-    {children}
-  </p>
-);
-
-Typography.Paragraph = Paragraph;
-
-Typography.Heading = Heading;
-
-export default Typography;
+export default Heading;

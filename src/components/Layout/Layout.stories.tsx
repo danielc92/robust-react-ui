@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 import React from "react";
-import Typography from "../Typography/Typography";
+import Typography from "../Typography";
 import Layout from "./Layout";
 
 export default {

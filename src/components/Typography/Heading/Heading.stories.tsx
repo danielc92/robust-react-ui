@@ -2,12 +2,12 @@
 
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import Typography from "./Typography";
-import { HeadingProps } from "./Typography.types";
-const { Heading } = Typography;
+import Heading from "./Heading";
+import { HeadingProps } from "./Heading.types";
+
 export default {
   title: "Components/Typography/Heading",
-  component: Typography.Heading,
+  component: Heading,
   args: {
     children: "Example Heading",
   },

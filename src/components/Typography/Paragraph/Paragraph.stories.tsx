@@ -2,13 +2,13 @@
 
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import Typography from "./Typography";
-import { ParagraphProps } from "./Typography.types";
-const { Paragraph } = Typography;
+import Paragraph from "./Paragraph";
+import { ParagraphProps } from "./Paragraph.types";
+
 export default {
   title: "Components/Typography/Paragraph",
 
-  component: Typography.Paragraph,
+  component: Paragraph,
   args: {
     children:
       "Ea esse mollit dolor mollit qui minim ex cillum minim ex cupidatat enim veniam ea. Velit sit aliquip amet consequat sint adipisicing non ad nostrud aliquip et pariatur. Nulla culpa non ea exercitation culpa laborum dolore commodo. Velit ex non tempor ea. Sit veniam aliquip tempor enim nulla culpa.",

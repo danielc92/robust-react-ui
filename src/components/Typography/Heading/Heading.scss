@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import "../../../variables.scss";
+@import "../../../typography.scss";
 
 :root {
   --header-font-size-h1: var(--font-size-xxxlg);
@@ -11,39 +11,8 @@
   --header-font-size-h6: var(--font-size-sm);
   --header-font-color: var(--color-charcoal);
   --header-jumbo-multiplier: 1.5;
-  --paragraph-font-size-sm: var(--font-size-sm);
-  --paragraph-font-size-md: var(--font-size-md);
-  --paragraph-font-size-lg: var(--font-size-lg);
-  --paragraph-line-height-sm: var(--font-line-height-sm);
-  --paragraph-line-height-md: var(--font-line-height-md);
-  --paragraph-line-height-lg: var(--font-line-height-lg);
-  --paragraph-font-color: var(--color-charcoal);
 }
 
-.dcui-para {
-  color: var(--paragraph-font-color);
-  font-family: var(--font-family-primary);
-  margin: var(--font-margin);
-
-  &--small {
-    font-size: var(--paragraph-font-size-sm);
-    line-height: var(--paragraph-line-height-sm);
-  }
-
-  &--medium {
-    font-size: var(--paragraph-font-size-md);
-    line-height: var(--paragraph-line-height-md);
-  }
-
-  &--large {
-    font-size: var(--paragraph-font-size-lg);
-    line-height: var(--paragraph-line-height-lg);
-  }
-
-  &--bolded {
-    font-weight: bold;
-  }
-}
 
 .dcui-header {
   color: var(--header-font-color);

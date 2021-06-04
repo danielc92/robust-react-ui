@@ -2,8 +2,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Typography from "./Typography";
-import { HeadingProps, ParagraphProps } from "./Typography.types";
+import Heading from "./Heading";
+import { HeadingProps } from "./Heading.types";
 
 describe("Heading Suite", () => {
   let props: HeadingProps;
@@ -15,7 +15,7 @@ describe("Heading Suite", () => {
     };
   });
 
-  const renderComponent = () => render(<Typography.Heading {...props} />);
+  const renderComponent = () => render(<Heading {...props} />);
 
   it("should render text correct", () => {
     const { getByTestId } = renderComponent();
@@ -105,43 +105,5 @@ describe("Heading Suite", () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId("Heading");
     expect(component.nodeName).toEqual("H6");
-  });
-});
-
-describe("Paragraph Suite", () => {
-  let props: ParagraphProps;
-
-  beforeEach(() => {
-    props = {
-      children: "hello world",
-      id: "para",
-      size: "large",
-    };
-  });
-
-  const renderComponent = () => render(<Typography.Paragraph {...props} />);
-
-  it("should render text correct", () => {
-    const { getByTestId } = renderComponent();
-    const component = getByTestId("Paragraph");
-    expect(component).toHaveTextContent("hello world");
-  });
-
-  it("should contain correct base class", () => {
-    const { getByTestId } = renderComponent();
-    const component = getByTestId("Paragraph");
-    expect(component).toHaveClass("dcui-para");
-  });
-
-  it("should contain the large class modifier", () => {
-    const { getByTestId } = renderComponent();
-    const component = getByTestId("Paragraph");
-    expect(component).toHaveClass("dcui-para--large");
-  });
-  it("should render with bolded class modifier", () => {
-    props.bolded = true;
-    const { getByTestId } = renderComponent();
-    const component = getByTestId("Paragraph");
-    expect(component).toHaveClass("dcui-para--bolded");
   });
 });
