@@ -11,7 +11,7 @@ TBD.
 TBD.
 
 ## Storybook
-Click the [following link](https://60b75a95d763ec0039b4429c-vxnypsfddl.chromatic.com/) to see the latest `develop` branch.
+Click the [following link](https://develop--60b75a95d763ec0039b4429c.chromatic.com/) to see the latest `develop` branch.
 
 ## CI
 
