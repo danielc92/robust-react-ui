@@ -13,7 +13,14 @@
   --color-charcoal: #333;
   --color-disabled: #d4d4d4;
   --color-disabled-light: rgb(238, 238, 238);
-
+  // focus
+  // used by breadcrumb/link
+  --link-focus-background-color: #5b31e63a;
+  --form-focus-color-primary: #5b31e694;
+  // used by button/alertdialogue/input/textarea/select/tablist/accordion/pagination
+  --global-input-focus-shadow: 0 0 0 3px var(--form-focus-color-primary);
+  --alert-focus-color: rgba(255, 255, 255, 0.541);
+  --alert-focus-shadow: 0 0 0 3px var(--alert-focus-color);
   // used by accordion/progressbar/tablist/table
   --global-box-width: 760px;
   // border
