@@ -30,13 +30,13 @@ If you want to contribute, feel free to send me a message.
 
 ```
 ├───Accordion
-│   ├───Base
-│   └───Panel
-├───Alert
+│   ├───Base     
+│   └───Panel    
+├───Alert        
 ├───AlertDialogue
-├───AutoComplete
-├───Breadcrumbs
-├───Button
+├───AutoComplete 
+├───Breadcrumbs  
+├───Button       
 ├───Form
 │   ├───Base
 │   ├───CheckboxGroup
@@ -48,7 +48,6 @@ If you want to contribute, feel free to send me a message.
 │   ├───Submit
 │   └───TextArea
 ├───Image
-│   └───assets
 ├───Landmark
 │   ├───Base
 │   ├───Complementary
@@ -56,11 +55,22 @@ If you want to contribute, feel free to send me a message.
 │   ├───Main
 │   └───Region
 ├───Layout
+│   ├───Base
+│   ├───Column
+│   ├───Container
+│   └───Row
 ├───Link
 ├───NavigationBar
 ├───Pagination
 ├───ProgressBar
 ├───Table
+│   ├───Base
+│   ├───Body
+│   ├───Cell
+│   ├───Foot
+│   ├───Head
+│   ├───Header
+│   └───Row
 ├───TabList
 └───Typography
     ├───Base
