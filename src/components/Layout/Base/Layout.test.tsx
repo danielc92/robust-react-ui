@@ -1,27 +1,23 @@
 // Generated with util/create-component.js
 import React from "react";
 import { render } from "@testing-library/react";
-
-import Row from "./Layout";
-import { RowProps } from "./Layout.types";
-import Layout from "./Layout";
+import Column from "../Column";
+import Row from "../Row";
+import Container from "../Container";
 
 describe("Layout Suite", () => {
-  let props: RowProps;
-
   beforeEach(() => {});
 
   const renderRow = () =>
     render(
-      <Layout.Row>
-        <Layout.Column>content 1</Layout.Column>
-        <Layout.Column>content 2</Layout.Column>
-        <Layout.Column>content 3</Layout.Column>
-      </Layout.Row>
+      <Row>
+        <Column>content 1</Column>
+        <Column>content 2</Column>
+        <Column>content 3</Column>
+      </Row>
     );
 
-  const renderContainer = () =>
-    render(<Layout.Container>some content</Layout.Container>);
+  const renderContainer = () => render(<Container>some content</Container>);
 
   it("Row should render correct class", () => {
     const { getByTestId } = renderRow();

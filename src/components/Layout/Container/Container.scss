@@ -1,0 +1,25 @@
+// Generated with util/create-component.js
+@import "../../../variables.scss";
+@import "../../../typography.scss";
+
+:root {
+  --container-max-width-sm: 800px;
+  --container-max-width-md: 1000px;
+  --container-max-width-lg: 1300px;
+}
+
+.dcui-container {
+  margin: 0 auto;
+
+  &--small {
+    max-width: var(--container-max-width-sm);
+  }
+
+  &--medium {
+    max-width: var(--container-max-width-md);
+  }
+
+  &--large {
+    max-width: var(--container-max-width-lg);
+  }
+}
