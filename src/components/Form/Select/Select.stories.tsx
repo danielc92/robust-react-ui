@@ -2,9 +2,10 @@
 
 import React, { useState } from "react";
 import { Story, Meta } from "@storybook/react";
-import Form from "./Form";
-import { FormSelectProps } from "./Form.types";
-const { Select, Label, FieldSet } = Form;
+import Select from "./Select";
+import { FormSelectProps } from "./Select.types";
+import FieldSet from "../FieldSet";
+import Label from "../Label";
 
 export default {
   title: "Components/Form/Select",

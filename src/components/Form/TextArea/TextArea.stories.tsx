@@ -2,9 +2,10 @@
 
 import React, { useState } from "react";
 import { Story, Meta } from "@storybook/react";
-import Form from "./Form";
-import { FormTextAreaProps } from "./Form.types";
-const { TextArea, Label, FieldSet } = Form;
+import TextArea from "./TextArea";
+import { FormTextAreaProps } from "./TextArea.types";
+import FieldSet from "../FieldSet";
+import Label from "../Label";
 
 export default {
   title: "Components/Form/TextArea",

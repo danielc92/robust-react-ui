@@ -41,4 +41,23 @@
   --space-xl: 3rem;
   --space-xxl: 6rem;
   --space-xxxl: 8rem;
+
+  // form
+  --input-border-style: solid;
+  --input-border-color: var(--color-primary);
+  --input-background-color: var(--color-primary-light);
+  --input-background-color-error: var(--color-danger-light);
+  --input-background-color-disabled: var(--color-disabled-light);
+  --input-border-color-disabled: var(--color-disabled);
+  --input-border-width: 2px;
+  --input-padding-y: var(--space-xs);
+  --input-padding-x: var(--space-xs);
+  --input-font-family: var(--font-family-primary);
+  --input-color: var(--color-black);
+  --input-placeholder-color: #949494;
+  --input-font-size: var(--font-size-md);
+  --input-margin-bottom: 1.5rem;
+  --input-border-radius: var(--global-border-radius);
+  --input-default-width: 300px;
+  --input-shadow: var(--global-shadow);
 }

@@ -1,4 +1,2 @@
-// Generated with util/create-component.js
-import Form from "./Form";
+import Form from "./Base";
 export default Form;
-  

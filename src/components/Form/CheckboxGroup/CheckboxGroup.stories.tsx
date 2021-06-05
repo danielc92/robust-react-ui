@@ -1,10 +1,12 @@
-// CheckboxGroup.stories.tsx
-
 import React, { useState } from "react";
 import { Story, Meta } from "@storybook/react";
-import Form from "./Form";
-import { CheckboxOptionProps, FormCheckboxGroupProps } from "./Form.types";
-const { CheckboxGroup, Label, FieldSet } = Form;
+import CheckboxGroup from "./CheckboxGroup";
+import {
+  CheckboxOptionProps,
+  FormCheckboxGroupProps,
+} from "./CheckboxGroup.types";
+import Label from "../Label";
+import FieldSet from "../FieldSet";
 
 export default {
   title: "Components/Form/CheckboxGroup",

@@ -1,10 +1,9 @@
-// Input.stories.tsx
-
 import React, { useState } from "react";
 import { Story, Meta } from "@storybook/react";
-import Form from "./Form";
-import { FormInputProps } from "./Form.types";
-const { Input, Label, FieldSet } = Form;
+import Label from "../Label";
+import FieldSet from "../FieldSet";
+import { FormInputProps } from "./Input.types";
+import Input from "./Input";
 
 export default {
   title: "Components/Form/Input",
@@ -12,14 +11,16 @@ export default {
   args: {
     id: "input-example",
     placeholder: "Type some text",
-    type: "date",
+    type: "text",
   },
 } as Meta<FormInputProps>;
 
 const Template: Story<FormInputProps> = (args) => {
   const [value, setValue] = useState("");
-  const onChangeFunction = (event: React.ChangeEvent<HTMLInputElement>) =>
+  const onChangeFunction = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event.target.value, "Changing to ->");
     setValue(event.target.value);
+  };
   return (
     <FieldSet>
       <Label htmlFor="input-example" required>
@@ -52,4 +53,15 @@ Password.args = {
 export const Date: Story<FormInputProps> = Template.bind({});
 Date.args = {
   type: "date",
+};
+export const DateError: Story<FormInputProps> = Template.bind({});
+DateError.args = {
+  type: "date",
+  error: true,
+  errorMessage: "Sorry, the date entered is invalid!",
+};
+export const DateDisabled: Story<FormInputProps> = Template.bind({});
+DateDisabled.args = {
+  type: "date",
+  disabled: true,
 };
