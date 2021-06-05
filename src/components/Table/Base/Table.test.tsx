@@ -3,13 +3,8 @@ import React from "react";
 import { render } from "@testing-library/react";
 
 import Table from "./Table";
-import { TableProps } from "./Table.types";
 
 describe("Table suite", () => {
-  let props: TableProps;
-
-  beforeEach(() => {});
-
   const renderComponent = () =>
     render(
       <Table>
