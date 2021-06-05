@@ -3,7 +3,7 @@
 import React, { createRef, useEffect, useState } from "react";
 import { AccordionProps, AccordionPanelProps } from "./Accordion.types";
 import "./Accordion.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 import Panel from "../Panel";
 
 const Accordion = ({
@@ -53,7 +53,7 @@ const Accordion = ({
     <div
       data-testid="Accordion"
       id="accordionGroup"
-      className={classNames({
+      className={getClassNames({
         "dcui-accordion": true,
         "dcui-accordion--full-width": fullWidth,
       })}

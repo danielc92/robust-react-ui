@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 import React from "react";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 import { ContainerProps } from "./Container.types";
 
 import "./Container.scss";
@@ -8,7 +8,7 @@ import "./Container.scss";
 const Container = ({ children, size }: ContainerProps) => (
   <div
     data-testid="Container"
-    className={classNames({
+    className={getClassNames({
       "dcui-container": true,
       "dcui-container--small": size === "small",
       "dcui-container--medium": size === "medium" || !size,

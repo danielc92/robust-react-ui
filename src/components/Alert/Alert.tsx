@@ -4,7 +4,7 @@ import React from "react";
 import { AlertProps } from "./Alert.types";
 
 import "./Alert.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const Alert = ({
   children,
@@ -17,7 +17,7 @@ const Alert = ({
     <div
       data-testid="Alert"
       role="alert"
-      className={classNames({
+      className={getClassNames({
         "dcui-alert": true,
         "dcui-alert--primary": variant === "primary" || !variant,
         "dcui-alert--danger": variant === "danger",

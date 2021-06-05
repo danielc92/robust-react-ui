@@ -4,7 +4,7 @@ import React from "react";
 import { ButtonProps } from "./Button.types";
 
 import "./Button.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -30,7 +30,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         onClickFunction ? onClickFunction(e) : {};
       }}
       ref={ref}
-      className={classNames({
+      className={getClassNames({
         "dcui-button": true,
         "dcui-button--small": size === "small",
         "dcui-button--medium": !size || size === "medium",

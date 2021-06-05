@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 import React from "react";
 import { PaginationProps } from "./Pagination.types";
 import "./Pagination.scss";
@@ -20,7 +20,7 @@ const Pagination = ({ data, ariaLabel, rounded }: PaginationProps) => {
           <li key={"page-key" + i.toString()}>
             <a
               data-testid="PaginationButton"
-              className={classNames({
+              className={getClassNames({
                 "dcui-pagination__button": true,
                 "dcui-pagination__button--current": x.current,
                 "dcui-pagination__button--rounded": rounded,

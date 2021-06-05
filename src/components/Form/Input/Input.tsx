@@ -2,7 +2,7 @@
 import React from "react";
 import { FormInputProps } from "./Input.types";
 import "./Input.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const Input = ({
   value,
@@ -20,7 +20,7 @@ const Input = ({
     <input
       data-testid="Input"
       disabled={disabled}
-      className={classNames({
+      className={getClassNames({
         "dcui-form__input": true,
         "dcui-form__input--full-width": fullWidth,
         "dcui-form__input--has-error": error,
@@ -35,7 +35,7 @@ const Input = ({
       onBlur={onBlurFunction || (() => {})}
     />
     <p
-      className={classNames({
+      className={getClassNames({
         "dcui-form__input-error": true,
         "dcui-form__input-error--hidden": !error,
       })}

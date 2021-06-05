@@ -5,7 +5,7 @@ import React, { createRef, useEffect, useState } from "react";
 import { TabListProps } from "./TabList.types";
 
 import "./TabList.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
   const [activeTab, setActiveTab] =
@@ -114,7 +114,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
   return (
     <div
       data-testid="TabList"
-      className={classNames({
+      className={getClassNames({
         "dcui-tablist": true,
         "dcui-tablist--full-width": fullWidth,
         "dcui-tablist--primary": variant === "primary" || !variant,
@@ -126,7 +126,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
       <div
         role="tablist"
         aria-label={ariaLabel || null}
-        className={classNames({ "dcui-tablist__button-group": true })}
+        className={getClassNames({ "dcui-tablist__button-group": true })}
       >
         {tabs.map((t, index) => (
           <button
@@ -143,7 +143,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
                 tabName: t.tabId,
               })
             }
-            className={classNames({
+            className={getClassNames({
               "dcui-tablist__button": true,
               "dcui-tablist__button--active": activeTab?.tabName === t.tabId,
             })}
@@ -161,7 +161,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
           data-testid="TabListPanel"
           ref={tabPanelRefs[i]}
           key={x.tabId}
-          className={classNames({
+          className={getClassNames({
             "dcui-tablist__panel": true,
             "dcui-tablist__panel--hidden": x.tabId !== activeTab?.tabName,
           })}

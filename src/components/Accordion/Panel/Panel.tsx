@@ -3,7 +3,7 @@
 import React from "react";
 import { AccordionPanelProps } from "./Panel.types";
 import "./Panel.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
   (
@@ -79,7 +79,7 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className={classNames({
+                className={getClassNames({
                   "dcui-accordion__icon": true,
                   "dcui-accordion__icon--expanded": isCurrent,
                 })}

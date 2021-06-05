@@ -3,7 +3,7 @@ import React, { createRef, useEffect, useRef, useState } from "react";
 
 import { AutoCompleteProps } from "./AutoComplete.types";
 import "./AutoComplete.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const AutoComplete = ({
   labelId,
@@ -127,7 +127,7 @@ const AutoComplete = ({
   return (
     <div
       data-testid="AutoComplete"
-      className={classNames({
+      className={getClassNames({
         "dcui-autocomplete": true,
       })}
       id="ex1"
@@ -169,7 +169,7 @@ const AutoComplete = ({
           aria-labelledby={labelId}
           role="listbox"
           id="ex1-listbox"
-          className={classNames({
+          className={getClassNames({
             "dcui-autocomplete__listbox": true,
             "dcui-autocomplete__listbox--show": open,
           })}
@@ -199,7 +199,7 @@ const AutoComplete = ({
                   selectAndCloseMenu();
                 }}
                 key={item.id}
-                className={classNames({
+                className={getClassNames({
                   "dcui-autocomplete__result": true,
                   "dcui-autocomplete__result--selected":
                     item.id === currentFocus?.id,

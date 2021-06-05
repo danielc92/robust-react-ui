@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { AlertDialogueProps } from "./AlertDialogue.types";
 
 import "./AlertDialogue.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 import Typography from "../Typography";
 import Button from "../Button";
 
@@ -77,7 +77,7 @@ const AlertDialogue = ({
     <div
       data-testid="AlertDialogue"
       onKeyDown={handleKeyDown}
-      className={classNames({
+      className={getClassNames({
         "dcui-modal__overlay": true,
         "dcui-modal__overlay--active": open,
       })}

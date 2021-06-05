@@ -2,11 +2,11 @@
 import React from "react";
 import { ParagraphProps } from "./Paragraph.types";
 import "./Paragraph.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const Paragraph = ({ children, id, size, bolded }: ParagraphProps) => (
   <p
-    className={classNames({
+    className={getClassNames({
       "dcui-para": true,
       "dcui-para--small": size === "small",
       "dcui-para--medium": size === "medium" || !size,

@@ -4,7 +4,7 @@ import React from "react";
 import { FormSubmitProps } from "./Submit.types";
 
 import "./Submit.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const Submit = ({ value, id, size, variant }: FormSubmitProps) => (
   <input
@@ -12,7 +12,7 @@ const Submit = ({ value, id, size, variant }: FormSubmitProps) => (
     value={value}
     id={id || null}
     data-testid="Button"
-    className={classNames({
+    className={getClassNames({
       "dcui-form__submit": true,
       "dcui-form__submit--small": size === "small",
       "dcui-form__submit--medium": !size || size === "medium",

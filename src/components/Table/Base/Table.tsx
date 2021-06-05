@@ -2,7 +2,7 @@
 import React from "react";
 import { TableProps } from "./Table.types";
 import "./Table.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 import Row from "../Row";
 import Cell from "../Cell";
 import Head from "../Head";
@@ -23,7 +23,7 @@ const Table = ({
     aria-describedby={ariaDescribedBy || null}
     aria-label={ariaLabel || null}
     data-testid="Table"
-    className={classNames({
+    className={getClassNames({
       "dcui-table": true,
       "dcui-table--striped": striped,
       "dcui-table--center-cells": centerCellContent,

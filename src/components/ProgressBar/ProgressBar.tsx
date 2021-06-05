@@ -4,7 +4,7 @@ import React from "react";
 import { ProgressBarProps } from "./ProgressBar.types";
 
 import "./ProgressBar.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const ProgressBar = ({
   minimumValue,
@@ -15,7 +15,7 @@ const ProgressBar = ({
   variant,
 }: ProgressBarProps) => (
   <div
-    className={classNames({
+    className={getClassNames({
       "dcui-progress": true,
       "dcui-progress--full-width": fullWidth,
       "dcui-progress--small": size === "small",

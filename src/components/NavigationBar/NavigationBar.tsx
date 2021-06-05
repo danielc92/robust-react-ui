@@ -2,7 +2,7 @@
 import React, { createRef, useEffect, useState } from "react";
 import { NavigationBarProps, NavigationData } from "./NavigationBar.types";
 import "./NavigationBar.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const FOCUS_DELAY = 120;
 type Dir = "LEFT" | "RIGHT" | "UP" | "DOWN";
@@ -226,7 +226,7 @@ const NavigationBar = ({
           return (
             <li
               role="none"
-              className={classNames({
+              className={getClassNames({
                 "dcui-nav__menu-item": true,
                 "dcui-nav__menu-item--expanded": n?.menuOpen,
                 "dcui-nav__menu-item--has-menu": n?.hasMenu,
@@ -273,7 +273,7 @@ const NavigationBar = ({
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={classNames({
+                    className={getClassNames({
                       "dcui-nav__chevron": true,
                     })}
                   >
@@ -284,7 +284,7 @@ const NavigationBar = ({
               {/* 1st dropdown level */}
               {a.children && (
                 <ul
-                  className={classNames({
+                  className={getClassNames({
                     "dcui-nav__dropdown": true,
                     "dcui-nav__dropdown--open": nodes.find((n) => n.id === a.id)
                       ?.menuOpen,
@@ -298,7 +298,7 @@ const NavigationBar = ({
                       <React.Fragment key={`dropitem${_bi}`}>
                         <li
                           role="none"
-                          className={classNames({
+                          className={getClassNames({
                             "dcui-nav__dropdown-item": true,
                             "dcui-nav__dropdown-item--expanded": n2?.menuOpen,
                           })}
@@ -366,7 +366,7 @@ const NavigationBar = ({
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                className={classNames({
+                                className={getClassNames({
                                   "dcui-nav__chevron": true,
                                   "dcui-nav__chevron--submenu": true,
                                   "dcui-nav__chevron--expanded": n2?.menuOpen,
@@ -379,7 +379,7 @@ const NavigationBar = ({
                           {/* 2nd dropdown level */}
                           {b.children && (
                             <ul
-                              className={classNames({
+                              className={getClassNames({
                                 "dcui-nav__dropdown": true,
                                 "dcui-nav__dropdown--nested": true,
                                 "dcui-nav__dropdown--open": nodes.find(

@@ -4,7 +4,7 @@ import React from "react";
 import { FormSelectProps } from "./Select.types";
 
 import "./Select.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const Select = ({
   id,
@@ -20,7 +20,7 @@ const Select = ({
     value={selectedValue}
     id={id}
     multiple={multiple || null}
-    className={classNames({
+    className={getClassNames({
       "dcui-form__select": true,
       "dcui-form__select--disabled": disabled,
       "dcui-form__select--o": disabled, // override class

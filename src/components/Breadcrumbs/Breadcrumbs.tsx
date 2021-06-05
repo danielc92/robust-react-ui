@@ -4,7 +4,7 @@ import React from "react";
 import { BreadcrumbsProps } from "./Breadcrumbs.types";
 
 import "./Breadcrumbs.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const Breadcrumbs = ({ ariaLabel, data, size }: BreadcrumbsProps) => {
   const _ariaLabel = ariaLabel || "breadcrumbs";
@@ -12,7 +12,7 @@ const Breadcrumbs = ({ ariaLabel, data, size }: BreadcrumbsProps) => {
     <nav
       aria-label={_ariaLabel}
       data-testid="Breadcrumbs"
-      className={classNames({
+      className={getClassNames({
         "dcui-breadcrumbs": true,
         "dcui-breadcrumbs--small": size === "small",
         "dcui-breadcrumbs--medium": size === "medium" || !size,

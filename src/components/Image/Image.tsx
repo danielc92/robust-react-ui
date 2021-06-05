@@ -4,7 +4,7 @@ import React from "react";
 import { ImageProps } from "./Image.types";
 
 import "./Image.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const Image = ({
   height,
@@ -24,7 +24,7 @@ const Image = ({
     height={height || null}
     data-testid="Image"
     src={src}
-    className={classNames({
+    className={getClassNames({
       "dcui-image": true,
       "dcui-image--responsive": scaling === "unrestricted",
       "dcui-image--responsive-restrict-width": scaling === "restricted-width",

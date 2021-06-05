@@ -4,7 +4,7 @@ import React from "react";
 import { FormTextAreaProps } from "./TextArea.types";
 
 import "./TextArea.scss";
-import classNames from "classnames";
+import getClassNames from "utils/getClassNames";
 
 const TextArea = ({
   id,
@@ -22,7 +22,7 @@ const TextArea = ({
     <textarea
       data-testid="TextArea"
       disabled={disabled}
-      className={classNames({
+      className={getClassNames({
         "dcui-form__textarea": true,
         "dcui-form__textarea--full-width": fullWidth,
         "dcui-form__textarea--has-error": error,
@@ -37,7 +37,7 @@ const TextArea = ({
       onBlur={onBlurFunction || (() => {})}
     />
     <p
-      className={classNames({
+      className={getClassNames({
         "dcui-form__textarea-error": true,
         "dcui-form__textarea-error--hidden": !error,
       })}
