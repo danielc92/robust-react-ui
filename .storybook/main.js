@@ -1,4 +1,5 @@
 const path = require("path");
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   stories: ["../src/**/*.stories.tsx"],
@@ -21,7 +22,8 @@ module.exports = {
       },
     });
     config.resolve.extensions.push(".ts", ".tsx");
-
+    // Solved by https://github.com/storybookjs/storybook/issues/4136#issuecomment-676797519
+    config.resolve.plugins.push(new TsconfigPathsPlugin({}));
     return config;
   },
 };
