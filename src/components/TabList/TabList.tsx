@@ -81,10 +81,6 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
     }
   };
 
-  const focusTabPanel = (index: number) => {
-    tabPanelRefs[index].current.focus();
-  };
-
   const handleKeyDown = (
     event: React.KeyboardEvent<HTMLButtonElement>,
     index: number
