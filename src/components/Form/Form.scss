@@ -113,6 +113,7 @@
   }
 
   &__input[type="text"],
+  &__input[type="date"],
   &__input[type="password"] {
     &:active,
     &:focus {

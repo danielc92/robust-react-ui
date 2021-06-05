@@ -12,7 +12,7 @@ export default {
   args: {
     id: "input-example",
     placeholder: "Type some text",
-    type: "text",
+    type: "date",
   },
 } as Meta<FormInputProps>;
 
@@ -48,4 +48,8 @@ TextDisabled.args = {
 export const Password: Story<FormInputProps> = Template.bind({});
 Password.args = {
   type: "password",
+};
+export const Date: Story<FormInputProps> = Template.bind({});
+Date.args = {
+  type: "date",
 };

@@ -71,7 +71,7 @@ export interface FormInputProps {
   id: string;
   value: string;
   placeholder: string;
-  type?: "text" | "password";
+  type?: "text" | "password" | "date";
   onChangeFunction: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onBlurFunction?: (event: React.FocusEvent<HTMLInputElement>) => void;
   fullWidth?: boolean;
