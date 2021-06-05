@@ -1,7 +1,6 @@
 // Generated with util/create-component.js
 import React from "react";
 import { TableHeaderProps } from "./Header.types";
-import "./Header.scss";
 
 const Header = ({ children, colSpan, rowSpan, scope }: TableHeaderProps) => (
   <th
