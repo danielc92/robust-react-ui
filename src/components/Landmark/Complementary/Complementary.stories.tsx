@@ -4,7 +4,7 @@ import React from "react";
 import _Complementary from "./Complementary";
 
 export default {
-  title: "Components/Landmark",
+  title: "Components/Landmark/Complementary",
 };
 
 export const Complementary = () => (

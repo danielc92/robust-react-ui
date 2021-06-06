@@ -4,7 +4,7 @@ import React from "react";
 import _ContentInfo from "./ContentInfo";
 
 export default {
-  title: "Components/Landmark",
+  title: "Components/Landmark/Content Info",
 };
 
 export const ContentInfo = () => (

@@ -4,7 +4,7 @@ import React from "react";
 import _Region from "./Region";
 
 export default {
-  title: "Components/Landmark",
+  title: "Components/Landmark/Region",
 };
 
 export const Region = () => (

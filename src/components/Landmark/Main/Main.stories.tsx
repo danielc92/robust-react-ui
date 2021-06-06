@@ -4,7 +4,7 @@ import React from "react";
 import _Main from "./Main";
 
 export default {
-  title: "Components/Landmark",
+  title: "Components/Landmark/Main",
 };
 
 export const Main = () => (
