@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
-import React from "react";
+import React from 'react';
 
-import { ImageProps } from "./Image.types";
+import { ImageProps } from './Image.types';
 
-import "./Image.scss";
-import getClassNames from "utils/getClassNames";
+import './Image.scss';
+import getClassNames from 'utils/getClassNames';
 
 const Image = ({
   height,
@@ -25,12 +25,12 @@ const Image = ({
     data-testid="Image"
     src={src}
     className={getClassNames({
-      "dcui-image": true,
-      "dcui-image--responsive": scaling === "unrestricted",
-      "dcui-image--responsive-restrict-width": scaling === "restricted-width",
-      "dcui-image--circle": circle,
-      "dcui-image--bordered": bordered,
-      "dcui-image--blurred": blurred,
+      'dcui-image': true,
+      'dcui-image--responsive': scaling === 'unrestricted',
+      'dcui-image--responsive-restrict-width': scaling === 'restricted-width',
+      'dcui-image--circle': circle,
+      'dcui-image--bordered': bordered,
+      'dcui-image--blurred': blurred,
     })}
   />
 );

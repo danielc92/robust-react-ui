@@ -1,4 +1,4 @@
 // Generated with util/create-component.js
-import Breadcrumbs from "./Breadcrumbs";
+import Breadcrumbs from './Breadcrumbs';
+
 export default Breadcrumbs;
-  

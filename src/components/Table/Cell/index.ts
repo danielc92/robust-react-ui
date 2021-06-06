@@ -1,3 +1,4 @@
 // Generated with util/create-component.js
-import Cell from "./Cell";
+import Cell from './Cell';
+
 export default Cell;

@@ -1,11 +1,11 @@
 // Generated with util/create-component.js
-import React from "react";
-import { render } from "@testing-library/react";
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import Table from "./Table";
-import { TableProps } from "./Table.types";
+import Table from './Table';
+import { TableProps } from './Table.types';
 
-describe("Table suite", () => {
+describe('Table suite', () => {
   const renderComponent = (partialProps?: Partial<TableProps>) =>
     render(
       <Table {...partialProps}>
@@ -31,18 +31,18 @@ describe("Table suite", () => {
       </Table>
     );
 
-  it("should render correct base class", () => {
+  it('should render correct base class', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("Table");
+    const component = getByTestId('Table');
 
-    expect(component).toHaveClass("dcui-table");
+    expect(component).toHaveClass('dcui-table');
   });
-  it("should render with striped modifier class", () => {
+  it('should render with striped modifier class', () => {
     const { getByTestId } = renderComponent({ striped: true });
 
-    const component = getByTestId("Table");
+    const component = getByTestId('Table');
 
-    expect(component).toHaveClass("dcui-table--striped");
+    expect(component).toHaveClass('dcui-table--striped');
   });
 });

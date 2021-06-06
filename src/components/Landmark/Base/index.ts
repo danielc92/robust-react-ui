@@ -1,2 +1,3 @@
-import Landmark from "./Landmark";
+import Landmark from './Landmark';
+
 export default Landmark;

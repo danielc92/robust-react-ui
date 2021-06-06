@@ -1,4 +1,4 @@
 // Generated with util/create-component.js
-import Image from "./Image";
+import Image from './Image';
+
 export default Image;
-  

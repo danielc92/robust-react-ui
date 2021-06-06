@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
-    "rootDir": "src",
-    "baseUrl": "src",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "#/*": ["./*"]
+    },
     "declaration": true,
     "declarationDir": "build",
     "module": "esnext",
@@ -17,8 +20,7 @@
   "exclude": [
     "node_modules",
     "build",
-    "storybook-static",
-    "src/**/*.stories.tsx",
-    "src/**/*.test.tsx"
+    "storybook-static"
+
   ]
 }

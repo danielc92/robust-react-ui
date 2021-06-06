@@ -1,2 +1,3 @@
-import Region from "./Region";
+import Region from './Region';
+
 export default Region;

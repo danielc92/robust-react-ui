@@ -1,50 +1,50 @@
-import React, { useState } from "react";
-import { Story, Meta } from "@storybook/react";
-import CheckboxGroup from "./CheckboxGroup";
+import React, { useState } from 'react';
+import { Story, Meta } from '@storybook/react';
+import CheckboxGroup from './CheckboxGroup';
 import {
   CheckboxOptionProps,
   FormCheckboxGroupProps,
-} from "./CheckboxGroup.types";
-import Label from "../Label";
-import FieldSet from "../FieldSet";
+} from './CheckboxGroup.types';
+import Label from '../Label';
+import FieldSet from '../FieldSet';
 
 export default {
-  title: "Components/Form/CheckboxGroup",
+  title: 'Components/Form/CheckboxGroup',
   component: CheckboxGroup,
   args: {
-    id: "CheckboxGroup-example",
-    placeholder: "Type some text",
-    type: "text",
-    ariaLabelledBy: "checkbox-label",
+    id: 'CheckboxGroup-example',
+    placeholder: 'Type some text',
+    type: 'text',
+    ariaLabelledBy: 'checkbox-label',
     values: [
       {
-        displayValue: "Apple",
-        keyValue: "a",
+        displayValue: 'Apple',
+        keyValue: 'a',
         checked: false,
       },
       {
-        displayValue: "Apricot",
-        keyValue: "a2",
+        displayValue: 'Apricot',
+        keyValue: 'a2',
         checked: false,
       },
       {
-        displayValue: "Watermelon",
-        keyValue: "w",
+        displayValue: 'Watermelon',
+        keyValue: 'w',
         checked: false,
       },
       {
-        displayValue: "Banana",
-        keyValue: "b",
+        displayValue: 'Banana',
+        keyValue: 'b',
         checked: false,
       },
       {
-        displayValue: "Peach",
-        keyValue: "p",
+        displayValue: 'Peach',
+        keyValue: 'p',
         checked: false,
       },
       {
-        displayValue: "Orange",
-        keyValue: "o",
+        displayValue: 'Orange',
+        keyValue: 'o',
         checked: false,
       },
     ],
@@ -80,33 +80,33 @@ export const Checked: Story<FormCheckboxGroupProps> = Template.bind({});
 Checked.args = {
   values: [
     {
-      displayValue: "Apple",
-      keyValue: "a",
+      displayValue: 'Apple',
+      keyValue: 'a',
       checked: true,
     },
     {
-      displayValue: "Apricot",
-      keyValue: "a2",
+      displayValue: 'Apricot',
+      keyValue: 'a2',
       checked: true,
     },
     {
-      displayValue: "Watermelon",
-      keyValue: "w",
+      displayValue: 'Watermelon',
+      keyValue: 'w',
       checked: true,
     },
     {
-      displayValue: "Banana",
-      keyValue: "b",
+      displayValue: 'Banana',
+      keyValue: 'b',
       checked: true,
     },
     {
-      displayValue: "Peach",
-      keyValue: "p",
+      displayValue: 'Peach',
+      keyValue: 'p',
       checked: true,
     },
     {
-      displayValue: "Orange",
-      keyValue: "o",
+      displayValue: 'Orange',
+      keyValue: 'o',
       checked: true,
     },
   ],

@@ -1,45 +1,45 @@
-import getClassNames from "./index";
+import getClassNames from './index';
 
-describe("Utils Suite", () => {
-  it("getClassNames returns the correct class value", () => {
+describe('Utils Suite', () => {
+  it('getClassNames returns the correct class value', () => {
     expect(
       getClassNames({
-        "class-1": true,
-        "class-2": false,
-        "class-3": true,
+        'class-1': true,
+        'class-2': false,
+        'class-3': true,
       })
-    ).toEqual("class-1 class-3 ");
+    ).toEqual('class-1 class-3 ');
   });
-  it("getClassNames returns the correct class value (2)", () => {
+  it('getClassNames returns the correct class value (2)', () => {
     expect(
       getClassNames({
-        "class-1": true,
+        'class-1': true,
       })
-    ).toEqual("class-1 ");
+    ).toEqual('class-1 ');
   });
-  it("getClassNames returns the correct class value (3)", () => {
+  it('getClassNames returns the correct class value (3)', () => {
     expect(
       getClassNames({
-        "class-1": undefined,
+        'class-1': undefined,
       })
-    ).toEqual("");
+    ).toEqual('');
   });
-  it("getClassNames returns the correct class value (4)", () => {
+  it('getClassNames returns the correct class value (4)', () => {
     expect(
       getClassNames({
-        "class-1": null,
+        'class-1': null,
       })
-    ).toEqual("");
+    ).toEqual('');
   });
-  it("getClassNames returns the correct class value (5)", () => {
+  it('getClassNames returns the correct class value (5)', () => {
     expect(
       getClassNames({
         class__0: 5 > 1,
-        "class-1": undefined,
+        'class-1': undefined,
       })
-    ).toEqual("class__0 ");
+    ).toEqual('class__0 ');
   });
-  it("getClassNames returns the correct class value (6)", () => {
+  it('getClassNames returns the correct class value (6)', () => {
     const flag = 7 > 1;
     expect(
       getClassNames({
@@ -48,6 +48,6 @@ describe("Utils Suite", () => {
         class__1: true,
         class__2: flag,
       })
-    ).toEqual("class__0 class__1 class__2 ");
+    ).toEqual('class__0 class__1 class__2 ');
   });
 });

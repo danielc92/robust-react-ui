@@ -1,12 +1,12 @@
 // Generated with util/create-component.js
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import { AlertDialogueProps } from "./AlertDialogue.types";
+import { AlertDialogueProps } from './AlertDialogue.types';
 
-import "./AlertDialogue.scss";
-import getClassNames from "utils/getClassNames";
-import Typography from "../Typography";
-import Button from "../Button";
+import './AlertDialogue.scss';
+import getClassNames from 'utils/getClassNames';
+import Typography from '../Typography';
+import Button from '../Button';
 
 const AlertDialogue = ({
   open,
@@ -28,7 +28,7 @@ const AlertDialogue = ({
   }, [open]);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === "Escape") {
+    if (event.key === 'Escape') {
       onCloseActionFunction();
     }
   };
@@ -78,11 +78,11 @@ const AlertDialogue = ({
       data-testid="AlertDialogue"
       onKeyDown={handleKeyDown}
       className={getClassNames({
-        "dcui-modal__overlay": true,
-        "dcui-modal__overlay--active": open,
+        'dcui-modal__overlay': true,
+        'dcui-modal__overlay--active': open,
       })}
     >
-      <div tabIndex={0}></div>
+      <div tabIndex={0} />
       <div
         id="alert_dialog"
         role="alertdialog"
@@ -104,7 +104,7 @@ const AlertDialogue = ({
             ref={ref}
             onClickFunction={onCloseActionFunction}
           >
-            {cancelButtonText || "Cancel"}
+            {cancelButtonText || 'Cancel'}
           </Button>
           <Button
             onKeyDownFunction={handleConfirmKeyDown}
@@ -112,11 +112,11 @@ const AlertDialogue = ({
             onClickFunction={onConfirmActionFunction}
             // aria-controls="notes"
           >
-            {confirmButtonText || "Confirm"}
+            {confirmButtonText || 'Confirm'}
           </Button>
         </div>
       </div>
-      <div tabIndex={0}></div>
+      <div tabIndex={0} />
     </div>
   );
 };

@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
 
-import React from "react";
-import _Region from "./Region";
+import React from 'react';
+import _Region from './Region';
 
 export default {
-  title: "Components/Landmark/Region",
+  title: 'Components/Landmark/Region',
 };
 
 export const Region = () => (

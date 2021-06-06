@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
-import React from "react";
+import React from 'react';
 
-import { RegionProps } from "./Region.types";
+import { RegionProps } from './Region.types';
 
 const Region = ({ children, ariaLabelledBy, ariaLabel }: RegionProps) => (
   <section

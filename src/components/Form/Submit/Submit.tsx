@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
-import React from "react";
+import React from 'react';
 
-import { FormSubmitProps } from "./Submit.types";
+import { FormSubmitProps } from './Submit.types';
 
-import "./Submit.scss";
-import getClassNames from "utils/getClassNames";
+import './Submit.scss';
+import getClassNames from 'utils/getClassNames';
 
 const Submit = ({ value, id, size, variant }: FormSubmitProps) => (
   <input
@@ -13,13 +13,13 @@ const Submit = ({ value, id, size, variant }: FormSubmitProps) => (
     id={id || null}
     data-testid="Button"
     className={getClassNames({
-      "dcui-form__submit": true,
-      "dcui-form__submit--small": size === "small",
-      "dcui-form__submit--medium": !size || size === "medium",
-      "dcui-form__submit--large": size === "large",
-      "dcui-form__submit--primary": variant === "primary" || !variant,
-      "dcui-form__submit--danger": variant === "danger",
-      "dcui-form__submit--success": variant === "success",
+      'dcui-form__submit': true,
+      'dcui-form__submit--small': size === 'small',
+      'dcui-form__submit--medium': !size || size === 'medium',
+      'dcui-form__submit--large': size === 'large',
+      'dcui-form__submit--primary': variant === 'primary' || !variant,
+      'dcui-form__submit--danger': variant === 'danger',
+      'dcui-form__submit--success': variant === 'success',
     })}
   />
 );

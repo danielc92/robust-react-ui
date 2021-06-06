@@ -1,18 +1,18 @@
 // Generated with util/create-component.js
 
-import React from "react";
-import _Complementary from "./Complementary";
+import React from 'react';
+import Default from './Complementary';
 
 export default {
-  title: "Components/Landmark/Complementary",
+  title: 'Components/Landmark/Complementary',
 };
 
 export const Complementary = () => (
-  <_Complementary>
+  <Default>
     <h2 className="dcui-header">This is a Complementary landmark</h2>
     <p className="dcui-para">
       This landmark will render the <strong>aside</strong> tag at the root
       level.
     </p>
-  </_Complementary>
+  </Default>
 );

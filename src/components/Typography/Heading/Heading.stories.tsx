@@ -1,21 +1,19 @@
 // Button.stories.tsx
 
-import React from "react";
-import { Story, Meta } from "@storybook/react";
-import Heading from "./Heading";
-import { HeadingProps } from "./Heading.types";
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+import Heading from './Heading';
+import { HeadingProps } from './Heading.types';
 
 export default {
-  title: "Components/Typography/Heading",
+  title: 'Components/Typography/Heading',
   component: Heading,
   args: {
-    children: "Example Heading",
+    children: 'Example Heading',
   },
 } as Meta<HeadingProps>;
 
-const Template: Story<HeadingProps> = (args) => {
-  return <Heading {...args} />;
-};
+const Template: Story<HeadingProps> = (args) => <Heading {...args} />;
 
 export const Level1Jumbo: Story<HeadingProps> = Template.bind({});
 Level1Jumbo.args = {

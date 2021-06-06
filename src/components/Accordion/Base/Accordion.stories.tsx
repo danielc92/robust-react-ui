@@ -1,17 +1,18 @@
 // Generated with util/create-component.js
-import React, { useState } from "react";
-import Accordion from "./Accordion";
-import { Meta, Story } from "@storybook/react";
-import { AccordionProps } from "./Accordion.types";
+import React, { useState } from 'react';
+import { Meta, Story } from '@storybook/react';
+import Accordion from './Accordion';
+import { AccordionProps } from './Accordion.types';
+
 const { Panel } = Accordion;
 export default {
-  title: "Components/Accordion",
+  title: 'Components/Accordion',
   component: Accordion,
   args: {},
 } as Meta<AccordionProps>;
 
 const Template: Story<AccordionProps> = (args) => {
-  const [panel, setPanel] = useState("1");
+  const [panel, setPanel] = useState('1');
   const onSelectPanelFunction = (panelId: string) => setPanel(panelId);
   return (
     <Accordion

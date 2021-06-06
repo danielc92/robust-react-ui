@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
-import React from "react";
+import React from 'react';
 
-import { ButtonProps } from "./Button.types";
+import { ButtonProps } from './Button.types';
 
-import "./Button.scss";
-import getClassNames from "utils/getClassNames";
+import './Button.scss';
+import getClassNames from 'utils/getClassNames';
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -21,6 +21,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => (
     <button
+      type="button"
       onKeyDown={onKeyDownFunction || null}
       tabIndex={tabIndex || null}
       aria-controls={ariaControls || null}
@@ -31,14 +32,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       }}
       ref={ref}
       className={getClassNames({
-        "dcui-button": true,
-        "dcui-button--small": size === "small",
-        "dcui-button--medium": !size || size === "medium",
-        "dcui-button--large": size === "large",
-        "dcui-button--primary": variant === "primary" || !variant,
-        "dcui-button--danger": variant === "danger",
-        "dcui-button--success": variant === "success",
-        "dcui-button--secondary": variant === "secondary",
+        'dcui-button': true,
+        'dcui-button--small': size === 'small',
+        'dcui-button--medium': !size || size === 'medium',
+        'dcui-button--large': size === 'large',
+        'dcui-button--primary': variant === 'primary' || !variant,
+        'dcui-button--danger': variant === 'danger',
+        'dcui-button--success': variant === 'success',
+        'dcui-button--secondary': variant === 'secondary',
       })}
     >
       {children}
@@ -46,6 +47,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   )
 );
 
-Button.displayName = "Button";
+Button.displayName = 'Button';
 
 export default Button;

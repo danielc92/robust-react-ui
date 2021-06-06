@@ -1,14 +1,14 @@
 // Generated with util/create-component.js
-import React from "react";
-import { TableProps } from "./Table.types";
-import "./Table.scss";
-import getClassNames from "utils/getClassNames";
-import Row from "../Row";
-import Cell from "../Cell";
-import Head from "../Head";
-import Header from "../Header";
-import Body from "../Body";
-import Foot from "../Foot";
+import React from 'react';
+import { TableProps } from './Table.types';
+import './Table.scss';
+import getClassNames from 'utils/getClassNames';
+import Row from '../Row';
+import Cell from '../Cell';
+import Head from '../Head';
+import Header from '../Header';
+import Body from '../Body';
+import Foot from '../Foot';
 
 const Table = ({
   children,
@@ -24,9 +24,9 @@ const Table = ({
     aria-label={ariaLabel || null}
     data-testid="Table"
     className={getClassNames({
-      "dcui-table": true,
-      "dcui-table--striped": striped,
-      "dcui-table--center-cells": centerCellContent,
+      'dcui-table': true,
+      'dcui-table--striped': striped,
+      'dcui-table--center-cells': centerCellContent,
     })}
   >
     {children}

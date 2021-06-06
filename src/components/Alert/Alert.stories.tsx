@@ -1,11 +1,11 @@
 // Generated with util/create-component.js
-import React, { useState } from "react";
-import Alert from "./Alert";
-import { Meta, Story } from "@storybook/react";
-import { AlertProps } from "./Alert.types";
+import React, { useState } from 'react';
+import { Meta, Story } from '@storybook/react';
+import Alert from './Alert';
+import { AlertProps } from './Alert.types';
 
 export default {
-  title: "Components/Alert",
+  title: 'Components/Alert',
   component: Alert,
   args: {},
 } as Meta<AlertProps>;
@@ -33,9 +33,9 @@ export const Primary: Story<AlertProps> = Template.bind({});
 Primary.args = {};
 export const Danger: Story<AlertProps> = Template.bind({});
 Danger.args = {
-  variant: "danger",
+  variant: 'danger',
 };
 export const Success: Story<AlertProps> = Template.bind({});
 Success.args = {
-  variant: "success",
+  variant: 'success',
 };
