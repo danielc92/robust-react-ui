@@ -21,6 +21,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => (
     <button
+      type="button"
       onKeyDown={onKeyDownFunction || null}
       tabIndex={tabIndex || null}
       aria-controls={ariaControls || null}

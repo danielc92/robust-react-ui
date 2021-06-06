@@ -23,7 +23,12 @@ const Template: Story<FormTextAreaProps> = (args) => {
   return (
     <FieldSet>
       <Label htmlFor="TextArea-example">TextArea Label</Label>
-      <TextArea {...args} value={value} onChangeFunction={onChangeFunction} />
+      <TextArea
+        id={args.id}
+        placeholder={args.placeholder}
+        value={value}
+        onChangeFunction={onChangeFunction}
+      />
     </FieldSet>
   );
 };

@@ -12,7 +12,7 @@ describe('Form Input Suite', () => {
       value: 'welcome to the jungle',
       id: 'sample-input',
       placeholder: 'type text',
-      onChangeFunction: () => console.log('.'),
+      onChangeFunction: () => {},
     };
   });
   const renderComponent = () => render(<Input {...props} />);

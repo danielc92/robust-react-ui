@@ -3,7 +3,6 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Landmark from './Landmark';
-import { LandmarkProps } from './Landmark.types';
 
 describe('Landmark Suite', () => {
   beforeEach(() => {});

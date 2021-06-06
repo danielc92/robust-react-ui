@@ -1,11 +1,9 @@
 // Generated with util/create-component.js
 // Component design from https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
 import React, { createRef, useEffect, useState } from 'react';
-
-import { TabListProps } from './TabList.types';
-
-import './TabList.scss';
 import getClassNames from 'utils/getClassNames';
+import { TabListProps } from './TabList.types';
+import './TabList.scss';
 
 const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
   const [activeTab, setActiveTab] =
@@ -26,13 +24,13 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
         tabName: tabs[0].tabId,
       });
 
-    setTabRefs((tabRefs) =>
+    setTabRefs(
       Array(arrLength)
         .fill(null)
         .map((_, i) => tabRefs[i] || createRef())
     );
 
-    setTabPanelRefs((tabPanelRefs) =>
+    setTabPanelRefs(
       Array(arrLength)
         .fill(null)
         .map((_, i) => tabPanelRefs[i] || createRef())
@@ -81,10 +79,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
     }
   };
 
-  const handleKeyDown = (
-    event: React.KeyboardEvent<HTMLButtonElement>,
-    index: number
-  ) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
     const { keyCode } = event;
     switch (keyCode) {
       case 39:
@@ -108,6 +103,8 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
       case 38:
         event.preventDefault();
         break;
+      default:
+        break;
     }
   };
 
@@ -130,12 +127,13 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
       >
         {tabs.map((t, index) => (
           <button
+            type="button"
             data-testid="TabListButton"
             tabIndex={activeTab?.tabName !== t.tabId ? -1 : null}
             ref={tabRefs[index]}
             key={t.tabId}
             onKeyDown={(event: React.KeyboardEvent<HTMLButtonElement>) =>
-              handleKeyDown(event, index)
+              handleKeyDown(event)
             }
             onClick={() =>
               setActiveTab({

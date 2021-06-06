@@ -44,7 +44,13 @@ export default {
   },
 } as Meta<PaginationProps>;
 
-const Template: Story<PaginationProps> = (args) => <Pagination {...args} />;
+const Template: Story<PaginationProps> = (args) => (
+  <Pagination
+    data={args.data}
+    ariaLabel={args.ariaLabel}
+    rounded={args.rounded}
+  />
+);
 
 export const Basic: Story<PaginationProps> = Template.bind({});
 

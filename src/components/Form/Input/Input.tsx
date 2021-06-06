@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
+import getClassNames from 'utils/getClassNames';
 import { FormInputProps } from './Input.types';
 import './Input.scss';
-import getClassNames from 'utils/getClassNames';
 
 const Input = ({
   value,

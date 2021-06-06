@@ -1,5 +1,3 @@
-import React, { ReactNode } from 'react';
-
 export interface FormSubmitProps {
   size?: 'small' | 'medium' | 'large';
   variant?: 'primary' | 'danger' | 'success';

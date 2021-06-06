@@ -15,8 +15,7 @@ describe('Alert Suite', () => {
     };
   });
 
-  const renderComponent = () =>
-    render(<Alert variant={props.variant}>{props.children}</Alert>);
+  const renderComponent = () => render(<Alert {...props} />);
 
   it('should render base class', () => {
     const { getByTestId } = renderComponent();

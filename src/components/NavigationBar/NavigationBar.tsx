@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
 import React, { createRef, useEffect, useState } from 'react';
+import getClassNames from 'utils/getClassNames';
 import { NavigationBarProps, NavigationData } from './NavigationBar.types';
 import './NavigationBar.scss';
-import getClassNames from 'utils/getClassNames';
 
 const FOCUS_DELAY = 120;
 type Dir = 'LEFT' | 'RIGHT' | 'UP' | 'DOWN';
@@ -26,7 +26,7 @@ const NavigationBar = ({
   const [nodes, setNodes] = useState<TransformedNavigationNode[]>([]);
   const [closeAll, setCloseAll] = useState(false);
   useEffect(() => {
-    const nodes = [];
+    const allNodes = [];
 
     const getNode = (x: NavigationData, i: number) => {
       const o: Partial<TransformedNavigationNode> = {};
@@ -45,25 +45,25 @@ const NavigationBar = ({
     };
 
     data.forEach((x, i) => {
-      const node = { ...getNode(x, i), lv: 1 };
-      nodes.push(node);
+      const node0 = { ...getNode(x, i), lv: 1 };
+      allNodes.push(node0);
       x.children?.forEach((x2, i2) => {
-        const node = { ...getNode(x2, i2), menuId: x.id, lv: 2 };
-        nodes.push(node);
+        const node1 = { ...getNode(x2, i2), menuId: x.id, lv: 2 };
+        allNodes.push(node1);
         x2.children?.forEach((x3, i3) => {
-          const node = { ...getNode(x3, i3), menuId: x.id, lv: 3 };
-          nodes.push(node);
+          const node2 = { ...getNode(x3, i3), menuId: x.id, lv: 3 };
+          allNodes.push(node2);
         });
       });
     });
 
-    setNodes(nodes);
+    setNodes(allNodes);
   }, []);
 
-  const closeAllMenuButOne = (id: number) => {
-    setNodes((nodes) =>
+  const closeAllMenuButOne = (menuId: number) => {
+    setNodes(
       nodes.map((n) => {
-        if (n.id === id) {
+        if (n.id === menuId) {
           return { ...n, menuOpen: true };
         }
         return { ...n, menuOpen: false };
@@ -203,9 +203,6 @@ const NavigationBar = ({
 
     nodes.find((n) => n.id === node.parentId).ref.current.focus();
   };
-  const handleBlur = () => {
-    setNodes(nodes.map((x) => ({ ...x, menuOpen: false })));
-  };
 
   return (
     <nav
@@ -225,7 +222,7 @@ const NavigationBar = ({
                 'dcui-nav__menu-item--expanded': n?.menuOpen,
                 'dcui-nav__menu-item--has-menu': n?.hasMenu,
               })}
-              key={`menuitem${_ai}`}
+              key={a.linkName + _ai.toString()}
             >
               <a
                 ref={n?.ref}
@@ -289,7 +286,7 @@ const NavigationBar = ({
                   {a.children.map((b, _bi) => {
                     const n2 = nodes.find((n) => n.id === b.id);
                     return (
-                      <React.Fragment key={`dropitem${_bi}`}>
+                      <React.Fragment key={b.linkName + _bi.toString()}>
                         <li
                           role="none"
                           className={getClassNames({
@@ -386,7 +383,9 @@ const NavigationBar = ({
                               {b.children.map((c, _ci) => {
                                 const n3 = nodes.find((n) => n.id === c.id);
                                 return (
-                                  <React.Fragment key={`dropitem2nd${_ci}`}>
+                                  <React.Fragment
+                                    key={c.linkName + _ci.toString()}
+                                  >
                                     <li
                                       role="none"
                                       className="dcui-nav__dropdown-item"

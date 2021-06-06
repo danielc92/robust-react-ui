@@ -18,7 +18,6 @@ export default {
 const Template: Story<FormInputProps> = (args) => {
   const [value, setValue] = useState('');
   const onChangeFunction = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value, 'Changing to ->');
     setValue(event.target.value);
   };
   return (
