@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 // Generated with util/create-component.js
 
@@ -10,7 +10,7 @@ export interface TabListTab {
 }
 export interface TabListProps {
   ariaLabel?: string;
-  variant?: "primary" | "danger" | "success" | "secondary";
+  variant?: 'primary' | 'danger' | 'success' | 'secondary';
   tabs: Array<TabListTab>;
   fullWidth?: boolean;
 }

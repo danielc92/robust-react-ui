@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
 
-import React from "react";
-import _Complementary from "./Complementary";
+import React from 'react';
+import _Complementary from './Complementary';
 
 export default {
-  title: "Components/Landmark/Complementary",
+  title: 'Components/Landmark/Complementary',
 };
 
 export const Complementary = () => (

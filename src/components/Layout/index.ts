@@ -1,2 +1,3 @@
-import Layout from "./Base";
+import Layout from './Base';
+
 export default Layout;

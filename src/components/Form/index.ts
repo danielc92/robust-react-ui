@@ -1,2 +1,3 @@
-import Form from "./Base";
+import Form from './Base';
+
 export default Form;

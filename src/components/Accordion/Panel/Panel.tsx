@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 
-import React from "react";
-import { AccordionPanelProps } from "./Panel.types";
-import "./Panel.scss";
-import getClassNames from "utils/getClassNames";
+import React from 'react';
+import { AccordionPanelProps } from './Panel.types';
+import './Panel.scss';
+import getClassNames from 'utils/getClassNames';
 
 const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
   (
@@ -21,7 +21,7 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
     },
     ref
   ) => {
-    const sectionId = panelId + "_section";
+    const sectionId = `${panelId}_section`;
     const isCurrent = activePanel === panelId;
     const handleSelectPanel = () => {
       _onSelectPanelFunction(panelId);
@@ -63,7 +63,7 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
             onClick={handleSelectPanel}
             onKeyDown={handleKeyDown}
             ref={ref}
-            aria-expanded={isCurrent ? "true" : "false"}
+            aria-expanded={isCurrent ? 'true' : 'false'}
             className="dcui-accordion__trigger"
             aria-controls={sectionId}
             id={panelId}
@@ -80,8 +80,8 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className={getClassNames({
-                  "dcui-accordion__icon": true,
-                  "dcui-accordion__icon--expanded": isCurrent,
+                  'dcui-accordion__icon': true,
+                  'dcui-accordion__icon--expanded': isCurrent,
                 })}
               >
                 {isCurrent ? (
@@ -115,5 +115,5 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
   }
 );
 
-AccordionPanel.displayName = "AccordionPanel";
+AccordionPanel.displayName = 'AccordionPanel';
 export default AccordionPanel;

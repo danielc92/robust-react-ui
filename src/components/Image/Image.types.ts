@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 // Generated with util/create-component.js
 export interface ImageProps {
   height?: number;
   width?: number;
   alt: string;
-  scaling?: "unrestricted" | "restricted-width";
+  scaling?: 'unrestricted' | 'restricted-width';
   style?: React.CSSProperties;
   circle?: boolean;
   bordered?: boolean;

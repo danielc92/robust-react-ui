@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react';
 
 // Generated with util/create-component.js
 export interface FormProps {

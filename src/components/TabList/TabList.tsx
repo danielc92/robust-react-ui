@@ -1,11 +1,11 @@
 // Generated with util/create-component.js
 // Component design from https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
-import React, { createRef, useEffect, useState } from "react";
+import React, { createRef, useEffect, useState } from 'react';
 
-import { TabListProps } from "./TabList.types";
+import { TabListProps } from './TabList.types';
 
-import "./TabList.scss";
-import getClassNames from "utils/getClassNames";
+import './TabList.scss';
+import getClassNames from 'utils/getClassNames';
 
 const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
   const [activeTab, setActiveTab] =
@@ -115,18 +115,18 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
     <div
       data-testid="TabList"
       className={getClassNames({
-        "dcui-tablist": true,
-        "dcui-tablist--full-width": fullWidth,
-        "dcui-tablist--primary": variant === "primary" || !variant,
-        "dcui-tablist--danger": variant === "danger",
-        "dcui-tablist--success": variant === "success",
-        "dcui-tablist--secondary": variant === "secondary",
+        'dcui-tablist': true,
+        'dcui-tablist--full-width': fullWidth,
+        'dcui-tablist--primary': variant === 'primary' || !variant,
+        'dcui-tablist--danger': variant === 'danger',
+        'dcui-tablist--success': variant === 'success',
+        'dcui-tablist--secondary': variant === 'secondary',
       })}
     >
       <div
         role="tablist"
         aria-label={ariaLabel || null}
-        className={getClassNames({ "dcui-tablist__button-group": true })}
+        className={getClassNames({ 'dcui-tablist__button-group': true })}
       >
         {tabs.map((t, index) => (
           <button
@@ -144,11 +144,11 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
               })
             }
             className={getClassNames({
-              "dcui-tablist__button": true,
-              "dcui-tablist__button--active": activeTab?.tabName === t.tabId,
+              'dcui-tablist__button': true,
+              'dcui-tablist__button--active': activeTab?.tabName === t.tabId,
             })}
             role="tab"
-            aria-selected={activeTab?.tabName === t.tabId ? "true" : "false"}
+            aria-selected={activeTab?.tabName === t.tabId ? 'true' : 'false'}
             aria-controls={t.tabId}
             id={t.buttonId}
           >
@@ -162,8 +162,8 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
           ref={tabPanelRefs[i]}
           key={x.tabId}
           className={getClassNames({
-            "dcui-tablist__panel": true,
-            "dcui-tablist__panel--hidden": x.tabId !== activeTab?.tabName,
+            'dcui-tablist__panel': true,
+            'dcui-tablist__panel--hidden': x.tabId !== activeTab?.tabName,
           })}
           tabIndex={0}
           role="tabpanel"

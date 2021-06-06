@@ -1,3 +1,4 @@
 // Generated with util/create-component.js
-import Submit from "./Submit";
+import Submit from './Submit';
+
 export default Submit;

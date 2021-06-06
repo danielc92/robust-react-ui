@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
 
-import React, { createRef, useEffect, useState } from "react";
-import { AccordionProps, AccordionPanelProps } from "./Accordion.types";
-import "./Accordion.scss";
-import getClassNames from "utils/getClassNames";
-import Panel from "../Panel";
+import React, { createRef, useEffect, useState } from 'react';
+import { AccordionProps, AccordionPanelProps } from './Accordion.types';
+import './Accordion.scss';
+import getClassNames from 'utils/getClassNames';
+import Panel from '../Panel';
 
 const Accordion = ({
   children,
@@ -54,8 +54,8 @@ const Accordion = ({
       data-testid="Accordion"
       id="accordionGroup"
       className={getClassNames({
-        "dcui-accordion": true,
-        "dcui-accordion--full-width": fullWidth,
+        'dcui-accordion': true,
+        'dcui-accordion--full-width': fullWidth,
       })}
     >
       {React.Children.map(children, (child, i) =>

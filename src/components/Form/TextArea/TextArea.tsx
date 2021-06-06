@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
-import React from "react";
+import React from 'react';
 
-import { FormTextAreaProps } from "./TextArea.types";
+import { FormTextAreaProps } from './TextArea.types';
 
-import "./TextArea.scss";
-import getClassNames from "utils/getClassNames";
+import './TextArea.scss';
+import getClassNames from 'utils/getClassNames';
 
 const TextArea = ({
   id,
@@ -23,11 +23,11 @@ const TextArea = ({
       data-testid="TextArea"
       disabled={disabled}
       className={getClassNames({
-        "dcui-form__textarea": true,
-        "dcui-form__textarea--full-width": fullWidth,
-        "dcui-form__textarea--has-error": error,
-        "dcui-form__textarea--disabled": disabled,
-        "dcui-form__textarea--o": disabled, // override class
+        'dcui-form__textarea': true,
+        'dcui-form__textarea--full-width': fullWidth,
+        'dcui-form__textarea--has-error': error,
+        'dcui-form__textarea--disabled': disabled,
+        'dcui-form__textarea--o': disabled, // override class
       })}
       rows={rows || 8}
       value={value}
@@ -38,8 +38,8 @@ const TextArea = ({
     />
     <p
       className={getClassNames({
-        "dcui-form__textarea-error": true,
-        "dcui-form__textarea-error--hidden": !error,
+        'dcui-form__textarea-error': true,
+        'dcui-form__textarea-error--hidden': !error,
       })}
     >
       {errorMessage}

@@ -1,72 +1,73 @@
 // Generated with util/create-component.js
-import React from "react";
-import { render } from "@testing-library/react";
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import Alert from "./Alert";
-import { AlertProps } from "./Alert.types";
+import Alert from './Alert';
+import { AlertProps } from './Alert.types';
 
-describe("Alert Suite", () => {
+describe('Alert Suite', () => {
   let props: AlertProps;
 
   beforeEach(() => {
     props = {
-      variant: "primary",
-      children: "alert message",
+      variant: 'primary',
+      children: 'alert message',
     };
   });
 
-  const renderComponent = () => render(<Alert {...props} />);
+  const renderComponent = () =>
+    render(<Alert variant={props.variant}>{props.children}</Alert>);
 
-  it("should render base class", () => {
+  it('should render base class', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("Alert");
+    const component = getByTestId('Alert');
 
-    expect(component).toHaveClass("dcui-alert");
+    expect(component).toHaveClass('dcui-alert');
   });
-  it("should render primary modifier class", () => {
+  it('should render primary modifier class', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("Alert");
+    const component = getByTestId('Alert');
 
-    expect(component).toHaveClass("dcui-alert--primary");
+    expect(component).toHaveClass('dcui-alert--primary');
   });
-  it("should render danger modifier class", () => {
-    props.variant = "danger";
+  it('should render danger modifier class', () => {
+    props.variant = 'danger';
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("Alert");
+    const component = getByTestId('Alert');
 
-    expect(component).toHaveClass("dcui-alert--danger");
+    expect(component).toHaveClass('dcui-alert--danger');
   });
-  it("should render success modifier class", () => {
-    props.variant = "success";
+  it('should render success modifier class', () => {
+    props.variant = 'success';
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("Alert");
+    const component = getByTestId('Alert');
 
-    expect(component).toHaveClass("dcui-alert--success");
+    expect(component).toHaveClass('dcui-alert--success');
   });
-  it("should render full width modifier class", () => {
+  it('should render full width modifier class', () => {
     props.fullWidth = true;
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("Alert");
+    const component = getByTestId('Alert');
 
-    expect(component).toHaveClass("dcui-alert--full-width");
+    expect(component).toHaveClass('dcui-alert--full-width');
   });
 
-  it("should render correct text", () => {
+  it('should render correct text', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("Alert");
+    const component = getByTestId('Alert');
 
-    expect(component).toHaveTextContent("alert message");
+    expect(component).toHaveTextContent('alert message');
   });
-  it("should have alert role", () => {
+  it('should have alert role', () => {
     const { getByRole } = renderComponent();
 
-    const component = getByRole("alert");
+    const component = getByRole('alert');
 
     expect(component).toBeDefined();
   });

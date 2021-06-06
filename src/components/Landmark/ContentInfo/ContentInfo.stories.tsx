@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
 
-import React from "react";
-import _ContentInfo from "./ContentInfo";
+import React from 'react';
+import _ContentInfo from './ContentInfo';
 
 export default {
-  title: "Components/Landmark/Content Info",
+  title: 'Components/Landmark/Content Info',
 };
 
 export const ContentInfo = () => (

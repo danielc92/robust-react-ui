@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export interface TableHeaderProps {
   children: ReactNode;
-  scope?: "col" | "row";
+  scope?: 'col' | 'row';
   colSpan?: number;
   rowSpan?: number;
 }

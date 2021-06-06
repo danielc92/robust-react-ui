@@ -7,5 +7,5 @@ export interface Breadcrumb {
 export interface BreadcrumbsProps {
   ariaLabel?: string;
   data: Array<Breadcrumb>;
-  size?: "small" | "medium" | "large";
+  size?: 'small' | 'medium' | 'large';
 }

@@ -1,47 +1,45 @@
 // Generated with util/create-component.js
-import React from "react";
-import { Story, Meta } from "@storybook/react";
-import Breadcrumbs from "./Breadcrumbs";
-import { BreadcrumbsProps } from "./Breadcrumbs.types";
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+import Breadcrumbs from './Breadcrumbs';
+import { BreadcrumbsProps } from './Breadcrumbs.types';
 
 export default {
-  title: "Components/Breadcrumbs",
+  title: 'Components/Breadcrumbs',
   component: Breadcrumbs,
   args: {
     data: [
       {
         isCurrent: false,
-        linkHref: "#",
-        linkText: "Nuhten",
+        linkHref: '#',
+        linkText: 'Nuhten',
       },
       {
         isCurrent: false,
-        linkHref: "#",
-        linkText: "Delore",
+        linkHref: '#',
+        linkText: 'Delore',
       },
       {
         isCurrent: false,
-        linkHref: "#",
-        linkText: "Ipsum",
+        linkHref: '#',
+        linkText: 'Ipsum',
       },
       {
         isCurrent: true,
-        linkHref: "#",
-        linkText: "Lorem",
+        linkHref: '#',
+        linkText: 'Lorem',
       },
     ],
   },
 } as Meta<BreadcrumbsProps>;
 
-const Template: Story<BreadcrumbsProps> = (args) => {
-  return <Breadcrumbs {...args} />;
-};
+const Template: Story<BreadcrumbsProps> = (args) => <Breadcrumbs {...args} />;
 
 export const Small: Story<BreadcrumbsProps> = Template.bind({});
-Small.args = { size: "small" };
+Small.args = { size: 'small' };
 
 export const Medium: Story<BreadcrumbsProps> = Template.bind({});
 Medium.args = {};
 
 export const Large: Story<BreadcrumbsProps> = Template.bind({});
-Large.args = { size: "large" };
+Large.args = { size: 'large' };

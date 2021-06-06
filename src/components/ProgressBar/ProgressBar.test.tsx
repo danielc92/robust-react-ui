@@ -1,11 +1,11 @@
 // Generated with util/create-component.js
-import React from "react";
-import { render } from "@testing-library/react";
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import ProgressBar from "./ProgressBar";
-import { ProgressBarProps } from "./ProgressBar.types";
+import ProgressBar from './ProgressBar';
+import { ProgressBarProps } from './ProgressBar.types';
 
-describe("Progress Suite", () => {
+describe('Progress Suite', () => {
   let props: ProgressBarProps;
 
   beforeEach(() => {
@@ -16,69 +16,69 @@ describe("Progress Suite", () => {
 
   const renderComponent = () => render(<ProgressBar {...props} />);
 
-  it("should render correct class", () => {
+  it('should render correct class', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBar");
+    const component = getByTestId('ProgressBar');
 
-    expect(component).toHaveClass("dcui-progress");
+    expect(component).toHaveClass('dcui-progress');
   });
-  it("should render correct class (2)", () => {
+  it('should render correct class (2)', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBar");
+    const component = getByTestId('ProgressBar');
 
-    expect(component).toHaveClass("dcui-progress--primary");
+    expect(component).toHaveClass('dcui-progress--primary');
   });
-  it("should render correct class (3)", () => {
+  it('should render correct class (3)', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBar");
+    const component = getByTestId('ProgressBar');
 
-    expect(component).toHaveClass("dcui-progress--medium");
+    expect(component).toHaveClass('dcui-progress--medium');
   });
 
-  it("should render correct class (4)", () => {
+  it('should render correct class (4)', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBarInner");
+    const component = getByTestId('ProgressBarInner');
 
-    expect(component).toHaveClass("dcui-progress__inner");
+    expect(component).toHaveClass('dcui-progress__inner');
   });
 
-  it("should render correct class (5)", () => {
-    props.variant = "danger";
+  it('should render correct class (5)', () => {
+    props.variant = 'danger';
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBar");
+    const component = getByTestId('ProgressBar');
 
-    expect(component).toHaveClass("dcui-progress--danger");
+    expect(component).toHaveClass('dcui-progress--danger');
   });
 
-  it("changing max value should change aria-valuemax", () => {
+  it('changing max value should change aria-valuemax', () => {
     props.maximumValue = 89;
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBarInner");
-    expect(component.getAttribute("aria-valuemax")).toEqual("89");
+    const component = getByTestId('ProgressBarInner');
+    expect(component.getAttribute('aria-valuemax')).toEqual('89');
   });
 
-  it("should render correct aria attributes (1)", () => {
+  it('should render correct aria attributes (1)', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBarInner");
-    expect(component.getAttribute("aria-valuenow")).toEqual("50");
+    const component = getByTestId('ProgressBarInner');
+    expect(component.getAttribute('aria-valuenow')).toEqual('50');
   });
-  it("should render correct aria attributes (2)", () => {
+  it('should render correct aria attributes (2)', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBarInner");
-    expect(component.getAttribute("aria-valuemin")).toEqual("0");
+    const component = getByTestId('ProgressBarInner');
+    expect(component.getAttribute('aria-valuemin')).toEqual('0');
   });
-  it("should render correct aria attributes (3)", () => {
+  it('should render correct aria attributes (3)', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("ProgressBarInner");
-    expect(component.getAttribute("aria-valuemax")).toEqual("100");
+    const component = getByTestId('ProgressBarInner');
+    expect(component.getAttribute('aria-valuemax')).toEqual('100');
   });
 });

@@ -1,2 +1,3 @@
-import ContentInfo from "./ContentInfo";
+import ContentInfo from './ContentInfo';
+
 export default ContentInfo;

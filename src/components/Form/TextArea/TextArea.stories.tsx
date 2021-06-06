@@ -1,23 +1,23 @@
 // TextArea.stories.tsx
 
-import React, { useState } from "react";
-import { Story, Meta } from "@storybook/react";
-import TextArea from "./TextArea";
-import { FormTextAreaProps } from "./TextArea.types";
-import FieldSet from "../FieldSet";
-import Label from "../Label";
+import React, { useState } from 'react';
+import { Story, Meta } from '@storybook/react';
+import TextArea from './TextArea';
+import { FormTextAreaProps } from './TextArea.types';
+import FieldSet from '../FieldSet';
+import Label from '../Label';
 
 export default {
-  title: "Components/Form/TextArea",
+  title: 'Components/Form/TextArea',
   component: TextArea,
   args: {
-    id: "TextArea-example",
-    placeholder: "Type some text",
+    id: 'TextArea-example',
+    placeholder: 'Type some text',
   },
 } as Meta<FormTextAreaProps>;
 
 const Template: Story<FormTextAreaProps> = (args) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const onChangeFunction = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
     setValue(event.target.value);
   return (
@@ -34,7 +34,7 @@ Basic.args = {};
 export const Error: Story<FormTextAreaProps> = Template.bind({});
 Error.args = {
   error: true,
-  errorMessage: "Something went wrong",
+  errorMessage: 'Something went wrong',
 };
 
 export const Disabled: Story<FormTextAreaProps> = Template.bind({});

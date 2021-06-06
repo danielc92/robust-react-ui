@@ -1,49 +1,47 @@
 // Generated with util/create-component.js
-import React from "react";
-import { Story, Meta } from "@storybook/react";
-import Table from "./Table";
-import { TableProps } from "./Table.types";
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+import Table from './Table';
+import { TableProps } from './Table.types';
 
 export default {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
   args: {},
 } as Meta<TableProps>;
 
-const Template: Story<TableProps> = (args) => {
-  return (
-    <Table {...args}>
-      <Table.Head>
-        <Table.Row>
-          <Table.Header>Ipsum</Table.Header>
-          <Table.Header>Ipsum</Table.Header>
-          <Table.Header>Ipsum</Table.Header>
-          <Table.Header>Ipsum</Table.Header>
-        </Table.Row>
-      </Table.Head>
-      <Table.Body>
-        <Table.Row>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-        </Table.Row>
-        <Table.Row>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-          <Table.Cell>Lorem</Table.Cell>
-        </Table.Row>
-      </Table.Body>
-    </Table>
-  );
-};
+const Template: Story<TableProps> = (args) => (
+  <Table {...args}>
+    <Table.Head>
+      <Table.Row>
+        <Table.Header>Ipsum</Table.Header>
+        <Table.Header>Ipsum</Table.Header>
+        <Table.Header>Ipsum</Table.Header>
+        <Table.Header>Ipsum</Table.Header>
+      </Table.Row>
+    </Table.Head>
+    <Table.Body>
+      <Table.Row>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+        <Table.Cell>Lorem</Table.Cell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+);
 
 export const Basic: Story<TableProps> = Template.bind({});
 export const Striped: Story<TableProps> = Template.bind({});

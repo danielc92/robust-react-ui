@@ -4,6 +4,6 @@ export interface ProgressBarProps {
   maximumValue?: number;
   currentValue: number;
   fullWidth?: boolean;
-  size?: "small" | "medium" | "large";
-  variant?: "primary" | "secondary" | "danger" | "success";
+  size?: 'small' | 'medium' | 'large';
+  variant?: 'primary' | 'secondary' | 'danger' | 'success';
 }

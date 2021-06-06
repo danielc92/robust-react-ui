@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
-import React from "react";
-import { render } from "@testing-library/react";
-import Accordion from "./Accordion";
+import React from 'react';
+import { render } from '@testing-library/react';
+import Accordion from './Accordion';
 
-describe("Accordion Suite", () => {
+describe('Accordion Suite', () => {
   const renderComponent = () =>
     render(
       <Accordion activePanel="panel-2" onSelectPanelFunction={() => {}}>
@@ -26,71 +26,71 @@ describe("Accordion Suite", () => {
       </Accordion>
     );
 
-  it("should render with correct base class", () => {
+  it('should render with correct base class', () => {
     const { getByTestId } = renderComponent();
 
-    const component = getByTestId("Accordion");
+    const component = getByTestId('Accordion');
 
-    expect(component).toHaveClass("dcui-accordion");
+    expect(component).toHaveClass('dcui-accordion');
   });
-  it("2 panel should render ", () => {
+  it('2 panel should render ', () => {
     const { getAllByTestId } = renderComponent();
 
-    const component = getAllByTestId("AccordionPanel");
+    const component = getAllByTestId('AccordionPanel');
 
     expect(component.length).toEqual(2);
   });
 
-  it("panel should render as h3", () => {
+  it('panel should render as h3', () => {
     const { getAllByTestId } = renderComponent();
 
-    const component = getAllByTestId("AccordionPanel");
+    const component = getAllByTestId('AccordionPanel');
 
-    expect(component[0].nodeName).toEqual("H3");
+    expect(component[0].nodeName).toEqual('H3');
   });
 
-  it("first panel should have text", () => {
+  it('first panel should have text', () => {
     const { getAllByTestId } = renderComponent();
 
-    const component = getAllByTestId("AccordionPanel");
+    const component = getAllByTestId('AccordionPanel');
 
-    expect(component[0]).toHaveTextContent("Animals");
+    expect(component[0]).toHaveTextContent('Animals');
   });
 
-  it("second panel should have text", () => {
+  it('second panel should have text', () => {
     const { getAllByTestId } = renderComponent();
 
-    const component = getAllByTestId("AccordionPanel");
+    const component = getAllByTestId('AccordionPanel');
 
-    expect(component[1]).toHaveTextContent("Plants");
+    expect(component[1]).toHaveTextContent('Plants');
   });
 
-  it("second panel should have text", () => {
+  it('second panel should have text', () => {
     const { getAllByTestId } = renderComponent();
 
-    const component = getAllByTestId("AccordionPanel");
+    const component = getAllByTestId('AccordionPanel');
     expect(component[0]);
   });
 
-  it("trigger should be aria-expanded", () => {
+  it('trigger should be aria-expanded', () => {
     const { getAllByTestId } = renderComponent();
 
-    const component = getAllByTestId("AccordionTrigger");
+    const component = getAllByTestId('AccordionTrigger');
 
-    expect(component[0].getAttribute("aria-expanded")).toEqual("false");
+    expect(component[0].getAttribute('aria-expanded')).toEqual('false');
   });
-  it("trigger should be aria-expanded", () => {
+  it('trigger should be aria-expanded', () => {
     const { getAllByTestId } = renderComponent();
 
-    const component = getAllByTestId("AccordionTrigger");
+    const component = getAllByTestId('AccordionTrigger');
 
-    expect(component[1].getAttribute("aria-expanded")).toEqual("true");
+    expect(component[1].getAttribute('aria-expanded')).toEqual('true');
   });
-  it("trigger should have correct class", () => {
+  it('trigger should have correct class', () => {
     const { getAllByTestId } = renderComponent();
 
-    const component = getAllByTestId("AccordionTrigger");
+    const component = getAllByTestId('AccordionTrigger');
 
-    expect(component[0]).toHaveClass("dcui-accordion__trigger");
+    expect(component[0]).toHaveClass('dcui-accordion__trigger');
   });
 });

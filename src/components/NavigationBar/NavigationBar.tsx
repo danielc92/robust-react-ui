@@ -1,11 +1,11 @@
 // Generated with util/create-component.js
-import React, { createRef, useEffect, useState } from "react";
-import { NavigationBarProps, NavigationData } from "./NavigationBar.types";
-import "./NavigationBar.scss";
-import getClassNames from "utils/getClassNames";
+import React, { createRef, useEffect, useState } from 'react';
+import { NavigationBarProps, NavigationData } from './NavigationBar.types';
+import './NavigationBar.scss';
+import getClassNames from 'utils/getClassNames';
 
 const FOCUS_DELAY = 120;
-type Dir = "LEFT" | "RIGHT" | "UP" | "DOWN";
+type Dir = 'LEFT' | 'RIGHT' | 'UP' | 'DOWN';
 interface TransformedNavigationNode {
   menuOpen?: boolean;
   hasMenu: boolean;
@@ -65,9 +65,8 @@ const NavigationBar = ({
       nodes.map((n) => {
         if (n.id === id) {
           return { ...n, menuOpen: true };
-        } else {
-          return { ...n, menuOpen: false };
         }
+        return { ...n, menuOpen: false };
       })
     );
   };
@@ -79,13 +78,13 @@ const NavigationBar = ({
     const next = ord === max ? 0 : ord + 1;
     const prev = ord === 0 ? max : ord - 1;
 
-    if (dir === "LEFT") {
+    if (dir === 'LEFT') {
       const m = menuNodes.find((x) => x.order === prev);
       m.ref.current.focus();
       if (closeAll) closeAllMenuButOne(m.id);
     }
 
-    if (dir === "RIGHT") {
+    if (dir === 'RIGHT') {
       const m = menuNodes.find((x) => x.order === next);
       m.ref.current.focus();
       if (closeAll) closeAllMenuButOne(m.id);
@@ -100,9 +99,8 @@ const NavigationBar = ({
             ...n,
             menuOpen: true,
           };
-        } else {
-          return n;
         }
+        return n;
       })
     );
 
@@ -167,7 +165,7 @@ const NavigationBar = ({
       // else navigate to the previous TOPLEVEL nav item
 
       if (!closeAll) setCloseAll(true);
-      traverseTopLevelMenu(foundNode.menuId, "LEFT");
+      traverseTopLevelMenu(foundNode.menuId, 'LEFT');
     }
   };
   const handleRightPress = (node: NavigationData) => {
@@ -184,7 +182,7 @@ const NavigationBar = ({
     } else {
       // else navigate to the next TOPLEVEL nav item
       if (!closeAll) setCloseAll(true);
-      traverseTopLevelMenu(foundNode.menuId, "RIGHT");
+      traverseTopLevelMenu(foundNode.menuId, 'RIGHT');
     }
   };
 
@@ -193,7 +191,7 @@ const NavigationBar = ({
       onEnterLinkFunction(href);
       return;
     }
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.location.href = href;
     }
   };
@@ -201,11 +199,7 @@ const NavigationBar = ({
   const closeAllAndFocusTopMenu = (node: NavigationData) => {
     // node.parentId
 
-    setNodes((nodes) =>
-      nodes.map((x) => {
-        return { ...x, menuOpen: false };
-      })
-    );
+    setNodes((nodes) => nodes.map((x) => ({ ...x, menuOpen: false })));
 
     nodes.find((n) => n.id === node.parentId).ref.current.focus();
   };
@@ -227,9 +221,9 @@ const NavigationBar = ({
             <li
               role="none"
               className={getClassNames({
-                "dcui-nav__menu-item": true,
-                "dcui-nav__menu-item--expanded": n?.menuOpen,
-                "dcui-nav__menu-item--has-menu": n?.hasMenu,
+                'dcui-nav__menu-item': true,
+                'dcui-nav__menu-item--expanded': n?.menuOpen,
+                'dcui-nav__menu-item--has-menu': n?.hasMenu,
               })}
               key={`menuitem${_ai}`}
             >
@@ -238,11 +232,11 @@ const NavigationBar = ({
                 onKeyDown={(e) => {
                   // left
                   if (e.keyCode === 37) {
-                    traverseTopLevelMenu(a.id, "LEFT");
+                    traverseTopLevelMenu(a.id, 'LEFT');
                   }
                   // right
                   if (e.keyCode === 39) {
-                    traverseTopLevelMenu(a.id, "RIGHT");
+                    traverseTopLevelMenu(a.id, 'RIGHT');
                   }
                   // enter
                   if (e.keyCode === 13) {
@@ -254,11 +248,11 @@ const NavigationBar = ({
                   }
                 }}
                 role="menuitem"
-                aria-haspopup={n?.hasMenu ? "true" : "false"}
+                aria-haspopup={n?.hasMenu ? 'true' : 'false'}
                 aria-expanded={
-                  !n?.hasMenu ? null : n?.menuOpen ? "true" : "false"
+                  !n?.hasMenu ? null : n?.menuOpen ? 'true' : 'false'
                 }
-                href={a.linkHref ? a.linkHref : "#"}
+                href={a.linkHref ? a.linkHref : '#'}
                 tabIndex={0}
               >
                 {a.linkName}
@@ -274,10 +268,10 @@ const NavigationBar = ({
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className={getClassNames({
-                      "dcui-nav__chevron": true,
+                      'dcui-nav__chevron': true,
                     })}
                   >
-                    <polyline points="9 18 15 12 9 6"></polyline>
+                    <polyline points="9 18 15 12 9 6" />
                   </svg>
                 )}
               </a>
@@ -285,8 +279,8 @@ const NavigationBar = ({
               {a.children && (
                 <ul
                   className={getClassNames({
-                    "dcui-nav__dropdown": true,
-                    "dcui-nav__dropdown--open": nodes.find((n) => n.id === a.id)
+                    'dcui-nav__dropdown': true,
+                    'dcui-nav__dropdown--open': nodes.find((n) => n.id === a.id)
                       ?.menuOpen,
                   })}
                   role="menu"
@@ -299,22 +293,22 @@ const NavigationBar = ({
                         <li
                           role="none"
                           className={getClassNames({
-                            "dcui-nav__dropdown-item": true,
-                            "dcui-nav__dropdown-item--expanded": n2?.menuOpen,
+                            'dcui-nav__dropdown-item': true,
+                            'dcui-nav__dropdown-item--expanded': n2?.menuOpen,
                           })}
                         >
                           <a
                             ref={n2?.ref}
                             id={b.id.toString()}
                             role="menuitem"
-                            href={b.linkHref ? b.linkHref : "#"}
-                            aria-haspopup={n2?.hasMenu ? "true" : "false"}
+                            href={b.linkHref ? b.linkHref : '#'}
+                            aria-haspopup={n2?.hasMenu ? 'true' : 'false'}
                             aria-expanded={
                               !n2?.hasMenu
                                 ? null
                                 : n2?.menuOpen
-                                ? "true"
-                                : "false"
+                                ? 'true'
+                                : 'false'
                             }
                             tabIndex={-1}
                             onKeyDown={(e) => {
@@ -367,12 +361,12 @@ const NavigationBar = ({
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 className={getClassNames({
-                                  "dcui-nav__chevron": true,
-                                  "dcui-nav__chevron--submenu": true,
-                                  "dcui-nav__chevron--expanded": n2?.menuOpen,
+                                  'dcui-nav__chevron': true,
+                                  'dcui-nav__chevron--submenu': true,
+                                  'dcui-nav__chevron--expanded': n2?.menuOpen,
                                 })}
                               >
-                                <polyline points="9 18 15 12 9 6"></polyline>
+                                <polyline points="9 18 15 12 9 6" />
                               </svg>
                             )}
                           </a>
@@ -380,9 +374,9 @@ const NavigationBar = ({
                           {b.children && (
                             <ul
                               className={getClassNames({
-                                "dcui-nav__dropdown": true,
-                                "dcui-nav__dropdown--nested": true,
-                                "dcui-nav__dropdown--open": nodes.find(
+                                'dcui-nav__dropdown': true,
+                                'dcui-nav__dropdown--nested': true,
+                                'dcui-nav__dropdown--open': nodes.find(
                                   (n) => n.id === b.id
                                 )?.menuOpen,
                               })}
@@ -436,7 +430,7 @@ const NavigationBar = ({
                                         ref={n3?.ref}
                                         id={c.id.toString()}
                                         role="menuitem"
-                                        href={c.linkHref ? c.linkHref : "#"}
+                                        href={c.linkHref ? c.linkHref : '#'}
                                         aria-haspopup="false"
                                         aria-expanded={null}
                                         tabIndex={-1}
@@ -449,7 +443,7 @@ const NavigationBar = ({
                                       <li
                                         role="separator"
                                         className="dcui-nav__separator"
-                                      ></li>
+                                      />
                                     )}
                                   </React.Fragment>
                                 );
@@ -461,7 +455,7 @@ const NavigationBar = ({
                           <li
                             role="separator"
                             className="dcui-nav__separator"
-                          ></li>
+                          />
                         )}
                       </React.Fragment>
                     );

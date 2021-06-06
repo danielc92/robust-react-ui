@@ -1,46 +1,46 @@
 // Generated with util/create-component.js
-import React from "react";
-import NavigationBar from "./NavigationBar";
+import React from 'react';
+import NavigationBar from './NavigationBar';
 
 export default {
-  title: "Components/NavigationBar",
+  title: 'Components/NavigationBar',
 };
 
-const sampleLink = "https://github.com";
+const sampleLink = 'https://github.com';
 const navData = [
   {
     id: 1,
     parentId: null,
-    linkName: "Google",
+    linkName: 'Google',
     linkHref: sampleLink,
   },
   {
     id: 2,
     parentId: null,
-    linkName: "Fruit Listing",
+    linkName: 'Fruit Listing',
     children: [
       {
         id: 6,
         parentId: 2,
-        linkName: "Sweet Fruits",
+        linkName: 'Sweet Fruits',
         children: [
           {
             id: 10,
             parentId: 6,
-            linkName: "Apple",
+            linkName: 'Apple',
             linkHref: sampleLink,
           },
           {
             id: 11,
             parentId: 6,
-            linkName: "Strawberries",
+            linkName: 'Strawberries',
             linkHref: sampleLink,
           },
 
           {
             id: 13,
             parentId: 6,
-            linkName: "Kiwi",
+            linkName: 'Kiwi',
             linkHref: sampleLink,
           },
         ],
@@ -48,30 +48,30 @@ const navData = [
       {
         id: 5,
         parentId: 2,
-        linkName: "Sour Fruits",
+        linkName: 'Sour Fruits',
         children: [
           {
             id: 54,
             parentId: 5,
-            linkName: "Lemon",
+            linkName: 'Lemon',
             linkHref: sampleLink,
           },
           {
             id: 6548,
             parentId: 5,
-            linkName: "Mango",
+            linkName: 'Mango',
             linkHref: sampleLink,
           },
           {
             id: 289654,
             parentId: 5,
-            linkName: "Lime",
+            linkName: 'Lime',
             linkHref: sampleLink,
           },
           {
             id: 2544,
             parentId: 5,
-            linkName: "Grape",
+            linkName: 'Grape',
             linkHref: sampleLink,
           },
         ],
@@ -80,7 +80,7 @@ const navData = [
       {
         id: 4,
         parentId: 2,
-        linkName: "Other",
+        linkName: 'Other',
         linkHref: sampleLink,
       },
     ],
@@ -88,7 +88,7 @@ const navData = [
   {
     id: 3,
     parentId: null,
-    linkName: "About us",
+    linkName: 'About us',
     linkHref: sampleLink,
   },
 ];
