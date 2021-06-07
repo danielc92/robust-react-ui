@@ -61,7 +61,7 @@ Props:
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
 | `ariaLabel`              | `string`                 |         |         no| 
-| `variant`              | ` 'primary' | 'danger' | 'success' | 'secondary'`                 |         |    no     | 
+| `variant`              | `'primary' | 'danger' | 'success' | 'secondary'`                 |         |    no     | 
 | `tabs`              | `Array<TabListTab>`                 |         |     yes    | 
 | `fullWidth`              | `boolean`                 |         |         no| 
 
