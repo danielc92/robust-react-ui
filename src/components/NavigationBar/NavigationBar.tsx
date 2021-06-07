@@ -91,10 +91,10 @@ const NavigationBar = ({
     }
   };
 
-  const openMenu = (id: number) => {
-    setNodes((nodes) =>
+  const openMenu = (menuId: number) => {
+    setNodes(
       nodes.map((n) => {
-        if (n.id === id) {
+        if (n.id === menuId) {
           return {
             ...n,
             menuOpen: true,
@@ -106,7 +106,7 @@ const NavigationBar = ({
 
     // focus on first child
     setTimeout(() => {
-      const exists = nodes.find((n) => n.parentId === id);
+      const exists = nodes.find((n) => n.parentId === menuId);
       exists?.ref?.current?.focus();
     }, FOCUS_DELAY);
   };
@@ -149,7 +149,7 @@ const NavigationBar = ({
     const foundNode = nodes.find((n) => n.id === node.id);
 
     if (foundNode.lv > 2) {
-      setNodes((nodes) =>
+      setNodes(
         nodes.map((n) => {
           if (n.id === node.parentId) {
             return { ...n, menuOpen: false };
@@ -199,7 +199,7 @@ const NavigationBar = ({
   const closeAllAndFocusTopMenu = (node: NavigationData) => {
     // node.parentId
 
-    setNodes((nodes) => nodes.map((x) => ({ ...x, menuOpen: false })));
+    setNodes(nodes.map((x) => ({ ...x, menuOpen: false })));
 
     nodes.find((n) => n.id === node.parentId).ref.current.focus();
   };
@@ -213,7 +213,8 @@ const NavigationBar = ({
       {/* Root nav bar */}
       <ul id={id || null} role="menubar" aria-label={ariaLabel}>
         {data.map((a, _ai) => {
-          const n = nodes.find((n) => n.id === a.id);
+          const n = nodes.find((nodeToFind4) => nodeToFind4.id === a.id);
+
           return (
             <li
               role="none"
@@ -246,9 +247,7 @@ const NavigationBar = ({
                 }}
                 role="menuitem"
                 aria-haspopup={n?.hasMenu ? 'true' : 'false'}
-                aria-expanded={
-                  !n?.hasMenu ? null : n?.menuOpen ? 'true' : 'false'
-                }
+                aria-expanded={n?.menuOpen ? 'true' : 'false'}
                 href={a.linkHref ? a.linkHref : '#'}
                 tabIndex={0}
               >
@@ -277,14 +276,17 @@ const NavigationBar = ({
                 <ul
                   className={getClassNames({
                     'dcui-nav__dropdown': true,
-                    'dcui-nav__dropdown--open': nodes.find((n) => n.id === a.id)
-                      ?.menuOpen,
+                    'dcui-nav__dropdown--open': nodes.find(
+                      (nodeToFind2) => nodeToFind2.id === a.id
+                    )?.menuOpen,
                   })}
                   role="menu"
                   aria-label={a.linkName}
                 >
                   {a.children.map((b, _bi) => {
-                    const n2 = nodes.find((n) => n.id === b.id);
+                    const n2 = nodes.find(
+                      (nodeToFind) => nodeToFind.id === b.id
+                    );
                     return (
                       <React.Fragment key={b.linkName + _bi.toString()}>
                         <li
@@ -300,13 +302,7 @@ const NavigationBar = ({
                             role="menuitem"
                             href={b.linkHref ? b.linkHref : '#'}
                             aria-haspopup={n2?.hasMenu ? 'true' : 'false'}
-                            aria-expanded={
-                              !n2?.hasMenu
-                                ? null
-                                : n2?.menuOpen
-                                ? 'true'
-                                : 'false'
-                            }
+                            aria-expanded={n2?.menuOpen ? 'true' : 'false'}
                             tabIndex={-1}
                             onKeyDown={(e) => {
                               e.preventDefault();
@@ -374,14 +370,16 @@ const NavigationBar = ({
                                 'dcui-nav__dropdown': true,
                                 'dcui-nav__dropdown--nested': true,
                                 'dcui-nav__dropdown--open': nodes.find(
-                                  (n) => n.id === b.id
+                                  (nodeToFind3) => nodeToFind3.id === b.id
                                 )?.menuOpen,
                               })}
                               role="menu"
                               aria-label={b.linkName}
                             >
                               {b.children.map((c, _ci) => {
-                                const n3 = nodes.find((n) => n.id === c.id);
+                                const n3 = nodes.find(
+                                  (nodeToFind5) => nodeToFind5.id === c.id
+                                );
                                 return (
                                   <React.Fragment
                                     key={c.linkName + _ci.toString()}

@@ -1,10 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
-
-import { ProgressBarProps } from './ProgressBar.types';
-
-import './ProgressBar.scss';
 import getClassNames from 'utils/getClassNames';
+import { ProgressBarProps } from './ProgressBar.types';
+import './ProgressBar.scss';
 
 const ProgressBar = ({
   minimumValue,

@@ -1,10 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
-
-import { AlertProps } from './Alert.types';
-
-import './Alert.scss';
 import getClassNames from 'utils/getClassNames';
+import { AlertProps } from './Alert.types';
+import './Alert.scss';
 
 const Alert = ({
   children,
@@ -26,6 +24,7 @@ const Alert = ({
     })}
   >
     <button
+      type="button"
       className="dcui-alert__button"
       aria-label="close alert"
       onClick={() => {

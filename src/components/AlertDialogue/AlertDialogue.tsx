@@ -1,10 +1,8 @@
 // Generated with util/create-component.js
 import React, { useEffect } from 'react';
-
-import { AlertDialogueProps } from './AlertDialogue.types';
-
-import './AlertDialogue.scss';
 import getClassNames from 'utils/getClassNames';
+import { AlertDialogueProps } from './AlertDialogue.types';
+import './AlertDialogue.scss';
 import Typography from '../Typography';
 import Button from '../Button';
 
@@ -74,15 +72,15 @@ const AlertDialogue = ({
     }
   };
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
-      data-testid="AlertDialogue"
       onKeyDown={handleKeyDown}
+      data-testid="AlertDialogue"
       className={getClassNames({
         'dcui-modal__overlay': true,
         'dcui-modal__overlay--active': open,
       })}
     >
-      <div tabIndex={0} />
       <div
         id="alert_dialog"
         role="alertdialog"
@@ -116,7 +114,6 @@ const AlertDialogue = ({
           </Button>
         </div>
       </div>
-      <div tabIndex={0} />
     </div>
   );
 };

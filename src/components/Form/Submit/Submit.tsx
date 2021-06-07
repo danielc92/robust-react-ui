@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
 import React from 'react';
 
+import getClassNames from 'utils/getClassNames';
 import { FormSubmitProps } from './Submit.types';
 
 import './Submit.scss';
-import getClassNames from 'utils/getClassNames';
 
 const Submit = ({ value, id, size, variant }: FormSubmitProps) => (
   <input

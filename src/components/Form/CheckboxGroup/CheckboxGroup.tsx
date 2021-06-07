@@ -11,10 +11,10 @@ const CheckboxGroup = ({
   ariaLabelledBy,
   onSelectFunction,
 }: FormCheckboxGroupProps) => (
-  <div role="group" aria-labelledby={ariaLabelledBy}>
+  <div role="group" aria-labelledby={ariaLabelledBy} id={id || null}>
     <ul className="dcui-form__checkbox-group" data-testid="CheckboxGroup">
-      {values.map((v, i) => (
-        <li key={`checkbox-item-${i}`}>
+      {values.map((v) => (
+        <li key={`checkbox-item-${v.displayValue}`}>
           <div
             onKeyDown={(event) => {
               if (event.keyCode === 32) {

@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
 import React from 'react';
+import getClassNames from 'utils/getClassNames';
 
 import { FormTextAreaProps } from './TextArea.types';
 
 import './TextArea.scss';
-import getClassNames from 'utils/getClassNames';
 
 const TextArea = ({
   id,

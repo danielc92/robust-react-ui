@@ -3,7 +3,6 @@
 @import "../../../typography.scss";
 
 .dcui-form {
- 
   &__input {
     box-shadow: var(--input-shadow);
     margin-bottom: 0.5rem;
@@ -28,12 +27,9 @@
     }
   }
 
-
   &__input[type="text"],
   &__input[type="date"],
   &__input[type="password"] {
-
-
     &:active,
     &:focus {
       outline: none;
@@ -74,6 +70,4 @@
       color: var(--input-placeholder-color);
     }
   }
-
- 
 }

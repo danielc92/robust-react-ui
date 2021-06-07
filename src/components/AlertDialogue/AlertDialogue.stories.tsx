@@ -8,8 +8,8 @@ export default {
 
 export const Basic = () => (
   <AlertDialogue
-    onCloseActionFunction={() => alert('Closing...')}
-    onConfirmActionFunction={() => alert('Confiming...')}
+    onCloseActionFunction={() => {}}
+    onConfirmActionFunction={() => {}}
     bodyText="Consectetur culpa consequat id labore magna excepteur laboris magna et sint. Adipisicing cupidatat officia consequat qui est quis voluptate cillum adipisicing. Esse in sunt ipsum ea ad laboris culpa ea sint. Esse magna elit exercitation id ullamco laboris elit excepteur "
     titleText="Lorem Ipsum Delore"
     open

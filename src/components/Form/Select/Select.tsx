@@ -1,10 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
-
-import { FormSelectProps } from './Select.types';
-
-import './Select.scss';
 import getClassNames from 'utils/getClassNames';
+import { FormSelectProps } from './Select.types';
+import './Select.scss';
 
 const Select = ({
   id,

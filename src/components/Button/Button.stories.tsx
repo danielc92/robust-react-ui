@@ -12,7 +12,7 @@ export default {
     size: 'medium',
     variant: 'primary',
     children: 'Learn more',
-    onClickFunction: () => alert('Button has been clicked.'),
+    onClickFunction: () => {},
   },
 } as Meta<ButtonProps>;
 

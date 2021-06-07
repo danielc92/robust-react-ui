@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
+import getClassNames from 'utils/getClassNames';
 import { HeadingLevel, HeadingProps } from './Heading.types';
 import './Heading.scss';
-import getClassNames from 'utils/getClassNames';
 
 const getHeaderClass = (level: HeadingLevel | null, jumbo: boolean) => {
   const levelCalc = !level ? 1 : level;
@@ -14,16 +14,6 @@ const getHeaderClass = (level: HeadingLevel | null, jumbo: boolean) => {
 };
 
 const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
-  if (!level || level === 1)
-    return (
-      <h1
-        data-testid="Heading"
-        id={id || null}
-        className={getHeaderClass(level, jumbo)}
-      >
-        {children}
-      </h1>
-    );
   if (level === 2)
     return (
       <h2
@@ -74,6 +64,15 @@ const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
         {children}
       </h6>
     );
+  return (
+    <h1
+      data-testid="Heading"
+      id={id || null}
+      className={getHeaderClass(level, jumbo)}
+    >
+      {children}
+    </h1>
+  );
 };
 
 export default Heading;

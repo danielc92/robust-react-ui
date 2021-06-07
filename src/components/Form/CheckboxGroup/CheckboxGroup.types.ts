@@ -1,5 +1,3 @@
-import React, { ReactNode } from 'react';
-
 export interface CheckboxOptionProps {
   displayValue: string;
   keyValue: string;

@@ -22,7 +22,7 @@ describe('Form Input Suite', () => {
         },
         {
           checked: false,
-          keyValue: '002',
+          keyValue: '003',
           displayValue: 'Apples',
         },
       ],

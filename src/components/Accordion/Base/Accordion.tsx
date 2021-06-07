@@ -1,10 +1,11 @@
 // Generated with util/create-component.js
 
 import React, { createRef, useEffect, useState } from 'react';
-import { AccordionProps, AccordionPanelProps } from './Accordion.types';
-import './Accordion.scss';
 import getClassNames from 'utils/getClassNames';
+import { AccordionProps } from './Accordion.types';
+import './Accordion.scss';
 import Panel from '../Panel';
+import { AccordionPanelProps } from '../Panel/Panel.types';
 
 const Accordion = ({
   children,
@@ -16,20 +17,20 @@ const Accordion = ({
     { panelId: string; idx: number; ref: any }[]
   >([]);
 
-  const _handleFocusPrevious = (_index: number) => {
+  const handleFocusPrevious = (_index: number) => {
     const max = refs.length - 1;
     const newIndex = _index === 0 ? max : _index - 1;
     refs[newIndex]?.ref?.current?.focus();
   };
-  const _handleFocusNext = (_index: number) => {
+  const handleFocusNext = (_index: number) => {
     const max = refs.length - 1;
     const newIndex = _index === max ? 0 : _index + 1;
     refs[newIndex]?.ref?.current?.focus();
   };
-  const _handleFocusFirst = () => {
+  const handleFocusFirst = () => {
     if (refs.length) refs[0]?.ref?.current?.focus();
   };
-  const _handleFocusLast = () => {
+  const handleFocusLast = () => {
     if (refs.length) refs[refs.length - 1]?.ref?.current?.focus();
   };
 
@@ -44,6 +45,7 @@ const Accordion = ({
               ref: createRef(),
             };
           }
+          return null;
         })
       );
     }
@@ -58,16 +60,16 @@ const Accordion = ({
         'dcui-accordion--full-width': fullWidth,
       })}
     >
-      {React.Children.map(children, (child, i) =>
+      {React.Children.map(children, (child, index) =>
         React.cloneElement(child as React.ReactElement<any>, {
           activePanel,
-          _onSelectPanelFunction: onSelectPanelFunction,
-          _handleFocusPrevious,
-          _handleFocusNext,
-          _handleFocusFirst,
-          _handleFocusLast,
-          _index: i,
-          ref: refs.length ? refs[i].ref : null,
+          onSelectPanelFunction,
+          handleFocusPrevious,
+          handleFocusNext,
+          handleFocusFirst,
+          handleFocusLast,
+          index,
+          ref: refs.length ? refs[index].ref : null,
         })
       )}
     </div>

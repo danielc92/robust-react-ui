@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 
 import React from 'react';
+import getClassNames from 'utils/getClassNames';
 import { AccordionPanelProps } from './Panel.types';
 import './Panel.scss';
-import getClassNames from 'utils/getClassNames';
 
 const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
   (
@@ -12,29 +12,29 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
       panelTitle,
       panelId,
       activePanel,
-      _onSelectPanelFunction,
-      _handleFocusPrevious,
-      _handleFocusNext,
-      _handleFocusFirst,
-      _handleFocusLast,
-      _index,
+      onSelectPanelFunction,
+      handleFocusPrevious,
+      handleFocusNext,
+      handleFocusFirst,
+      handleFocusLast,
+      index,
     },
     ref
   ) => {
     const sectionId = `${panelId}_section`;
     const isCurrent = activePanel === panelId;
     const handleSelectPanel = () => {
-      _onSelectPanelFunction(panelId);
+      onSelectPanelFunction(panelId);
     };
     const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
       // 38 up
-      if (_handleFocusPrevious && event.keyCode === 38) {
-        _handleFocusPrevious(_index);
+      if (handleFocusPrevious && event.keyCode === 38) {
+        handleFocusPrevious(index);
         event.preventDefault();
       }
       // 40 down
-      if (_handleFocusNext && event.keyCode === 40) {
-        _handleFocusNext(_index);
+      if (handleFocusNext && event.keyCode === 40) {
+        handleFocusNext(index);
         event.preventDefault();
       }
 
@@ -46,18 +46,19 @@ const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
       // home
       if (event.keyCode === 36) {
         event.preventDefault();
-        _handleFocusFirst();
+        handleFocusFirst();
       }
       // end
       if (event.keyCode === 35) {
         event.preventDefault();
-        _handleFocusLast();
+        handleFocusLast();
       }
     };
     return (
       <>
         <h3 data-testid="AccordionPanel">
           <button
+            type="button"
             data-testid="AccordionTrigger"
             aria-disabled={isCurrent}
             onClick={handleSelectPanel}

@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
+import getClassNames from 'utils/getClassNames';
 import { TableProps } from './Table.types';
 import './Table.scss';
-import getClassNames from 'utils/getClassNames';
 import Row from '../Row';
 import Cell from '../Cell';
 import Head from '../Head';

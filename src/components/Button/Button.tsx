@@ -1,10 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { ButtonProps } from './Button.types';
-
-import './Button.scss';
 import getClassNames from 'utils/getClassNames';
+import { ButtonProps } from './Button.types';
+import './Button.scss';
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -28,7 +27,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       id={id || null}
       data-testid="Button"
       onClick={(e) => {
-        onClickFunction ? onClickFunction(e) : {};
+        if (typeof onClickFunction === 'function') onClickFunction(e);
       }}
       ref={ref}
       className={getClassNames({

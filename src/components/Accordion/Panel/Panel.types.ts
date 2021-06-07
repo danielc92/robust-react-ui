@@ -5,10 +5,10 @@ export interface AccordionPanelProps {
   panelTitle: string;
   panelId: string;
   activePanel?: string;
-  _onSelectPanelFunction?: (panelId: string) => void;
-  _handleFocusPrevious?: (_index: number) => void;
-  _handleFocusNext?: (_index: number) => void;
-  _handleFocusFirst?: () => void;
-  _handleFocusLast?: () => void;
-  _index?: number;
+  onSelectPanelFunction?: (panelId: string) => void;
+  handleFocusPrevious?: (_index: number) => void;
+  handleFocusNext?: (_index: number) => void;
+  handleFocusFirst?: () => void;
+  handleFocusLast?: () => void;
+  index?: number;
 }
