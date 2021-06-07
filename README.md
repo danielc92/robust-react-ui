@@ -19,6 +19,9 @@ TBD.
 ### Components
 - [Accordion](#accordion)
 - [Accordion.Panel](#accordionpanel)
+- [Alert](#alert)
+- [AlertDialogue](#alertdialogue)
+- [Image](#image)
 - [Typography](#typography)
 - [Typography.Heading](#typographyheading)
 - [Typography.Paragraph](#typographyparagraph)
@@ -96,6 +99,57 @@ Description: A compound component for the Accordion.
 | `children`              | `ReactNode`                 |         | yes        | 
 | `panelTitle`           | `string`                    |         | yes        | 
 | `panelId`             | `string`                   |         | yes      |  
+
+#### Alert
+
+Description: An alert component.
+
+`AlertProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|----------|
+| `children`              | `ReactNode`                 |         | yes        | 
+| `variant`           | `'primary', 'success', 'danger'`                    |         | no        | 
+| `fullWidth`             | `boolean`                   |         | no      |  
+| `visible`             | `boolean`                   |         | no      |  
+| `onCloseActionFunction`             | `(visibleState: boolean) => void`                   |         |no      |  
+
+
+#### Alert Dialogue
+
+Description: A Modal dialogue component, with confirm and cancel action buttons.
+
+`AlertDialogueProps`
+  
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `open`              | `boolean`                 |         |   yes      | 
+| `titleText`              | `string`                 |         |        yes | 
+| `bodyText`              | `string`                 |         |       yes  | 
+| `confirmButtonText`              | `string`                 |         |    no     | 
+| `cancelButtonText`              | `string`                 |         |    no     | 
+| `onCloseActionFunction`              | `() => void`                 |         |        yes | 
+| `onConfirmActionFunction`              | `() => void`                 |         |  yes       | 
+
+
+#### Image
+
+Description: An image component.
+
+`ImageProps`
+  
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `height`              | `number`                 |         |     no    | 
+| `width`              | `number`                 |         |     no    | 
+| `alt`              | `string`                 |         |      yes   | 
+| `scaling`              | `'unrestricted', 'restricted-width'`                 |         |     no    | 
+| `style`              | `React.CSSProperties`                 |         |     no    | 
+| `circle`              | `boolean`                 |         |     no    | 
+| `bordered`              | `boolean`                 |         |    no     | 
+| `blurred`              | `boolean`                 |         |    no     | 
+| `src`              | `string`                 |         |    yes     | 
+
 
 #### TabList
 
@@ -303,7 +357,6 @@ Description: A navigation bar which supports nested dropdowns.
 | `linkHref`              | `string`                 |         |     no    | 
 | `children`              | `NavigationData[]`                 |         | no        | 
 | `hasSeparator`              | `boolean`                 |         |       no  | 
-
 
 
 ## Maintainers
