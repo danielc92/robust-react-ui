@@ -32,7 +32,7 @@ Props (`ParagraphProps`)
 | `children`              | `ReactNode`                 |         | yes       | 
 | `id`              | `string`                 |         |         no| 
 | `bolded`              | `boolean`                 |         |      no   | 
-| `size`              | `'small' \| 'medium' \| 'large'`                 |         |no         | 
+| `size`              | `'small','medium','large'`                 |         |no         | 
 
 
 #### Accordion
@@ -61,7 +61,7 @@ Props:
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
 | `ariaLabel`              | `string`                 |         |         no| 
-| `variant`              | `'primary' | 'danger' | 'success' | 'secondary'`                 |         |    no     | 
+| `variant`              | `'primary','danger','success','secondary'`                 |         |    no     | 
 | `tabs`              | `Array<TabListTab>`                 |         |     yes    | 
 | `fullWidth`              | `boolean`                 |         |         no| 
 
@@ -71,7 +71,7 @@ Props:
 | `tabId`              | `string`                 |         |         yes| 
 | `buttonLabel`              | `string`                 |         |    yes     | 
 | `buttonId`              | `string`                 |         |     yes    | 
-| `tabContent`              | `string | ReactNode`                 |         |         yes| 
+| `tabContent`              | `string,ReactNode`                 |         |         yes| 
 
   minimumValue?: number;
   maximumValue?: number;
