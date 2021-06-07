@@ -9,24 +9,32 @@ TBD.
 ## Documentation
 
 ### Components
-- [Accordion](####accordion)
-- [Accordion.Panel](####accordion.panel)
-- [Typography](####typography)
-- [Typography.Heading](####typography.heading)
-- [Typography.Paragraph](####typography.paragraph)
-- [TabList](####tablist)
-- [ProgressBar](####progressbar)
+- [Accordion](#accordion)
+- [Accordion.Panel](#accordionpanel)
+- [Typography](#typography)
+- [Typography.Heading](#typographyheading)
+- [Typography.Paragraph](#typographyparagraph)
+- [TabList](#tablist)
+- [Link](#link)
+- [Table](#table)
+- [ProgressBar](#progressbar)
 
 #### Typography
+
 Description: Base component for typography.
-Props (`TypographyProps`)
+
+`TypographyProps`
+
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `ReactNode`                 |         |yes         | 
 
 #### Typography.Paragraph
+
 Description: Compound paragraph component for typography.
-Props (`ParagraphProps`)
+
+`ParagraphProps`
+
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `ReactNode`                 |         | yes       | 
@@ -34,10 +42,27 @@ Props (`ParagraphProps`)
 | `bolded`              | `boolean`                 |         |      no   | 
 | `size`              | `'small','medium','large'`                 |         |no         | 
 
+#### Typography.Heading 
+
+Description: Compound heading component for typography.
+
+`<HeadingProps>`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         | yes       | 
+| `id`              | `string`                 |         |         no| 
+| `level`              | `1, 2, 3, 4, 5, 6`                 |         |      no   | 
+| `jumbo`              | `boolean`                 |         |no         | 
+
+
 
 #### Accordion
+
 Description: Base component for Accordion.
-Props:
+
+`AccordionProps`
+
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|----------|
 | `children`              | `ReactNode`                 |         | yes        | 
@@ -46,8 +71,11 @@ Props:
 | `onSelectPanelFunction` | `(panelId: string) => void` |         | yes        |  
 
 #### Accordion.Panel
+
 Description: A compound component for the Accordion.
-Props (`AccordionProps`)
+
+`AccordionProps`
+
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|----------|
 | `children`              | `ReactNode`                 |         | yes        | 
@@ -55,9 +83,11 @@ Props (`AccordionProps`)
 | `panelId`             | `string`                   |         | yes      |  
 
 #### TabList
+
 Description: Tab list component.
-Props: 
-(`TabListProps`)
+
+`TabListProps`
+
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
 | `ariaLabel`              | `string`                 |         |         no| 
@@ -65,7 +95,8 @@ Props:
 | `tabs`              | `Array<TabListTab>`                 |         |     yes    | 
 | `fullWidth`              | `boolean`                 |         |         no| 
 
-(`TabListTab`)
+`TabListTab`
+
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
 | `tabId`              | `string`                 |         |         yes| 
@@ -73,39 +104,140 @@ Props:
 | `buttonId`              | `string`                 |         |     yes    | 
 | `tabContent`              | `string,ReactNode`                 |         |         yes| 
 
-  minimumValue?: number;
-  maximumValue?: number;
-  currentValue: number;
-  fullWidth?: boolean;
-  size?: 'small' | 'medium' | 'large';
-  variant?: 'primary' | 'secondary' | 'danger' | 'success';
+#### Pagination
+
+Description: Component for a group of pagination buttons.
+
+`PaginationProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `rounded`              | `boolean`                 |         |      no   | 
+| `ariaLabel`              | `string`                 |         |        no | 
+| `data`              | `PaginationButtonProps[]`                 |         |         yes| 
+
+
+`PaginationButtonProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `current`              | `boolean`                 |         |      yes   | 
+| `href`              | `string`                 |         |        yes | 
+| `pageNumber`              | `number`                 |         |         yes| 
+
 
 #### ProgressBar
+
 Description: -
-Props (`ProgressBarProps`):
+
+`ProgressBarProps`
+
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
 | `minimumValue`              | `number`                 |         |      no   | 
 | `maximumValue`              | `number`                 |         |        no | 
 | `currentValue`              | `number`                 |         |         yes| 
 | `fullWidth`              | `boolean`                 |         |         no| 
-| `size`              | `'small' | 'medium' | 'large'`                 |         |         no| 
-| `variant`              | `'primary' | 'secondary' | 'danger' | 'success'`                 |         |       no  | 
+| `size`              | `'small', 'medium', 'large'`                 |         |         no| 
+| `variant`              | `'primary', 'secondary', 'danger', 'success'`                 |         |       no  | 
 
-#### NAME
-Description: -
-Props:
+#### Link
+
+Description: A link component.
+
+`LinkProps`
+
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| ``              | ``                 |         |         | 
-| ``              | ``                 |         |         | 
-| ``              | ``                 |         |         | 
-| ``              | ``                 |         |         | 
-| ``              | ``                 |         |         | 
-| ``              | ``                 |         |         | 
-| ``              | ``                 |         |         | 
-| ``           | ``                    |         |         | 
-| ``             | ``                   |         |       |  
+| `children`              | `ReactNode`                 |         |     yes    | 
+| `size`              | `'small', 'medium', 'large'`                 |         |         no| 
+| `display`              | `'inline', 'block'`                 |         |no         | 
+| `href`              | `string`                 |         |         yes| 
+| `ariaLabel`              | `string`                 |         |        no | 
+| `ariaDescribedBy`              | `string`                 |         |no         | 
+
+
+#### Table
+
+Description: Base component for Table.
+
+`TableProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+| `striped`              | `boolean`                 |         |         no| 
+| `centerCellContent`              | `centerCellContent`                 |         |no         | 
+| `id`              | `string`                 |         |         no| 
+| `ariaLabel`              | `string`                 |         |        bi | 
+| `ariaDescribedBy`              | `string`                 |         |no         | 
+
+#### Table.Body
+
+Description: Compound Table component for inserting a table's body.
+
+`TableBodyProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+
+#### Table.Foot
+
+Description: Compound Table component for inserting a table's foot.
+
+`TableFootProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+
+#### Table.Head
+
+Description: Compound Table component for inserting a table's head.
+
+`TableHeadProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+
+#### Table.Row
+
+Description: Compound Table component for inserting rows.
+
+`TableRowProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+
+
+#### Table.Cell
+
+Description: Compound Table component for inserting cells.
+
+`TableCellProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+
+
+
+#### Table.Header
+
+Description: Compound Table component for inserting headers.
+
+`TableHeaderProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+| `scope`              | `'col', 'row'`                 |         |     no    | 
+| `colSpan`              | `number`                 |         |     no    | 
+| `rowSpan`              | `number`                 |         |     no    | 
+
 
 
 ## Storybook
