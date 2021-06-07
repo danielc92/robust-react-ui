@@ -2,6 +2,14 @@
 
 The goal is provide a react library of components, which are robust, extensible and meet general accessibility guidelines. This project is currently **not published** on npm.
 
+## Storybook
+Click the [following link](https://develop--60b75a95d763ec0039b4429c.chromatic.com/) to see the latest `develop` branch.
+
+## CI
+
+![maintest](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![mainbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)
+![devtest](https://github.com/danielc92/dc-react-ui/actions/workflows/develop-test.yml/badge.svg) ![devbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/develop-build.yml/badge.svg)
+
 ## Getting started
 
 TBD.
@@ -17,7 +25,14 @@ TBD.
 - [TabList](#tablist)
 - [Link](#link)
 - [Table](#table)
+- [Table.Body](#tablebody)
+- [Table.Head](#tablehead)
+- [Table.Header](#tableheader)
+- [Table.Foot](#tablefoot)
+- [Table.Cell](#tablecell)
+- [Table.Row](#tablerow)
 - [ProgressBar](#progressbar)
+- [NavigationBar](#navigationbar)
 
 #### Typography
 
@@ -239,14 +254,57 @@ Description: Compound Table component for inserting headers.
 | `rowSpan`              | `number`                 |         |     no    | 
 
 
+### Breadcrumbs
 
-## Storybook
-Click the [following link](https://develop--60b75a95d763ec0039b4429c.chromatic.com/) to see the latest `develop` branch.
+Description: Breadcrumb link group component.
 
-## CI
+`BreadcrumbsProps`
 
-![maintest](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![mainbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)
-![devtest](https://github.com/danielc92/dc-react-ui/actions/workflows/develop-test.yml/badge.svg) ![devbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/develop-build.yml/badge.svg)
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `ariaLabel`              | `string`                 |         |    no     | 
+| `data`              | `Array<Breadcrumb>`                |         |        yes | 
+| `size`              | `'small', 'medium', 'large'`                 |         |     no    | 
+
+`Breadcrumb`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `linkHref`              | `string, null`                 |         |   yes     | 
+| `linkText`              | `string`                |         |        yes | 
+| `isCurrent`              | `boolean`                 |         |     yes    | 
+
+
+#### NavigationBar
+
+Description: A navigation bar which supports nested dropdowns.
+
+`NavigationBarProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `data`              | `NavigationData[]`                 |         |    yes     | 
+| `onEnterLinkFunction`              | `(href: string) => void`                 |         |        no | 
+| `ariaLabel`              | `string`                 |         |     yes    | 
+| `id`              | `string`                 |         |      no   | 
+| ``              | ``                 |         |         | 
+| ``              | ``                 |         |         | 
+| ``              | ``                 |         |         | 
+| ``           | ``                    |         |         | 
+| ``             | ``                   |         |       |  
+
+`NavigationData`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `parentId`              | `null, number`                 |         |  yes       | 
+| `id`              | `number`                 |         |      yes   | 
+| `linkName`              | `string`                 |         |   yes      | 
+| `linkHref`              | `string`                 |         |     no    | 
+| `children`              | `NavigationData[]`                 |         | no        | 
+| `hasSeparator`              | `boolean`                 |         |       no  | 
+
+
 
 ## Maintainers
 
@@ -256,58 +314,6 @@ Click the [following link](https://develop--60b75a95d763ec0039b4429c.chromatic.c
 
 If you want to contribute, feel free to send me a message.
 
-## Components
-
-```
-├───Accordion
-│   ├───Base     
-│   └───Panel    
-├───Alert        
-├───AlertDialogue
-├───AutoComplete 
-├───Breadcrumbs  
-├───Button       
-├───Form
-│   ├───Base
-│   ├───CheckboxGroup
-│   ├───FieldSet
-│   ├───Input
-│   ├───Label
-│   ├───Legend
-│   ├───Select
-│   ├───Submit
-│   └───TextArea
-├───Image
-├───Landmark
-│   ├───Base
-│   ├───Complementary
-│   ├───ContentInfo
-│   ├───Main
-│   └───Region
-├───Layout
-│   ├───Base
-│   ├───Column
-│   ├───Container
-│   └───Row
-├───Link
-├───NavigationBar
-├───Pagination
-├───ProgressBar
-├───Table
-│   ├───Base
-│   ├───Body
-│   ├───Cell
-│   ├───Foot
-│   ├───Head
-│   ├───Header
-│   └───Row
-├───TabList
-└───Typography
-    ├───Base
-    ├───Heading
-    └───Paragraph
-
-```
 
 ## Credits & Resources
 
