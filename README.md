@@ -81,13 +81,13 @@ Description: An autocomplete form component.
 
 #### Accordion
 
-Description: Base component for Accordion.
+Description: Base component for Accordion. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `AccordionProps`
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|----------|
-| `children`              | `ReactNode`                 |         | yes        | 
+| `children`              | `React.ReactNode`                 |         | yes        | 
 | `activePanel`           | `string`                    |         | yes        | 
 | `fullWidth`             | `boolean`                   |         | no        |  
 | `onSelectPanelFunction` | `(panelId: string) => void` |         | yes        |  
@@ -100,19 +100,19 @@ Description: A compound component for the Accordion.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|----------|
-| `children`              | `ReactNode`                 |         | yes        | 
+| `children`              | `React.ReactNode`                 |         | yes        | 
 | `panelTitle`           | `string`                    |         | yes        | 
 | `panelId`             | `string`                   |         | yes      |  
 
 #### Alert
 
-Description: An alert component.
+Description: An alert component. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `AlertProps`
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|----------|
-| `children`              | `ReactNode`                 |         | yes        | 
+| `children`              | `React.ReactNode`                 |         | yes        | 
 | `variant`           | `'primary', 'success', 'danger'`                    |         | no        | 
 | `fullWidth`             | `boolean`                   |         | no      |  
 | `visible`             | `boolean`                   |         | no      |  
@@ -121,7 +121,7 @@ Description: An alert component.
 
 #### AlertDialogue
 
-Description: A Modal dialogue component, with confirm and cancel action buttons.
+Description: A Modal dialogue component, with confirm and cancel action buttons. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `AlertDialogueProps`
   
@@ -138,7 +138,7 @@ Description: A Modal dialogue component, with confirm and cancel action buttons.
 
 ### Breadcrumbs
 
-Description: Breadcrumb link group component.
+Description: Breadcrumb link group component. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `BreadcrumbsProps`
 
@@ -183,14 +183,14 @@ Description: Base component for form elements.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |       yes  | 
+| `children`              | `React.ReactNode`                 |         |       yes  | 
 | `onSubmitFunction`              | `()=>void`                 |         |    yes     | 
 | `ariaDescribedBy`              | `string`                 |         |     no    | 
 
 
 #### Form.CheckboxGroup
 
-Description: -
+Description: A Form compound component for a group of checkboxes. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `FormCheckboxGroupProps `
 
@@ -219,13 +219,13 @@ Description: A form compound component, to insert a fieldset.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         | yes        | 
+| `children`              | `React.ReactNode`                 |         | yes        | 
 
 
 
 #### Form.Input
 
-Description: A form compound component for inputs.
+Description: A form compound component for inputs. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `FormInputProps`
 
@@ -272,7 +272,7 @@ Description: A form compound component for legends.
 
 #### Form.Select
 
-Description: A form compound component for select.
+Description: A form compound component for select. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `FormSelectProps `
 
@@ -311,7 +311,7 @@ Description: A form compound component for a submit button.
 
 #### Form.TextArea
 
-Description: A form compound component for a textarea.
+Description: A form compound component for a textarea. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `FormTextAreaProps `
 
@@ -356,7 +356,7 @@ Description: The base component for Landmarks.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+| `children`              | `React.ReactNode`                 |         |    yes     | 
 
 #### Landmark.Complementary
 
@@ -366,7 +366,7 @@ Description: A compound landmark component for an element with the complementary
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+| `children`              | `React.ReactNode`                 |         |    yes     | 
 | `ariaLabelledBy`              | `string`                 |         |    no     | 
 
 #### Landmark.ContentInfo
@@ -377,7 +377,7 @@ Description: A compound landmark component for an element with the contentinfo r
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+| `children`              | `React.ReactNode`                 |         |    yes     | 
 | `ariaLabelledBy`              | `string`                 |         |    no     | 
 
 
@@ -389,7 +389,7 @@ Description: A compound landmark component for an element with the contentinfo r
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     |
+| `children`              | `React.ReactNode`                 |         |    yes     |
 
 
 #### Landmark.Region
@@ -400,11 +400,9 @@ Description: A compound landmark component for an element with the contentinfo r
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+| `children`              | `React.ReactNode`                 |         |    yes     | 
 | `ariaLabelledBy`              | `string`                 |         |    no     | 
 | `ariaLabel`              | `string`                 |         |    no     | 
-
- 
 
 
 #### Layout
@@ -415,7 +413,7 @@ Description: The base component for Layout.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+| `children`              | `React.ReactNode`                 |         |    yes     | 
 
 
 
@@ -427,7 +425,7 @@ Description: A compound layout component for a row.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+| `children`              | `React.ReactNode`                 |         |    yes     | 
 | `wrap`              | `boolean`                 |         |    no     | 
 
 
@@ -439,7 +437,7 @@ Description: A compound layout component for a column.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+| `children`              | `React.ReactNode`                 |         |    yes     | 
 | `size`              | `'third', 'half', 'quarter'`                 |         |    no     | 
 
 
@@ -451,7 +449,7 @@ Description: A compound layout component for a container.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+| `children`              | `React.ReactNode`                 |         |    yes     | 
 | `size`              | ` 'small', 'medium', 'large'`                 |         |    no     | 
 
 
@@ -463,7 +461,7 @@ Description: A link component.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
+| `children`              | `React.ReactNode`                 |         |     yes    | 
 | `size`              | `'small', 'medium', 'large'`                 |         |         no| 
 | `display`              | `'inline', 'block'`                 |         |no         | 
 | `href`              | `string`                 |         |         yes| 
@@ -473,7 +471,7 @@ Description: A link component.
 
 #### NavigationBar
 
-Description: A navigation bar which supports nested dropdowns.
+Description: A navigation bar which supports nested dropdowns. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `NavigationBarProps`
 
@@ -499,7 +497,7 @@ Description: A navigation bar which supports nested dropdowns.
 
 #### Pagination
 
-Description: Component for a group of pagination buttons.
+Description: Component for a group of pagination buttons. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `PaginationProps`
 
@@ -521,7 +519,7 @@ Description: Component for a group of pagination buttons.
 
 #### ProgressBar
 
-Description: -
+Description: A component which uses the progressbar role. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `ProgressBarProps`
 
@@ -543,7 +541,7 @@ Description: Base component for Table.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
+| `children`              | `React.ReactNode`                 |         |     yes    | 
 | `striped`              | `boolean`                 |         |         no| 
 | `centerCellContent`              | `centerCellContent`                 |         |no         | 
 | `id`              | `string`                 |         |         no| 
@@ -558,7 +556,7 @@ Description: Compound Table component for inserting a table's body.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
+| `children`              | `React.ReactNode`                 |         |     yes    | 
 
 
 #### Table.Cell
@@ -569,7 +567,7 @@ Description: Compound Table component for inserting cells.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
+| `children`              | `React.ReactNode`                 |         |     yes    | 
 
 
 
@@ -581,7 +579,7 @@ Description: Compound Table component for inserting a table's foot.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
+| `children`              | `React.ReactNode`                 |         |     yes    | 
 
 #### Table.Head
 
@@ -591,7 +589,7 @@ Description: Compound Table component for inserting a table's head.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
+| `children`              | `React.ReactNode`                 |         |     yes    | 
 
 
 #### Table.Header
@@ -602,7 +600,7 @@ Description: Compound Table component for inserting headers.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
+| `children`              | `React.ReactNode`                 |         |     yes    | 
 | `scope`              | `'col', 'row'`                 |         |     no    | 
 | `colSpan`              | `number`                 |         |     no    | 
 | `rowSpan`              | `number`                 |         |     no    | 
@@ -616,16 +614,12 @@ Description: Compound Table component for inserting rows.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
-
-
-
-
+| `children`              | `React.ReactNode`                 |         |     yes    | 
 
 
 #### TabList
 
-Description: Tab list component.
+Description: Tab list component. This component follows the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) design pattern.
 
 `TabListProps`
 
@@ -654,7 +648,7 @@ Description: Base component for typography.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |yes         | 
+| `children`              | `React.ReactNode`                 |         |yes         | 
 
 #### Typography.Heading 
 
@@ -664,7 +658,7 @@ Description: Compound heading component for typography.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         | yes       | 
+| `children`              | `React.ReactNode`                 |         | yes       | 
 | `id`              | `string`                 |         |         no| 
 | `level`              | `1, 2, 3, 4, 5, 6`                 |         |      no   | 
 | `jumbo`              | `boolean`                 |         |no         | 
@@ -678,12 +672,10 @@ Description: Compound paragraph component for typography.
 
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         | yes       | 
+| `children`              | `React.ReactNode`                 |         | yes       | 
 | `id`              | `string`                 |         |         no| 
 | `bolded`              | `boolean`                 |         |      no   | 
 | `size`              | `'small','medium','large'`                 |         |no         | 
-
-
 
 
 ## Maintainers
@@ -701,6 +693,7 @@ If you want to contribute, feel free to send me a message.
 
 - [Index of ARIA Design Pattern Examples](https://www.w3.org/TR/wai-aria-practices/examples/)
 - [ARIA Landmarks](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html)
+- [Controlled components](https://reactjs.org/docs/forms.html#controlled-components)
 
 ### Styling
 
