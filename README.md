@@ -34,24 +34,25 @@ TBD.
   - [Form.Submit](#formsubmit)
 - [Image](#image)
 - [Landmark](#landmark)
-  - [Landmark.Main](#landmarkmain)
   - [Landmark.Complementary](#landmarkcomplementary)
   - [Landmark.ContentInfo](#landmarkcontentinfo)
+  - [Landmark.Main](#landmarkmain)
   - [Landmark.Region](#landmarkregion)
 - [Layout](#layout)
+  - [Layout.Row](#layoutRow)
   - [Layout.Column](#layoutcolumn)
   - [Layout.Container](#layoutcontainer)
-  - [Layout.Row](#layoutRow)
 - [Link](#link)
+- [Pagination](#pagination)
 - [ProgressBar](#progressbar)
 - [NavigationBar](#navigationbar)
 - [Table](#table)
   - [Table.Body](#tablebody)
-  - [Table.Row](#tablerow)
   - [Table.Cell](#tablecell)
+  - [Table.Foot](#tablefoot)
   - [Table.Head](#tablehead)
   - [Table.Header](#tableheader)
-  - [Table.Foot](#tablefoot)
+  - [Table.Row](#tablerow)
 - [TabList](#tablist)
 - [Typography](#typography)
   - [Typography.Heading](#typographyheading)
@@ -241,6 +242,21 @@ Description: A form compound component for inputs.
 | `errorMessage`             | `string`                   |         |       no   |  
 | `disabled`             | `boolean`                   |         |       no   |  
 
+#### Form.Label
+
+Description: A form compound component for labels.
+
+`FormLabelProps `
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `React.ReactNode`                 |         | yes        | 
+| `id`              | `string`                 |         |  no       | 
+| `htmlFor`              | `string`                 |         |  no       | 
+| `required`              | `boolean`                 |         | no        | 
+
+
+
 #### Form.Legend
 
 Description: A form compound component for legends.
@@ -250,20 +266,9 @@ Description: A form compound component for legends.
 | name                  | type                      | purpose | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         | yes        | 
-| `id`              | `string`                 |         |  no       | 
-| `htmlFor`              | `string`                 |         |  no       | 
-| `required`              | `boolean`                 |         | no        | 
-
-#### Form.Label
-
-Description: A form compound component for labels.
-
-`FormLegendProps `
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `children`              | `React.ReactNode`                 |         | yes        | 
 | `id`              | `string`                 |         |  yes       | 
+
+
 
 #### Form.Select
 
@@ -289,6 +294,21 @@ Description: A form compound component for select.
 | `keyValue`              | `string`                 |         |         yes| 
 
 
+
+
+#### Form.Submit
+
+Description: A form compound component for a submit button.
+
+`FormSubmitProps `
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `size`              | `'small', 'medium', 'large'`                 |         |no         | 
+| `variant`              | `'primary', 'danger', 'success'`                 |         |no         | 
+| `value`              | `string`                 |         |     yes    | 
+| `id`              | `string`                 |         |      no   | 
+
 #### Form.TextArea
 
 Description: A form compound component for a textarea.
@@ -308,19 +328,6 @@ Description: A form compound component for a textarea.
 | `errorMessage`             | `string`                   |         |   no    |  
 | `disabled`             | `boolean`                   |         |     no  |  
 
-#### Form.Submit
-
-Description: A form compound component for a submit button.
-
-`FormSubmitProps `
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `size`              | `'small', 'medium', 'large'`                 |         |no         | 
-| `variant`              | `'primary', 'danger', 'success'`                 |         |no         | 
-| `value`              | `string`                 |         |     yes    | 
-| `id`              | `string`                 |         |      no   | 
-
 
 #### Image
 
@@ -339,45 +346,6 @@ Description: An image component.
 | `bordered`              | `boolean`                 |         |    no     | 
 | `blurred`              | `boolean`                 |         |    no     | 
 | `src`              | `string`                 |         |    yes     | 
-
-
-
-#### Pagination
-
-Description: Component for a group of pagination buttons.
-
-`PaginationProps`
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `rounded`              | `boolean`                 |         |      no   | 
-| `ariaLabel`              | `string`                 |         |        no | 
-| `data`              | `PaginationButtonProps[]`                 |         |         yes| 
-
-
-`PaginationButtonProps`
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `current`              | `boolean`                 |         |      yes   | 
-| `href`              | `string`                 |         |        yes | 
-| `pageNumber`              | `number`                 |         |         yes| 
-
-
-#### ProgressBar
-
-Description: -
-
-`ProgressBarProps`
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `minimumValue`              | `number`                 |         |      no   | 
-| `maximumValue`              | `number`                 |         |        no | 
-| `currentValue`              | `number`                 |         |         yes| 
-| `fullWidth`              | `boolean`                 |         |         no| 
-| `size`              | `'small', 'medium', 'large'`                 |         |         no| 
-| `variant`              | `'primary', 'secondary', 'danger', 'success'`                 |         |       no  | 
 
 
 #### Landmark
@@ -413,6 +381,17 @@ Description: A compound landmark component for an element with the contentinfo r
 | `ariaLabelledBy`              | `string`                 |         |    no     | 
 
 
+#### Landmark.Main
+
+Description: A compound landmark component for an element with the contentinfo role.
+
+`MainProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |    yes     |
+
+
 #### Landmark.Region
 
 Description: A compound landmark component for an element with the contentinfo role.
@@ -425,15 +404,7 @@ Description: A compound landmark component for an element with the contentinfo r
 | `ariaLabelledBy`              | `string`                 |         |    no     | 
 | `ariaLabel`              | `string`                 |         |    no     | 
 
-#### Landmark.Main
-
-Description: A compound landmark component for an element with the contentinfo role.
-
-`MainProps`
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |    yes     | 
+ 
 
 
 #### Layout
@@ -500,8 +471,6 @@ Description: A link component.
 | `ariaDescribedBy`              | `string`                 |         |no         | 
 
 
-
-
 #### NavigationBar
 
 Description: A navigation bar which supports nested dropdowns.
@@ -526,6 +495,44 @@ Description: A navigation bar which supports nested dropdowns.
 | `children`              | `NavigationData[]`                 |         | no        | 
 | `hasSeparator`              | `boolean`                 |         |       no  | 
 
+
+
+#### Pagination
+
+Description: Component for a group of pagination buttons.
+
+`PaginationProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `rounded`              | `boolean`                 |         |      no   | 
+| `ariaLabel`              | `string`                 |         |        no | 
+| `data`              | `PaginationButtonProps[]`                 |         |         yes| 
+
+
+`PaginationButtonProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `current`              | `boolean`                 |         |      yes   | 
+| `href`              | `string`                 |         |        yes | 
+| `pageNumber`              | `number`                 |         |         yes| 
+
+
+#### ProgressBar
+
+Description: -
+
+`ProgressBarProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `minimumValue`              | `number`                 |         |      no   | 
+| `maximumValue`              | `number`                 |         |        no | 
+| `currentValue`              | `number`                 |         |         yes| 
+| `fullWidth`              | `boolean`                 |         |         no| 
+| `size`              | `'small', 'medium', 'large'`                 |         |         no| 
+| `variant`              | `'primary', 'secondary', 'danger', 'success'`                 |         |       no  | 
 
 
 #### Table
@@ -553,6 +560,19 @@ Description: Compound Table component for inserting a table's body.
 |-----------------------|---------------------------|---------|---|
 | `children`              | `ReactNode`                 |         |     yes    | 
 
+
+#### Table.Cell
+
+Description: Compound Table component for inserting cells.
+
+`TableCellProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+
+
+
 #### Table.Foot
 
 Description: Compound Table component for inserting a table's foot.
@@ -573,28 +593,6 @@ Description: Compound Table component for inserting a table's head.
 |-----------------------|---------------------------|---------|---|
 | `children`              | `ReactNode`                 |         |     yes    | 
 
-#### Table.Row
-
-Description: Compound Table component for inserting rows.
-
-`TableRowProps`
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
-
-
-#### Table.Cell
-
-Description: Compound Table component for inserting cells.
-
-`TableCellProps`
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         |     yes    | 
-
-
 
 #### Table.Header
 
@@ -608,6 +606,20 @@ Description: Compound Table component for inserting headers.
 | `scope`              | `'col', 'row'`                 |         |     no    | 
 | `colSpan`              | `number`                 |         |     no    | 
 | `rowSpan`              | `number`                 |         |     no    | 
+
+
+#### Table.Row
+
+Description: Compound Table component for inserting rows.
+
+`TableRowProps`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |     yes    | 
+
+
+
 
 
 
@@ -644,6 +656,20 @@ Description: Base component for typography.
 |-----------------------|---------------------------|---------|---|
 | `children`              | `ReactNode`                 |         |yes         | 
 
+#### Typography.Heading 
+
+Description: Compound heading component for typography.
+
+`<HeadingProps>`
+
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         | yes       | 
+| `id`              | `string`                 |         |         no| 
+| `level`              | `1, 2, 3, 4, 5, 6`                 |         |      no   | 
+| `jumbo`              | `boolean`                 |         |no         | 
+
+
 #### Typography.Paragraph
 
 Description: Compound paragraph component for typography.
@@ -657,18 +683,6 @@ Description: Compound paragraph component for typography.
 | `bolded`              | `boolean`                 |         |      no   | 
 | `size`              | `'small','medium','large'`                 |         |no         | 
 
-#### Typography.Heading 
-
-Description: Compound heading component for typography.
-
-`<HeadingProps>`
-
-| name                  | type                      | purpose | required | 
-|-----------------------|---------------------------|---------|---|
-| `children`              | `ReactNode`                 |         | yes       | 
-| `id`              | `string`                 |         |         no| 
-| `level`              | `1, 2, 3, 4, 5, 6`                 |         |      no   | 
-| `jumbo`              | `boolean`                 |         |no         | 
 
 
 
