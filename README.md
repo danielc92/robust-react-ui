@@ -8,7 +8,68 @@ TBD.
 
 ## Documentation
 
-TBD.
+### Components
+- [Accordion](####accordion)
+- [Accordion.Panel](####accordion.panel)
+
+#### Typography
+Description: Base component for typography.
+Props (`TypographyProps`)
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         |yes         | 
+
+#### Typography.Paragraph
+Description: Compound paragraph component for typography.
+Props (`ParagraphProps`)
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `children`              | `ReactNode`                 |         | yes       | 
+| `id`              | `string`                 |         |         no| 
+| `bolded`              | `boolean`                 |         |      no   | 
+| `size`              | `'small' | 'medium' | 'large'`                 |         |no         | 
+
+export interface HeadingProps {
+  children: ReactNode;
+  id?: string;
+  level?: HeadingLevel;
+  jumbo?: boolean;
+}
+
+#### Accordion
+Description: Base component for Accordion.
+Props:
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|----------|
+| `children`              | `ReactNode`                 |         | yes        | 
+| `activePanel`           | `string`                    |         | yes        | 
+| `fullWidth`             | `boolean`                   |         | no        |  
+| `onSelectPanelFunction` | `(panelId: string) => void` |         | yes        |  
+
+#### Accordion.Panel
+Description: A compound component for the Accordion.
+Props (`AccordionProps`)
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|----------|
+| `children`              | `ReactNode`                 |         | yes        | 
+| `panelTitle`           | `string`                    |         | yes        | 
+| `panelId`             | `string`                   |         | yes      |  
+
+#### NAME
+Description: -
+Props:
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| ``              | ``                 |         |         | 
+| ``              | ``                 |         |         | 
+| ``              | ``                 |         |         | 
+| ``              | ``                 |         |         | 
+| ``              | ``                 |         |         | 
+| ``              | ``                 |         |         | 
+| ``              | ``                 |         |         | 
+| ``           | ``                    |         |         | 
+| ``             | ``                   |         |       |  
+
 
 ## Storybook
 Click the [following link](https://develop--60b75a95d763ec0039b4429c.chromatic.com/) to see the latest `develop` branch.
