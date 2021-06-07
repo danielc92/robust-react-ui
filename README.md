@@ -32,7 +32,7 @@ Props (`ParagraphProps`)
 | `children`              | `ReactNode`                 |         | yes       | 
 | `id`              | `string`                 |         |         no| 
 | `bolded`              | `boolean`                 |         |      no   | 
-| `size`              | <code>'small' | 'medium' | 'large'</code>                 |         |no         | 
+| `size`              | `'small' \| 'medium' \| 'large'`                 |         |no         | 
 
 
 #### Accordion
