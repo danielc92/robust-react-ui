@@ -11,6 +11,11 @@ TBD.
 ### Components
 - [Accordion](####accordion)
 - [Accordion.Panel](####accordion.panel)
+- [Typography](####typography)
+- [Typography.Heading](####typography.heading)
+- [Typography.Paragraph](####typography.paragraph)
+- [TabList](####tablist)
+- [ProgressBar](####progressbar)
 
 #### Typography
 Description: Base component for typography.
@@ -29,12 +34,6 @@ Props (`ParagraphProps`)
 | `bolded`              | `boolean`                 |         |      no   | 
 | `size`              | `'small' | 'medium' | 'large'`                 |         |no         | 
 
-export interface HeadingProps {
-  children: ReactNode;
-  id?: string;
-  level?: HeadingLevel;
-  jumbo?: boolean;
-}
 
 #### Accordion
 Description: Base component for Accordion.
@@ -54,6 +53,44 @@ Props (`AccordionProps`)
 | `children`              | `ReactNode`                 |         | yes        | 
 | `panelTitle`           | `string`                    |         | yes        | 
 | `panelId`             | `string`                   |         | yes      |  
+
+#### TabList
+Description: Tab list component.
+Props: 
+(`TabListProps`)
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `ariaLabel`              | `string`                 |         |         no| 
+| `variant`              | ` 'primary' | 'danger' | 'success' | 'secondary'`                 |         |    no     | 
+| `tabs`              | `Array<TabListTab>`                 |         |     yes    | 
+| `fullWidth`              | `boolean`                 |         |         no| 
+
+(`TabListTab`)
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `tabId`              | `string`                 |         |         yes| 
+| `buttonLabel`              | `string`                 |         |    yes     | 
+| `buttonId`              | `string`                 |         |     yes    | 
+| `tabContent`              | `string | ReactNode`                 |         |         yes| 
+
+  minimumValue?: number;
+  maximumValue?: number;
+  currentValue: number;
+  fullWidth?: boolean;
+  size?: 'small' | 'medium' | 'large';
+  variant?: 'primary' | 'secondary' | 'danger' | 'success';
+
+#### ProgressBar
+Description: -
+Props (`ProgressBarProps`):
+| name                  | type                      | purpose | required | 
+|-----------------------|---------------------------|---------|---|
+| `minimumValue`              | `number`                 |         |      no   | 
+| `maximumValue`              | `number`                 |         |        no | 
+| `currentValue`              | `number`                 |         |         yes| 
+| `fullWidth`              | `boolean`                 |         |         no| 
+| `size`              | `'small' | 'medium' | 'large'`                 |         |         no| 
+| `variant`              | `'primary' | 'secondary' | 'danger' | 'success'`                 |         |       no  | 
 
 #### NAME
 Description: -
