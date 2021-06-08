@@ -27,7 +27,10 @@
     }
   }
 
+
+
   &__input[type="text"],
+  &__input[type="color"],
   &__input[type="date"],
   &__input[type="password"] {
     &:active,
@@ -48,8 +51,6 @@
     display: block;
     font-family: var(--input-font-family);
     font-size: var(--input-font-size);
-    padding: var(--input-padding-y) var(--input-padding-x);
-    width: var(--input-default-width);
     box-sizing: border-box;
     border-style: var(--input-border-style);
 
@@ -69,5 +70,18 @@
     &::placeholder {
       color: var(--input-placeholder-color);
     }
+  }
+
+  &__input[type="color"]{
+    padding: 0;
+    width: var(--input-color-width);
+    height: var(--input-color-width);
+  }
+
+  &__input[type="text"],
+  &__input[type="date"],
+  &__input[type="password"] {
+    padding: var(--input-padding-y) var(--input-padding-x);
+        width: var(--input-default-width);
   }
 }

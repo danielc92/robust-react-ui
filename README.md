@@ -66,7 +66,7 @@ Description: An autocomplete form component.
 
 `AutoCompleteProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `options`              | `Array<string>`                 |         |    yes     | 
 | `labelText`              | `string`                 |         |      yes   | 
@@ -85,7 +85,7 @@ Description: Base component for Accordion. This component follows the [controlle
 
 `AccordionProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|----------|
 | `children`              | `React.ReactNode`                 |         | yes        | 
 | `activePanel`           | `string`                    |         | yes        | 
@@ -98,7 +98,7 @@ Description: A compound component for the Accordion.
 
 `AccordionProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|----------|
 | `children`              | `React.ReactNode`                 |         | yes        | 
 | `panelTitle`           | `string`                    |         | yes        | 
@@ -110,7 +110,7 @@ Description: An alert component. This component follows the [controlled componen
 
 `AlertProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|----------|
 | `children`              | `React.ReactNode`                 |         | yes        | 
 | `variant`           | `'primary', 'success', 'danger'`                    |         | no        | 
@@ -125,7 +125,7 @@ Description: A Modal dialogue component, with confirm and cancel action buttons.
 
 `AlertDialogueProps`
   
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `open`              | `boolean`                 |         |   yes      | 
 | `titleText`              | `string`                 |         |        yes | 
@@ -142,7 +142,7 @@ Description: Breadcrumb link group component. This component follows the [contro
 
 `BreadcrumbsProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `ariaLabel`              | `string`                 |         |    no     | 
 | `data`              | `Array<Breadcrumb>`                |         |        yes | 
@@ -150,7 +150,7 @@ Description: Breadcrumb link group component. This component follows the [contro
 
 `Breadcrumb`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `linkHref`              | `string, null`                 |         |   yes     | 
 | `linkText`              | `string`                |         |        yes | 
@@ -163,16 +163,15 @@ Description: A button component.
 
 `ButtonProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
-| `size`              | `'small' | 'medium' | 'large'`                 |         |       no  | 
-| `variant`              | `'primary' | 'danger' | 'success' | 'secondary'`                 |         |   no      | 
+| `size`              | `'small', 'medium', 'large'`                 |         |       no  | 
+| `variant`              | `'primary', 'danger', 'success', 'secondary'`                 |         |   no      | 
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 | `id`              | `string`                 |         |       no  | 
 | `tabIndex`              | `number`                 |         |   no      | 
 | `ariaControls`              | `string`                 |         |        no | 
-| `onClickFunction`              | `(e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => void`                 |         |       no  | 
+| `onClickFunction`              | `(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void`                 |         |       no  | 
 | `onKeyDownFunction`           | `(event: React.KeyboardEvent<HTMLButtonElement>) => void`                    |         |  no       | 
 
 #### Form
@@ -181,7 +180,7 @@ Description: Base component for form elements.
 
 `FormProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |       yes  | 
 | `onSubmitFunction`              | `()=>void`                 |         |    yes     | 
@@ -194,7 +193,7 @@ Description: A Form compound component for a group of checkboxes. This component
 
 `FormCheckboxGroupProps `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `id`              | `string`                 |         |        yes | 
 | `values`              | `CheckboxOptionProps[]`                 |         |    yes     | 
@@ -204,9 +203,9 @@ Description: A Form compound component for a group of checkboxes. This component
 
 `CheckboxOptionProps  `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
-| `displayValue: `              | `string`                 |         |        yes | 
+| `displayValue`              | `string`                 |         |        yes | 
 | `keyValue`              | `string`                 |         |    yes     | 
 | `checked`              | `boolean`                 |         |   yes      | 
 
@@ -217,7 +216,7 @@ Description: A form compound component, to insert a fieldset.
 
 `FormFieldSetProps `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         | yes        | 
 
@@ -229,12 +228,12 @@ Description: A form compound component for inputs. This component follows the [c
 
 `FormInputProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `id`              | `string`                 |         |     yes    | 
 | `value`              | `string`                 |         |       yes  | 
 | `placeholder`              | `string`                 |         |       yes  | 
-| `type`              | `'text', 'password', 'date'`                 |         |          no  | 
+| `type`              | `'text', 'password', 'date', 'color'`                 |         |          no  | 
 | `onChangeFunction`              | `(event: React.ChangeEvent<HTMLInputElement>) => void`                 |         |     yes    | 
 | `onBlurFunction`              | `(event: React.FocusEvent<HTMLInputElement>) => void`                 |         |     no    | 
 | `fullWidth`              | `boolean`                 |         |         no   | 
@@ -248,7 +247,7 @@ Description: A form compound component for labels.
 
 `FormLabelProps `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         | yes        | 
 | `id`              | `string`                 |         |  no       | 
@@ -263,7 +262,7 @@ Description: A form compound component for legends.
 
 `FormLegendProps `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         | yes        | 
 | `id`              | `string`                 |         |  yes       | 
@@ -276,7 +275,7 @@ Description: A form compound component for select. This component follows the [c
 
 `FormSelectProps `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `id`              | `string`                 |         |        yes | 
 | `multiple`              | `boolean`                 |         |         no| 
@@ -288,9 +287,9 @@ Description: A form compound component for select. This component follows the [c
 
 `FormSelectProps `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
-| `displayValue: `              | `string`                 |         |        yes | 
+| `displayValue`              | `string`                 |         |        yes | 
 | `keyValue`              | `string`                 |         |         yes| 
 
 
@@ -302,7 +301,7 @@ Description: A form compound component for a submit button.
 
 `FormSubmitProps `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `size`              | `'small', 'medium', 'large'`                 |         |no         | 
 | `variant`              | `'primary', 'danger', 'success'`                 |         |no         | 
@@ -315,7 +314,7 @@ Description: A form compound component for a textarea. This component follows th
 
 `FormTextAreaProps `
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `id`              | `string`                 |         |   yes      | 
 | `value`              | `string`                 |         |       yes | 
@@ -335,7 +334,7 @@ Description: An image component.
 
 `ImageProps`
   
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `height`              | `number`                 |         |     no    | 
 | `width`              | `number`                 |         |     no    | 
@@ -354,7 +353,7 @@ Description: The base component for Landmarks.
 
 `LandmarkProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     | 
 
@@ -364,7 +363,7 @@ Description: A compound landmark component for an element with the complementary
 
 `ComplementaryProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     | 
 | `ariaLabelledBy`              | `string`                 |         |    no     | 
@@ -375,7 +374,7 @@ Description: A compound landmark component for an element with the contentinfo r
 
 `ContentInfoProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     | 
 | `ariaLabelledBy`              | `string`                 |         |    no     | 
@@ -387,7 +386,7 @@ Description: A compound landmark component for an element with the contentinfo r
 
 `MainProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     |
 
@@ -398,7 +397,7 @@ Description: A compound landmark component for an element with the contentinfo r
 
 `RegionProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     | 
 | `ariaLabelledBy`              | `string`                 |         |    no     | 
@@ -411,7 +410,7 @@ Description: The base component for Layout.
 
 `LandmarkProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     | 
 
@@ -423,7 +422,7 @@ Description: A compound layout component for a row.
 
 `ContentInfoProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     | 
 | `wrap`              | `boolean`                 |         |    no     | 
@@ -435,7 +434,7 @@ Description: A compound layout component for a column.
 
 `RegionProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     | 
 | `size`              | `'third', 'half', 'quarter'`                 |         |    no     | 
@@ -447,7 +446,7 @@ Description: A compound layout component for a container.
 
 `ContainerProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |    yes     | 
 | `size`              | ` 'small', 'medium', 'large'`                 |         |    no     | 
@@ -459,7 +458,7 @@ Description: A link component.
 
 `LinkProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 | `size`              | `'small', 'medium', 'large'`                 |         |         no| 
@@ -475,7 +474,7 @@ Description: A navigation bar which supports nested dropdowns. This component fo
 
 `NavigationBarProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `data`              | `NavigationData[]`                 |         |    yes     | 
 | `onEnterLinkFunction`              | `(href: string) => void`                 |         |        no | 
@@ -484,7 +483,7 @@ Description: A navigation bar which supports nested dropdowns. This component fo
 
 `NavigationData`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `parentId`              | `null, number`                 |         |  yes       | 
 | `id`              | `number`                 |         |      yes   | 
@@ -501,7 +500,7 @@ Description: Component for a group of pagination buttons. This component follows
 
 `PaginationProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `rounded`              | `boolean`                 |         |      no   | 
 | `ariaLabel`              | `string`                 |         |        no | 
@@ -510,7 +509,7 @@ Description: Component for a group of pagination buttons. This component follows
 
 `PaginationButtonProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `current`              | `boolean`                 |         |      yes   | 
 | `href`              | `string`                 |         |        yes | 
@@ -523,7 +522,7 @@ Description: A component which uses the progressbar role. This component follows
 
 `ProgressBarProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `minimumValue`              | `number`                 |         |      no   | 
 | `maximumValue`              | `number`                 |         |        no | 
@@ -539,7 +538,7 @@ Description: Base component for Table.
 
 `TableProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 | `striped`              | `boolean`                 |         |         no| 
@@ -554,7 +553,7 @@ Description: Compound Table component for inserting a table's body.
 
 `TableBodyProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 
@@ -565,7 +564,7 @@ Description: Compound Table component for inserting cells.
 
 `TableCellProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 
@@ -577,7 +576,7 @@ Description: Compound Table component for inserting a table's foot.
 
 `TableFootProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 
@@ -587,7 +586,7 @@ Description: Compound Table component for inserting a table's head.
 
 `TableHeadProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 
@@ -598,7 +597,7 @@ Description: Compound Table component for inserting headers.
 
 `TableHeaderProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 | `scope`              | `'col', 'row'`                 |         |     no    | 
@@ -612,7 +611,7 @@ Description: Compound Table component for inserting rows.
 
 `TableRowProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 
@@ -623,7 +622,7 @@ Description: Tab list component. This component follows the [controlled componen
 
 `TabListProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `ariaLabel`              | `string`                 |         |         no| 
 | `variant`              | `'primary','danger','success','secondary'`                 |         |    no     | 
@@ -632,7 +631,7 @@ Description: Tab list component. This component follows the [controlled componen
 
 `TabListTab`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `tabId`              | `string`                 |         |         yes| 
 | `buttonLabel`              | `string`                 |         |    yes     | 
@@ -646,7 +645,7 @@ Description: Base component for typography.
 
 `TypographyProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         |yes         | 
 
@@ -654,9 +653,9 @@ Description: Base component for typography.
 
 Description: Compound heading component for typography.
 
-`<HeadingProps>`
+`HeadingProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         | yes       | 
 | `id`              | `string`                 |         |         no| 
@@ -670,7 +669,7 @@ Description: Compound paragraph component for typography.
 
 `ParagraphProps`
 
-| name                  | type                      | purpose | required | 
+| name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
 | `children`              | `React.ReactNode`                 |         | yes       | 
 | `id`              | `string`                 |         |         no| 
