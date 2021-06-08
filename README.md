@@ -233,7 +233,7 @@ Description: A form compound component for inputs. This component follows the [c
 | `id`              | `string`                 |         |     yes    | 
 | `value`              | `string`                 |         |       yes  | 
 | `placeholder`              | `string`                 |         |       yes  | 
-| `type`              | `'text', 'password', 'date'`                 |         |          no  | 
+| `type`              | `'text', 'password', 'date', 'color'`                 |         |          no  | 
 | `onChangeFunction`              | `(event: React.ChangeEvent<HTMLInputElement>) => void`                 |         |     yes    | 
 | `onBlurFunction`              | `(event: React.FocusEvent<HTMLInputElement>) => void`                 |         |     no    | 
 | `fullWidth`              | `boolean`                 |         |         no   | 

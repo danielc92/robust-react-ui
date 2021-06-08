@@ -30,6 +30,11 @@ const Template: Story<FormInputProps> = (args) => {
   );
 };
 
+export const Color: Story<FormInputProps> = Template.bind({});
+Color.args = {
+  type: 'color',
+};
+
 export const Text: Story<FormInputProps> = Template.bind({});
 Text.args = {};
 
