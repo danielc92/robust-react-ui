@@ -165,14 +165,13 @@ Description: A button component.
 
 | name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
-| `size`              | `'small' | 'medium' | 'large'`                 |         |       no  | 
-| `variant`              | `'primary' | 'danger' | 'success' | 'secondary'`                 |         |   no      | 
+| `size`              | `'small', 'medium', 'large'`                 |         |       no  | 
+| `variant`              | `'primary', 'danger', 'success', 'secondary'`                 |         |   no      | 
 | `children`              | `React.ReactNode`                 |         |     yes    | 
 | `id`              | `string`                 |         |       no  | 
 | `tabIndex`              | `number`                 |         |   no      | 
 | `ariaControls`              | `string`                 |         |        no | 
-| `onClickFunction`              | `(e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => void`                 |         |       no  | 
+| `onClickFunction`              | `(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void`                 |         |       no  | 
 | `onKeyDownFunction`           | `(event: React.KeyboardEvent<HTMLButtonElement>) => void`                    |         |  no       | 
 
 #### Form
@@ -206,7 +205,7 @@ Description: A Form compound component for a group of checkboxes. This component
 
 | name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
-| `displayValue: `              | `string`                 |         |        yes | 
+| `displayValue`              | `string`                 |         |        yes | 
 | `keyValue`              | `string`                 |         |    yes     | 
 | `checked`              | `boolean`                 |         |   yes      | 
 
@@ -290,7 +289,7 @@ Description: A form compound component for select. This component follows the [c
 
 | name                  | type                      | description | required | 
 |-----------------------|---------------------------|---------|---|
-| `displayValue: `              | `string`                 |         |        yes | 
+| `displayValue`              | `string`                 |         |        yes | 
 | `keyValue`              | `string`                 |         |         yes| 
 
 
