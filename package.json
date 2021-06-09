@@ -17,7 +17,9 @@
     "prepublishOnly": "npm run build",
     "stylelint:fix": ".\\node_modules\\.bin\\stylelint --fix \"**/*.scss\"",
     "chromatic": "npx chromatic",
-    "eslint:fix":".\\node_modules\\.bin\\eslint src --ext .ts,.tsx --fix"
+    "eslint:fix": ".\\node_modules\\.bin\\eslint src --ext .ts,.tsx --fix",
+    "styleguidist": "styleguidist",
+    "start": "tsc && styleguidist server --config styleguide.config.js"
   },
   "repository": {
     "type": "git",
@@ -76,7 +78,9 @@
     "node-sass": "^4.14.1",
     "prettier": "2.3.0",
     "react": "^16.13.1",
+    "react-docgen-typescript": "^1.22.0",
     "react-dom": "^16.13.1",
+    "react-styleguidist": "^11.1.7",
     "rollup": "^1.27.4",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
@@ -88,6 +92,7 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
     "ts-jest": "^24.2.0",
+    "ts-loader": "^9.2.3",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^3.7.2"
   },
