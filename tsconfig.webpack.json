@@ -11,8 +11,10 @@
     "outDir": "lib",
     "jsx": "react",
     "esModuleInterop": true,
-  
-  },  "include":["src"],
-  "exclude": [  "src/**/*.stories.tsx",
-    "src/**/*.test.tsx"]
+  },  
+  "include":["src"],
+  "exclude": [  
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx"
+  ]
 }

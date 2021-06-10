@@ -18,7 +18,9 @@
     "prepublishOnly": "npm run build",
     "stylelint:fix": ".\\node_modules\\.bin\\stylelint --fix \"**/*.scss\"",
     "chromatic": "npx chromatic",
-    "eslint:fix": ".\\node_modules\\.bin\\eslint src --ext .ts,.tsx --fix"
+    "eslint:fix": ".\\node_modules\\.bin\\eslint src --ext .ts,.tsx --fix",
+    "tsconfig-cp:webpack": "copy tsconfig.webpack.json tsconfig.json",
+    "tsconfig-cp:build": "copy tsconfig.build.json tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -52,8 +54,6 @@
     "@storybook/react": "^6.2.9",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^10.0.2",
-    "@types/jest": "^26.0.23",
-    "@types/mocha": "^8.2.2",
     "@types/react": "^16.9.12",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^4.4.1",

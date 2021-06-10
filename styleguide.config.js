@@ -7,10 +7,11 @@ module.exports = {
     return glob
       .sync(path.resolve(__dirname, 'src/**/*.tsx'))
       .filter((module) => /\/[A-Z]\w*\.tsx$/.test(module));
-  },
+    },
   resolver: require('react-docgen').resolver.findAllComponentDefinitions,
   propsParser: require('react-docgen-typescript').withCustomConfig(
-    './tsconfig.styleguide.json',
+    './tsconfig.webpack.json',
     [{ skipPropsWithoutDoc: true }]
   ).parse,
+  ignore: ['**/*.test.tsx']
 };
