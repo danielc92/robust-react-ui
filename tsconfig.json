@@ -21,6 +21,5 @@
     "node_modules",
     "build",
     "storybook-static"
-
   ]
 }
