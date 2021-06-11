@@ -13,6 +13,9 @@ export interface FormInputProps {
    * A function triggered when component loses focus.
    */
   onBlurFunction?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  /**
+   * Component will take up the full width available.
+   */
   fullWidth?: boolean;
   error?: boolean;
   errorMessage?: string;

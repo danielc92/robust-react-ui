@@ -3,6 +3,9 @@ export interface ProgressBarProps {
   minimumValue?: number;
   maximumValue?: number;
   currentValue: number;
+  /**
+   * Component will take up the full width available.
+   */
   fullWidth?: boolean;
   /**
    * Size setting for component.

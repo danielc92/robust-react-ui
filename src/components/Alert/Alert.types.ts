@@ -8,6 +8,9 @@ export interface AlertProps {
    * @default primary
    */
   variant?: 'primary' | 'success' | 'danger';
+  /**
+   * Component will take up the full width available.
+   */
   fullWidth?: boolean;
   visible?: boolean;
   onCloseActionFunction?: (visibleState: boolean) => void;

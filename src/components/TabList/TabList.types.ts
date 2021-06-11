@@ -25,5 +25,8 @@ export interface TabListProps {
    */
   variant?: 'primary' | 'danger' | 'success' | 'secondary';
   tabs: Array<TabListTab>;
+  /**
+   * Component will take up the full width available.
+   */
   fullWidth?: boolean;
 }

@@ -13,6 +13,9 @@ export interface FormTextAreaProps {
    */
   onBlurFunction?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;
   rows?: number;
+  /**
+   * Component will take up the full width available.
+   */
   fullWidth?: boolean;
   error?: boolean;
   errorMessage?: string;
