@@ -19,6 +19,10 @@ export interface TabListProps {
    * An accessible name.
    */
   ariaLabel?: string;
+  /**
+   * Provides component with a colour theme.
+   * @default primary
+   */
   variant?: 'primary' | 'danger' | 'success' | 'secondary';
   tabs: Array<TabListTab>;
   fullWidth?: boolean;

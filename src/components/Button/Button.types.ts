@@ -7,6 +7,10 @@ export interface ButtonProps {
    * @default medium
    */
   size?: 'small' | 'medium' | 'large';
+  /**
+   * Provides component with a colour theme.
+   * @default primary
+   */
   variant?: 'primary' | 'danger' | 'success' | 'secondary';
   children: React.ReactNode;
   id?: string;
