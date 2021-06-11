@@ -2,6 +2,10 @@ import React from 'react';
 
 // Generated with util/create-component.js
 export interface ButtonProps {
+  /**
+   * Size setting for component.
+   * @default medium
+   */
   size?: 'small' | 'medium' | 'large';
   variant?: 'primary' | 'danger' | 'success' | 'secondary';
   children: React.ReactNode;

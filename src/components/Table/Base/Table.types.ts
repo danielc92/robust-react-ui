@@ -6,6 +6,9 @@ export interface TableProps {
   striped?: boolean;
   centerCellContent?: boolean;
   id?: string;
+  /**
+   * An accessible name.
+   */
   ariaLabel?: string;
   ariaDescribedBy?: string;
 }

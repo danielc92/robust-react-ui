@@ -11,6 +11,9 @@ export interface NavigationData {
 export interface NavigationBarProps {
   data: NavigationData[];
   onEnterLinkFunction?: (href: string) => void;
+  /**
+   * An accessible name.
+   */
   ariaLabel: string;
   id?: string;
 }
