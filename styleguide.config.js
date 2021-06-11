@@ -13,5 +13,6 @@ module.exports = {
     './tsconfig.webpack.json',
     [{ skipPropsWithoutDoc: true }]
   ).parse,
-  ignore: ['**/*.test.tsx']
+  ignore: ['**/*.test.tsx'],
+  // Todo: https://react-styleguidist.js.org/docs/configuration/#modulealiases
 };
