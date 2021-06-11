@@ -15,5 +15,8 @@ export interface NavigationBarProps {
    * An accessible name.
    */
   ariaLabel: string;
+  /**
+   * Provides the component with an id attribute. May be used for accessibilty purposes.
+   */
   id?: string;
 }

@@ -13,6 +13,9 @@ export interface ButtonProps {
    */
   variant?: 'primary' | 'danger' | 'success' | 'secondary';
   children: React.ReactNode;
+  /**
+   * Provides the component with an id attribute. May be used for accessibilty purposes.
+   */
   id?: string;
   tabIndex?: number;
   ariaControls?: string;
