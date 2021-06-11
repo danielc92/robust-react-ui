@@ -12,7 +12,7 @@ const Column = ({ children, size }: ColumnProps) => (
       'dcui-column': true,
       'dcui-column--one-third': size === 'third',
       'dcui-column--one-half': size === 'half',
-      'dcui-column--one-quarter': size === 'quarter',
+      'dcui-column--one-quarter': size === 'quarter' || !size,
     })}
   >
     {children}

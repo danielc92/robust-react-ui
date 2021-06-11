@@ -7,6 +7,9 @@ export interface PaginationButtonProps {
 }
 export interface PaginationProps {
   rounded?: boolean;
+  /**
+   * An accessible name.
+   */
   ariaLabel?: string;
   data: PaginationButtonProps[];
 }
