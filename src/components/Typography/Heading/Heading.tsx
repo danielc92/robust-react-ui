@@ -1,10 +1,13 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'utils/getClassNames';
-import { HeadingLevel, HeadingProps } from './Heading.types';
+import { HeadingProps } from './Heading.types';
 import './Heading.scss';
 
-const getHeaderClass = (level: HeadingLevel | null, jumbo: boolean) => {
+const getHeaderClass = (
+  level: 1 | 2 | 3 | 4 | 5 | 6 | null,
+  jumbo: boolean
+) => {
   const levelCalc = !level ? 1 : level;
   return getClassNames({
     'dcui-header': true,

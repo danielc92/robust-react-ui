@@ -19,8 +19,14 @@ export interface ButtonProps {
   id?: string;
   tabIndex?: number;
   ariaControls?: string;
+  /**
+   * A function to be triggered on mouse click event.
+   */
   onClickFunction?: (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
+  /**
+   * A function to be triggered on keydown event.
+   */
   onKeyDownFunction?: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
 }
