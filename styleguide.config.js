@@ -2,7 +2,7 @@ const path = require('path');
 const glob = require('glob');
 
 module.exports = {
-  title: 'DCUI REACT LIBRARY',
+  title: 'Daniel Corcoran\'s React UI Library',
   components() {
     return glob
       .sync(path.resolve(__dirname, 'src/**/*.tsx'))
