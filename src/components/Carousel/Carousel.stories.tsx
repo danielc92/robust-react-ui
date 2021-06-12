@@ -3,9 +3,9 @@ import React from "react";
 import { Story, Meta } from "@storybook/react";
 import Carousel from "./Carousel";
 import { CarouselProps } from "./Carousel.types";
-
+import Container from '../Layout/Container'
 export default {
-  title: "Carousel",
+  title: "Components/Carousel",
   component: Carousel,
   args: {
     // Insert default args here
@@ -37,7 +37,9 @@ export default {
 } as Meta<CarouselProps>;
 
 const Template: Story<CarouselProps> = (args) => {
-  return <Carousel {...args} />;
+  return (<Container>
+    <Carousel {...args} />
+  </Container>)
 };
 
 export const Basic: Story<CarouselProps> = Template.bind({});
