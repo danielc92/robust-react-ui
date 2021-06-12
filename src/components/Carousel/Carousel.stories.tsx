@@ -12,7 +12,7 @@ export default {
     ariaLabel: "Sample carousel",
     slides: [
       {
-        imageSrc:"https://via.placeholder.com/800x300/bf9c0d/ffffff",
+        imageSrc:"https://via.placeholder.com/600x300/bf9c0d/ffffff",
         imageAlt: "alt text for an image",
         href: "https://github.com",
         captionHeading: "Heading for image 1",

@@ -9,6 +9,16 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
 
   const navigateSlide = (dir: 'prev' | 'next') => {
     console.log(dir, 'moving');
+    const max = slides.length - 1;
+    if (dir === 'next') {
+      const newIndex = activeSlide === max ? 0 : activeSlide + 1;
+      setActive(newIndex);
+    }
+
+    if (dir === 'prev') {
+      const newIndex = activeSlide === 0 ? max : activeSlide - 1;
+      setActive(newIndex);
+    }
   };
   const play = () => {
     console.log('playing.');
@@ -20,23 +30,24 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
   return (
     <section
       id="myCarousel"
-      className="carousel"
+      className="dcui-carousel"
       aria-roledescription="carousel"
       aria-label={ariaLabel}
     >
-      <div className="carousel-inner">
-        <div className="controls">
+      <div className="dcui-carousel__inner">
+        <div className="dcui-carousel__controls">
           <button
             type="button"
-            className="rotation play"
+            className="dcui-carousel__button dcui-carousel__button--play"
             aria-label="Start automatic slide show"
           >
             START/PAUSE
           </button>
 
           <button
+            onClick={() => navigateSlide('prev')}
             type="button"
-            className="previous"
+            className="dcui-carousel__button dcui-carousel__button--prev"
             aria-controls="myCarousel-items"
             aria-label="Previous Slide"
           >
@@ -44,8 +55,9 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
           </button>
 
           <button
+            onClick={() => navigateSlide('next')}
             type="button"
-            className="next"
+            className="dcui-carousel__button dcui-carousel__button--next"
             aria-controls="myCarousel-items"
             aria-label="Next Slide"
           >
@@ -55,25 +67,26 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
 
         <div
           id="myCarousel-items"
-          className="carousel-items"
+          className="dcui-carousel__items"
           aria-live="polite"
         >
           {slides.map((s, i) => (
             <div
               className={getClassNames({
-                'carousel-item': true,
+                'dcui-carousel__item': true,
+                'dcui-carousel__item--active': activeSlide === i,
               })}
               role="group"
               aria-roledescription="slide"
               aria-label={`${(i + 1).toString()} of ${slides.length}`}
             >
-              <div className="carousel-image">
+              <div className="dcui-carousel__image">
                 <a href={s.href}>
                   <img src={s.imageSrc} alt={s.imageAlt} />
                 </a>
               </div>
 
-              <div className="carousel-caption">
+              <div className="dcui-carousel__caption">
                 <h3>
                   <a href={s.href} id={`carousel-label-${i}`}>
                     {s.captionHeading}
@@ -82,7 +95,9 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
 
                 <div className="hidden-xs hidden-sm">
                   <p>
-                    <span className="contrast">{s.captionText}</span>
+                    <span className="dcui-carousel__contrast">
+                      {s.captionText}
+                    </span>
                   </p>
                 </div>
               </div>
