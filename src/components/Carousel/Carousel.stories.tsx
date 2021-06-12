@@ -9,6 +9,30 @@ export default {
   component: Carousel,
   args: {
     // Insert default args here
+    ariaLabel: "Sample carousel",
+    slides: [
+      {
+        imageSrc:"https://via.placeholder.com/800x300/bf9c0d/ffffff",
+        imageAlt: "alt text for an image",
+        href: "https://github.com",
+        captionHeading: "Heading for image 1",
+        captionText: "Lorem dolore dolor fugiat sint adipisicing officia adipisicing elit.",
+      },
+      {
+        imageSrc:"https://via.placeholder.com/800x300/135691/ffffff",
+        imageAlt: "alt text for an image",
+        href: "https://github.com",
+        captionHeading: "Heading for image 1",
+        captionText: "Lorem dolore dolor fugiat sint adipisicing officia adipisicing elit.",
+      },
+      {
+        imageSrc:"https://via.placeholder.com/800x300/751754/ffffff",
+        imageAlt: "alt text for an image",
+        href: "https://github.com",
+        captionHeading: "Heading for image 1",
+        captionText: "Lorem dolore dolor fugiat sint adipisicing officia adipisicing elit.",
+      }
+    ]
   },
 } as Meta<CarouselProps>;
 
@@ -17,4 +41,6 @@ const Template: Story<CarouselProps> = (args) => {
 };
 
 export const Basic: Story<CarouselProps> = Template.bind({});
-Basic.args = {}
+Basic.args = {
+ 
+}
