@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 export interface CarouselProps {
   /**
-   * An accessible name.
+   * An accessible label.
    */
   ariaLabel: string;
   /**
@@ -25,7 +25,7 @@ export interface CarouselSlide {
    */
   imageSrc: string;
   /**
-   * An accessible name.
+   * An accessible label.
    */
   imageAlt: string;
   /**

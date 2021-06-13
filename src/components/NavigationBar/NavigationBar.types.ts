@@ -12,7 +12,7 @@ export interface NavigationBarProps {
   data: NavigationData[];
   onEnterLinkFunction?: (href: string) => void;
   /**
-   * An accessible name.
+   * An accessible label.
    */
   ariaLabel: string;
   /**

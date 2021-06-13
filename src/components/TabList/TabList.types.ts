@@ -16,7 +16,7 @@ export interface TabListTab {
 }
 export interface TabListProps {
   /**
-   * An accessible name.
+   * An accessible label.
    */
   ariaLabel?: string;
   /**

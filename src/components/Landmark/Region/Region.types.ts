@@ -8,7 +8,7 @@ export interface RegionProps {
    */
   ariaLabelledBy?: string;
   /**
-   * An accessible name.
+   * An accessible label.
    */
   ariaLabel?: string;
 }

@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 
-// Generated with util/create-component.js
+/**
+ * Props for the Table (base) component.
+ */
 export interface TableProps {
   children: ReactNode;
   /**
@@ -16,8 +18,11 @@ export interface TableProps {
    */
   id?: string;
   /**
-   * An accessible name.
+   * An accessible label.
    */
   ariaLabel?: string;
+  /**
+   * Indicate id of component used to describe this component.
+   */
   ariaDescribedBy?: string;
 }

@@ -11,8 +11,11 @@ export interface LinkProps {
   display?: 'inline' | 'block';
   href: string;
   /**
-   * An accessible name.
+   * An accessible label.
    */
   ariaLabel?: string;
+  /**
+   * Indicate id of component used to describe this component.
+   */
   ariaDescribedBy?: string;
 }

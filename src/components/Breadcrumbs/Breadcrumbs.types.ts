@@ -6,7 +6,7 @@ export interface Breadcrumb {
 }
 export interface BreadcrumbsProps {
   /**
-   * An accessible name.
+   * An accessible label.
    */
   ariaLabel?: string;
   data: Array<Breadcrumb>;
