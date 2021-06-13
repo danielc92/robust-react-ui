@@ -4,19 +4,14 @@ import getClassNames from 'utils/getClassNames';
 import { HeadingProps } from './Heading.types';
 import './Heading.scss';
 
-const getHeaderClass = (
-  level: 1 | 2 | 3 | 4 | 5 | 6 | null,
-  jumbo: boolean
-) => {
-  const levelCalc = !level ? 1 : level;
-  return getClassNames({
+const getHeaderClass = (level: 1 | 2 | 3 | 4 | 5 | 6, jumbo: boolean) =>
+  getClassNames({
     'dcui-header': true,
-    [`dcui-header__${levelCalc}`]: true,
-    [`dcui-header__${levelCalc}--jumbo`]: jumbo,
+    [`dcui-header__${level}`]: true,
+    [`dcui-header__${level}--jumbo`]: jumbo,
   });
-};
 
-const Heading = ({ children, level, jumbo, id }: HeadingProps) => {
+const Heading = ({ children, level = 1, jumbo = false, id }: HeadingProps) => {
   if (level === 2)
     return (
       <h2
