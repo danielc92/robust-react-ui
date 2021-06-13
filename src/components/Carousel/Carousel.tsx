@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React, { useEffect, useRef, useState } from 'react';
+import getClassNames from 'utils/getClassNames';
 import { CarouselProps } from './Carousel.types';
 import './Carousel.scss';
 import Typography from '../Typography';
-import getClassNames from './utils/getClassNames';
 
 const Carousel = ({
   ariaLabel,
