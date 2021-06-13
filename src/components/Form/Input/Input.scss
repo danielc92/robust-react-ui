@@ -27,6 +27,10 @@
     }
   }
 
+  &__input[type="color"] {
+    cursor: pointer;
+  }
+
   &__input[type="text"],
   &__input[type="color"],
   &__input[type="date"],
