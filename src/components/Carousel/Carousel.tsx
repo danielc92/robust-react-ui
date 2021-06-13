@@ -1,44 +1,57 @@
 // Generated with util/create-component.js
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { CarouselProps } from './Carousel.types';
 import './Carousel.scss';
 import getClassNames from '#/utils/getClassNames';
 
-const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
+const Carousel = ({
+  ariaLabel,
+  slides,
+  intervalSeconds = 5,
+  autoplay = false,
+}: CarouselProps) => {
   const [activeSlide, setActive] = useState<number>(0);
-  const [intervalId, setIntervalId] = useState<any>(null);
+
+  const ref = useRef<any>();
+
   const navigateSlide = (dir: 'prev' | 'next') => {
-    console.log(dir, 'moving');
     const max = slides.length - 1;
     if (dir === 'next') {
-      const newIndex = activeSlide === max ? 0 : activeSlide + 1;
-      console.log(newIndex, 'new');
-      setActive(newIndex);
+      setActive((a) => {
+        if (a === max) {
+          return 0;
+        }
+        return a + 1;
+      });
     }
 
     if (dir === 'prev') {
-      const newIndex = activeSlide === 0 ? max : activeSlide - 1;
-      setActive(newIndex);
+      setActive((a) => {
+        if (a === 0) {
+          return max;
+        }
+        return a - 1;
+      });
     }
   };
-  const play = () => {
-    console.log('playing.');
-    const interval = setInterval(() => {
-      navigateSlide('next');
-    }, 2500);
-    console.log(interval, 'ASKDJASIOLFJAISJF');
-    setIntervalId(interval);
-  };
-  const pause = () => {
-    console.log('pausing');
-    if (intervalId) {
-      clearInterval(intervalId);
-    }
-  };
+  const [playing, setPlaying] = useState(autoplay);
+  const toggle = (_e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
+    setPlaying((p) => !p);
 
   useEffect(() => {
-    // play();
-  }, []);
+    if (playing) {
+      const interval = setInterval(() => {
+        navigateSlide('next');
+      }, intervalSeconds * 1000);
+      ref.current = interval;
+    } else {
+      clearInterval(ref.current);
+    }
+
+    return () => clearInterval(ref.current);
+  }, [playing]);
+
+  const pause = () => setPlaying(false);
 
   return (
     <section
@@ -50,28 +63,39 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
       <div className="dcui-carousel__inner">
         <div className="dcui-carousel__controls">
           <button
+            // onFocus={pause}
+            onClick={toggle}
             type="button"
             className="dcui-carousel__button dcui-carousel__button--play"
             aria-label="Start automatic slide show"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="dcui-carousel__icon"
             >
-              <circle cx="12" cy="12" r="10" />
-              <polygon points="10 8 16 12 10 16 10 8" />
+              {playing ? (
+                <>
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="10" y1="15" x2="10" y2="9" />
+                  <line x1="14" y1="15" x2="14" y2="9" />
+                </>
+              ) : (
+                <>
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="10 8 16 12 10 16 10 8" />
+                </>
+              )}
             </svg>
           </button>
 
           <button
+            onFocus={() => console.log('onfocus')}
+            onFocusCapture={() => console.log('onFocusCapture')}
+            onBeforeInputCapture={() => console.log('onBeforeInputCapture')}
             onClick={() => navigateSlide('prev')}
             type="button"
             className="dcui-carousel__button dcui-carousel__button--prev"
@@ -80,12 +104,10 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="dcui-carousel__icon"
@@ -97,6 +119,7 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
           </button>
 
           <button
+            onFocus={pause}
             onClick={() => navigateSlide('next')}
             type="button"
             className="dcui-carousel__button dcui-carousel__button--next"
@@ -104,13 +127,9 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
             aria-label="Next Slide"
           >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="dcui-carousel__icon"
@@ -125,7 +144,7 @@ const Carousel = ({ ariaLabel, slides }: CarouselProps) => {
         <div
           id="myCarousel-items"
           className="dcui-carousel__items"
-          aria-live="polite"
+          aria-live={playing ? 'polite' : 'off'}
         >
           {slides.map((s, i) => (
             <div

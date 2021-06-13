@@ -9,7 +9,6 @@
 
 /* .carousel */
 .dcui-carousel {
-
   &__inner {
     position: relative;
   }
@@ -28,11 +27,9 @@
   }
 
   &__items {
-    border: solid 2px transparent;
-
     &:focus {
-      border-color: white;
-      outline: solid 3px #d31811;
+      outline: 0;
+      box-shadow: var(--global-input-focus-shadow);
     }
   }
 
@@ -96,23 +93,26 @@
   }
 
   &__icon {
-    color: white;
+    color: var(--color-white);
+    stroke-width: 1;
+    width: 36px;
+    height: 36px;
   }
 
   &__button {
-    background-color: transparent;
+    background-color: var(--color-primary);
     border: none;
+    border-radius: 50%;
     padding: 0;
+    box-sizing: border-box;
+    width: 36px;
+    height: 36px;
+    outline: 0;
     cursor: pointer;
-    outline: none;
 
+    &:active,
     &:focus {
-      color: green;
-      background:#f2f2f2;
-    }
-    &--play {
-      left: 6px;
+      box-shadow: var(--global-input-focus-shadow);
     }
   }
 }
-
