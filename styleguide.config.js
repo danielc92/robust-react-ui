@@ -11,7 +11,10 @@ module.exports = {
   resolver: require('react-docgen').resolver.findAllComponentDefinitions,
   propsParser: require('react-docgen-typescript').withCustomConfig(
     './tsconfig.webpack.json',
-    [{ skipPropsWithoutDoc: true }]
+   {
+    skipChildrenPropWithoutDoc:false,
+    savePropValueAsString: true
+   }
   ).parse,
   ignore: ['**/*.test.tsx'],
   // Todo: https://react-styleguidist.js.org/docs/configuration/#modulealiases
