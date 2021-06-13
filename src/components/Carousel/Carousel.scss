@@ -1,0 +1,120 @@
+// Generated with util/create-component.js
+@import '../../variables.scss';
+@import '../../typography.scss';
+
+:root {
+  --carousel-max-width: var(--container-max-width-md);
+  --carousel-max-height: 400px;
+  --carousel-caption-background-color: #00000060;
+  --carousel-controls-padding: var(--space-m);
+  --carousel-heading-color: var(--color-white);
+  --carouse-text-color: var(--color-white);
+  --carousel-icon-color: var(--color-white);
+  --carousel-icon-stroke-width: 1;
+  --carousel-icon-width: 36px;
+  --carousel-caption-padding-x: var(--space-m);
+  --carousel-caption-padding-y: var(--space-m);
+}
+
+/* .carousel */
+.dcui-carousel {
+  &__inner {
+    position: relative;
+  }
+
+  &__item {
+    display: none;
+    max-height: var(--carousel-max-height);
+    max-width: var(--carousel-max-width);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__items--focused {
+    outline: 0;
+    box-shadow: var(--global-input-focus-shadow);
+  }
+
+  &__image a img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  &__caption {
+    background: var(--carousel-caption-background-color);
+    border-radius: 4px;
+    color: #fff;
+    padding: var(--carousel-caption-padding-y) var(--carousel-caption-padding-x);
+    position: absolute;
+    right: 15%;
+    bottom: 6%;
+    left: 15%;
+    text-align: center;
+
+    .dcui-header {
+      a {
+        &:focus,
+        &:hover {
+          outline: none;
+          background-color: var(--link-focus-background-color);
+          text-decoration: underline;
+        }
+
+        text-decoration: none;
+        color: var(--carousel-heading-color);
+      }
+    }
+
+    .dcui-para {
+      color: var(--carousel-text-color);
+      margin-bottom: 0;
+    }
+  }
+
+  &__controls {
+    background: transparent;
+    display: flex;
+    padding: var(--carousel-controls-padding);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    justify-content: space-between;
+    z-index: 10;
+
+    .dcui-carousel__button--next {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__icon {
+    color: var(--carousel-icon-color);
+    stroke-width: var(--carousel-icon-stroke-width);
+    width: var(--carousel-icon-width);
+    height: var(--carousel-icon-width);
+  }
+
+  &__button {
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    box-sizing: border-box;
+    width: 36px;
+    height: 36px;
+    outline: 0;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+      box-shadow: var(--global-input-focus-shadow);
+    }
+  }
+}

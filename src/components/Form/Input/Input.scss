@@ -27,7 +27,9 @@
     }
   }
 
-
+  &__input[type="color"] {
+    cursor: pointer;
+  }
 
   &__input[type="text"],
   &__input[type="color"],
@@ -72,7 +74,7 @@
     }
   }
 
-  &__input[type="color"]{
+  &__input[type="color"] {
     padding: 0;
     width: var(--input-color-width);
     height: var(--input-color-width);
@@ -82,6 +84,6 @@
   &__input[type="date"],
   &__input[type="password"] {
     padding: var(--input-padding-y) var(--input-padding-x);
-        width: var(--input-default-width);
+    width: var(--input-default-width);
   }
 }

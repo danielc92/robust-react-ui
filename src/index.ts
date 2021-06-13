@@ -15,8 +15,10 @@ import Accordion from './components/Accordion';
 import Alert from './components/Alert';
 import ProgressBar from './components/ProgressBar';
 import Breadcrumbs from './components/Breadcrumbs';
+import Carousel from './components/Carousel';
 
 export {
+  Carousel,
   Breadcrumbs,
   Accordion,
   Alert,
