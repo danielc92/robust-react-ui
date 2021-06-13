@@ -2,8 +2,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CarouselProps } from './Carousel.types';
 import './Carousel.scss';
-import getClassNames from '#/utils/getClassNames';
 import Typography from '../Typography';
+import getClassNames from './utils/getClassNames';
 
 const Carousel = ({
   ariaLabel,
@@ -69,6 +69,7 @@ const Carousel = ({
   const ariaLive = polite ? 'polite' : 'off';
   return (
     <section
+      data-testid="Carousel"
       onMouseEnter={() => setPolite(true)}
       onFocus={() => setPolite(true)}
       onBlur={() => setPolite(false)}

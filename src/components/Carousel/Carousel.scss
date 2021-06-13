@@ -12,9 +12,7 @@
   --carousel-icon-color: var(--color-white);
   --carousel-icon-stroke-width: 1;
   --carousel-icon-width: 36px;
-
   --carousel-caption-padding-x: var(--space-m);
-
   --carousel-caption-padding-y: var(--space-m);
 }
 
@@ -53,7 +51,7 @@
     background: var(--carousel-caption-background-color);
     border-radius: 4px;
     color: #fff;
-    padding: var(--carousel-caption-padding-y) var(--carousel-caption-padding-x) ;
+    padding: var(--carousel-caption-padding-y) var(--carousel-caption-padding-x);
     position: absolute;
     right: 15%;
     bottom: 6%;
@@ -62,11 +60,13 @@
 
     .dcui-header {
       a {
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
           outline: none;
           background-color: var(--link-focus-background-color);
           text-decoration: underline;
         }
+
         text-decoration: none;
         color: var(--carousel-heading-color);
       }
