@@ -4,5 +4,8 @@ import { ReactNode } from 'react';
 export interface FormProps {
   children: ReactNode;
   onSubmitFunction: () => void;
+  /**
+   * Indicate id of component used to describe this component.
+   */
   ariaDescribedBy?: string;
 }
