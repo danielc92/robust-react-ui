@@ -10,36 +10,45 @@ module.exports = {
   //   },
     sections: [
       {
+        name: "Core",
+        components: [
+          "src/components/Alert/**/*.tsx",
+          "src/components/AlertDialogue/**/*.tsx",
+          "src/components/AutoComplete/**/*.tsx",
+          "src/components/Breadcrumbs/**/*.tsx",
+          "src/components/Button/**/*.tsx",
+          "src/components/Carousel/**/*.tsx",
+          "src/components/Image/**/*.tsx",
+          "src/components/Link/**/*.tsx",
+          "src/components/Pagination/**/*.tsx",
+          "src/components/TabList/**/*.tsx",
+        ]
+      },
+      {
+        name:"Accordion",
+        components: "src/components/Accordion/**/*.tsx"
+      },    
+      {
         name: "Form",
         components: "src/components/Form/**/*.tsx"
       },
       {
-        name:"Typography",
-        components: "src/components/Typography/**/*.tsx"
+        name:"Landmark",
+        components: "src/components/Landmark/**/*.tsx"
       },
       {
         name:"Layout",
         components: "src/components/Layout/**/*.tsx"
       },
       {
-        name:"Accordion",
-        components: "src/components/Accordion/**/*.tsx"
-      },      
-      {
         name:"Table",
         components: "src/components/Table/**/*.tsx"
       },
       {
-        name: "Core",
-        components: [
-          "src/components/Image/**/*.tsx",
-          "src/components/Link/**/*.tsx",
-          "src/components/Carousel/**/*.tsx",
-          "src/components/Alert/**/*.tsx",
-          "src/components/AlertDialogue/**/*.tsx",
-          "src/components/Pagination/**/*.tsx",
-        ]
+        name:"Typography",
+        components: "src/components/Typography/**/*.tsx"
       },
+      
     ],
   resolver: require('react-docgen').resolver.findAllComponentDefinitions,
   propsParser: require('react-docgen-typescript').withCustomConfig(
