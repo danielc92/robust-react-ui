@@ -12,6 +12,7 @@ describe('Form TextArea Suite', () => {
       value: 'welcome to the jungle',
       id: 'sample-input',
       placeholder: 'type text',
+      name: 'sample-input-name',
       onChangeFunction: () => {},
     };
   });
@@ -24,6 +25,13 @@ describe('Form TextArea Suite', () => {
 
     expect(component).toHaveClass('dcui-form__textarea');
   });
+  it("TextArea should render with name attribute", ()=>{
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId('TextArea');
+
+    expect(component.getAttribute('name')).toEqual('sample-input-name');
+  })
   it('TextArea should render the correct value', () => {
     const { getByTestId } = renderComponent();
 
@@ -33,8 +41,7 @@ describe('Form TextArea Suite', () => {
   it('TextArea should render with error', () => {
     props.error = true;
     props.errorMessage = 'an error has occured!';
-    const { getByTestId, debug } = renderComponent();
-    debug();
+    const { getByTestId } = renderComponent();
 
     const component = getByTestId('TextAreaWrapper');
     expect(

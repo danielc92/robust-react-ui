@@ -13,9 +13,10 @@
 ### Large
 
 ```jsx
-<Button size="large" variant="primary">Click me</Button>
+<Button size="large" variant="primary">
+  Click me
+</Button>
 ```
-
 
 ### Danger
 
@@ -38,6 +39,8 @@
 ### With onClick
 
 ```jsx
-const onClickFunction = () => alert("Hello")
-;<Button variant="secondary" onClickFunction={onClickFunction}>Click me</Button>
+const onClickFunction = () => alert('Hello');
+<Button variant="secondary" onClickFunction={onClickFunction}>
+  Click me
+</Button>;
 ```
