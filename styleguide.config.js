@@ -10,7 +10,7 @@ module.exports = {
   //   },
     sections: [
       {
-        name: "Core",
+        name: "Components",
         components: [
           "src/components/Alert/**/*.tsx",
           "src/components/AlertDialogue/**/*.tsx",
