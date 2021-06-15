@@ -29,6 +29,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 <Form>
   <Form.Label htmlFor="input_1">Label</Form.Label>
   <Form.Input
+    placeholder="input placeholder text"
     fullWidth
     id="input_1"
     name="input_1"
@@ -49,6 +50,9 @@ const onChangeFunction = (event) => setValue(event.target.value);
 <Form>
   <Form.Label htmlFor="input_1">Label</Form.Label>
   <Form.Input
+    input
+    placeholder="input placeholder text"
+    text
     id="input_1"
     name="input_1"
     error
@@ -70,6 +74,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 <Form>
   <Form.Label htmlFor="input_1">Label</Form.Label>
   <Form.Input
+    placeholder="input placeholder text"
     id="input_1"
     name="input_1"
     disabled
@@ -90,6 +95,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 <Form>
   <Form.Label htmlFor="input_1">Label</Form.Label>
   <Form.Input
+    placeholder="input placeholder text"
     id="input_1"
     name="input_1"
     onChangeFunction={onChangeFunction}
