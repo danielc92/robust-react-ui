@@ -3,6 +3,7 @@
 ```jsx
 import React from 'react';
 import Accordion from 'components/Accordion';
+import Image from 'components/Image';
 import Typography from 'components/Typography';
 const { Panel } = Accordion;
 const [activePanel, setActivePanel] = React.useState('1');
@@ -13,17 +14,22 @@ const onSelectPanelFunction = (panelId) => setActivePanel(panelId);
   onSelectPanelFunction={onSelectPanelFunction}
 >
   <Panel panelId="1" panelTitle="Lorem Ipsum">
+    <Typography.Heading level={3}>
+      Nisi sunt sint occaecat eu.
+    </Typography.Heading>
     <Typography.Paragraph>
-      is ex in dolor magna aliqua ex. Consectetur cupidatat ea nostrud consequat
-      officia ut ipsum sit proident dolor ipsum aliquipem adipisicing. Mollin
-      dolor magna aliqua ex. Consectetur cupidatat ea nostrud consequat officia
-      ut ipsum sit proident dolor ipsum aliquipem adipisicing. Mollin dolor
+      is ex in dolor magna aliqua ex.um aliquipem adipisicing. Mollin dolor
       magna aliqua ex. Consectetur cupidatat ea nostrud consequat officia ut
-      ipsum sit proident dolor ipsum aliquipem adipisicing. Mollin dolor magna
-      aliqua ex. Consectetur cupidatat ea nostrud consequat officia ut ipsum sit
-      proident dolor ipsum aliquipem adipisicing. Mollit et occaecat dolor
-      proident fugiat pariatur officia irure.
+      ipsum sit proident dolor ipsum aliquipem adipisicing. Mollit et occaecat
+      dolor proident fugiat pariatur officia irure.
     </Typography.Paragraph>
+    <Image
+      scaling="restricted-width"
+      alt="Doggy"
+      src="https://picsum.photos/id/237/600/350"
+      width={600}
+      height={350}
+    />
   </Panel>
   <Panel panelId="2" panelTitle="Lorem Ipsum">
     <Typography.Paragraph>
@@ -58,6 +64,7 @@ const onSelectPanelFunction = (panelId) => setActivePanel(panelId);
 ```jsx
 import React from 'react';
 import Accordion from 'components/Accordion';
+
 import Typography from 'components/Typography';
 const { Panel } = Accordion;
 const [activePanel, setActivePanel] = React.useState('1');
