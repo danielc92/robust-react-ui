@@ -9,6 +9,32 @@
 />
 ```
 
+### Scaling - Unrestricted
+
+```jsx
+<Image
+  scaling="unrestricted"
+  bordered
+  alt="Lego pieces on the floor"
+  src="https://picsum.photos/id/237/600/350"
+  width={600}
+  height={350}
+/>
+```
+
+### Scaling - Restricting width
+
+```jsx
+<Image
+  scaling="restricted-width"
+  bordered
+  alt="Lego pieces on the floor"
+  src="https://picsum.photos/id/237/600/350"
+  width={600}
+  height={350}
+/>
+```
+
 ### Bordered
 
 ```jsx
