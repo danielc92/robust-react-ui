@@ -7,7 +7,7 @@
 ### Small
 
 ```jsx
-<Button variant="small">Click me</Button>
+<Button size="small">Click me</Button>
 ```
 
 ### Large

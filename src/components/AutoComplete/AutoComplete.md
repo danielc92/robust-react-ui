@@ -1,30 +1,21 @@
 ### Default
 
 ```jsx
-initialState = {
-    mockData: ['apple','banana','orange','watermelon','peach'],
-    options: [],
-    value: "",
-}
+import React from 'react';
+const [options, setOptions] = React.useState([]);
+const [mockData, setMockData] = React.useState(['apple','banana','orange','watermelon','peach']);
+const [value, setValue] = React.useState("");
 const onChangeFunction = (newValue) => {
-    setState({
-        ...state,
-        value: newValue,
-        options: state.mockData.filter(
+   setOptions(mockData.filter(
         (o) => o.toLowerCase().indexOf(newValue.toLowerCase()) > -1
       )
-    }
-      
-    );
+   )
 }
-const onSelectOptionFunction = (newValue) => {
-    console.log('ON SELECT', newValue)
-    setState({...state, value: newValue})
-}
-const onClearOptionsFunction = () => setState({...state, options: []})
+const onSelectOptionFunction = (newValue) => setValue(newValue)
+const onClearOptionsFunction = () => setOptions([])
 ;<AutoComplete
-      options={state.options}
-      value={state.value}
+      options={options}
+      value={value}
       onClearOptionsFunction={onClearOptionsFunction}
       onSelectOptionFunction={onSelectOptionFunction}
       onChangeFunction={onChangeFunction}

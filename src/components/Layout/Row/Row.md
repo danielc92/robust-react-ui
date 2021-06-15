@@ -1,6 +1,9 @@
 ### Default
 
 ```jsx
+import React from 'react';
+import Layout from 'components/Layout';
+import Typography from 'components/Typography';
 <Layout.Row>
 <Layout.Column>
 <Typography.Heading level={3}>Cupidatat tempor deserunt in do nisi eiusmllit.</Typography.Heading>

@@ -1,22 +1,20 @@
 ### Default
 
 ```jsx
-initialState = {
-    open: false,
-    bodyText: "Elit duis sit et enim. Qui non dolor consequat Lorem in eu ipsum irure qui labore. Consectetur dolore ipsum tempor excepteur Lorem enim. Occaecat culpa ipsum ipsum occaecat ullamco laboris Lorem elit",
-    titleText:"Do cupidatat non consequat enim aute."
-}
-const onCloseActionFunction = () => setState({...state, open: false})
-const onConfirmActionFunction = () => setState({...state, open: false})
-const onClickFunction = () => setState({...state, open: true})
+import React from 'react';
+import Button from 'components/Button';
+const [open, setOpen] = React.useState(false)
+const onCloseActionFunction = () =>setOpen(false)
+const onConfirmActionFunction = () => setOpen(false)
+const onClickFunction = () => setOpen(true)
 ;<div>
 <Button onClickFunction={onClickFunction}>Show</Button>
 <AlertDialogue
     onCloseActionFunction={onCloseActionFunction}
     onConfirmActionFunction={onConfirmActionFunction}
-    bodyText={state.bodyText}
-    titleText={state.titleText}
-    open={state.open}
+    bodyText="Proident ex nostrud ex qui culpa utLabore ex duis aliqua culpa et."
+    titleText="Cillumm fugiat Lorem esse."
+    open={open}
     cancelButtonText="Close"
     confirmButtonText="Ok"
   />
