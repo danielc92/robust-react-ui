@@ -10,8 +10,8 @@ const AlertDialogue = ({
   open,
   titleText,
   bodyText,
-  confirmButtonText,
-  cancelButtonText,
+  confirmButtonText = 'Confrim',
+  cancelButtonText = 'Cancel',
   onCloseActionFunction,
   onConfirmActionFunction,
 }: AlertDialogueProps) => {
@@ -102,7 +102,7 @@ const AlertDialogue = ({
             ref={ref}
             onClickFunction={onCloseActionFunction}
           >
-            {cancelButtonText || 'Cancel'}
+            {cancelButtonText}
           </Button>
           <Button
             onKeyDownFunction={handleConfirmKeyDown}
@@ -110,7 +110,7 @@ const AlertDialogue = ({
             onClickFunction={onConfirmActionFunction}
             // aria-controls="notes"
           >
-            {confirmButtonText || 'Confirm'}
+            {confirmButtonText}
           </Button>
         </div>
       </div>
