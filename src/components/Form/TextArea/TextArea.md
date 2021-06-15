@@ -1,56 +1,53 @@
 ### Default
 
 ```jsx
-initialState = {
-    value: ''
-}
-const onChangeFunction = (event) => setState({...state, value: event.target.value})
-;
+import React from 'react';
+import Form from 'components/Form';
+const [value, setValue] = React.useState("");
+const onChangeFunction = (event) => setValue(event.target.value);
+
 <Form>
 <Form.Label>Label</Form.Label>
 <Form.TextArea 
 onChangeFunction={onChangeFunction} 
 type="text" 
-value={state.value}/>
+value={value}/>
 </Form>
 ```
 
 ### Error state
 
 ```jsx
-initialState = {
-    value: 'some bad value', 
-    error: true,
-    errorMessage: "something is wrong!"
-}
-const onChangeFunction = (event) => setState({...state, value: event.target.value})
+import React from 'react';
+import Form from 'components/Form';
+const [value, setValue] = React.useState("");
+const onChangeFunction = (event) =>setValue(event.target.value)
 ;
 <Form>
 <Form.Label>Label</Form.Label>
 <Form.TextArea 
-error={state.error}
-errorMessage={state.errorMessage}
+error
+errorMessage="Something is wrong."
 onChangeFunction={onChangeFunction} 
 type="text" 
-value={state.value}/>
+value={value}/>
 </Form>
 ```
 
 ### Disabled state
 
 ```jsx
-initialState = {
-    value: 'some bad value', 
-    disabled: true
-}
-const onChangeFunction = (event) => setState({...state, value: event.target.value})
+import React from 'react';
+import Form from 'components/Form';
+const [value, setValue] = React.useState("");
+const onChangeFunction = (event) =>setValue(event.target.value)
 ;
 <Form>
 <Form.Label>Label</Form.Label>
 <Form.TextArea 
+disabled
 onChangeFunction={onChangeFunction} 
-disabled={state.disabled}
 type="text" 
-value={state.value}/>
+value={value}/>
 </Form>
 ```

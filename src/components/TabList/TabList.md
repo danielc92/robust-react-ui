@@ -1,6 +1,9 @@
 ### Primary
 
 ```jsx
+import React from 'react';
+import Typography from 'components/Typography';
+import TabList from 'components/TabList';
 <TabList
 ariaLabel='Four planets'
 variant="primary"
@@ -48,10 +51,12 @@ variant="primary"
       },
     ]}/>
 ```
-
 ### Success
 
 ```jsx
+import React from 'react';
+import Typography from 'components/Typography';
+import TabList from 'components/TabList';
 <TabList
 ariaLabel='Four planets'
 variant="success"
@@ -100,9 +105,13 @@ variant="success"
     ]}/>
 ```
 
+
 ### Danger
 
 ```jsx
+import React from 'react';
+import Typography from 'components/Typography';
+import TabList from 'components/TabList';
 <TabList
 ariaLabel='Four planets'
 variant="danger"
@@ -154,6 +163,9 @@ variant="danger"
 ### Secondary
 
 ```jsx
+import React from 'react';
+import Typography from 'components/Typography';
+import TabList from 'components/TabList';
 <TabList
 ariaLabel='Four planets'
 variant="secondary"
@@ -201,3 +213,4 @@ variant="secondary"
       },
     ]}/>
 ```
+

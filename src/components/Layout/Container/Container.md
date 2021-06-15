@@ -3,6 +3,9 @@
 ### Small 
 
 ```jsx
+import React from 'react';
+import Layout from 'components/Layout';
+import Typography from 'components/Typography';
 <Layout.Container size="small">
 
 <Typography.Paragraph>
@@ -13,6 +16,10 @@ Dolore minim eiusmod fugiat sunt occaecat occaecat aliquip ullamco velit sit. Su
 ### Default 
 
 ```jsx
+import React from 'react';
+import Layout from 'components/Layout';
+import Typography from 'components/Typography';
+
 <Layout.Container>
 <Typography.Paragraph>
 Dolore minim eiusmod fugiat sunt occaecat occaecat aliquip ullamco velit sit. Sunt eu voluptate in irure. Voluptate amet ullamco quis proident fugiat ipsum et mollit tempor ea.</Typography.Paragraph>
@@ -22,6 +29,10 @@ Dolore minim eiusmod fugiat sunt occaecat occaecat aliquip ullamco velit sit. Su
 ### Large 
 
 ```jsx
+import React from 'react';
+import Layout from 'components/Layout';
+import Typography from 'components/Typography';
+
 <Layout.Container size="large">
 <Typography.Paragraph>
 Dolore minim eiusmod fugiat sunt occaecat occaecat aliquip ullamco velit sit. Sunt eu voluptate in irure. Voluptate amet ullamco quis proident fugiat ipsum et mollit tempor ea.</Typography.Paragraph>

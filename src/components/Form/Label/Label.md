@@ -1,6 +1,8 @@
 ### Default
 
 ```jsx
+import React from 'react';
+import Form from 'components/Form';
 <Form>
 <Form.FieldSet>
 <Form.Legend>Form Legend</Form.Legend>
