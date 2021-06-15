@@ -10,14 +10,16 @@ const Input = ({
   placeholder,
   onChangeFunction,
   onBlurFunction,
-  type,
+  type = 'text',
   fullWidth,
   error,
   errorMessage,
   disabled,
+  name,
 }: FormInputProps) => (
   <div className="dcui-form__input-wrapper" data-testid="InputWrapper">
     <input
+      name={name}
       data-testid="Input"
       disabled={disabled}
       className={getClassNames({
@@ -27,7 +29,7 @@ const Input = ({
         'dcui-form__input--disabled': disabled,
         'dcui-form__input--o': disabled,
       })}
-      type={type || 'text'}
+      type={type}
       placeholder={placeholder}
       id={id}
       value={value}

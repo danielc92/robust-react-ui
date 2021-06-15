@@ -5,6 +5,7 @@ export interface FormTextAreaProps {
    * Provides the component with an id attribute. May be used for accessibilty purposes.
    */
   id: string;
+  name: string;
   value: string;
   placeholder: string;
   onChangeFunction: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;

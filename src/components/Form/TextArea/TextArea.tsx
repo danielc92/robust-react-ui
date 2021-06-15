@@ -9,6 +9,7 @@ import './TextArea.scss';
 const TextArea = ({
   id,
   value,
+  name,
   rows,
   placeholder,
   onChangeFunction,
@@ -20,6 +21,7 @@ const TextArea = ({
 }: FormTextAreaProps) => (
   <div className="dcui-form__textarea-wrapper" data-testid="TextAreaWrapper">
     <textarea
+      name={name}
       data-testid="TextArea"
       disabled={disabled}
       className={getClassNames({
