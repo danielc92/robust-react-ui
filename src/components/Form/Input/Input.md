@@ -7,8 +7,10 @@ const [value, setValue] = React.useState("");
 const onChangeFunction = (event) => setValue(event.target.value);
 
 <Form>
-<Form.Label>Label</Form.Label>
+<Form.Label htmlFor="input_1">Label</Form.Label>
 <Form.Input 
+id="input_1"
+name="input_1"
 onChangeFunction={onChangeFunction} 
 type="text" 
 value={value}/>
@@ -24,8 +26,10 @@ const [value, setValue] = React.useState("");
 const onChangeFunction = (event) =>setValue(event.target.value)
 ;
 <Form>
-<Form.Label>Label</Form.Label>
+<Form.Label htmlFor="input_1">Label</Form.Label>
 <Form.Input 
+id="input_1"
+name="input_1"
 error
 errorMessage="Something is wrong."
 onChangeFunction={onChangeFunction} 
@@ -43,8 +47,10 @@ const [value, setValue] = React.useState("");
 const onChangeFunction = (event) =>setValue(event.target.value)
 ;
 <Form>
-<Form.Label>Label</Form.Label>
+<Form.Label htmlFor="input_1">Label</Form.Label>
 <Form.Input 
+id="input_1"
+name="input_1"
 disabled
 onChangeFunction={onChangeFunction} 
 type="text" 
@@ -60,8 +66,10 @@ const [value, setValue] = React.useState("");
 const onChangeFunction = (event) =>setValue(event.target.value)
 ;
 <Form>
-<Form.Label>Label</Form.Label>
+<Form.Label htmlFor="input_1">Label</Form.Label>
 <Form.Input 
+id="input_1"
+name="input_1"
 onChangeFunction={onChangeFunction} 
 type="password" 
 value={value}/>
@@ -77,8 +85,10 @@ const [value, setValue] = React.useState("");
 const onChangeFunction = (event) =>setValue(event.target.value)
 ;
 <Form>
-<Form.Label>Label</Form.Label>
+<Form.Label htmlFor="input_1">Label</Form.Label>
 <Form.Input 
+id="input_1"
+name="input_1"
 onChangeFunction={onChangeFunction} 
 type="color" 
 value={value}/>
@@ -95,8 +105,10 @@ const [value, setValue] = React.useState("");
 const onChangeFunction = (event) =>setValue(event.target.value)
 ;
 <Form>
-<Form.Label>Label</Form.Label>
+<Form.Label htmlFor="input_1">Label</Form.Label>
 <Form.Input 
+id="input_1"
+name="input_1"
 onChangeFunction={onChangeFunction} 
 type="date" 
 value={value}/>
