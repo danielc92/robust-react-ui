@@ -1,3 +1,10 @@
+### Features
+
+- uses native html tags for accessibility
+- supports multiple sizes
+- supports multiple colour themes
+- supports custom onClick function
+
 ### Primary
 
 ```jsx

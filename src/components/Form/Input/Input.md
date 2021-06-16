@@ -1,3 +1,9 @@
+### Features
+
+- uses native html tags for accessibility
+- uses the controlled component pattern
+- supports multiple input types
+
 ### Text
 
 ```jsx

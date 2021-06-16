@@ -1,4 +1,6 @@
-### Default
+### Features
+
+- uses native html tags for accessibility### Default
 
 ```jsx
 import Landmark from 'components/Landmark';

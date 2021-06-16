@@ -1,3 +1,12 @@
+### Features
+
+- uses controlled component pattern
+- pressing left will move to previous tab
+- pressing right arrow will move to next tab
+- pressing tab will move focus to content area
+- pressing shift + tab will move focus back to tabs, from content area
+- supports multiple colour themes
+
 ### Primary
 
 ```jsx

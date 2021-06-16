@@ -1,3 +1,12 @@
+### Features
+
+- uses controlled component pattern
+- pressing down will move focus to next panel header
+- pressing up will move focus to previous panel header
+- pressing enter/space will open the current panel
+- contents can be inserted into panels via children
+- support for full width appearance
+
 ### Default
 
 ```jsx

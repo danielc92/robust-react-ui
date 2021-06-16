@@ -1,3 +1,7 @@
+### Features
+
+- supports multiple sizes
+
 ### Small
 
 ```jsx

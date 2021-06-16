@@ -1,3 +1,11 @@
+### Features
+
+- uses the controlled component pattern
+- supports autoplay
+- supports button actions for pause, play, next slide, previous slide
+- pressing enter on focused image/text will visit link
+- press tab or shift + tab will navigate between focusable elements
+
 ### Default
 
 ```jsx

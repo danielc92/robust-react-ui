@@ -1,3 +1,8 @@
+### Features
+
+- uses native html tags for accessibility
+- supports multiple sizes
+
 ### Levels
 
 ```jsx

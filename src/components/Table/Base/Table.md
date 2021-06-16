@@ -1,3 +1,10 @@
+### Features
+
+- uses native html tags for accessibility
+- supports striped mode
+- supports grouping table headers together
+- support full width mode
+
 ### Default
 
 ```jsx

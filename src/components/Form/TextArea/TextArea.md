@@ -18,6 +18,10 @@ const onChangeFunction = (event) => setValue(event.target.value);
 </Form>;
 ```
 
+### Features
+
+- uses the controlled component pattern
+
 ### Full width
 
 ```jsx

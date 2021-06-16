@@ -1,3 +1,8 @@
+### Features
+
+- uses the controlled component pattern
+- support for rounded button theme
+
 ### Default
 
 ```jsx

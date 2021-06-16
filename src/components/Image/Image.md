@@ -1,3 +1,11 @@
+### Features
+
+- uses native html tags for accessibility
+- supports different scaling options
+- supports circular images
+- supports bordered images
+- supports blurred images
+
 ### Default
 
 ```jsx

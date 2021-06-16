@@ -1,3 +1,9 @@
+### Features
+
+- close button accessible by keyboard
+- ability to pass in children
+- supports multiple colour themes
+
 ### Primary
 
 ```jsx
