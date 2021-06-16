@@ -7,11 +7,10 @@
 ### Primary
 
 ```jsx
-initialState = {
-  open: true,
-};
-const onCloseActionFunction = () => setState({ open: !state.open });
-<Alert onCloseActionFunction={onCloseActionFunction} visible={state.open}>
+import React from 'react';
+const [open, setOpen] = React.useState(true);
+const onCloseActionFunction = () => setOpen(false);
+<Alert onCloseActionFunction={onCloseActionFunction} visible={open}>
   <p className="dcui-para dcui-para--medium">
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
     proident adipisicing.
@@ -22,14 +21,13 @@ const onCloseActionFunction = () => setState({ open: !state.open });
 ### Danger
 
 ```jsx
-initialState = {
-  open: true,
-};
-const onCloseActionFunction = () => setState({ open: !state.open });
+import React from 'react';
+const [open, setOpen] = React.useState(true);
+const onCloseActionFunction = () => setOpen(false);
 <Alert
   variant="danger"
   onCloseActionFunction={onCloseActionFunction}
-  visible={state.open}
+  visible={open}
 >
   <p className="dcui-para dcui-para--medium">
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
@@ -41,14 +39,13 @@ const onCloseActionFunction = () => setState({ open: !state.open });
 ### Success
 
 ```jsx
-initialState = {
-  open: true,
-};
-const onCloseActionFunction = () => setState({ open: !state.open });
+import React from 'react';
+const [open, setOpen] = React.useState(true);
+const onCloseActionFunction = () => setOpen(false);
 <Alert
   variant="success"
   onCloseActionFunction={onCloseActionFunction}
-  visible={state.open}
+  visible={open}
 >
   <p className="dcui-para dcui-para--medium">
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
