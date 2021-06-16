@@ -21,6 +21,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 ### Features
 
 - uses the controlled component pattern
+- supports disabled and error states
 
 ### Full width
 

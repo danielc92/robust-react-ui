@@ -3,6 +3,7 @@
 - uses native html tags for accessibility
 - uses the controlled component pattern
 - supports multiple input types
+- supports disabled and error states
 
 ### Text
 
