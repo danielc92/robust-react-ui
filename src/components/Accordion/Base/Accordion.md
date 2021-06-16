@@ -1,5 +1,6 @@
 ### Features
 
+- uses the compound component design pattern
 - uses controlled component pattern
 - pressing down will move focus to next panel header
 - pressing up will move focus to previous panel header

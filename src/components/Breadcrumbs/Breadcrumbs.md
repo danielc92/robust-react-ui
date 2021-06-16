@@ -1,3 +1,9 @@
+### Features
+
+- uses the controlled component design pattern
+- supports multiple links
+- support multiple sizes
+
 ### Small
 
 ```jsx

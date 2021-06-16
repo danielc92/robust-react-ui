@@ -1,5 +1,6 @@
 ### Features
 
+- uses the compound component design pattern
 - uses native html tags for accessibility
 - supports striped mode
 - supports grouping table headers together

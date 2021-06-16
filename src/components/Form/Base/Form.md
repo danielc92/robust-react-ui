@@ -1,3 +1,7 @@
+### Features
+
+- uses the compound component design pattern
+
 ### Full Example
 
 ```jsx
