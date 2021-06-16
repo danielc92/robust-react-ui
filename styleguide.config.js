@@ -51,6 +51,7 @@ module.exports = {
         'src/components/Carousel/**/*.tsx',
         'src/components/Image/**/*.tsx',
         'src/components/Link/**/*.tsx',
+        'src/components/NavigationBar/**/*.tsx',
         'src/components/Pagination/**/*.tsx',
         'src/components/TabList/**/*.tsx',
       ],
