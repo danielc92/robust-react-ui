@@ -1,0 +1,64 @@
+// Generated with util/create-component.js
+@import "../../../variables.scss";
+@import "../../../typography.scss";
+
+:root {
+  --table-background-color: var(--color-white);
+  --table-stripe-color: var(--color-light-grey);
+  --table-border-color: var(--color-light-grey);
+  --table-cell-padding: var(--space-m);
+  --table-border-radius: var(--global-border-radius);
+  --table-cell-color: var(--color-charcoal);
+  --table-header-color: var(--color-white);
+  --table-header-background-color: var(--color-primary);
+  --table-foot-background: var(--color-primary);
+  --table-foot-color: var(--color-white);
+}
+
+.dcui-table {
+  background-color: var(--table-background-color);
+  border-color: var(--table-border-color);
+  border-radius: var(--table-border-radius);
+  border-width: 0.1px;
+  font-family: var(--font-family-primary);
+  width: 100%;
+  border-collapse: collapse;
+  border-style: dashed;
+  box-shadow: var(--global-shadow);
+
+  &__cell,
+  &__header {
+    border-color: var(--table-border-color);
+    border-width: 0.1px;
+    padding: var(--table-cell-padding);
+    border-style: solid;
+  }
+
+  &__cell {
+    color: var(--table-cell-color);
+
+    &--centered {
+      text-align: center;
+    }
+  }
+
+  &--center-cells &__cell {
+    text-align: center;
+  }
+
+  &--striped &__body &__row {
+    &:nth-child(odd) {
+      background: var(--table-stripe-color);
+    }
+  }
+
+  &__header[scope="column"] {
+    background-color: var(--table-header-background-color);
+    color: var(--table-header-color);
+  }
+
+  &__foot &__cell {
+    background-color: var(--table-foot-background);
+    color: var(--table-foot-color);
+  }
+}

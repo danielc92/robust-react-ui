@@ -13,6 +13,7 @@
   --color-charcoal: #333;
   --color-disabled: #d4d4d4;
   --color-disabled-light: rgb(238, 238, 238);
+  --color-placeholder: #949494;
   // focus
   // used by breadcrumb/link
   --link-focus-background-color: #5b31e63a;
@@ -41,4 +42,24 @@
   --space-xl: 3rem;
   --space-xxl: 6rem;
   --space-xxxl: 8rem;
+
+  // form
+  --input-border-style: solid;
+  --input-border-color: var(--color-primary);
+  --input-background-color: var(--color-primary-light);
+  --input-background-color-error: var(--color-danger-light);
+  --input-background-color-disabled: var(--color-disabled-light);
+  --input-border-color-disabled: var(--color-disabled);
+  --input-border-width: 2px;
+  --input-padding-y: var(--space-xs);
+  --input-padding-x: var(--space-xs);
+  --input-font-family: var(--font-family-primary);
+  --input-color: var(--color-black);
+  --input-placeholder-color: var(--color-placeholder);
+  --input-font-size: var(--font-size-md);
+  --input-margin-bottom: 1.5rem;
+  --input-border-radius: var(--global-border-radius);
+  --input-default-width: 300px;
+  --input-color-width: 38px;
+  --input-shadow: var(--global-shadow);
 }

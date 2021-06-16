@@ -1,19 +1,20 @@
 // Generated with util/create-component.js
-import React from "react";
-import TabList from "./TabList";
-import Typography from "../Typography";
-import { Meta, Story } from "@storybook/react";
-import { TabListProps } from "./TabList.types";
+import React from 'react';
+import { Meta, Story } from '@storybook/react';
+import TabList from './TabList';
+import Typography from '../Typography';
+import { TabListProps } from './TabList.types';
+
 export default {
-  title: "Components/TabList",
+  title: 'Components/TabList',
   component: TabList,
   args: {
-    ariaLabel: "Four planets",
+    ariaLabel: 'Four planets',
     tabs: [
       {
-        tabId: "pluto-tab",
-        buttonLabel: "Pluto",
-        buttonId: "pluto",
+        tabId: 'pluto-tab',
+        buttonLabel: 'Pluto',
+        buttonId: 'pluto',
         tabContent: (
           <Typography.Paragraph>
             incididunt et fugiat cillum in voluptate dolor. Tempor in deserunt
@@ -27,9 +28,9 @@ export default {
         ),
       },
       {
-        tabId: "earth-tab",
-        buttonLabel: "Earth",
-        buttonId: "earth",
+        tabId: 'earth-tab',
+        buttonLabel: 'Earth',
+        buttonId: 'earth',
 
         tabContent: (
           <Typography.Paragraph>
@@ -44,9 +45,9 @@ export default {
         ),
       },
       {
-        tabId: "venus-tab",
-        buttonLabel: "Venus",
-        buttonId: "venus",
+        tabId: 'venus-tab',
+        buttonLabel: 'Venus',
+        buttonId: 'venus',
         tabContent: (
           <Typography.Paragraph>
             meid reprehenderit nisi ex amet nisi magna reprehenderit cupidatat
@@ -62,9 +63,9 @@ export default {
         ),
       },
       {
-        tabId: "jupiter-tab",
-        buttonLabel: "Jupiter",
-        buttonId: "jupiter",
+        tabId: 'jupiter-tab',
+        buttonLabel: 'Jupiter',
+        buttonId: 'jupiter',
         tabContent: (
           <Typography.Paragraph>
             Commodo qui incididunt et fugiat cillum in voluptate dolor. Tempor
@@ -80,9 +81,7 @@ export default {
   },
 } as Meta<TabListProps>;
 
-const Template: Story<TabListProps> = (args) => {
-  return <TabList {...args} />;
-};
+const Template: Story<TabListProps> = (args) => <TabList {...args} />;
 
 export const Primary: Story<TabListProps> = Template.bind({});
 Primary.args = {};
@@ -92,9 +91,9 @@ PrimaryFullWidth.args = {
 };
 export const Danger: Story<TabListProps> = Template.bind({});
 Danger.args = {
-  variant: "danger",
+  variant: 'danger',
 };
 export const Success: Story<TabListProps> = Template.bind({});
 Success.args = {
-  variant: "success",
+  variant: 'success',
 };

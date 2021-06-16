@@ -1,50 +1,56 @@
 // Generated with util/create-component.js
 
-import { Meta, Story } from "@storybook/react";
-import React from "react";
-import Pagination from "./Pagination";
-import { PaginationProps } from "./Pagination.types";
+import { Meta, Story } from '@storybook/react';
+import React from 'react';
+import Pagination from './Pagination';
+import { PaginationProps } from './Pagination.types';
 
 export default {
-  title: "Components/Pagination",
+  title: 'Components/Pagination',
   component: Pagination,
   args: {
     data: [
       {
         current: false,
-        href: "#",
+        href: '#',
         pageNumber: 1,
       },
       {
         current: true,
-        href: "#",
+        href: '#',
         pageNumber: 2,
       },
       {
         current: false,
-        href: "#",
+        href: '#',
         pageNumber: 3,
       },
       {
         current: false,
-        href: "#",
+        href: '#',
         pageNumber: 4,
       },
       {
         current: false,
-        href: "#",
+        href: '#',
         pageNumber: 5,
       },
       {
         current: false,
-        href: "#",
+        href: '#',
         pageNumber: 6,
       },
     ],
   },
 } as Meta<PaginationProps>;
 
-const Template: Story<PaginationProps> = (args) => <Pagination {...args} />;
+const Template: Story<PaginationProps> = (args) => (
+  <Pagination
+    data={args.data}
+    ariaLabel={args.ariaLabel}
+    rounded={args.rounded}
+  />
+);
 
 export const Basic: Story<PaginationProps> = Template.bind({});
 

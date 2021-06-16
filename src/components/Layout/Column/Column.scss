@@ -1,0 +1,27 @@
+// Generated with util/create-component.js
+@import "../../../variables.scss";
+@import "../../../typography.scss";
+
+:root {
+  --column-padding-x: 1rem;
+}
+
+.dcui-column {
+  box-sizing: border-box;
+  padding: 0 var(--column-padding-x);
+
+  &--one-half {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  &--one-third {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  &--one-quarter {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}

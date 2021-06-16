@@ -1,0 +1,24 @@
+// Generated with util/create-component.js
+@import "../../../variables.scss";
+@import "../../../typography.scss";
+
+:root {
+  --accordion-border-style: solid;
+  --accordion-border-width: 1px;
+  --accordion-border-color: var(--color-light-grey);
+  --accordion-width: var(--global-box-width);
+}
+
+.dcui-accordion {
+  border-color: var(--accordion-border-color);
+  border-style: var(--accordion-border-style);
+  border-width: var(--accordion-border-width);
+  padding: 0;
+  margin: 0;
+  width: var(--accordion-width);
+  margin-bottom: var(--global-space-under);
+
+  &--full-width {
+    width: 100%;
+  }
+}

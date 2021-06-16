@@ -3,7 +3,18 @@ export interface ProgressBarProps {
   minimumValue?: number;
   maximumValue?: number;
   currentValue: number;
+  /**
+   * Component will take up the full width available.
+   */
   fullWidth?: boolean;
-  size?: "small" | "medium" | "large";
-  variant?: "primary" | "secondary" | "danger" | "success";
+  /**
+   * Size setting for component.
+   * @default medium
+   */
+  size?: 'small' | 'medium' | 'large';
+  /**
+   * Provides component with a colour theme.
+   * @default primary
+   */
+  variant?: 'primary' | 'secondary' | 'danger' | 'success';
 }

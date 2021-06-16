@@ -1,0 +1,23 @@
+// Generated with util/create-component.js
+@import "../../../variables.scss";
+@import "../../../typography.scss";
+
+:root {
+
+  // fieldset
+  --fieldset-font-size: var(--font-size-md);
+  --fieldset-border: 1px solid #f2f2f2;
+  --fieldset-font-family: var(--font-family-primary);
+  --fieldset-color: var(--color-charcoal);
+}
+
+.dcui-form {
+  &__fieldset {
+    border: var(--fieldset-border);
+    color: var(--fieldset-color);
+    font-family: var(--fieldset-font-family);
+    font-size: var(--fieldset-font-size);
+    padding: var(--space-m);
+    margin-bottom: var(--input-margin-bottom);
+  }
+}

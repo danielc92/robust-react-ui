@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "baseUrl": "src",
+    "target": "es5",
+    "lib": ["es5", "es6", "dom"],
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "outDir": "lib",
+    "jsx": "react",
+    "esModuleInterop": true,
+  },  
+  "include":["src"],
+  "exclude": [  
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx"
+  ]
+}

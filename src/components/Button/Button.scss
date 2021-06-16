@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import '../../variables.scss';
+@import '../../typography.scss';
 
 :root {
   --button-padding-y-sm: 0.6rem;
@@ -12,12 +12,16 @@
   --button-font-size-sm: var(--font-size-sm);
   --button-font-size-md: var(--font-size-md);
   --button-font-size-lg: var(--font-size-lg);
+  --button-display: block;
+  --button-margin-bottom: var(--global-space-under);
 }
 
 .dcui-button {
   border: 0;
   border-radius: var(--global-border-radius);
+  display: var(--button-display);
   font-weight: bold;
+  margin-bottom: var(--button-margin-bottom);
   box-sizing: border-box;
   cursor: pointer;
 

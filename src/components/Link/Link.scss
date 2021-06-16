@@ -10,16 +10,16 @@
   --link-line-height-md: var(--font-line-height-md);
   --link-line-height-lg: var(--font-line-height-lg);
   --link-font-color: var(--color-primary);
-
 }
 
 .dcui-link {
   color: var(--link-font-color);
   font-family: var(--font-family-primary);
 
-  &:active,&:focus {
+  &:active,
+  &:focus {
     outline: 0;
-   background-color: var(--link-focus-background-color);
+    background-color: var(--link-focus-background-color);
   }
 
   &--small {

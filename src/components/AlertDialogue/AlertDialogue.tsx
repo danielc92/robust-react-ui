@@ -1,19 +1,17 @@
 // Generated with util/create-component.js
-import React, { useEffect } from "react";
-
-import { AlertDialogueProps } from "./AlertDialogue.types";
-
-import "./AlertDialogue.scss";
-import classNames from "classnames";
-import Typography from "../Typography";
-import Button from "../Button";
+import React, { useEffect } from 'react';
+import getClassNames from 'utils/getClassNames';
+import { AlertDialogueProps } from './AlertDialogue.types';
+import './AlertDialogue.scss';
+import Typography from '../Typography';
+import Button from '../Button';
 
 const AlertDialogue = ({
   open,
   titleText,
   bodyText,
-  confirmButtonText,
-  cancelButtonText,
+  confirmButtonText = 'Confrim',
+  cancelButtonText = 'Cancel',
   onCloseActionFunction,
   onConfirmActionFunction,
 }: AlertDialogueProps) => {
@@ -28,7 +26,7 @@ const AlertDialogue = ({
   }, [open]);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === "Escape") {
+    if (event.key === 'Escape') {
       onCloseActionFunction();
     }
   };
@@ -74,15 +72,15 @@ const AlertDialogue = ({
     }
   };
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div
-      data-testid="AlertDialogue"
       onKeyDown={handleKeyDown}
-      className={classNames({
-        "dcui-modal__overlay": true,
-        "dcui-modal__overlay--active": open,
+      data-testid="AlertDialogue"
+      className={getClassNames({
+        'dcui-modal__overlay': true,
+        'dcui-modal__overlay--active': open,
       })}
     >
-      <div tabIndex={0}></div>
       <div
         id="alert_dialog"
         role="alertdialog"
@@ -104,7 +102,7 @@ const AlertDialogue = ({
             ref={ref}
             onClickFunction={onCloseActionFunction}
           >
-            {cancelButtonText || "Cancel"}
+            {cancelButtonText}
           </Button>
           <Button
             onKeyDownFunction={handleConfirmKeyDown}
@@ -112,11 +110,10 @@ const AlertDialogue = ({
             onClickFunction={onConfirmActionFunction}
             // aria-controls="notes"
           >
-            {confirmButtonText || "Confirm"}
+            {confirmButtonText}
           </Button>
         </div>
       </div>
-      <div tabIndex={0}></div>
     </div>
   );
 };

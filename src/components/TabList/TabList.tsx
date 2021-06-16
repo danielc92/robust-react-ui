@@ -1,11 +1,9 @@
 // Generated with util/create-component.js
 // Component design from https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
-import React, { createRef, useEffect, useState } from "react";
-
-import { TabListProps } from "./TabList.types";
-
-import "./TabList.scss";
-import classNames from "classnames";
+import React, { createRef, useEffect, useState } from 'react';
+import getClassNames from 'utils/getClassNames';
+import { TabListProps } from './TabList.types';
+import './TabList.scss';
 
 const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
   const [activeTab, setActiveTab] =
@@ -26,13 +24,13 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
         tabName: tabs[0].tabId,
       });
 
-    setTabRefs((tabRefs) =>
+    setTabRefs(
       Array(arrLength)
         .fill(null)
         .map((_, i) => tabRefs[i] || createRef())
     );
 
-    setTabPanelRefs((tabPanelRefs) =>
+    setTabPanelRefs(
       Array(arrLength)
         .fill(null)
         .map((_, i) => tabPanelRefs[i] || createRef())
@@ -81,14 +79,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
     }
   };
 
-  const focusTabPanel = (index: number) => {
-    tabPanelRefs[index].current.focus();
-  };
-
-  const handleKeyDown = (
-    event: React.KeyboardEvent<HTMLButtonElement>,
-    index: number
-  ) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
     const { keyCode } = event;
     switch (keyCode) {
       case 39:
@@ -112,34 +103,37 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
       case 38:
         event.preventDefault();
         break;
+      default:
+        break;
     }
   };
 
   return (
     <div
       data-testid="TabList"
-      className={classNames({
-        "dcui-tablist": true,
-        "dcui-tablist--full-width": fullWidth,
-        "dcui-tablist--primary": variant === "primary" || !variant,
-        "dcui-tablist--danger": variant === "danger",
-        "dcui-tablist--success": variant === "success",
-        "dcui-tablist--secondary": variant === "secondary",
+      className={getClassNames({
+        'dcui-tablist': true,
+        'dcui-tablist--full-width': fullWidth,
+        'dcui-tablist--primary': variant === 'primary' || !variant,
+        'dcui-tablist--danger': variant === 'danger',
+        'dcui-tablist--success': variant === 'success',
+        'dcui-tablist--secondary': variant === 'secondary',
       })}
     >
       <div
         role="tablist"
         aria-label={ariaLabel || null}
-        className={classNames({ "dcui-tablist__button-group": true })}
+        className={getClassNames({ 'dcui-tablist__button-group': true })}
       >
         {tabs.map((t, index) => (
           <button
+            type="button"
             data-testid="TabListButton"
             tabIndex={activeTab?.tabName !== t.tabId ? -1 : null}
             ref={tabRefs[index]}
             key={t.tabId}
             onKeyDown={(event: React.KeyboardEvent<HTMLButtonElement>) =>
-              handleKeyDown(event, index)
+              handleKeyDown(event)
             }
             onClick={() =>
               setActiveTab({
@@ -147,12 +141,12 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
                 tabName: t.tabId,
               })
             }
-            className={classNames({
-              "dcui-tablist__button": true,
-              "dcui-tablist__button--active": activeTab?.tabName === t.tabId,
+            className={getClassNames({
+              'dcui-tablist__button': true,
+              'dcui-tablist__button--active': activeTab?.tabName === t.tabId,
             })}
             role="tab"
-            aria-selected={activeTab?.tabName === t.tabId ? "true" : "false"}
+            aria-selected={activeTab?.tabName === t.tabId ? 'true' : 'false'}
             aria-controls={t.tabId}
             id={t.buttonId}
           >
@@ -165,9 +159,9 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
           data-testid="TabListPanel"
           ref={tabPanelRefs[i]}
           key={x.tabId}
-          className={classNames({
-            "dcui-tablist__panel": true,
-            "dcui-tablist__panel--hidden": x.tabId !== activeTab?.tabName,
+          className={getClassNames({
+            'dcui-tablist__panel': true,
+            'dcui-tablist__panel--hidden': x.tabId !== activeTab?.tabName,
           })}
           tabIndex={0}
           role="tabpanel"

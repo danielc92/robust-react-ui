@@ -11,6 +11,12 @@ export interface NavigationData {
 export interface NavigationBarProps {
   data: NavigationData[];
   onEnterLinkFunction?: (href: string) => void;
+  /**
+   * An accessible label.
+   */
   ariaLabel: string;
+  /**
+   * Provides the component with an id attribute. May be used for accessibilty purposes.
+   */
   id?: string;
 }

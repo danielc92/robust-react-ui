@@ -1,0 +1,44 @@
+// Generated with util/create-component.js
+@import "../../../variables.scss";
+@import "../../../typography.scss";
+
+.dcui-form {
+  &__select {
+    box-shadow: var(--input-shadow);
+    background-color: var(--input-background-color);
+    border-color: var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    border-width: var(--input-border-width);
+    color: var(--input-color);
+    display: block;
+    font-family: var(--input-font-family);
+    font-size: var(--input-font-size);
+    padding: var(--input-padding-y) var(--input-padding-x);
+    margin-bottom: var(--input-margin-bottom);
+    width: var(--input-default-width);
+    box-sizing: border-box;
+    border-style: var(--input-border-style);
+    line-height: calc(var(--input-font-size) * 1.5);
+
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: var(--global-input-focus-shadow);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &--full-width {
+      width: 100%;
+    }
+
+    &.dcui-form__select--disabled {
+      &.dcui-form__select--o {
+        background-color: var(--input-background-color-disabled);
+        border-color: var(--input-border-color-disabled);
+      }
+    }
+  }
+}

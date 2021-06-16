@@ -1,3 +1,3 @@
-// Generated with util/create-component.js
-import Layout from "./Layout";
+import Layout from './Base';
+
 export default Layout;

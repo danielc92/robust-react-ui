@@ -1,0 +1,89 @@
+// Generated with util/create-component.js
+@import "../../../variables.scss";
+@import "../../../typography.scss";
+
+.dcui-form {
+  &__input {
+    box-shadow: var(--input-shadow);
+    margin-bottom: 0.5rem;
+
+    &--full-width {
+      width: 100%;
+    }
+  }
+
+  &__input-wrapper {
+    margin-bottom: var(--input-margin-bottom);
+  }
+
+  &__input-error {
+    color: var(--color-danger);
+    font-family: var(--input-font-family);
+    font-size: var(--font-size-sm);
+    margin: 0;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__input[type="color"] {
+    cursor: pointer;
+  }
+
+  &__input[type="text"],
+  &__input[type="color"],
+  &__input[type="date"],
+  &__input[type="password"] {
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: var(--global-input-focus-shadow);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    background-color: var(--input-background-color);
+    border-color: var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    border-width: var(--input-border-width);
+    color: var(--input-color);
+    display: block;
+    font-family: var(--input-font-family);
+    font-size: var(--input-font-size);
+    box-sizing: border-box;
+    border-style: var(--input-border-style);
+
+    &.dcui-form__input--disabled {
+      &.dcui-form__input--o {
+        background-color: var(--input-background-color-disabled);
+        border-color: var(--input-border-color-disabled);
+      }
+    }
+
+    &.dcui-form__input--has-error {
+      background-color: var(--input-background-color-error);
+      border-color: var(--color-danger);
+      color: var(--color-danger);
+    }
+
+    &::placeholder {
+      color: var(--input-placeholder-color);
+    }
+  }
+
+  &__input[type="color"] {
+    padding: 0;
+    width: var(--input-color-width);
+    height: var(--input-color-width);
+  }
+
+  &__input[type="text"],
+  &__input[type="date"],
+  &__input[type="password"] {
+    padding: var(--input-padding-y) var(--input-padding-x);
+    width: var(--input-default-width);
+  }
+}

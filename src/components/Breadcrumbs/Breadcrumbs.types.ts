@@ -5,7 +5,14 @@ export interface Breadcrumb {
   isCurrent: boolean;
 }
 export interface BreadcrumbsProps {
+  /**
+   * An accessible label.
+   */
   ariaLabel?: string;
   data: Array<Breadcrumb>;
-  size?: "small" | "medium" | "large";
+  /**
+   * Size setting for component.
+   * @default medium
+   */
+  size?: 'small' | 'medium' | 'large';
 }

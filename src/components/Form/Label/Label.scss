@@ -1,0 +1,30 @@
+// Generated with util/create-component.js
+@import "../../../variables.scss";
+@import "../../../typography.scss";
+
+:root {
+
+  // label
+  --label-font-size: var(--font-size-sm);
+  --label-font-color: var(--color-charcoal);
+  --label-font-family: var(--font-family-primary);
+  --label-font-weight: bold;
+  --label-margin: var(--space-xs);
+  --label-required-font-color: var(--color-primary);
+}
+
+.dcui-form {
+  &__label {
+    color: var(--label-font-color);
+    display: block;
+    font-family: var(--label-font-family);
+    font-size: var(--label-font-size);
+    font-weight: var(--label-font-weight);
+    margin-right: var(--label-margin);
+    margin-bottom: var(--label-margin);
+  }
+
+  &__label-required {
+    color: var(--label-required-font-color);
+  }
+}

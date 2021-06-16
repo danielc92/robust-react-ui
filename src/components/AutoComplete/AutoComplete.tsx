@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
-import React, { createRef, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
-import { AutoCompleteProps } from "./AutoComplete.types";
-import "./AutoComplete.scss";
-import classNames from "classnames";
+import getClassNames from 'utils/getClassNames';
+import { AutoCompleteProps } from './AutoComplete.types';
+import './AutoComplete.scss';
 
 const AutoComplete = ({
   labelId,
@@ -26,10 +26,20 @@ const AutoComplete = ({
       i,
       option,
       selected: false,
-      id: "result_" + i,
+      id: `result_${i}`,
     }));
     setModdedOptions(refList);
   }, [options]);
+
+  const changePseudoFocus = (index: number) =>
+    setModdedOptions(
+      moddedOptions.map((x) => {
+        if (x.i === index) {
+          return { ...x, selected: true };
+        }
+        return { ...x, selected: false };
+      })
+    );
 
   const selectAndCloseMenu = () => {
     const selected = moddedOptions.find((x) => x.selected);
@@ -39,14 +49,49 @@ const AutoComplete = ({
 
     onClearOptionsFunction();
   };
+
+  const switchFocus = (dir: 'UP' | 'DOWN') => {
+    const { length } = moddedOptions;
+    const max = length - 1;
+    const anySelected = moddedOptions.find((x) => x.selected);
+
+    // If there are more than 0 items, navigate
+    if (length > 0) {
+      if (anySelected) {
+        // get current index
+        if (dir === 'UP') {
+          if (anySelected.i === 0) {
+            changePseudoFocus(max);
+          } else {
+            changePseudoFocus(anySelected.i - 1);
+          }
+        }
+        if (dir === 'DOWN') {
+          if (anySelected.i === max) {
+            changePseudoFocus(0);
+          } else {
+            changePseudoFocus(anySelected.i + 1);
+          }
+        }
+      } else {
+        if (dir === 'UP') {
+          changePseudoFocus(max);
+        }
+        if (dir === 'DOWN') {
+          changePseudoFocus(0);
+        }
+      }
+    }
+  };
+
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     // down
     if (event.keyCode === 40) {
-      switchFocus("DOWN");
+      switchFocus('DOWN');
     }
     // up
     if (event.keyCode === 38) {
-      switchFocus("UP");
+      switchFocus('UP');
     }
 
     if (event.keyCode === 13) {
@@ -55,7 +100,7 @@ const AutoComplete = ({
 
     // end
     if (event.keyCode === 35) {
-      const length = moddedOptions.length;
+      const { length } = moddedOptions;
       if (length) {
         changePseudoFocus(length - 1);
       }
@@ -63,7 +108,7 @@ const AutoComplete = ({
 
     // home
     if (event.keyCode === 36) {
-      const length = moddedOptions.length;
+      const { length } = moddedOptions;
       if (length) changePseudoFocus(0);
     }
 
@@ -78,57 +123,13 @@ const AutoComplete = ({
     onChangeFunction(event.target.value);
   };
 
-  const changePseudoFocus = (index: number) =>
-    setModdedOptions(
-      moddedOptions.map((x) => {
-        if (x.i === index) {
-          return { ...x, selected: true };
-        }
-        return { ...x, selected: false };
-      })
-    );
-
-  const switchFocus = (dir: "UP" | "DOWN") => {
-    const length = moddedOptions.length;
-    const max = length - 1;
-    const anySelected = moddedOptions.find((x) => x.selected);
-
-    // If there are more than 0 items, navigate
-    if (length > 0) {
-      if (anySelected) {
-        // get current index
-        if (dir === "UP") {
-          if (anySelected.i === 0) {
-            changePseudoFocus(max);
-          } else {
-            changePseudoFocus(anySelected.i - 1);
-          }
-        }
-        if (dir === "DOWN") {
-          if (anySelected.i === max) {
-            changePseudoFocus(0);
-          } else {
-            changePseudoFocus(anySelected.i + 1);
-          }
-        }
-      } else {
-        if (dir === "UP") {
-          changePseudoFocus(max);
-        }
-        if (dir === "DOWN") {
-          changePseudoFocus(0);
-        }
-      }
-    }
-  };
-
   const currentFocus = moddedOptions.find((x) => x.selected);
   const open = moddedOptions.length > 0;
   return (
     <div
       data-testid="AutoComplete"
-      className={classNames({
-        "dcui-autocomplete": true,
+      className={getClassNames({
+        'dcui-autocomplete': true,
       })}
       id="ex1"
     >
@@ -142,8 +143,9 @@ const AutoComplete = ({
       </label>
       <div className="dcui-autocomplete__wrapper">
         <div
+          // eslint-disable-next-line jsx-a11y/role-has-required-aria-props
           role="combobox"
-          aria-expanded={open ? "true" : "false"}
+          aria-expanded={open ? 'true' : 'false'}
           aria-owns="ex1-listbox"
           aria-haspopup="listbox"
           id="ex1-combobox"
@@ -169,49 +171,46 @@ const AutoComplete = ({
           aria-labelledby={labelId}
           role="listbox"
           id="ex1-listbox"
-          className={classNames({
-            "dcui-autocomplete__listbox": true,
-            "dcui-autocomplete__listbox--show": open,
+          className={getClassNames({
+            'dcui-autocomplete__listbox': true,
+            'dcui-autocomplete__listbox--show': open,
           })}
           data-testid="AutoCompleteListBox"
         >
-          {moddedOptions.map((item, i) => {
-            return (
-              <li
-                data-testid="AutoCompleteResult"
-                onMouseEnter={(
-                  event: React.MouseEvent<HTMLLIElement, MouseEvent>
-                ) => {
-                  event.preventDefault();
-                  setMouseIn(true);
-                  changePseudoFocus(i);
-                }}
-                onMouseLeave={(
-                  event: React.MouseEvent<HTMLLIElement, MouseEvent>
-                ) => {
-                  event.preventDefault();
-                  setMouseIn(false);
-                }}
-                onClick={(
-                  event: React.MouseEvent<HTMLLIElement, MouseEvent>
-                ) => {
-                  event.preventDefault();
-                  selectAndCloseMenu();
-                }}
-                key={item.id}
-                className={classNames({
-                  "dcui-autocomplete__result": true,
-                  "dcui-autocomplete__result--selected":
-                    item.id === currentFocus?.id,
-                })}
-                role="option"
-                id={item.id}
-                aria-selected={item.id === currentFocus?.id}
-              >
-                {item.option}
-              </li>
-            );
-          })}
+          {moddedOptions.map((item, i) => (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+            <li
+              data-testid="AutoCompleteResult"
+              onMouseEnter={(
+                event: React.MouseEvent<HTMLLIElement, MouseEvent>
+              ) => {
+                event.preventDefault();
+                setMouseIn(true);
+                changePseudoFocus(i);
+              }}
+              onMouseLeave={(
+                event: React.MouseEvent<HTMLLIElement, MouseEvent>
+              ) => {
+                event.preventDefault();
+                setMouseIn(false);
+              }}
+              onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+                event.preventDefault();
+                selectAndCloseMenu();
+              }}
+              key={item.id}
+              className={getClassNames({
+                'dcui-autocomplete__result': true,
+                'dcui-autocomplete__result--selected':
+                  item.id === currentFocus?.id,
+              })}
+              role="option"
+              id={item.id}
+              aria-selected={item.id === currentFocus?.id}
+            >
+              {item.option}
+            </li>
+          ))}
         </ul>
       </div>
     </div>
