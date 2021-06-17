@@ -9,6 +9,8 @@
 ### Default
 
 ```jsx
+import React from 'react';
+import Carousel from 'robust-react-ui/components/Carousel';
 <Carousel
   ariaLabel="Sample carousel"
   slides={[
@@ -37,12 +39,14 @@
         'Deserunt Lorem laboris mollit proident pariatur. Velit duis velit ut mollit laborum laborum eu cupidatat veniam deserunt culpa. Irure anim dolor et voluptate quis magna aliqua tempor nostrud labore consequat do. Quis nisi do enim mollit labore sint. Ullamco cupidatat commodo magna esse officia adipisicing aliquip ea ad magna magna excepteur.',
     },
   ]}
-/>
+/>;
 ```
 
 ### Autoplay
 
 ```jsx
+import React from 'react';
+import Carousel from 'robust-react-ui/components/Carousel';
 <Carousel
   ariaLabel="Sample carousel"
   autoplay
@@ -72,5 +76,5 @@
         'Deserunt Lorem laboris mollit proident pariatur. Velit duis velit ut mollit laborum laborum eu cupidatat veniam deserunt culpa. Irure anim dolor et voluptate quis magna aliqua tempor nostrud labore consequat do. Quis nisi do enim mollit labore sint. Ullamco cupidatat commodo magna esse officia adipisicing aliquip ea ad magna magna excepteur.',
     },
   ]}
-/>
+/>;
 ```
