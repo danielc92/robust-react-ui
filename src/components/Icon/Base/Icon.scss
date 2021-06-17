@@ -1,0 +1,27 @@
+// Generated with util/create-component.js
+@import '../../../variables.scss';
+@import '../../../typography.scss';
+
+.dcui-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  &--primary {
+    color: var(--color-primary);
+  }
+  &--success {
+    color: var(--color-success);
+  }
+  &--danger {
+    color: var(--color-danger);
+  }
+  &--light {
+    color: var(--color-light-grey);
+  }
+  &--charcoal {
+    color: var(--color-charcoal);
+  }
+}
