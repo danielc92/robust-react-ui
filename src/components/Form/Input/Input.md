@@ -9,7 +9,7 @@
 
 ```jsx
 import React from 'react';
-import Form from 'components/Form';
+import Form from 'robust-react-ui/components/Form';
 const [value, setValue] = React.useState('');
 const onChangeFunction = (event) => setValue(event.target.value);
 
@@ -29,7 +29,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 
 ```jsx
 import React from 'react';
-import Form from 'components/Form';
+import Form from 'robust-react-ui/components/Form';
 const [value, setValue] = React.useState('');
 const onChangeFunction = (event) => setValue(event.target.value);
 
@@ -51,7 +51,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 
 ```jsx
 import React from 'react';
-import Form from 'components/Form';
+import Form from 'robust-react-ui/components/Form';
 const [value, setValue] = React.useState('');
 const onChangeFunction = (event) => setValue(event.target.value);
 <Form>
@@ -75,7 +75,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 
 ```jsx
 import React from 'react';
-import Form from 'components/Form';
+import Form from 'robust-react-ui/components/Form';
 const [value, setValue] = React.useState('');
 const onChangeFunction = (event) => setValue(event.target.value);
 <Form>
@@ -96,7 +96,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 
 ```jsx
 import React from 'react';
-import Form from 'components/Form';
+import Form from 'robust-react-ui/components/Form';
 const [value, setValue] = React.useState('');
 const onChangeFunction = (event) => setValue(event.target.value);
 <Form>
@@ -116,7 +116,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 
 ```jsx
 import React from 'react';
-import Form from 'components/Form';
+import Form from 'robust-react-ui/components/Form';
 const [value, setValue] = React.useState('');
 const onChangeFunction = (event) => setValue(event.target.value);
 <Form>
@@ -135,7 +135,7 @@ const onChangeFunction = (event) => setValue(event.target.value);
 
 ```jsx
 import React from 'react';
-import Form from 'components/Form';
+import Form from 'robust-react-ui/components/Form';
 const [value, setValue] = React.useState('');
 const onChangeFunction = (event) => setValue(event.target.value);
 <Form>

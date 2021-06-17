@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
+import Container from 'robust-react-ui/components/Layout/Container';
 import Carousel from './Carousel';
 import { CarouselProps } from './Carousel.types';
-import Container from '../Layout/Container';
 
 export default {
   title: 'Components/Carousel',

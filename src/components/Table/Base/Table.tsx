@@ -1,14 +1,14 @@
 // Generated with util/create-component.js
 import React from 'react';
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { TableProps } from './Table.types';
 import './Table.scss';
-import Row from '../Row';
-import Cell from '../Cell';
-import Head from '../Head';
-import Header from '../Header';
-import Body from '../Body';
-import Foot from '../Foot';
+import Row from 'robust-react-ui/components/Table/Row';
+import Cell from 'robust-react-ui/components/Table/Cell';
+import Head from 'robust-react-ui/components/Table/Head';
+import Header from 'robust-react-ui/components/Table/Header';
+import Body from 'robust-react-ui/components/Table/Body';
+import Foot from 'robust-react-ui/components/Table/Foot';
 
 const Table = ({
   children,

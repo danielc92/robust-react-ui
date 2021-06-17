@@ -1,23 +1,25 @@
-import Button from './components/Button';
-import Landmark from './components/Landmark';
-import Layout from './components/Layout';
-import Table from './components/Table';
-import Typography from './components/Typography';
-import TabList from './components/TabList';
-import AlertDialogue from './components/AlertDialogue';
-import Form from './components/Form';
-import Link from './components/Link';
-import Image from './components/Image';
-import AutoComplete from './components/AutoComplete';
-import Pagination from './components/Pagination';
-import NavigationBar from './components/NavigationBar';
-import Accordion from './components/Accordion';
-import Alert from './components/Alert';
-import ProgressBar from './components/ProgressBar';
-import Breadcrumbs from './components/Breadcrumbs';
-import Carousel from './components/Carousel';
+import Icon from 'robust-react-ui/components/Icon';
+import Button from 'robust-react-ui/components/Button';
+import Landmark from 'robust-react-ui/components/Landmark';
+import Layout from 'robust-react-ui/components/Layout';
+import Table from 'robust-react-ui/components/Table';
+import Typography from 'robust-react-ui/components/Typography';
+import TabList from 'robust-react-ui/components/TabList';
+import AlertDialogue from 'robust-react-ui/components/AlertDialogue';
+import Form from 'robust-react-ui/components/Form';
+import Link from 'robust-react-ui/components/Link';
+import Image from 'robust-react-ui/components/Image';
+import AutoComplete from 'robust-react-ui/components/AutoComplete';
+import Pagination from 'robust-react-ui/components/Pagination';
+import NavigationBar from 'robust-react-ui/components/NavigationBar';
+import Accordion from 'robust-react-ui/components/Accordion';
+import Alert from 'robust-react-ui/components/Alert';
+import ProgressBar from 'robust-react-ui/components/ProgressBar';
+import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
+import Carousel from 'robust-react-ui/components/Carousel';
 
 export {
+  Icon,
   Carousel,
   Breadcrumbs,
   Accordion,

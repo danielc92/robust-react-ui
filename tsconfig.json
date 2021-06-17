@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "baseUrl": "src",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "robust-react-ui/*": ["src/*"]
+    },
     "declaration": true,
     "declarationDir": "build",
     "module": "esnext",
@@ -14,9 +17,5 @@
     "esModuleInterop": true
   },
   "include": ["src"],
-  "exclude": [
-    "node_modules",
-    "build",
-    "storybook-static"
-  ]
+  "exclude": ["node_modules", "build", "storybook-static"]
 }

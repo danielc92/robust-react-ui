@@ -6,8 +6,8 @@
 
 ```jsx
 import React from 'react';
-import Layout from 'components/Layout';
-import Typography from 'components/Typography';
+import Layout from 'robust-react-ui/components/Layout';
+import Typography from 'robust-react-ui/components/Typography';
 <Layout.Container size="small">
   <Typography.Paragraph>
     Dolore minim eiusmod fugiat sunt occaecat occaecat aliquip ullamco velit
@@ -21,8 +21,8 @@ import Typography from 'components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'components/Layout';
-import Typography from 'components/Typography';
+import Layout from 'robust-react-ui/components/Layout';
+import Typography from 'robust-react-ui/components/Typography';
 
 <Layout.Container>
   <Typography.Paragraph>
@@ -37,8 +37,8 @@ import Typography from 'components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'components/Layout';
-import Typography from 'components/Typography';
+import Layout from 'robust-react-ui/components/Layout';
+import Typography from 'robust-react-ui/components/Typography';
 
 <Layout.Container size="large">
   <Typography.Paragraph>

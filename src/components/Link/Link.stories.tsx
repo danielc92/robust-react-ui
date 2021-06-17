@@ -8,7 +8,7 @@ export default {
   title: 'Components/Link',
   args: {
     children: 'learn more about',
-    href: 'https://github.com/danielc92/dc-react-ui',
+    href: 'https://github.com/danielc92/robust-react-ui',
     ariaLabel: 'daniels github repo',
   },
 } as Meta<LinkProps>;

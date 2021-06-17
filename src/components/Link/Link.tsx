@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import './Link.scss';
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { LinkProps } from './Link.types';
 
 const Link = ({

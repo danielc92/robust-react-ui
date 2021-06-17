@@ -1,23 +1,31 @@
 ### Primary
 
 ```jsx
-<ProgressBar variant="primary" currentValue={80} />
+import React from 'react';
+import ProgressBar from 'robust-react-ui/components/ProgressBar';
+<ProgressBar variant="primary" currentValue={80} />;
 ```
 
 ### Danger
 
 ```jsx
-<ProgressBar variant="danger" currentValue={35} />
+import React from 'react';
+import ProgressBar from 'robust-react-ui/components/ProgressBar';
+<ProgressBar variant="danger" currentValue={35} />;
 ```
 
 ### Success
 
 ```jsx
-<ProgressBar variant="success" currentValue={60} />
+import React from 'react';
+import ProgressBar from 'robust-react-ui/components/ProgressBar';
+<ProgressBar variant="success" currentValue={60} />;
 ```
 
 ### Full Width
 
 ```jsx
-<ProgressBar variant="primary" fullWidth currentValue={80} />
+import React from 'react';
+import ProgressBar from 'robust-react-ui/components/ProgressBar';
+<ProgressBar variant="primary" fullWidth currentValue={80} />;
 ```

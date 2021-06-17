@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
+import Column from 'robust-react-ui/components/Layout/Column';
+import Container from 'robust-react-ui/components/Layout/Container';
+import Row from 'robust-react-ui/components/Layout/Row';
 import { LayoutProps } from './Layout.types';
-import Row from '../Row';
-import Column from '../Column';
-import Container from '../Container';
 
 const Layout = ({ children }: LayoutProps) => (
   <div data-testid="Layout">{children}</div>

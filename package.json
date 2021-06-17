@@ -1,5 +1,5 @@
 {
-  "name": "dc-react-ui",
+  "name": "robust-react-ui",
   "version": "1.0.0",
   "main": "build/index.js",
   "files": [
@@ -20,11 +20,13 @@
     "chromatic": "npx chromatic",
     "eslint:fix": ".\\node_modules\\.bin\\eslint src --ext .ts,.tsx --fix",
     "tsconfig-cp:webpack": "copy tsconfig.webpack.json tsconfig.json",
-    "tsconfig-cp:build": "copy tsconfig.build.json tsconfig.json"
+    "tsconfig-cp:build": "copy tsconfig.build.json tsconfig.json",
+    "predeploy": "npm run styleguidist build",
+    "deploy": "gh-pages -d styleguide"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielc92/dc-react-ui.git"
+    "url": "git+https://github.com/danielc92/robust-react-ui.git"
   },
   "keywords": [
     "React",
@@ -38,9 +40,9 @@
   "author": "Daniel Corcoran",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielc92/dc-react-ui/issues"
+    "url": "https://github.com/danielc92/robust-react-ui/issues"
   },
-  "homepage": "https://github.com/danielc92/dc-react-ui#readme",
+  "homepage": "https://github.com/danielc92/robust-react-ui#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
@@ -73,6 +75,7 @@
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "gh-pages": "^3.2.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "node-sass": "^4.14.1",

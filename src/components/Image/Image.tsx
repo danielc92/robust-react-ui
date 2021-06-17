@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 import React from 'react';
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { ImageProps } from './Image.types';
 import './Image.scss';
 

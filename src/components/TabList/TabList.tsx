@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 // Component design from https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
 import React, { createRef, useEffect, useState } from 'react';
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { TabListProps } from './TabList.types';
 import './TabList.scss';
 

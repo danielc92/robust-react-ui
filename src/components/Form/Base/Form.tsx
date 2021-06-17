@@ -1,17 +1,15 @@
 // Generated with util/create-component.js
 import React from 'react';
-
-import { FormProps } from './Form.types';
-
 import './Form.scss';
-import Submit from '../Submit';
-import Legend from '../Legend';
-import FieldSet from '../FieldSet';
-import Label from '../Label';
-import Input from '../Input';
-import Select from '../Select';
-import CheckboxGroup from '../CheckboxGroup';
-import TextArea from '../TextArea';
+import Submit from 'robust-react-ui/components/Form/Submit';
+import Legend from 'robust-react-ui/components/Form/Legend';
+import FieldSet from 'robust-react-ui/components/Form/FieldSet';
+import Label from 'robust-react-ui/components/Form/Label';
+import Input from 'robust-react-ui/components/Form/Input';
+import Select from 'robust-react-ui/components/Form/Select';
+import CheckboxGroup from 'robust-react-ui/components/Form/CheckboxGroup';
+import TextArea from 'robust-react-ui/components/Form/TextArea';
+import { FormProps } from './Form.types';
 
 const Form = ({ children, onSubmitFunction, ariaDescribedBy }: FormProps) => (
   <form

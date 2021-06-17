@@ -7,6 +7,8 @@
 ### Small
 
 ```jsx
+import React from 'react';
+import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
 <Breadcrumbs
   size="small"
   data={[
@@ -31,12 +33,14 @@
       linkText: 'Lorem',
     },
   ]}
-/>
+/>;
 ```
 
 ### Medium
 
 ```jsx
+import React from 'react';
+import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
 <Breadcrumbs
   size="medium"
   data={[
@@ -61,12 +65,14 @@
       linkText: 'Lorem',
     },
   ]}
-/>
+/>;
 ```
 
 ### Large
 
 ```jsx
+import React from 'react';
+import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
 <Breadcrumbs
   size="large"
   data={[
@@ -91,5 +97,5 @@
       linkText: 'Lorem',
     },
   ]}
-/>
+/>;
 ```

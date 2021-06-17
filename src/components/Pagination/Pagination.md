@@ -6,6 +6,8 @@
 ### Default
 
 ```jsx
+import React from 'react';
+import Pagination from 'robust-react-ui/components/Pagination';
 <Pagination
   data={[
     {
@@ -41,12 +43,14 @@
   ]}
   ariaLabel="Pagination label"
   rounded={false}
-/>
+/>;
 ```
 
 ### Rounded
 
 ```jsx
+import React from 'react';
+import Pagination from 'robust-react-ui/components/Pagination';
 <Pagination
   data={[
     {
@@ -82,5 +86,5 @@
   ]}
   ariaLabel="Pagination label"
   rounded={true}
-/>
+/>;
 ```

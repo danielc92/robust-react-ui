@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 import { render } from '@testing-library/react';
-import Column from '../Column';
-import Row from '../Row';
-import Container from '../Container';
+import Column from 'robust-react-ui/components/Layout/Column';
+import Row from 'robust-react-ui/components/Layout/Row';
+import Container from 'robust-react-ui/components/Layout/Container';
 
 describe('Layout Suite', () => {
   beforeEach(() => {});

@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import Typography from '../../Typography';
-import Column from './Column';
-import Row from '../Row';
+import Typography from 'robust-react-ui/components/Typography';
+import Column from 'robust-react-ui/components/Layout/Column';
+import Row from 'robust-react-ui/components/Layout/Row';
 import { ColumnProps } from './Column.types';
 
 export default {

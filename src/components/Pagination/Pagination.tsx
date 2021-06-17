@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import React from 'react';
 import { PaginationProps } from './Pagination.types';
 import './Pagination.scss';
