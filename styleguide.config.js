@@ -3,6 +3,7 @@ const glob = require('glob');
 
 module.exports = {
   title: "Daniel Corcoran's React UI Library",
+  version: '1.0.0',
   theme: {
     color: {
       base: '#333',
