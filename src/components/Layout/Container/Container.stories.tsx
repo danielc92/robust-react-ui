@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import Typography from '../../Typography';
+import Typography from 'robust-react-ui/components/Typography';
+import Container from 'robust-react-ui/components/Layout/Container';
 import { ContainerProps } from './Container.types';
-import Container from './Container';
 
 export default {
   title: 'Components/Layout/Container',

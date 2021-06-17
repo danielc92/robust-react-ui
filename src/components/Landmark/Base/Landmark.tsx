@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
-import Complementary from '../Complementary/Complementary';
-import ContentInfo from '../ContentInfo/ContentInfo';
-import Main from '../Main/Main';
-import Region from '../Region/Region';
+import Main from 'robust-react-ui/components/Landmark/Main';
+import Region from 'robust-react-ui/components/Landmark/Region';
+import Complementary from 'robust-react-ui/components/Landmark/Complementary';
+import ContentInfo from 'robust-react-ui/components/Landmark/ContentInfo';
 
 import { LandmarkProps } from './Landmark.types';
 

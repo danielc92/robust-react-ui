@@ -8,6 +8,7 @@
 
 ```jsx
 import React from 'react';
+import Alert from 'robust-react-ui/components/Alert';
 const [open, setOpen] = React.useState(true);
 const onCloseActionFunction = () => setOpen(false);
 <Alert onCloseActionFunction={onCloseActionFunction} visible={open}>
@@ -22,6 +23,7 @@ const onCloseActionFunction = () => setOpen(false);
 
 ```jsx
 import React from 'react';
+import Alert from 'robust-react-ui/components/Alert';
 const [open, setOpen] = React.useState(true);
 const onCloseActionFunction = () => setOpen(false);
 <Alert
@@ -40,6 +42,7 @@ const onCloseActionFunction = () => setOpen(false);
 
 ```jsx
 import React from 'react';
+import Alert from 'robust-react-ui/components/Alert';
 const [open, setOpen] = React.useState(true);
 const onCloseActionFunction = () => setOpen(false);
 <Alert

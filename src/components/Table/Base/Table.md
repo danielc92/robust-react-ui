@@ -9,6 +9,8 @@
 ### Default
 
 ```jsx
+import React from 'react';
+import Table from 'robust-react-ui/components/Table';
 <Table>
   <Table.Head>
     <Table.Row>
@@ -38,12 +40,13 @@
       <Table.Cell>Lorem</Table.Cell>
     </Table.Row>
   </Table.Body>
-</Table>
+</Table>;
 ```
 
 ### Full width
 
 ```jsx
+import Table from 'robust-react-ui/components/Table';
 <Table fullWidth>
   <Table.Head>
     <Table.Row>
@@ -73,12 +76,13 @@
       <Table.Cell>Lorem</Table.Cell>
     </Table.Row>
   </Table.Body>
-</Table>
+</Table>;
 ```
 
 ### Striped
 
 ```jsx
+import Table from 'robust-react-ui/components/Table';
 <Table striped>
   <Table.Head>
     <Table.Row>
@@ -126,12 +130,13 @@
       <Table.Cell>Lorem</Table.Cell>
     </Table.Row>
   </Table.Body>
-</Table>
+</Table>;
 ```
 
 ### Centered cells
 
 ```jsx
+import Table from 'robust-react-ui/components/Table';
 <Table centerCellContent>
   <Table.Head>
     <Table.Row>
@@ -161,12 +166,13 @@
       <Table.Cell>Lorem</Table.Cell>
     </Table.Row>
   </Table.Body>
-</Table>
+</Table>;
 ```
 
 ### Row Span
 
 ```jsx
+import Table from 'robust-react-ui/components/Table';
 <Table>
   <Table.Head>
     <Table.Row>
@@ -209,12 +215,13 @@
       <Table.Cell>Lorem</Table.Cell>
     </Table.Row>
   </Table.Body>
-</Table>
+</Table>;
 ```
 
 ### With Table.Foot
 
 ```jsx
+import Table from 'robust-react-ui/components/Table';
 <Table>
   <Table.Head>
     <Table.Row>
@@ -242,5 +249,5 @@
       <Table.Cell>413,000</Table.Cell>
     </Table.Row>
   </Table.Foot>
-</Table>
+</Table>;
 ```

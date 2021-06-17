@@ -1,5 +1,5 @@
 {
-  "name": "dc-react-ui",
+  "name": "robust-react-ui",
   "version": "1.0.0",
   "main": "build/index.js",
   "files": [
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielc92/dc-react-ui.git"
+    "url": "git+https://github.com/danielc92/robust-react-ui.git"
   },
   "keywords": [
     "React",
@@ -40,9 +40,9 @@
   "author": "Daniel Corcoran",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielc92/dc-react-ui/issues"
+    "url": "https://github.com/danielc92/robust-react-ui/issues"
   },
-  "homepage": "https://github.com/danielc92/dc-react-ui#readme",
+  "homepage": "https://github.com/danielc92/robust-react-ui#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"

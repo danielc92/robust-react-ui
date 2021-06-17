@@ -3,7 +3,7 @@
 ### Default
 
 ```jsx
-import Icon from 'components/Icon/Base';
+import Icon from 'robust-react-ui/components/Icon';
 <Icon>
   <Icon.Box />
 </Icon>;
@@ -12,7 +12,7 @@ import Icon from 'components/Icon/Base';
 ### Using different icons
 
 ```jsx
-import Icon from 'components/Icon/Base';
+import Icon from 'robust-react-ui/components/Icon/Base';
 <>
   <Icon>
     <Icon.ArrowDown />
@@ -41,7 +41,7 @@ import Icon from 'components/Icon/Base';
 ### Using custom paths
 
 ```jsx
-import Icon from 'components/Icon/Base';
+import Icon from 'robust-react-ui/components/Icon/Base';
 <Icon>
   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
   <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
@@ -57,8 +57,8 @@ import Icon from 'components/Icon/Base';
 The default is "primary"
 
 ```jsx
-import Code from 'components/Icon/Code';
-import Icon from 'components/Icon/Base';
+import Code from 'robust-react-ui/components/Icon/Code';
+import Icon from 'robust-react-ui/components/Icon/Base';
 <>
   <Icon>
     <Code />
@@ -82,8 +82,8 @@ import Icon from 'components/Icon/Base';
 ### Custom sizes
 
 ```jsx
-import Code from 'components/Icon/Code';
-import Icon from 'components/Icon/Base';
+import Code from 'robust-react-ui/components/Icon/Code';
+import Icon from 'robust-react-ui/components/Icon/Base';
 <>
   <Icon width={48} height={48}>
     <Code />

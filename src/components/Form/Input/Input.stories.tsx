@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
-import Label from '../Label';
-import FieldSet from '../FieldSet';
+import FieldSet from 'robust-react-ui/components/Form/FieldSet';
+import Label from 'robust-react-ui/components/Form/Label';
 import { FormInputProps } from './Input.types';
 import Input from './Input';
 

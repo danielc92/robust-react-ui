@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
+import FieldSet from 'robust-react-ui/components/Form/FieldSet';
+import Label from 'robust-react-ui/components/Form/Label';
 import Select from './Select';
 import { FormSelectProps } from './Select.types';
-import FieldSet from '../FieldSet';
-import Label from '../Label';
 
 export default {
   title: 'Components/Form/Select',

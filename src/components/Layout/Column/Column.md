@@ -2,8 +2,8 @@
 
 ```jsx
 import React from 'react';
-import Layout from 'components/Layout';
-import Typography from 'components/Typography';
+import Layout from 'robust-react-ui/components/Layout';
+import Typography from 'robust-react-ui/components/Typography';
 <Layout.Row>
   <Layout.Column size="quarter">
     <Typography.Heading level={3}>
@@ -50,8 +50,8 @@ import Typography from 'components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'components/Layout';
-import Typography from 'components/Typography';
+import Layout from 'robust-react-ui/components/Layout';
+import Typography from 'robust-react-ui/components/Typography';
 <Layout.Row>
   <Layout.Column size="half">
     <Typography.Heading level={3}>
@@ -78,8 +78,8 @@ import Typography from 'components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'components/Layout';
-import Typography from 'components/Typography';
+import Layout from 'robust-react-ui/components/Layout';
+import Typography from 'robust-react-ui/components/Typography';
 <Layout.Row>
   <Layout.Column size="third">
     <Typography.Heading level={3}>

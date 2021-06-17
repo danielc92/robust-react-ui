@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import TabList from './TabList';
-import Typography from '../Typography';
+import Typography from 'robust-react-ui/components/Typography';
+import TabList from 'robust-react-ui/components/TabList';
 import { TabListProps } from './TabList.types';
 
 export default {

@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
 
 import React, { createRef, useEffect, useState } from 'react';
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
+import Panel from 'robust-react-ui/components/Accordion/Panel';
 import { AccordionProps } from './Accordion.types';
 import './Accordion.scss';
-import Panel from '../Panel';
 import { AccordionPanelProps } from '../Panel/Panel.types';
 
 const Accordion = ({
