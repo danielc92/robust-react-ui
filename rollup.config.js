@@ -7,6 +7,7 @@ import copy from 'rollup-plugin-copy';
 export default {
   input: [
     'src/index.ts',
+    'src/components/Icon/index.ts',
     'src/components/Carousel/index.ts',
     'src/components/AlertDialogue/index.ts',
     'src/components/Button/index.ts',

@@ -16,8 +16,10 @@ import Alert from './components/Alert';
 import ProgressBar from './components/ProgressBar';
 import Breadcrumbs from './components/Breadcrumbs';
 import Carousel from './components/Carousel';
+import Icon from './components/Icon';
 
 export {
+  Icon,
   Carousel,
   Breadcrumbs,
   Accordion,
