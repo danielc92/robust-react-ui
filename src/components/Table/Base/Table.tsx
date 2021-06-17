@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 import React from 'react';
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { TableProps } from './Table.types';
 import './Table.scss';
 import Row from '../Row';

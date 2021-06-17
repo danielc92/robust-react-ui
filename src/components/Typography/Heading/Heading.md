@@ -7,7 +7,7 @@
 
 ```jsx
 import React from 'react';
-import Typography from 'components/Typography';
+import Typography from 'robust-react-ui/components/Typography';
 <React.Fragment>
   <Typography.Heading level={1}>
     Anim do exercitation consequat aute irure ut sit.
@@ -34,7 +34,7 @@ import Typography from 'components/Typography';
 
 ```jsx
 import React from 'react';
-import Typography from 'components/Typography';
+import Typography from 'robust-react-ui/components/Typography';
 <Typography.Heading jumbo level={1}>
   Anim do exercitation consequat aute irure ut sit.
 </Typography.Heading>;

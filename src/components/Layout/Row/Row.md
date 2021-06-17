@@ -2,8 +2,8 @@
 
 ```jsx
 import React from 'react';
-import Layout from 'components/Layout';
-import Typography from 'components/Typography';
+import Layout from 'robust-react-ui/components/Layout';
+import Typography from 'robust-react-ui/components/Typography';
 <Layout.Row>
   <Layout.Column>
     <Typography.Heading level={3}>

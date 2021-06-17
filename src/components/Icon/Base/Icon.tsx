@@ -1,5 +1,5 @@
 import React from 'react';
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { IconProps } from './Icon.types';
 import './Icon.scss';
 import Box from '../Box';

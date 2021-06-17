@@ -6,7 +6,7 @@
 
 ```jsx
 import React from 'react';
-import Form from 'components/Form';
+import Form from 'robust-react-ui/components/Form';
 const [value, setValue] = React.useState({
   input_1: '',
   input_2: '',

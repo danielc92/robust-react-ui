@@ -5,8 +5,8 @@
 ### Default
 
 ```jsx
-import Landmark from 'components/Landmark';
-import Typography from 'components/Typography';
+import Landmark from 'robust-react-ui/components/Landmark';
+import Typography from 'robust-react-ui/components/Typography';
 
 <Landmark.Complementary>
   <Typography.Paragraph>

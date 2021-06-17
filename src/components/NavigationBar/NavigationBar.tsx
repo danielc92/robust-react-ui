@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 import React, { createRef, useEffect, useState } from 'react';
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { NavigationBarProps, NavigationData } from './NavigationBar.types';
 import './NavigationBar.scss';
 

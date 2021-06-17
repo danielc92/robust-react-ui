@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React, { useEffect, useRef, useState } from 'react';
 
-import getClassNames from 'utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { AutoCompleteProps } from './AutoComplete.types';
 import './AutoComplete.scss';
 
