@@ -43,6 +43,7 @@ module.exports = {
     {
       name: 'Components',
       components: [
+        'src/components/Icon/Base/**/*.tsx',
         'src/components/Alert/**/*.tsx',
         'src/components/AlertDialogue/**/*.tsx',
         'src/components/AutoComplete/**/*.tsx',
