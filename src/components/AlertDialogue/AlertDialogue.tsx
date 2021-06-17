@@ -3,8 +3,8 @@ import React, { useEffect } from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { AlertDialogueProps } from './AlertDialogue.types';
 import './AlertDialogue.scss';
-import Typography from '../Typography';
-import Button from '../Button';
+import Typography from 'robust-react-ui/components/Typography';
+import Button from 'robust-react-ui/components/Button';
 
 const AlertDialogue = ({
   open,

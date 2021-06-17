@@ -1,17 +1,17 @@
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { IconProps } from './Icon.types';
 import './Icon.scss';
-import Box from '../Box';
-import AlertTriangle from '../AlertTriangle';
-import ArrowDown from '../ArrowDown';
-import Camera from '../Camera';
-import Code from '../Code';
-import Eye from '../Eye';
-import Picture from '../Picture';
-import Download from '../Download';
-import Home from '../Home';
-import EyeOff from '../EyeOff';
+import Box from 'robust-react-ui/components/Icon/Box';
+import AlertTriangle from 'robust-react-ui/components/Icon/AlertTriangle';
+import ArrowDown from 'robust-react-ui/components/Icon/ArrowDown';
+import Camera from 'robust-react-ui/components/Icon/Camera';
+import Code from 'robust-react-ui/components/Icon/Code';
+import Eye from 'robust-react-ui/components/Icon/Eye';
+import Picture from 'robust-react-ui/components/Icon/Picture';
+import Download from 'robust-react-ui/components/Icon/Download';
+import Home from 'robust-react-ui/components/Icon/Home';
+import EyeOff from 'robust-react-ui/components/Icon/EyeOff';
+import { IconProps } from './Icon.types';
 
 const Icon = ({
   children,

@@ -1,6 +1,6 @@
 import React from 'react';
-import Paragraph from '../Paragraph';
-import Heading from '../Heading';
+import Paragraph from 'robust-react-ui/components/Typography/Paragraph';
+import Heading from 'robust-react-ui/components/Typography/Heading';
 import { TypographyProps } from './Typography.types';
 
 const Typography = ({ children }: TypographyProps) => <>{children}</>;
