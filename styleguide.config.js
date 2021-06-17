@@ -2,7 +2,7 @@ const path = require('path');
 const glob = require('glob');
 
 module.exports = {
-  title: "Daniel Corcoran's React UI Library",
+  title: 'Robust React UI - by Daniel Corcoran',
   version: '1.0.0',
   theme: {
     color: {

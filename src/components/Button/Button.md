@@ -10,10 +10,12 @@
 ```jsx
 import React from 'react';
 import Button from 'robust-react-ui/components/Button';
-<Button variant="primary">Click me</Button>
-<Button variant="danger">Click me</Button>
-<Button variant="secondary">Click me</Button>
-<Button variant="success">Click me</Button>
+<>
+  <Button variant="primary">Click me</Button>
+  <Button variant="danger">Click me</Button>
+  <Button variant="secondary">Click me</Button>
+  <Button variant="success">Click me</Button>
+</>;
 ```
 
 ### Sizes
@@ -21,9 +23,11 @@ import Button from 'robust-react-ui/components/Button';
 ```jsx
 import React from 'react';
 import Button from 'robust-react-ui/components/Button';
-<Button size="large">Click me</Button>
-<Button size="medium">Click me</Button>
-<Button size="small">Click me</Button>
+<>
+  <Button size="large">Click me</Button>
+  <Button size="medium">Click me</Button>
+  <Button size="small">Click me</Button>
+</>;
 ```
 
 ### Using onClickFunction
