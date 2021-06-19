@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Generated with util/create-component.js
-export interface GridProps {
+export interface IGridProps {
   children: React.ReactNode;
   /**
    * Vertical horizontal spacing between grid items

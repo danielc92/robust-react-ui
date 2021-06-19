@@ -2,10 +2,10 @@
 import React from 'react';
 
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { ButtonProps } from './Button.types';
+import { IButtonProps } from './Button.types';
 import './Button.scss';
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
   (
     {
       children,

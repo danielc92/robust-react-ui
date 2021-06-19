@@ -2,16 +2,16 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 import Accordion from './Accordion';
-import { AccordionProps } from './Accordion.types';
+import { IAccordionProps } from './Accordion.types';
 
 const { Panel } = Accordion;
 export default {
   title: 'Components/Accordion',
   component: Accordion,
   args: {},
-} as Meta<AccordionProps>;
+} as Meta<IAccordionProps>;
 
-const Template: Story<AccordionProps> = (args) => {
+const Template: Story<IAccordionProps> = (args) => {
   const [panel, setPanel] = useState('1');
   const onSelectPanelFunction = (panelId: string) => setPanel(panelId);
   return (
@@ -63,7 +63,7 @@ const Template: Story<AccordionProps> = (args) => {
   );
 };
 
-export const Basic: Story<AccordionProps> = Template.bind({});
+export const Basic: Story<IAccordionProps> = Template.bind({});
 Basic.args = {};
-export const FullWidth: Story<AccordionProps> = Template.bind({});
+export const FullWidth: Story<IAccordionProps> = Template.bind({});
 FullWidth.args = { fullWidth: true };

@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
-import { FormLabelProps } from './Label.types';
+import { IFormLabelProps } from './Label.types';
 import './Label.scss';
 
-const Label = ({ children, id, htmlFor, required }: FormLabelProps) => (
+const Label = ({ children, id, htmlFor, required }: IFormLabelProps) => (
   <label
     className="dcui-form__label"
     htmlFor={htmlFor || null}

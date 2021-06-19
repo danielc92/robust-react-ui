@@ -4,9 +4,9 @@ import Column from 'robust-react-ui/components/Layout/Column';
 import Grid from 'robust-react-ui/components/Layout/Grid';
 import Container from 'robust-react-ui/components/Layout/Container';
 import Row from 'robust-react-ui/components/Layout/Row';
-import { LayoutProps } from './Layout.types';
+import { ILayoutProps } from './Layout.types';
 
-const Layout = ({ children }: LayoutProps) => (
+const Layout = ({ children }: ILayoutProps) => (
   <div data-testid="Layout">{children}</div>
 );
 

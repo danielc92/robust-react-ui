@@ -2,10 +2,10 @@
 
 import getClassNames from 'robust-react-ui/utils/getClassNames';
 import React from 'react';
-import { PaginationProps } from './Pagination.types';
+import { IPaginationProps } from './Pagination.types';
 import './Pagination.scss';
 
-const Pagination = ({ data, ariaLabel, rounded }: PaginationProps) => {
+const Pagination = ({ data, ariaLabel, rounded }: IPaginationProps) => {
   const defaultLabel = 'Pagination Navigation';
 
   return (

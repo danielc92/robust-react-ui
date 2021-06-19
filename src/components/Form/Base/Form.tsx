@@ -9,9 +9,9 @@ import Input from 'robust-react-ui/components/Form/Input';
 import Select from 'robust-react-ui/components/Form/Select';
 import CheckboxGroup from 'robust-react-ui/components/Form/CheckboxGroup';
 import TextArea from 'robust-react-ui/components/Form/TextArea';
-import { FormProps } from './Form.types';
+import { IFormProps } from './Form.types';
 
-const Form = ({ children, onSubmitFunction, ariaDescribedBy }: FormProps) => (
+const Form = ({ children, onSubmitFunction, ariaDescribedBy }: IFormProps) => (
   <form
     aria-describedby={ariaDescribedBy || null}
     data-testid="Form"

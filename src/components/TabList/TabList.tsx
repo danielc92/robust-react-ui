@@ -2,10 +2,10 @@
 // Component design from https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html
 import React, { createRef, useEffect, useState } from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { TabListProps } from './TabList.types';
+import { ITabListProps } from './TabList.types';
 import './TabList.scss';
 
-const TabList = ({ ariaLabel, tabs, fullWidth, variant }: TabListProps) => {
+const TabList = ({ ariaLabel, tabs, fullWidth, variant }: ITabListProps) => {
   const [activeTab, setActiveTab] =
     useState<{
       tabName: string;

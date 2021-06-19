@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Image from './Image';
-import { ImageProps } from './Image.types';
+import { IImageProps } from './Image.types';
 
 describe('Test Component', () => {
-  let props: ImageProps;
+  let props: IImageProps;
 
   beforeEach(() => {
     props = {

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface RowProps {
+export interface IRowProps {
   children: ReactNode;
   wrap?: boolean;
 }

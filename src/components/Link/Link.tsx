@@ -2,7 +2,7 @@
 import React from 'react';
 import './Link.scss';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { LinkProps } from './Link.types';
+import { ILinkProps } from './Link.types';
 
 const Link = ({
   href,
@@ -11,7 +11,7 @@ const Link = ({
   display,
   ariaDescribedBy,
   ariaLabel,
-}: LinkProps) => (
+}: ILinkProps) => (
   <a
     href={href}
     aria-label={ariaLabel || null}

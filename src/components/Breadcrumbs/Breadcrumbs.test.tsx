@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Breadcrumbs from './Breadcrumbs';
-import { BreadcrumbsProps } from './Breadcrumbs.types';
+import { IBreadcrumbsProps } from './Breadcrumbs.types';
 
 describe('Breadcrumb suite', () => {
-  let props: BreadcrumbsProps;
+  let props: IBreadcrumbsProps;
 
   beforeEach(() => {
     props = {

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface GridItemProps {
+export interface IGridItemProps {
   children?: ReactNode;
   /**
    * The horizontal padding

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface FormLabelProps {
+export interface IFormLabelProps {
   children: ReactNode;
   htmlFor?: string;
   /**

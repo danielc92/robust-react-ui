@@ -3,7 +3,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Container from 'robust-react-ui/components/Layout/Container';
 import Carousel from './Carousel';
-import { CarouselProps } from './Carousel.types';
+import { ICarouselProps } from './Carousel.types';
 
 export default {
   title: 'Components/Carousel',
@@ -39,21 +39,21 @@ export default {
       },
     ],
   },
-} as Meta<CarouselProps>;
+} as Meta<ICarouselProps>;
 
-const Template: Story<CarouselProps> = (args) => (
+const Template: Story<ICarouselProps> = (args) => (
   <Container>
     <Carousel {...args} />
   </Container>
 );
 
-export const Default: Story<CarouselProps> = Template.bind({});
+export const Default: Story<ICarouselProps> = Template.bind({});
 Default.args = {};
-export const Autoplay: Story<CarouselProps> = Template.bind({});
+export const Autoplay: Story<ICarouselProps> = Template.bind({});
 Autoplay.args = {
   autoplay: true,
 };
-export const WithCustomTiming: Story<CarouselProps> = Template.bind({});
+export const WithCustomTiming: Story<ICarouselProps> = Template.bind({});
 WithCustomTiming.args = {
   autoplay: true,
   intervalSeconds: 3,

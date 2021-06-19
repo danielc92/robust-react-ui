@@ -2,11 +2,11 @@
 import React from 'react';
 
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { FormSubmitProps } from './Submit.types';
+import { IFormSubmitProps } from './Submit.types';
 
 import './Submit.scss';
 
-const Submit = ({ value, id, size, variant }: FormSubmitProps) => (
+const Submit = ({ value, id, size, variant }: IFormSubmitProps) => (
   <input
     type="submit"
     value={value}

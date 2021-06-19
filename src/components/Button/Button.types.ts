@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Generated with util/create-component.js
-export interface ButtonProps {
+export interface IButtonProps {
   /**
    * Size setting for component.
    * @default medium

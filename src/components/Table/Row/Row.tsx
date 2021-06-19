@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { TableRowProps } from './Row.types';
+import { ITableRowProps } from './Row.types';
 
-const Row = ({ children }: TableRowProps) => (
+const Row = ({ children }: ITableRowProps) => (
   <tr className="dcui-table__row">{children}</tr>
 );
 

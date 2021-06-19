@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
 // Generated with util/create-component.js
-export interface MainProps {
+export interface IMainProps {
   children: ReactNode;
 }

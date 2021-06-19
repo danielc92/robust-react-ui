@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { TableProps } from './Table.types';
+import { ITableProps } from './Table.types';
 import './Table.scss';
 import Row from 'robust-react-ui/components/Table/Row';
 import Cell from 'robust-react-ui/components/Table/Cell';
@@ -17,7 +17,7 @@ const Table = ({
   id,
   ariaDescribedBy,
   ariaLabel,
-}: TableProps) => (
+}: ITableProps) => (
   <table
     id={id || null}
     aria-describedby={ariaDescribedBy || null}

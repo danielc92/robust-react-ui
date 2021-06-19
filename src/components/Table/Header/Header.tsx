@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
-import { TableHeaderProps } from './Header.types';
+import { ITableHeaderProps } from './Header.types';
 
-const Header = ({ children, colSpan, rowSpan, scope }: TableHeaderProps) => (
+const Header = ({ children, colSpan, rowSpan, scope }: ITableHeaderProps) => (
   <th
     className="dcui-table__header"
     scope={scope || 'col'}

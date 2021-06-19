@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { ProgressBarProps } from './ProgressBar.types';
+import { IProgressBarProps } from './ProgressBar.types';
 import './ProgressBar.scss';
 
 const ProgressBar = ({
@@ -11,7 +11,7 @@ const ProgressBar = ({
   size,
   fullWidth,
   variant,
-}: ProgressBarProps) => (
+}: IProgressBarProps) => (
   <div
     className={getClassNames({
       'dcui-progress': true,

@@ -1,11 +1,11 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { ColumnProps } from './Column.types';
+import { IColumnProps } from './Column.types';
 
 import './Column.scss';
 
-const Column = ({ children, size }: ColumnProps) => (
+const Column = ({ children, size }: IColumnProps) => (
   <div
     data-testid="Column"
     className={getClassNames({

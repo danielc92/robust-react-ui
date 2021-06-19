@@ -1,5 +1,5 @@
 import React from 'react';
 
-export interface TypographyProps {
+export interface ITypographyProps {
   children: React.ReactNode;
 }

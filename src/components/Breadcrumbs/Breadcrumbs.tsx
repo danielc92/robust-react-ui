@@ -1,10 +1,10 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { BreadcrumbsProps } from './Breadcrumbs.types';
+import { IBreadcrumbsProps } from './Breadcrumbs.types';
 import './Breadcrumbs.scss';
 
-const Breadcrumbs = ({ ariaLabel, data, size }: BreadcrumbsProps) => (
+const Breadcrumbs = ({ ariaLabel, data, size }: IBreadcrumbsProps) => (
   <nav
     aria-label={ariaLabel || 'breadcrumbs'}
     data-testid="Breadcrumbs"

@@ -3,10 +3,10 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 
 import TabList from './TabList';
-import { TabListProps } from './TabList.types';
+import { ITabListProps } from './TabList.types';
 
 describe('TabList Suite', () => {
-  let props: TabListProps;
+  let props: ITabListProps;
 
   beforeEach(() => {
     props = {

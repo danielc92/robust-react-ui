@@ -2,10 +2,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import Paragraph from './Paragraph';
-import { ParagraphProps } from './Paragraph.types';
+import { IParagraphProps } from './Paragraph.types';
 
 describe('Paragraph Suite', () => {
-  let props: ParagraphProps;
+  let props: IParagraphProps;
 
   beforeEach(() => {
     props = {

@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { ParagraphProps } from './Paragraph.types';
+import { IParagraphProps } from './Paragraph.types';
 import './Paragraph.scss';
 
 const Paragraph = ({
@@ -9,7 +9,7 @@ const Paragraph = ({
   id,
   size = 'medium',
   bolded = false,
-}: ParagraphProps) => (
+}: IParagraphProps) => (
   <p
     className={getClassNames({
       'dcui-para': true,

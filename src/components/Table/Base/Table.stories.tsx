@@ -2,15 +2,15 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Table from './Table';
-import { TableProps } from './Table.types';
+import { ITableProps } from './Table.types';
 
 export default {
   title: 'Components/Table',
   component: Table,
   args: {},
-} as Meta<TableProps>;
+} as Meta<ITableProps>;
 
-const Template: Story<TableProps> = (args) => (
+const Template: Story<ITableProps> = (args) => (
   <Table {...args}>
     <Table.Head>
       <Table.Row>
@@ -43,11 +43,11 @@ const Template: Story<TableProps> = (args) => (
   </Table>
 );
 
-export const Basic: Story<TableProps> = Template.bind({});
-export const Striped: Story<TableProps> = Template.bind({});
+export const Basic: Story<ITableProps> = Template.bind({});
+export const Striped: Story<ITableProps> = Template.bind({});
 Striped.args = { striped: true };
 
-export const Centered: Story<TableProps> = Template.bind({});
+export const Centered: Story<ITableProps> = Template.bind({});
 Centered.args = { centerCellContent: true };
 
 export const WithRowSpan = () => (

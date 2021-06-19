@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Carousel from './Carousel';
-import { CarouselProps } from './Carousel.types';
+import { ICarouselProps } from './Carousel.types';
 
 describe('Test Component', () => {
-  let props: CarouselProps;
+  let props: ICarouselProps;
 
   beforeEach(() => {
     props = {

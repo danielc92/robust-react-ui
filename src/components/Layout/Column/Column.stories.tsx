@@ -4,14 +4,14 @@ import { Story, Meta } from '@storybook/react';
 import Typography from 'robust-react-ui/components/Typography';
 import Column from 'robust-react-ui/components/Layout/Column';
 import Row from 'robust-react-ui/components/Layout/Row';
-import { ColumnProps } from './Column.types';
+import { IColumnProps } from './Column.types';
 
 export default {
   title: 'Components/Layout/Rows & Columns',
   args: {},
-} as Meta<ColumnProps>;
+} as Meta<IColumnProps>;
 
-const Template: Story<ColumnProps> = (args) => (
+const Template: Story<IColumnProps> = (args) => (
   <Row>
     {new Array(7).fill(0).map((x, index) => (
       <Column {...args} key={index.toString()}>
@@ -29,11 +29,11 @@ const Template: Story<ColumnProps> = (args) => (
   </Row>
 );
 
-export const Half: Story<ColumnProps> = Template.bind({});
+export const Half: Story<IColumnProps> = Template.bind({});
 Half.args = { size: 'half' };
 
-export const Quarter: Story<ColumnProps> = Template.bind({});
+export const Quarter: Story<IColumnProps> = Template.bind({});
 Quarter.args = { size: 'quarter' };
 
-export const Third: Story<ColumnProps> = Template.bind({});
+export const Third: Story<IColumnProps> = Template.bind({});
 Third.args = { size: 'third' };

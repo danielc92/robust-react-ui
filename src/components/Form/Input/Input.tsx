@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { FormInputProps } from './Input.types';
+import { IFormInputProps } from './Input.types';
 import './Input.scss';
 
 const Input = ({
@@ -16,7 +16,7 @@ const Input = ({
   errorMessage,
   disabled,
   name,
-}: FormInputProps) => (
+}: IFormInputProps) => (
   <div className="dcui-form__input-wrapper" data-testid="InputWrapper">
     <input
       name={name}

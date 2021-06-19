@@ -3,7 +3,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Grid from './Grid';
 import Typography from '../../Typography';
-import { GridProps } from './Grid.types';
+import { IGridProps } from './Grid.types';
 const { GridItem } = Grid;
 export default {
   title: 'Grid',
@@ -12,9 +12,9 @@ export default {
     // Insert default args here
     gap: 'm',
   },
-} as Meta<GridProps>;
+} as Meta<IGridProps>;
 
-const Template: Story<GridProps> = (args) => {
+const Template: Story<IGridProps> = (args) => {
   return (
     <Grid {...args}>
       <GridItem config={{ rowStart: 1, colStart: 1, height: 1, width: 6 }}>
@@ -64,7 +64,7 @@ const Template: Story<GridProps> = (args) => {
   );
 };
 
-const Template2: Story<GridProps> = (args) => {
+const Template2: Story<IGridProps> = (args) => {
   return (
     <Grid {...args}>
       <GridItem>
@@ -107,9 +107,9 @@ const Template2: Story<GridProps> = (args) => {
   );
 };
 
-export const Fixed: Story<GridProps> = Template.bind({});
+export const Fixed: Story<IGridProps> = Template.bind({});
 Fixed.args = {};
-export const Fluid: Story<GridProps> = Template.bind({});
+export const Fluid: Story<IGridProps> = Template.bind({});
 Fluid.args = {
   type: 'fluid',
 };

@@ -11,7 +11,7 @@ import Picture from 'robust-react-ui/components/Icon/Picture';
 import Download from 'robust-react-ui/components/Icon/Download';
 import Home from 'robust-react-ui/components/Icon/Home';
 import EyeOff from 'robust-react-ui/components/Icon/EyeOff';
-import { IconProps } from './Icon.types';
+import { IIconProps } from './Icon.types';
 
 const Icon = ({
   children,
@@ -19,7 +19,7 @@ const Icon = ({
   width = 24,
   height = 24,
   variant = 'primary',
-}: IconProps) => {
+}: IIconProps) => {
   const variantClass = `dcui-icon--${variant}`;
   return (
     <svg

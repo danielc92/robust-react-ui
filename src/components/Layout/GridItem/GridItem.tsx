@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { GridItemProps } from './GridItem.types';
+import { IGridItemProps } from './GridItem.types';
 import './GridItem.scss';
 
 const GridItem = ({
@@ -10,7 +10,7 @@ const GridItem = ({
   variant = 'primary',
   paddingX = 's',
   paddingY = 's',
-}: GridItemProps) => {
+}: IGridItemProps) => {
   const style: React.CSSProperties = config
     ? {
         gridRowStart: config.rowStart,

@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React, { useEffect, useRef, useState } from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { CarouselProps } from './Carousel.types';
+import { ICarouselProps } from './Carousel.types';
 import './Carousel.scss';
 import Typography from 'robust-react-ui/components/Typography';
 
@@ -10,7 +10,7 @@ const Carousel = ({
   slides,
   intervalSeconds = 5,
   autoplay = false,
-}: CarouselProps) => {
+}: ICarouselProps) => {
   const [activeSlide, setActive] = useState<number>(0);
 
   const ref = useRef<any>();

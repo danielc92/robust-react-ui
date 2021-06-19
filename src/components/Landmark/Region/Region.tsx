@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { RegionProps } from './Region.types';
+import { IRegionProps } from './Region.types';
 
-const Region = ({ children, ariaLabelledBy, ariaLabel }: RegionProps) => (
+const Region = ({ children, ariaLabelledBy, ariaLabel }: IRegionProps) => (
   <section
     data-testid="Region"
     className="dcui-landmark__region"

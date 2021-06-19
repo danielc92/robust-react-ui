@@ -3,7 +3,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Button from './Button';
-import { ButtonProps } from './Button.types';
+import { IButtonProps } from './Button.types';
 
 export default {
   title: 'Components/Button',
@@ -14,66 +14,66 @@ export default {
     children: 'Learn more',
     onClickFunction: () => {},
   },
-} as Meta<ButtonProps>;
+} as Meta<IButtonProps>;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<IButtonProps> = (args) => <Button {...args} />;
 
-export const PrimarySmall: Story<ButtonProps> = Template.bind({});
+export const PrimarySmall: Story<IButtonProps> = Template.bind({});
 PrimarySmall.args = {
   size: 'small',
 };
 
-export const PrimaryMedium: Story<ButtonProps> = Template.bind({});
+export const PrimaryMedium: Story<IButtonProps> = Template.bind({});
 PrimaryMedium.args = {};
 
-export const PrimaryLarge: Story<ButtonProps> = Template.bind({});
+export const PrimaryLarge: Story<IButtonProps> = Template.bind({});
 PrimaryLarge.args = {
   size: 'large',
 };
-export const DangerSmall: Story<ButtonProps> = Template.bind({});
+export const DangerSmall: Story<IButtonProps> = Template.bind({});
 DangerSmall.args = {
   size: 'small',
   variant: 'danger',
 };
 
-export const DangerMedium: Story<ButtonProps> = Template.bind({});
+export const DangerMedium: Story<IButtonProps> = Template.bind({});
 DangerMedium.args = {
   variant: 'danger',
 };
 
-export const DangerLarge: Story<ButtonProps> = Template.bind({});
+export const DangerLarge: Story<IButtonProps> = Template.bind({});
 DangerLarge.args = {
   size: 'large',
   variant: 'danger',
 };
-export const SuccessSmall: Story<ButtonProps> = Template.bind({});
+export const SuccessSmall: Story<IButtonProps> = Template.bind({});
 SuccessSmall.args = {
   size: 'small',
   variant: 'success',
 };
 
-export const SuccessMedium: Story<ButtonProps> = Template.bind({});
+export const SuccessMedium: Story<IButtonProps> = Template.bind({});
 SuccessMedium.args = {
   variant: 'success',
 };
 
-export const SuccessLarge: Story<ButtonProps> = Template.bind({});
+export const SuccessLarge: Story<IButtonProps> = Template.bind({});
 SuccessLarge.args = {
   size: 'large',
   variant: 'success',
 };
-export const SecondarySmall: Story<ButtonProps> = Template.bind({});
+export const SecondarySmall: Story<IButtonProps> = Template.bind({});
 SecondarySmall.args = {
   size: 'small',
   variant: 'secondary',
 };
 
-export const SecondaryMedium: Story<ButtonProps> = Template.bind({});
+export const SecondaryMedium: Story<IButtonProps> = Template.bind({});
 SecondaryMedium.args = {
   variant: 'secondary',
 };
 
-export const SecondaryLarge: Story<ButtonProps> = Template.bind({});
+export const SecondaryLarge: Story<IButtonProps> = Template.bind({});
 SecondaryLarge.args = {
   size: 'large',
   variant: 'secondary',

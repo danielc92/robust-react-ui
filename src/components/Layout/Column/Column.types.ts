@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface ColumnProps {
+export interface IColumnProps {
   children: ReactNode;
   /**
    * Size setting for component.

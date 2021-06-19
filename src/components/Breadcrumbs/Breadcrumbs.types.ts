@@ -1,15 +1,15 @@
 // Generated with util/create-component.js
-export interface BreadcrumbProps {
+export interface IBreadcrumbProps {
   linkHref: string | null;
   linkText: string;
   isCurrent: boolean;
 }
-export interface BreadcrumbsProps {
+export interface IBreadcrumbsProps {
   /**
    * An accessible label.
    */
   ariaLabel?: string;
-  data: Array<BreadcrumbProps>;
+  data: Array<IBreadcrumbProps>;
   /**
    * Size setting for component.
    * @default medium

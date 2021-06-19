@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React, { createRef, useEffect, useState } from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { NavigationBarProps, NavigationData } from './NavigationBar.types';
+import { INavigationBarProps, NavigationData } from './NavigationBar.types';
 import './NavigationBar.scss';
 
 const FOCUS_DELAY = 120;
@@ -22,7 +22,7 @@ const NavigationBar = ({
   onEnterLinkFunction,
   ariaLabel,
   id,
-}: NavigationBarProps) => {
+}: INavigationBarProps) => {
   const [nodes, setNodes] = useState<TransformedNavigationNode[]>([]);
   const [closeAll, setCloseAll] = useState(false);
   useEffect(() => {

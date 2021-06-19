@@ -2,15 +2,15 @@
 import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 import Alert from './Alert';
-import { AlertProps } from './Alert.types';
+import { IAlertProps } from './Alert.types';
 
 export default {
   title: 'Components/Alert',
   component: Alert,
   args: {},
-} as Meta<AlertProps>;
+} as Meta<IAlertProps>;
 
-const Template: Story<AlertProps> = (args) => {
+const Template: Story<IAlertProps> = (args) => {
   const [visible, setVisible] = useState<boolean>(true);
   const onCloseActionFunction = () => {
     setVisible(false);
@@ -29,13 +29,13 @@ const Template: Story<AlertProps> = (args) => {
   );
 };
 
-export const Primary: Story<AlertProps> = Template.bind({});
+export const Primary: Story<IAlertProps> = Template.bind({});
 Primary.args = {};
-export const Danger: Story<AlertProps> = Template.bind({});
+export const Danger: Story<IAlertProps> = Template.bind({});
 Danger.args = {
   variant: 'danger',
 };
-export const Success: Story<AlertProps> = Template.bind({});
+export const Success: Story<IAlertProps> = Template.bind({});
 Success.args = {
   variant: 'success',
 };

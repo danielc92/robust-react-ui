@@ -3,10 +3,10 @@ import React from 'react';
 
 import getClassNames from 'robust-react-ui/utils/getClassNames';
 import GridItem from 'robust-react-ui/components/Layout/GridItem';
-import { GridProps } from './Grid.types';
+import { IGridProps } from './Grid.types';
 import './Grid.scss';
 
-const Grid = ({ children, gap = 's', type = 'fixed' }: GridProps) => (
+const Grid = ({ children, gap = 's', type = 'fixed' }: IGridProps) => (
   <div
     data-testid="Grid"
     className={getClassNames({

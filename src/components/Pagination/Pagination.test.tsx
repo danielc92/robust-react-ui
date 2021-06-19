@@ -3,10 +3,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import Pagination from './Pagination';
-import { PaginationProps } from './Pagination.types';
+import { IPaginationProps } from './Pagination.types';
 
 describe('Pagination Suite', () => {
-  let props: PaginationProps;
+  let props: IPaginationProps;
 
   beforeEach(() => {
     props = {

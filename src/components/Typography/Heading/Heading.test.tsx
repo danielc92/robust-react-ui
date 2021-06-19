@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Heading from './Heading';
-import { HeadingProps } from './Heading.types';
+import { IHeadingProps } from './Heading.types';
 
 describe('Heading Suite', () => {
-  let props: HeadingProps;
+  let props: IHeadingProps;
 
   beforeEach(() => {
     props = {

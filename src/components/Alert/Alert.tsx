@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { AlertProps } from './Alert.types';
+import { IAlertProps } from './Alert.types';
 import './Alert.scss';
 
 const Alert = ({
@@ -10,7 +10,7 @@ const Alert = ({
   fullWidth,
   visible,
   onCloseActionFunction,
-}: AlertProps) => (
+}: IAlertProps) => (
   <div
     data-testid="Alert"
     role="alert"

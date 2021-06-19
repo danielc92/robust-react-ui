@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
-import { MainProps } from './Main.types';
+import { IMainProps } from './Main.types';
 
-const Main = ({ children }: MainProps) => (
+const Main = ({ children }: IMainProps) => (
   <main data-testid="Main" className="dcui-landmark__main">
     {children}
   </main>

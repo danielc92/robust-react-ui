@@ -3,14 +3,14 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Typography from 'robust-react-ui/components/Typography';
 import Container from 'robust-react-ui/components/Layout/Container';
-import { ContainerProps } from './Container.types';
+import { IContainerProps } from './Container.types';
 
 export default {
   title: 'Components/Layout/Container',
   args: {},
-} as Meta<ContainerProps>;
+} as Meta<IContainerProps>;
 
-const Template: Story<ContainerProps> = (args) => (
+const Template: Story<IContainerProps> = (args) => (
   <Container {...args}>
     <Typography.Heading level={1}>
       Ea in incididunt cillum ut laborum magna minim adipisicing non dolore
@@ -54,11 +54,11 @@ const Template: Story<ContainerProps> = (args) => (
   </Container>
 );
 
-export const Small: Story<ContainerProps> = Template.bind({});
+export const Small: Story<IContainerProps> = Template.bind({});
 Small.args = { size: 'small' };
 
-export const Medium: Story<ContainerProps> = Template.bind({});
+export const Medium: Story<IContainerProps> = Template.bind({});
 Medium.args = { size: 'medium' };
 
-export const Large: Story<ContainerProps> = Template.bind({});
+export const Large: Story<IContainerProps> = Template.bind({});
 Large.args = { size: 'large' };

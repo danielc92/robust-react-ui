@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
-export interface FormFieldSetProps {
+export interface IFormFieldSetProps {
   children: ReactNode;
 }

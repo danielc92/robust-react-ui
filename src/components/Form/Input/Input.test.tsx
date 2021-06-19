@@ -3,13 +3,13 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Input from './Input';
-import { FormInputProps } from './Input.types';
+import { IFormInputProps } from './Input.types';
 
 describe('Form Input Suite', () => {
-  let props: FormInputProps;
+  let props: IFormInputProps;
   beforeEach(() => {
     props = {
-      name:"input-name",
+      name: 'input-name',
       value: 'welcome to the jungle',
       id: 'sample-input',
       placeholder: 'type text',
@@ -17,7 +17,6 @@ describe('Form Input Suite', () => {
     };
   });
   const renderComponent = () => render(<Input {...props} />);
-
 
   it('Input should render with name attribute', () => {
     const { getByTestId } = renderComponent();
@@ -28,7 +27,7 @@ describe('Form Input Suite', () => {
   });
 
   it('Input should render with type password', () => {
-    props.type="password"
+    props.type = 'password';
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Input');
@@ -36,7 +35,7 @@ describe('Form Input Suite', () => {
     expect(component.getAttribute('type')).toEqual('password');
   });
   it('Input should render with type date', () => {
-    props.type="date"
+    props.type = 'date';
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Input');
@@ -44,7 +43,7 @@ describe('Form Input Suite', () => {
     expect(component.getAttribute('type')).toEqual('date');
   });
   it('Input should render with type color', () => {
-    props.type="color"
+    props.type = 'color';
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Input');

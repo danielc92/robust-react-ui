@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 // Generated with util/create-component.js
-export interface AlertProps {
+export interface IAlertProps {
   children: ReactNode;
   /**
    * Provides component with a colour theme.

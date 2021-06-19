@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Grid from './Grid';
-import { GridProps } from './Grid.types';
+import { IGridProps } from './Grid.types';
 
 describe('Test Component', () => {
-  let props: Partial<GridProps>;
+  let props: Partial<IGridProps>;
 
   beforeEach(() => {
     props = {

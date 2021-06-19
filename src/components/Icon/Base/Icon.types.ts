@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface IconProps {
+export interface IIconProps {
   children: React.ReactNode;
   /**
    * Changes the viewBox attribute of the icon wrapper.

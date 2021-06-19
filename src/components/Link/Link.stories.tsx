@@ -2,7 +2,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import Link from './Link';
-import { LinkProps } from './Link.types';
+import { ILinkProps } from './Link.types';
 
 export default {
   title: 'Components/Link',
@@ -11,19 +11,19 @@ export default {
     href: 'https://github.com/danielc92/robust-react-ui',
     ariaLabel: 'daniels github repo',
   },
-} as Meta<LinkProps>;
+} as Meta<ILinkProps>;
 
-const Template: Story<LinkProps> = (args) => <Link {...args} />;
+const Template: Story<ILinkProps> = (args) => <Link {...args} />;
 
-export const Small: Story<LinkProps> = Template.bind({});
+export const Small: Story<ILinkProps> = Template.bind({});
 Small.args = {
   size: 'small',
 };
 
-export const Medium: Story<LinkProps> = Template.bind({});
+export const Medium: Story<ILinkProps> = Template.bind({});
 Medium.args = {};
 
-export const Large: Story<LinkProps> = Template.bind({});
+export const Large: Story<ILinkProps> = Template.bind({});
 Large.args = {
   size: 'large',
 };

@@ -1,4 +1,4 @@
-export interface CarouselSlideProps {
+export interface ICarouselSlideProps {
   /**
    * Source url of image.
    */
@@ -21,7 +21,7 @@ export interface CarouselSlideProps {
   captionText: string;
 }
 
-export interface CarouselProps {
+export interface ICarouselProps {
   /**
    * An accessible label.
    */
@@ -29,7 +29,7 @@ export interface CarouselProps {
   /**
    * An array of slides
    */
-  slides: Array<CarouselSlideProps>;
+  slides: Array<ICarouselSlideProps>;
   /**
    * @default 5
    */

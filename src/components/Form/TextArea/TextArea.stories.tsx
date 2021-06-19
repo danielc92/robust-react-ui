@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react';
 import FieldSet from 'robust-react-ui/components/Form/FieldSet';
 import Label from 'robust-react-ui/components/Form/Label';
 import TextArea from './TextArea';
-import { FormTextAreaProps } from './TextArea.types';
+import { IFormTextAreaProps } from './TextArea.types';
 
 export default {
   title: 'Components/Form/TextArea',
@@ -14,9 +14,9 @@ export default {
     id: 'TextArea-example',
     placeholder: 'Type some text',
   },
-} as Meta<FormTextAreaProps>;
+} as Meta<IFormTextAreaProps>;
 
-const Template: Story<FormTextAreaProps> = (args) => {
+const Template: Story<IFormTextAreaProps> = (args) => {
   const [value, setValue] = useState('');
   const onChangeFunction = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
     setValue(event.target.value);
@@ -33,16 +33,16 @@ const Template: Story<FormTextAreaProps> = (args) => {
   );
 };
 
-export const Basic: Story<FormTextAreaProps> = Template.bind({});
+export const Basic: Story<IFormTextAreaProps> = Template.bind({});
 Basic.args = {};
 
-export const Error: Story<FormTextAreaProps> = Template.bind({});
+export const Error: Story<IFormTextAreaProps> = Template.bind({});
 Error.args = {
   error: true,
   errorMessage: 'Something went wrong',
 };
 
-export const Disabled: Story<FormTextAreaProps> = Template.bind({});
+export const Disabled: Story<IFormTextAreaProps> = Template.bind({});
 Disabled.args = {
   disabled: true,
 };
