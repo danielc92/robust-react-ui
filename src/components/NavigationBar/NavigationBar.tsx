@@ -1,7 +1,10 @@
 // Generated with util/create-component.js
 import React, { createRef, useEffect, useState } from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { INavigationBarProps, NavigationData } from './NavigationBar.types';
+import {
+  INavigationBarProps,
+  INavigationDataProps,
+} from './NavigationBar.types';
 import './NavigationBar.scss';
 
 const FOCUS_DELAY = 120;
@@ -28,7 +31,7 @@ const NavigationBar = ({
   useEffect(() => {
     const allNodes = [];
 
-    const getNode = (x: NavigationData, i: number) => {
+    const getNode = (x: INavigationDataProps, i: number) => {
       const o: Partial<TransformedNavigationNode> = {};
       if (x.children && x.children.length && x.children.length > 0) {
         o.menuOpen = false;
@@ -111,7 +114,7 @@ const NavigationBar = ({
     }, FOCUS_DELAY);
   };
 
-  const focusDownNode = (node: NavigationData) => {
+  const focusDownNode = (node: INavigationDataProps) => {
     // get nodes at the level
     const filtered = nodes.filter((n) => n.parentId === node.parentId);
     // find the current pos
@@ -126,7 +129,7 @@ const NavigationBar = ({
       filtered[currentNode.order + 1].ref.current.focus();
     }
   };
-  const focusUpNode = (node: NavigationData) => {
+  const focusUpNode = (node: INavigationDataProps) => {
     // get nodes at the level
     const filtered = nodes.filter((n) => n.parentId === node.parentId);
 
@@ -143,7 +146,7 @@ const NavigationBar = ({
     }
   };
 
-  const handleLeftPress = (node: NavigationData) => {
+  const handleLeftPress = (node: INavigationDataProps) => {
     // if has children has parent close the current dropdown
     // focus on parent node
     const foundNode = nodes.find((n) => n.id === node.id);
@@ -168,7 +171,7 @@ const NavigationBar = ({
       traverseTopLevelMenu(foundNode.menuId, 'LEFT');
     }
   };
-  const handleRightPress = (node: NavigationData) => {
+  const handleRightPress = (node: INavigationDataProps) => {
     // if has children open the menu
     const foundNode = nodes.find((n) => n.id === node.id);
     if (foundNode.hasMenu) {
@@ -196,7 +199,7 @@ const NavigationBar = ({
     }
   };
 
-  const closeAllAndFocusTopMenu = (node: NavigationData) => {
+  const closeAllAndFocusTopMenu = (node: INavigationDataProps) => {
     // node.parentId
 
     setNodes(nodes.map((x) => ({ ...x, menuOpen: false })));
