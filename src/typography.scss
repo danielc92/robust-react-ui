@@ -1,5 +1,5 @@
 :root {
-  --font-family-primary: "Montserrat", helvetica, arial, sans-serif;
+  --font-family-primary: 'Montserrat', helvetica, arial, sans-serif;
   --font-size-sm: 0.8rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.25rem;
@@ -10,4 +10,5 @@
   --font-line-height-md: calc(var(--font-size-md) * 1.5);
   --font-line-height-lg: calc(var(--font-size-lg) * 1.5);
   --font-margin: 0 0 var(--global-space-under) 0;
+  --font-margin-small: 0 0 var(--space-xs) 0;
 }
