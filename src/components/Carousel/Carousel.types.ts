@@ -1,25 +1,4 @@
-// Generated with util/create-component.js
-export interface CarouselProps {
-  /**
-   * An accessible label.
-   */
-  ariaLabel: string;
-  /**
-   * An array of slides
-   */
-  slides: Array<CarouselSlide>;
-  /**
-   * @default 5
-   */
-  intervalSeconds?: number;
-
-  /**
-   * @default false
-   */
-  autoplay?: boolean;
-}
-
-export interface CarouselSlide {
+export interface CarouselSlideProps {
   /**
    * Source url of image.
    */
@@ -40,4 +19,24 @@ export interface CarouselSlide {
    * Description text for the slide.
    */
   captionText: string;
+}
+
+export interface CarouselProps {
+  /**
+   * An accessible label.
+   */
+  ariaLabel: string;
+  /**
+   * An array of slides
+   */
+  slides: Array<CarouselSlideProps>;
+  /**
+   * @default 5
+   */
+  intervalSeconds?: number;
+
+  /**
+   * @default false
+   */
+  autoplay?: boolean;
 }

@@ -1,15 +1,15 @@
 // Generated with util/create-component.js
 
-export interface NavigationData {
+export interface NavigationDataProps {
   parentId: null | number;
   id: number;
   linkName: string;
   linkHref?: string;
-  children?: NavigationData[];
+  children?: NavigationDataProps[];
   hasSeparator?: boolean;
 }
 export interface NavigationBarProps {
-  data: NavigationData[];
+  data: NavigationDataProps[];
   onEnterLinkFunction?: (href: string) => void;
   /**
    * An accessible label.

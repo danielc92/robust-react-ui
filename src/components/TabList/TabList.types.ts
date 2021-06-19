@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 // Generated with util/create-component.js
 
-export interface TabListTab {
+export interface TabListTabProps {
   /**
    * Provides the component with an id attribute. May be used for accessibilty purposes.
    */
@@ -24,7 +24,7 @@ export interface TabListProps {
    * @default primary
    */
   variant?: 'primary' | 'danger' | 'success' | 'secondary';
-  tabs: Array<TabListTab>;
+  tabs: Array<TabListTabProps>;
   /**
    * Component will take up the full width available.
    */
