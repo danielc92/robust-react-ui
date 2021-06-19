@@ -48,6 +48,7 @@
     outline: none;
     background-color: var(--nav-active-background-color);
     color: var(--nav-active-color);
+
     .dcui-nav__chevron {
       color: var(--nav-active-color);
     }
@@ -108,23 +109,35 @@
       background-color: var(--nav-active-background-color);
       color: var(--nav-active-color);
     }
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      > a[role='menuitem'] > .dcui-nav__chevron {
+        color: var(--nav-active-color);
+        transition: none;
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+
     > a[role='menuitem'] > .dcui-nav__chevron {
       color: var(--nav-active-color);
       transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
       transform: translateY(-50%) rotate(90deg);
     }
   }
+
   .dcui-nav__dropdown-item,
   .dcui-nav__menu-item {
     > a[aria-expanded='true'] {
       outline: none;
       background-color: var(--nav-active-background-color);
       color: var(--nav-active-color);
+
       .dcui-nav__chevron {
         color: var(--nav-active-color);
       }
     }
   }
+
   .dcui-nav__menu-item {
     > a[role='menuitem'] {
       line-height: 3rem;
