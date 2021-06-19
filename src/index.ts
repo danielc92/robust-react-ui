@@ -19,7 +19,7 @@ export {
 export { default as Form } from './components/Form';
 export { IFormProps } from './components/Form/Base/Form.types';
 export {
-  ICheckboxOptionProps,
+  IFormCheckboxOptionProps,
   IFormCheckboxGroupProps,
 } from './components/Form/CheckboxGroup/CheckboxGroup.types';
 export { IFormFieldSetProps } from './components/Form/FieldSet/FieldSet.types';

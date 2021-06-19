@@ -1,4 +1,4 @@
-export interface ICheckboxOptionProps {
+export interface IFormCheckboxOptionProps {
   displayValue: string;
   keyValue: string;
   checked: boolean;
@@ -8,7 +8,7 @@ export interface IFormCheckboxGroupProps {
    * Provides the component with an id attribute. May be used for accessibilty purposes.
    */
   id: string;
-  values: ICheckboxOptionProps[];
+  values: IFormCheckboxOptionProps[];
   /**
    * An accessible label via id of another element.
    */
