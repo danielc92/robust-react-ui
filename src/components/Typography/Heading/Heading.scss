@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
   --header-font-size-h1: var(--font-size-xxxlg);
@@ -42,6 +42,7 @@
 
   &__3 {
     font-size: var(--header-font-size-h3);
+    margin: var(--font-margin-small);
 
     &--jumbo {
       font-size:
@@ -53,6 +54,7 @@
 
   &__4 {
     font-size: var(--header-font-size-h4);
+    margin: var(--font-margin-small);
 
     &--jumbo {
       font-size:
@@ -64,6 +66,7 @@
 
   &__5 {
     font-size: var(--header-font-size-h5);
+    margin: var(--font-margin-small);
 
     &--jumbo {
       font-size:
@@ -75,6 +78,7 @@
 
   &__6 {
     font-size: var(--header-font-size-h6);
+    margin: var(--font-margin-small);
 
     &--jumbo {
       font-size:
