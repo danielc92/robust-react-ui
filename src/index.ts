@@ -1,41 +1,19 @@
-import Icon from 'robust-react-ui/components/Icon';
-import Button from 'robust-react-ui/components/Button';
-import Landmark from 'robust-react-ui/components/Landmark';
-import Layout from 'robust-react-ui/components/Layout';
-import Table from 'robust-react-ui/components/Table';
-import Typography from 'robust-react-ui/components/Typography';
-import TabList from 'robust-react-ui/components/TabList';
-import AlertDialogue from 'robust-react-ui/components/AlertDialogue';
-import Form from 'robust-react-ui/components/Form';
-import Link from 'robust-react-ui/components/Link';
-import Image from 'robust-react-ui/components/Image';
-import AutoComplete from 'robust-react-ui/components/AutoComplete';
-import Pagination from 'robust-react-ui/components/Pagination';
-import NavigationBar from 'robust-react-ui/components/NavigationBar';
-import Accordion from 'robust-react-ui/components/Accordion';
-import Alert from 'robust-react-ui/components/Alert';
-import ProgressBar from 'robust-react-ui/components/ProgressBar';
-import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
-import Carousel from 'robust-react-ui/components/Carousel';
-
-export {
-  Icon,
-  Carousel,
-  Breadcrumbs,
-  Accordion,
-  Alert,
-  AutoComplete,
-  Button,
-  Pagination,
-  NavigationBar,
-  AlertDialogue,
-  Landmark,
-  Layout,
-  Link,
-  Image,
-  Table,
-  TabList,
-  Typography,
-  Form,
-  ProgressBar,
-};
+export { default as Icon } from './components/Icon';
+export { default as Button } from './components/Button';
+export { default as Landmark } from './components/Landmark';
+export { default as Layout } from './components/Layout';
+export { default as Table } from './components/Table';
+export { default as Typography } from './components/Typography';
+export { default as TabList } from './components/TabList';
+export { default as AlertDialogue } from './components/AlertDialogue';
+export { default as Form } from './components/Form';
+export { default as Link } from './components/Link';
+export { default as Image } from './components/Image';
+export { default as AutoComplete } from './components/AutoComplete';
+export { default as Pagination } from './components/Pagination';
+export { default as NavigationBar } from './components/NavigationBar';
+export { default as Accordion } from './components/Accordion';
+export { default as Alert } from './components/Alert';
+export { default as ProgressBar } from './components/ProgressBar';
+export { default as Breadcrumbs } from './components/Breadcrumbs';
+export { default as Carousel } from './components/Carousel';
