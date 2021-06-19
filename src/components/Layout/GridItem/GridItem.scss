@@ -1,0 +1,130 @@
+// Generated with util/create-component.js
+@import '../../../variables.scss';
+@import '../../../typography.scss';
+@import '../../../breakpoints.scss';
+
+.dcui-grid {
+  &__item {
+    &--shrink-tablet {
+      @include for-tablet {
+        grid-column-start: 1 !important;
+        grid-column-end: 4 !important;
+        grid-row-start: 1 !important;
+        grid-row-end: 1 !important;
+      }
+
+      @include for-mobile {
+        grid-column-start: 1 !important;
+        grid-column-end: 2 !important;
+        grid-row-start: 1 !important;
+        grid-row-end: 1 !important;
+      }
+    }
+
+    &--shrink-mobile {
+      @include for-mobile {
+        grid-column-start: 1 !important;
+        grid-column-end: 2 !important;
+        grid-row-start: 1 !important;
+        grid-row-end: 1 !important;
+      }
+    }
+
+    box-sizing: border-box;
+
+    &--padding-y-xxs {
+      padding-top: var(--space-xxs);
+      padding-bottom: var(--space-xxs);
+    }
+
+    &--padding-y-xs {
+      padding-top: var(--space-xs);
+      padding-bottom: var(--space-xs);
+    }
+
+    &--padding-y-s {
+      padding-top: var(--space-s);
+      padding-bottom: var(--space-s);
+    }
+
+    &--padding-y-m {
+      padding-top: var(--space-m);
+      padding-bottom: var(--space-m);
+    }
+
+    &--padding-y-l {
+      padding-top: var(--space-l);
+      padding-bottom: var(--space-l);
+    }
+
+    &--padding-x-xxs {
+      padding-right: var(--space-xxs);
+      padding-left: var(--space-xxs);
+    }
+
+    &--padding-x-xs {
+      padding-right: var(--space-xs);
+      padding-left: var(--space-xs);
+    }
+
+    &--padding-x-s {
+      padding-right: var(--space-s);
+      padding-left: var(--space-s);
+    }
+
+    &--padding-x-m {
+      padding-right: var(--space-m);
+      padding-left: var(--space-m);
+    }
+
+    &--padding-x-l {
+      padding-right: var(--space-l);
+      padding-left: var(--space-l);
+    }
+
+    &--primary {
+      background-color: var(--color-primary);
+
+      .dcui-header,
+      .dcui-para {
+        color: var(--color-white);
+      }
+    }
+
+    &--success {
+      background-color: var(--color-success);
+
+      .dcui-header,
+      .dcui-para {
+        color: var(--color-white);
+      }
+    }
+
+    &--danger {
+      background-color: var(--color-danger);
+
+      .dcui-header,
+      .dcui-para {
+        color: var(--color-white);
+      }
+    }
+
+    &--dark {
+      background-color: var(--color-charcoal);
+
+      .dcui-header,
+      .dcui-para {
+        color: var(--color-white);
+      }
+    }
+
+    &--light {
+      background-color: var(--color-light-grey);
+
+      .dcui-header,
+      .dcui-para {
+        color: var(--color-charcoal);
+      }
+    }
+  }
+}
