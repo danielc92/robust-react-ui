@@ -1,11 +1,11 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 .dcui-row {
   box-sizing: border-box;
   display: flex;
-
+  flex-wrap: wrap;
   &--wrap {
     flex-wrap: wrap;
   }

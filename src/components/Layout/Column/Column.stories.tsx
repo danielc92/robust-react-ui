@@ -37,3 +37,9 @@ Quarter.args = { size: 'quarter' };
 
 export const Third: Story<IColumnProps> = Template.bind({});
 Third.args = { size: 'third' };
+export const ExtraExtraSmallPadding: Story<IColumnProps> = Template.bind({});
+ExtraExtraSmallPadding.args = { paddingX: 'xxs', paddingY: 'xxs' };
+export const MediumPadding: Story<IColumnProps> = Template.bind({});
+MediumPadding.args = { paddingX: 'm', paddingY: 'm' };
+export const LargePadding: Story<IColumnProps> = Template.bind({});
+LargePadding.args = { paddingX: 'l', paddingY: 'l' };
