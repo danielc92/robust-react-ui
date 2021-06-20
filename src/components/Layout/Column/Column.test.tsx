@@ -37,6 +37,14 @@ describe('Row/Column suite', () => {
 
     expect(component).toHaveClass('dcui-row');
   });
+
+  it('should render row wrap class by default', () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId('Row');
+
+    expect(component).toHaveClass('dcui-row--wrap');
+  });
   it('should render exactly 4 columns', () => {
     const { getAllByTestId } = renderComponent();
 

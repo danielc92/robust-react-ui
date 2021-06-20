@@ -5,12 +5,12 @@ import { IRowProps } from './Row.types';
 
 import './Row.scss';
 
-const Row = ({ children, wrap }: IRowProps) => (
+const Row = ({ children, wrap = true }: IRowProps) => (
   <div
     data-testid="Row"
     className={getClassNames({
       'dcui-row': true,
-      'dcui-row--wrap': wrap === true,
+      'dcui-row--wrap': wrap,
     })}
   >
     {children}
