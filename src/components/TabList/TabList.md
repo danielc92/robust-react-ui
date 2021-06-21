@@ -82,7 +82,7 @@ import TabList from 'robust-react-ui/components/TabList';
   variant="success"
   tabs={[
     {
-      tabId: 'pluto-tab',
+      tabId: 'pluto-tab2',
       buttonLabel: 'Pluto',
       buttonId: 'pluto',
       tabContent: (
@@ -94,7 +94,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'earth-tab',
+      tabId: 'earth-tab2',
       buttonLabel: 'Earth',
       buttonId: 'earth',
 
@@ -107,7 +107,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'venus-tab',
+      tabId: 'venus-tab2',
       buttonLabel: 'Venus',
       buttonId: 'venus',
       tabContent: (
@@ -120,7 +120,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'jupiter-tab',
+      tabId: 'jupiter-tab2',
       buttonLabel: 'Jupiter',
       buttonId: 'jupiter',
       tabContent: (
@@ -146,7 +146,7 @@ import TabList from 'robust-react-ui/components/TabList';
   variant="danger"
   tabs={[
     {
-      tabId: 'pluto-tab',
+      tabId: 'pluto-tab3',
       buttonLabel: 'Pluto',
       buttonId: 'pluto',
       tabContent: (
@@ -158,7 +158,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'earth-tab',
+      tabId: 'earth-tab3',
       buttonLabel: 'Earth',
       buttonId: 'earth',
 
@@ -171,7 +171,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'venus-tab',
+      tabId: 'venus-tab3',
       buttonLabel: 'Venus',
       buttonId: 'venus',
       tabContent: (
@@ -184,7 +184,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'jupiter-tab',
+      tabId: 'jupiter-tab3',
       buttonLabel: 'Jupiter',
       buttonId: 'jupiter',
       tabContent: (
@@ -210,7 +210,7 @@ import TabList from 'robust-react-ui/components/TabList';
   variant="secondary"
   tabs={[
     {
-      tabId: 'pluto-tab',
+      tabId: 'pluto-tab4',
       buttonLabel: 'Pluto',
       buttonId: 'pluto',
       tabContent: (
@@ -222,7 +222,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'earth-tab',
+      tabId: 'earth-tab4',
       buttonLabel: 'Earth',
       buttonId: 'earth',
 
@@ -235,7 +235,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'venus-tab',
+      tabId: 'venus-tab4',
       buttonLabel: 'Venus',
       buttonId: 'venus',
       tabContent: (
@@ -248,7 +248,7 @@ import TabList from 'robust-react-ui/components/TabList';
       ),
     },
     {
-      tabId: 'jupiter-tab',
+      tabId: 'jupiter-tab4',
       buttonLabel: 'Jupiter',
       buttonId: 'jupiter',
       tabContent: (
