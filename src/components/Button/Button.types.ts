@@ -18,6 +18,16 @@ export interface IButtonProps {
    */
   id?: string;
   tabIndex?: number;
+  /**
+   * Creates equal padding vertically and horizontally
+   * @default false
+   */
+  square?: boolean;
+  /**
+   * An accessible label.
+   */
+  ariaLabel?: string;
+
   ariaControls?: string;
   /**
    * A function to be triggered on mouse click event.
