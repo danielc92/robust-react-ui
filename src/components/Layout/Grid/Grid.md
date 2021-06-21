@@ -4,6 +4,7 @@ Features split into two sections below;
 
 ### Fixed type
 
+- grid based layout.
 - default of 6 column layout
 - supports consistent spacing between GridItems, both horizontally and vertically
 - supports highly custom layouts
