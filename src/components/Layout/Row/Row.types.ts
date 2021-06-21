@@ -7,4 +7,14 @@ export interface IRowProps {
    * @default true
    */
   wrap?: boolean;
+
+  /**
+   * @default stretch
+   */
+  alignY?: 'top' | 'bottom' | 'middle' | 'stretch';
+
+  /**
+   * @default left
+   */
+  alignX?: 'left' | 'right' | 'even-between' | 'even-around';
 }
