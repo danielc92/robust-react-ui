@@ -14,6 +14,8 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       size = 'medium',
       variant = 'primary',
       tabIndex,
+      ariaLabel,
+      square = false,
       onClickFunction,
       onKeyDownFunction,
     },
@@ -23,6 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       type="button"
       onKeyDown={onKeyDownFunction || null}
       tabIndex={tabIndex || null}
+      aria-label={ariaLabel || null}
       aria-controls={ariaControls || null}
       id={id || null}
       data-testid="Button"
@@ -32,6 +35,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       ref={ref}
       className={getClassNames({
         'dcui-button': true,
+        'dcui-button--square': square,
         [`dcui-button--${size}`]: true,
         [`dcui-button--${variant}`]: true,
       })}
