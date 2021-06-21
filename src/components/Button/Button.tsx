@@ -11,8 +11,8 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       children,
       id,
       ariaControls,
-      size,
-      variant,
+      size = 'medium',
+      variant = 'primary',
       tabIndex,
       onClickFunction,
       onKeyDownFunction,
@@ -32,13 +32,8 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       ref={ref}
       className={getClassNames({
         'dcui-button': true,
-        'dcui-button--small': size === 'small',
-        'dcui-button--medium': !size || size === 'medium',
-        'dcui-button--large': size === 'large',
-        'dcui-button--primary': variant === 'primary' || !variant,
-        'dcui-button--danger': variant === 'danger',
-        'dcui-button--success': variant === 'success',
-        'dcui-button--secondary': variant === 'secondary',
+        [`dcui-button--${size}`]: true,
+        [`dcui-button--${variant}`]: true,
       })}
     >
       {children}

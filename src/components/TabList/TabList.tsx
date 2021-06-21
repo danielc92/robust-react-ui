@@ -5,7 +5,12 @@ import getClassNames from 'robust-react-ui/utils/getClassNames';
 import { ITabListProps } from './TabList.types';
 import './TabList.scss';
 
-const TabList = ({ ariaLabel, tabs, fullWidth, variant }: ITabListProps) => {
+const TabList = ({
+  ariaLabel,
+  tabs,
+  fullWidth = false,
+  variant = 'primary',
+}: ITabListProps) => {
   const [activeTab, setActiveTab] =
     useState<{
       tabName: string;
@@ -114,10 +119,7 @@ const TabList = ({ ariaLabel, tabs, fullWidth, variant }: ITabListProps) => {
       className={getClassNames({
         'dcui-tablist': true,
         'dcui-tablist--full-width': fullWidth,
-        'dcui-tablist--primary': variant === 'primary' || !variant,
-        'dcui-tablist--danger': variant === 'danger',
-        'dcui-tablist--success': variant === 'success',
-        'dcui-tablist--secondary': variant === 'secondary',
+        [`dcui-tablist--${variant}`]: true,
       })}
     >
       <div

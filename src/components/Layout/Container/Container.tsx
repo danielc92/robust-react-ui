@@ -5,14 +5,12 @@ import { IContainerProps } from './Container.types';
 
 import './Container.scss';
 
-const Container = ({ children, size }: IContainerProps) => (
+const Container = ({ children, size = 'medium' }: IContainerProps) => (
   <div
     data-testid="Container"
     className={getClassNames({
       'dcui-container': true,
-      'dcui-container--small': size === 'small',
-      'dcui-container--medium': size === 'medium' || !size,
-      'dcui-container--large': size === 'large',
+      [`dcui-container--${size}`]: true,
     })}
   >
     {children}

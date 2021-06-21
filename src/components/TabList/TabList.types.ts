@@ -27,6 +27,7 @@ export interface ITabListProps {
   tabs: Array<ITabListTabProps>;
   /**
    * Component will take up the full width available.
+   * @default false
    */
   fullWidth?: boolean;
 }

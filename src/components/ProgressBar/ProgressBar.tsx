@@ -8,21 +8,16 @@ const ProgressBar = ({
   minimumValue,
   maximumValue,
   currentValue,
-  size,
+  size = 'medium',
+  variant = 'primary',
   fullWidth,
-  variant,
 }: IProgressBarProps) => (
   <div
     className={getClassNames({
       'dcui-progress': true,
       'dcui-progress--full-width': fullWidth,
-      'dcui-progress--small': size === 'small',
-      'dcui-progress--medium': size === 'medium' || !size,
-      'dcui-progress--large': size === 'large',
-      'dcui-progress--primary': !variant || variant === 'primary',
-      'dcui-progress--danger': variant === 'danger',
-      'dcui-progress--secondary': variant === 'secondary',
-      'dcui-progress--success': variant === 'success',
+      [`dcui-progress--${variant}`]: true,
+      [`dcui-progress--${size}`]: true,
     })}
     data-testid="ProgressBar"
   >

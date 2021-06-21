@@ -8,6 +8,10 @@ export interface ILinkProps {
    * @default medium
    */
   size?: 'small' | 'medium' | 'large';
+  /**
+   * Set display type, inline or block.
+   * @default inline
+   */
   display?: 'inline' | 'block';
   href: string;
   /**

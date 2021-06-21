@@ -6,7 +6,7 @@ import './Alert.scss';
 
 const Alert = ({
   children,
-  variant,
+  variant = 'primary',
   fullWidth,
   visible,
   onCloseActionFunction,
@@ -16,9 +16,7 @@ const Alert = ({
     role="alert"
     className={getClassNames({
       'dcui-alert': true,
-      'dcui-alert--primary': variant === 'primary' || !variant,
-      'dcui-alert--danger': variant === 'danger',
-      'dcui-alert--success': variant === 'success',
+      [`dcui-alert--${variant}`]: true,
       'dcui-alert--full-width': fullWidth,
       'dcui-alert--hidden': visible === false,
     })}

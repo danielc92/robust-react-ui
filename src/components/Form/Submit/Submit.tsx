@@ -6,7 +6,12 @@ import { IFormSubmitProps } from './Submit.types';
 
 import './Submit.scss';
 
-const Submit = ({ value, id, size, variant }: IFormSubmitProps) => (
+const Submit = ({
+  value,
+  id,
+  size = 'medium',
+  variant = 'primary',
+}: IFormSubmitProps) => (
   <input
     type="submit"
     value={value}
@@ -14,12 +19,8 @@ const Submit = ({ value, id, size, variant }: IFormSubmitProps) => (
     data-testid="Button"
     className={getClassNames({
       'dcui-form__submit': true,
-      'dcui-form__submit--small': size === 'small',
-      'dcui-form__submit--medium': !size || size === 'medium',
-      'dcui-form__submit--large': size === 'large',
-      'dcui-form__submit--primary': variant === 'primary' || !variant,
-      'dcui-form__submit--danger': variant === 'danger',
-      'dcui-form__submit--success': variant === 'success',
+      [`dcui-form__submit--${variant}`]: true,
+      [`dcui-form__submit--${size}`]: true,
     })}
   />
 );

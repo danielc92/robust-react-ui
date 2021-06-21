@@ -7,8 +7,8 @@ import { ILinkProps } from './Link.types';
 const Link = ({
   href,
   children,
-  size,
-  display,
+  size = 'medium',
+  display = 'inline',
   ariaDescribedBy,
   ariaLabel,
 }: ILinkProps) => (
@@ -19,9 +19,7 @@ const Link = ({
     data-testid="Link"
     className={getClassNames({
       'dcui-link': true,
-      'dcui-link--small': size === 'small',
-      'dcui-link--medium': size === 'medium' || !size,
-      'dcui-link--large': size === 'large',
+      [`dcui-link--${size}`]: true,
       'dcui-link--block': display === 'block',
     })}
   >
