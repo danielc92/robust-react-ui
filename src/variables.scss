@@ -51,7 +51,7 @@
   --input-background-color-disabled: var(--color-disabled-light);
   --input-border-color-disabled: var(--color-disabled);
   --input-border-width: 2px;
-  --input-padding-y: var(--space-xs);
+  --input-padding-y: var(--space-s);
   --input-padding-x: var(--space-xs);
   --input-font-family: var(--font-family-primary);
   --input-color: var(--color-black);
@@ -61,5 +61,4 @@
   --input-border-radius: var(--global-border-radius);
   --input-default-width: 300px;
   --input-color-width: 38px;
-  --input-shadow: var(--global-shadow);
 }
