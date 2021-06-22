@@ -3,6 +3,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Icon from './Icon';
+import Box from '../Box';
 import { IIconProps } from './Icon.types';
 
 describe('Icon Suite', () => {
@@ -15,7 +16,7 @@ describe('Icon Suite', () => {
   const renderComponent = () =>
     render(
       <Icon {...props}>
-        <Icon.Box />
+        <Box />
       </Icon>
     );
 
