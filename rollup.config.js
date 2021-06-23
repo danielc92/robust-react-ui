@@ -1,8 +1,12 @@
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from 'rollup-plugin-typescript2';
-import sass from 'rollup-plugin-sass';
 import copy from 'rollup-plugin-copy';
+import scss from 'rollup-plugin-scss';
+import autoprefixer from 'autoprefixer';
+import postcss from 'postcss';
+import fs from 'fs';
+import CleanCss from 'clean-css';
 
 export default {
   input: [
@@ -327,8 +331,15 @@ export default {
     peerDepsExternal(),
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
-    sass({
-      output: 'build/styles/main.css',
+    scss({
+      // Run postcss processor before output
+      processor: (css) => postcss([autoprefixer({})]),
+      // Output both minified and uncompressed css
+      output: function (styles, styleNodes) {
+        fs.writeFileSync('build/styles/main.css', styles);
+        const minifiedStyles = new CleanCss().minify(styles).styles;
+        fs.writeFileSync('build/styles/main.min.css', minifiedStyles);
+      },
     }),
     copy({
       targets: [
