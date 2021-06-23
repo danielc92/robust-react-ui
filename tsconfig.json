@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "./",
+    "rootDir": "src",
     "baseUrl": "./",
     "paths": {
       "robust-react-ui/*": ["src/*"]

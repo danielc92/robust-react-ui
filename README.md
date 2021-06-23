@@ -1,6 +1,6 @@
-# Daniel Corcoran's React UI Library 🐲
+# Robust React UI
 
-The goal is provide a react library of components, which are robust, extensible and meet general accessibility guidelines. This project is currently **not published** on npm.
+The goal is provide a react library of components, which are robust, extensible and meet general accessibility guidelines.
 
 ## Storybook
 
@@ -13,7 +13,31 @@ Click the [following link](https://develop--60b75a95d763ec0039b4429c.chromatic.c
 
 ## Getting started
 
-TBD.
+`npm install robust-react-ui`
+
+or with yarn
+
+`yarn add robust-react-ui`
+
+in app.tsx
+
+```
+import React from "react";
+// Import css file
+import "robust-react-ui/build/styles/main.css";
+import { Button, Typography } from "robust-react-ui";
+function App() {
+  return (
+    <>
+      <Typography.Heading level={2}>Hello world</Typography.Heading>
+      <Button>Click me</Button>
+    </>
+  );
+}
+
+export default App;
+
+```
 
 ## Documentation
 
