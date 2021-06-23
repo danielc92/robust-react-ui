@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Alert from './Alert';
-import { AlertProps } from './Alert.types';
+import { IAlertProps } from './Alert.types';
 
 describe('Alert Suite', () => {
-  let props: AlertProps;
+  let props: IAlertProps;
 
   beforeEach(() => {
     props = {

@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { AutoCompleteProps } from './AutoComplete.types';
+import { IAutoCompleteProps } from './AutoComplete.types';
 import './AutoComplete.scss';
 
 const AutoComplete = ({
@@ -13,7 +13,7 @@ const AutoComplete = ({
   onChangeFunction,
   onSelectOptionFunction,
   onClearOptionsFunction,
-}: AutoCompleteProps) => {
+}: IAutoCompleteProps) => {
   const [moddedOptions, setModdedOptions] = useState<
     { option: string; i: number; selected: boolean; id: string }[]
   >([]);

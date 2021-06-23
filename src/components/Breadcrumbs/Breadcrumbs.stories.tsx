@@ -2,7 +2,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Breadcrumbs from './Breadcrumbs';
-import { BreadcrumbsProps } from './Breadcrumbs.types';
+import { IBreadcrumbsProps } from './Breadcrumbs.types';
 
 export default {
   title: 'Components/Breadcrumbs',
@@ -31,15 +31,15 @@ export default {
       },
     ],
   },
-} as Meta<BreadcrumbsProps>;
+} as Meta<IBreadcrumbsProps>;
 
-const Template: Story<BreadcrumbsProps> = (args) => <Breadcrumbs {...args} />;
+const Template: Story<IBreadcrumbsProps> = (args) => <Breadcrumbs {...args} />;
 
-export const Small: Story<BreadcrumbsProps> = Template.bind({});
+export const Small: Story<IBreadcrumbsProps> = Template.bind({});
 Small.args = { size: 'small' };
 
-export const Medium: Story<BreadcrumbsProps> = Template.bind({});
+export const Medium: Story<IBreadcrumbsProps> = Template.bind({});
 Medium.args = {};
 
-export const Large: Story<BreadcrumbsProps> = Template.bind({});
+export const Large: Story<IBreadcrumbsProps> = Template.bind({});
 Large.args = { size: 'large' };

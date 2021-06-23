@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface HeadingProps {
+export interface IHeadingProps {
   children: ReactNode;
   /**
    * Provides the component with an id attribute. May be used for accessibilty purposes.

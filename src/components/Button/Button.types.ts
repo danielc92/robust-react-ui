@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Generated with util/create-component.js
-export interface ButtonProps {
+export interface IButtonProps {
   /**
    * Size setting for component.
    * @default medium
@@ -18,6 +18,16 @@ export interface ButtonProps {
    */
   id?: string;
   tabIndex?: number;
+  /**
+   * Creates equal padding vertically and horizontally
+   * @default false
+   */
+  square?: boolean;
+  /**
+   * An accessible label.
+   */
+  ariaLabel?: string;
+
   ariaControls?: string;
   /**
    * A function to be triggered on mouse click event.

@@ -1,5 +1,5 @@
 // Generated with util/create-component.js
-export interface AutoCompleteProps {
+export interface IAutoCompleteProps {
   options: string[];
   labelText: string;
   value: string;

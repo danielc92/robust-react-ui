@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { TableFootProps } from './Foot.types';
+import { ITableFootProps } from './Foot.types';
 
-const Foot = ({ children }: TableFootProps) => (
+const Foot = ({ children }: ITableFootProps) => (
   <tfoot className="dcui-table__foot">{children}</tfoot>
 );
 

@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import ProgressBar from './ProgressBar';
-import { ProgressBarProps } from './ProgressBar.types';
+import { IProgressBarProps } from './ProgressBar.types';
 
 describe('Progress Suite', () => {
-  let props: ProgressBarProps;
+  let props: IProgressBarProps;
 
   beforeEach(() => {
     props = {

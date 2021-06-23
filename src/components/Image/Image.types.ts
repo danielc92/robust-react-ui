@@ -1,6 +1,6 @@
 import React from 'react';
 // Generated with util/create-component.js
-export interface ImageProps {
+export interface IImageProps {
   /**
    * A fixed height for the component. Improves layout performance.
    */

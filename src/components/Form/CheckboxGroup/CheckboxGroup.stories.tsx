@@ -4,8 +4,8 @@ import Label from 'robust-react-ui/components/Form/Label';
 import FieldSet from 'robust-react-ui/components/Form/FieldSet';
 import CheckboxGroup from './CheckboxGroup';
 import {
-  CheckboxOptionProps,
-  FormCheckboxGroupProps,
+  ICheckboxOptionProps,
+  IFormCheckboxGroupProps,
 } from './CheckboxGroup.types';
 
 export default {
@@ -49,10 +49,10 @@ export default {
       },
     ],
   },
-} as Meta<FormCheckboxGroupProps>;
+} as Meta<IFormCheckboxGroupProps>;
 
-const Template: Story<FormCheckboxGroupProps> = (args) => {
-  const [values, setValues] = useState<CheckboxOptionProps[]>(args.values);
+const Template: Story<IFormCheckboxGroupProps> = (args) => {
+  const [values, setValues] = useState<ICheckboxOptionProps[]>(args.values);
 
   const onSelectFunction = (keyValue: string, checked: boolean) => {
     setValues(
@@ -76,7 +76,7 @@ const Template: Story<FormCheckboxGroupProps> = (args) => {
   );
 };
 
-export const Checked: Story<FormCheckboxGroupProps> = Template.bind({});
+export const Checked: Story<IFormCheckboxGroupProps> = Template.bind({});
 Checked.args = {
   values: [
     {
@@ -111,5 +111,5 @@ Checked.args = {
     },
   ],
 };
-export const Unchecked: Story<FormCheckboxGroupProps> = Template.bind({});
+export const Unchecked: Story<IFormCheckboxGroupProps> = Template.bind({});
 Unchecked.args = {};

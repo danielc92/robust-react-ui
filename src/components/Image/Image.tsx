@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { ImageProps } from './Image.types';
+import { IImageProps } from './Image.types';
 import './Image.scss';
 
 const Image = ({
@@ -14,7 +14,7 @@ const Image = ({
   bordered,
   blurred,
   src,
-}: ImageProps) => (
+}: IImageProps) => (
   <img
     style={style || null}
     alt={alt}

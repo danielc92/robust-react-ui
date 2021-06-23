@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Select from './Select';
-import { FormSelectProps } from './Select.types';
+import { IFormSelectProps } from './Select.types';
 
 describe('Form Select Suite', () => {
-  let props: FormSelectProps;
+  let props: IFormSelectProps;
   beforeEach(() => {
     props = {
       values: [

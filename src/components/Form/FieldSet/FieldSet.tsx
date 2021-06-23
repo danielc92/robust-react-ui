@@ -1,11 +1,11 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { FormFieldSetProps } from './FieldSet.types';
+import { IFormFieldSetProps } from './FieldSet.types';
 
 import './FieldSet.scss';
 
-const FieldSet = ({ children }: FormFieldSetProps) => (
+const FieldSet = ({ children }: IFormFieldSetProps) => (
   <fieldset className="dcui-form__fieldset">{children}</fieldset>
 );
 

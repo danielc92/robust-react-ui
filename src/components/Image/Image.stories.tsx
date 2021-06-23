@@ -3,7 +3,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Image from './Image';
 import src from './assets/xavi-cabrera-kn-UmDZQDjM-unsplash.jpg';
-import { ImageProps } from './Image.types';
+import { IImageProps } from './Image.types';
 
 export default {
   title: 'Components/Image',
@@ -14,31 +14,31 @@ export default {
     width: 800,
     height: 475,
   },
-} as Meta<ImageProps>;
+} as Meta<IImageProps>;
 
-const Template: Story<ImageProps> = (args) => <Image {...args} />;
+const Template: Story<IImageProps> = (args) => <Image {...args} />;
 
-export const Basic: Story<ImageProps> = Template.bind({});
+export const Basic: Story<IImageProps> = Template.bind({});
 
-export const ScalingUnrestricted: Story<ImageProps> = Template.bind({});
+export const ScalingUnrestricted: Story<IImageProps> = Template.bind({});
 ScalingUnrestricted.args = {
   scaling: 'unrestricted',
 };
-export const ScalingRestricted: Story<ImageProps> = Template.bind({});
+export const ScalingRestricted: Story<IImageProps> = Template.bind({});
 ScalingRestricted.args = {
   scaling: 'restricted-width',
 };
-export const Bordered: Story<ImageProps> = Template.bind({});
+export const Bordered: Story<IImageProps> = Template.bind({});
 Bordered.args = {
   bordered: true,
   scaling: 'restricted-width',
 };
-export const Blurred: Story<ImageProps> = Template.bind({});
+export const Blurred: Story<IImageProps> = Template.bind({});
 Blurred.args = {
   blurred: true,
   scaling: 'restricted-width',
 };
-export const Circular: Story<ImageProps> = Template.bind({});
+export const Circular: Story<IImageProps> = Template.bind({});
 Circular.args = {
   circle: true,
   width: 300,

@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { TableBodyProps } from './Body.types';
+import { ITableBodyProps } from './Body.types';
 
-const Body = ({ children }: TableBodyProps) => (
+const Body = ({ children }: ITableBodyProps) => (
   <tbody className="dcui-table__body">{children}</tbody>
 );
 export default Body;

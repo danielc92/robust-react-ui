@@ -2,7 +2,7 @@
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
 
-import { FormTextAreaProps } from './TextArea.types';
+import { IFormTextAreaProps } from './TextArea.types';
 
 import './TextArea.scss';
 
@@ -18,7 +18,7 @@ const TextArea = ({
   error,
   errorMessage,
   disabled,
-}: FormTextAreaProps) => (
+}: IFormTextAreaProps) => (
   <div className="dcui-form__textarea-wrapper" data-testid="TextAreaWrapper">
     <textarea
       name={name}

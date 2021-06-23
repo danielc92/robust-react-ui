@@ -3,16 +3,16 @@
 import React, { createRef, useEffect, useState } from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
 import Panel from 'robust-react-ui/components/Accordion/Panel';
-import { AccordionProps } from './Accordion.types';
+import { IAccordionProps } from './Accordion.types';
 import './Accordion.scss';
-import { AccordionPanelProps } from '../Panel/Panel.types';
+import { IAccordionPanelProps } from '../Panel/Panel.types';
 
 const Accordion = ({
   children,
   fullWidth,
   activePanel,
   onSelectPanelFunction,
-}: AccordionProps) => {
+}: IAccordionProps) => {
   const [refs, setRefs] = useState<
     { panelId: string; idx: number; ref: any }[]
   >([]);
@@ -38,7 +38,7 @@ const Accordion = ({
     if (React.Children.count(children)) {
       setRefs(
         React.Children.map(children, (child, index) => {
-          if (React.isValidElement<AccordionPanelProps>(child)) {
+          if (React.isValidElement<IAccordionPanelProps>(child)) {
             return {
               panelId: child.props.panelId,
               idx: index,

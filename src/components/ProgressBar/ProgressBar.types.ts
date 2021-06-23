@@ -1,5 +1,5 @@
 // Generated with util/create-component.js
-export interface ProgressBarProps {
+export interface IProgressBarProps {
   minimumValue?: number;
   maximumValue?: number;
   currentValue: number;

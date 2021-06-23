@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import AlertDialogue from './AlertDialogue';
-import { AlertDialogueProps } from './AlertDialogue.types';
+import { IAlertDialogueProps } from './AlertDialogue.types';
 
 describe('AlertDialogue Suite', () => {
-  let props: AlertDialogueProps;
+  let props: IAlertDialogueProps;
 
   beforeEach(() => {
     props = {

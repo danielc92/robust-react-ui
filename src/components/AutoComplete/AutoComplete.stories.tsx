@@ -3,7 +3,7 @@
 import { Meta, Story } from '@storybook/react';
 import React, { useState } from 'react';
 import AutoComplete from './AutoComplete';
-import { AutoCompleteProps } from './AutoComplete.types';
+import { IAutoCompleteProps } from './AutoComplete.types';
 
 export default {
   title: 'Components/AutoComplete',
@@ -12,9 +12,9 @@ export default {
     labelId: 'colour-autocomplete',
     labelText: 'Search for a colour.',
   },
-} as Meta<AutoCompleteProps>;
+} as Meta<IAutoCompleteProps>;
 
-const Template: Story<AutoCompleteProps> = (args) => {
+const Template: Story<IAutoCompleteProps> = (args) => {
   const mockData = [
     'blue',
     'light blue',
@@ -48,4 +48,4 @@ const Template: Story<AutoCompleteProps> = (args) => {
   );
 };
 
-export const Basic: Story<AutoCompleteProps> = Template.bind({});
+export const Basic: Story<IAutoCompleteProps> = Template.bind({});

@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Link from './Link';
-import { LinkProps } from './Link.types';
+import { ILinkProps } from './Link.types';
 
 describe('Test Component', () => {
-  let props: LinkProps;
+  let props: ILinkProps;
 
   beforeEach(() => {
     props = {

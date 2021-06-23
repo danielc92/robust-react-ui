@@ -3,12 +3,12 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Table from './Table';
-import { TableProps } from './Table.types';
+import { ITableProps } from './Table.types';
 
 describe('Table suite', () => {
-  const renderComponent = (partialProps?: Partial<TableProps>) =>
+  const renderComponent = (IpartialProps?: Partial<ITableProps>) =>
     render(
-      <Table {...partialProps}>
+      <Table {...IpartialProps}>
         <Table.Head>
           <Table.Row>
             <Table.Header>Animals</Table.Header>

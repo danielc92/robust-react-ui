@@ -3,7 +3,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import Typography from 'robust-react-ui/components/Typography';
 import TabList from 'robust-react-ui/components/TabList';
-import { TabListProps } from './TabList.types';
+import { ITabListProps } from './TabList.types';
 
 export default {
   title: 'Components/TabList',
@@ -79,21 +79,21 @@ export default {
       },
     ],
   },
-} as Meta<TabListProps>;
+} as Meta<ITabListProps>;
 
-const Template: Story<TabListProps> = (args) => <TabList {...args} />;
+const Template: Story<ITabListProps> = (args) => <TabList {...args} />;
 
-export const Primary: Story<TabListProps> = Template.bind({});
+export const Primary: Story<ITabListProps> = Template.bind({});
 Primary.args = {};
-export const PrimaryFullWidth: Story<TabListProps> = Template.bind({});
+export const PrimaryFullWidth: Story<ITabListProps> = Template.bind({});
 PrimaryFullWidth.args = {
   fullWidth: true,
 };
-export const Danger: Story<TabListProps> = Template.bind({});
+export const Danger: Story<ITabListProps> = Template.bind({});
 Danger.args = {
   variant: 'danger',
 };
-export const Success: Story<TabListProps> = Template.bind({});
+export const Success: Story<ITabListProps> = Template.bind({});
 Success.args = {
   variant: 'success',
 };

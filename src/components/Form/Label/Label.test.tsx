@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { FormLabelProps } from './Label.types';
+import { IFormLabelProps } from './Label.types';
 import Label from './Label';
 
 describe('Label Suite', () => {
-  let props: FormLabelProps;
+  let props: IFormLabelProps;
   beforeEach(() => {
     props = {
       children: 'form label text',

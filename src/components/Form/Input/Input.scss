@@ -1,10 +1,9 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 .dcui-form {
   &__input {
-    box-shadow: var(--input-shadow);
     margin-bottom: 0.5rem;
 
     &--full-width {
@@ -27,14 +26,14 @@
     }
   }
 
-  &__input[type="color"] {
+  &__input[type='color'] {
     cursor: pointer;
   }
 
-  &__input[type="text"],
-  &__input[type="color"],
-  &__input[type="date"],
-  &__input[type="password"] {
+  &__input[type='text'],
+  &__input[type='color'],
+  &__input[type='date'],
+  &__input[type='password'] {
     &:active,
     &:focus {
       outline: none;
@@ -74,15 +73,15 @@
     }
   }
 
-  &__input[type="color"] {
+  &__input[type='color'] {
     padding: 0;
     width: var(--input-color-width);
     height: var(--input-color-width);
   }
 
-  &__input[type="text"],
-  &__input[type="date"],
-  &__input[type="password"] {
+  &__input[type='text'],
+  &__input[type='date'],
+  &__input[type='password'] {
     padding: var(--input-padding-y) var(--input-padding-x);
     width: var(--input-default-width);
   }

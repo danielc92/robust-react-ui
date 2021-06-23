@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
 import React from 'react';
-import { ComplementaryProps } from './Complementary.types';
+import { IComplementaryProps } from './Complementary.types';
 
-const Complementary = ({ children, ariaLabelledBy }: ComplementaryProps) => (
+const Complementary = ({ children, ariaLabelledBy }: IComplementaryProps) => (
   <aside
     data-testid="Complementary"
     className="dcui-landmark__complementary"

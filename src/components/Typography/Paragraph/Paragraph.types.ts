@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface ParagraphProps {
+export interface IParagraphProps {
   children: ReactNode;
   /**
    * Provides the component with an id attribute. May be used for accessibilty purposes.

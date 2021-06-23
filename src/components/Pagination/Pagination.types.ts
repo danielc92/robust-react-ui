@@ -1,15 +1,15 @@
 // Generated with util/create-component.js
 
-export interface PaginationButtonProps {
+export interface IPaginationButtonProps {
   current: boolean;
   href: string;
   pageNumber: number;
 }
-export interface PaginationProps {
+export interface IPaginationProps {
   rounded?: boolean;
   /**
    * An accessible label.
    */
   ariaLabel?: string;
-  data: PaginationButtonProps[];
+  data: IPaginationButtonProps[];
 }

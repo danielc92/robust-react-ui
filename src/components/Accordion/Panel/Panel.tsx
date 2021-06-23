@@ -2,10 +2,13 @@
 
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { AccordionPanelProps } from './Panel.types';
+import { IAccordionPanelProps } from './Panel.types';
 import './Panel.scss';
 
-const AccordionPanel = React.forwardRef<HTMLButtonElement, AccordionPanelProps>(
+const AccordionPanel = React.forwardRef<
+  HTMLButtonElement,
+  IAccordionPanelProps
+>(
   (
     {
       children,

@@ -2,16 +2,16 @@
 import React from 'react';
 import './Link.scss';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { LinkProps } from './Link.types';
+import { ILinkProps } from './Link.types';
 
 const Link = ({
   href,
   children,
-  size,
-  display,
+  size = 'medium',
+  display = 'inline',
   ariaDescribedBy,
   ariaLabel,
-}: LinkProps) => (
+}: ILinkProps) => (
   <a
     href={href}
     aria-label={ariaLabel || null}
@@ -19,9 +19,7 @@ const Link = ({
     data-testid="Link"
     className={getClassNames({
       'dcui-link': true,
-      'dcui-link--small': size === 'small',
-      'dcui-link--medium': size === 'medium' || !size,
-      'dcui-link--large': size === 'large',
+      [`dcui-link--${size}`]: true,
       'dcui-link--block': display === 'block',
     })}
   >

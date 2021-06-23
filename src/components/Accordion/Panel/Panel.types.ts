@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface AccordionPanelProps {
+export interface IAccordionPanelProps {
   children: ReactNode;
   panelTitle: string;
   /**

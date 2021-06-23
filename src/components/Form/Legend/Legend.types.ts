@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface FormLegendProps {
+export interface IFormLegendProps {
   /**
    * Provides the component with an id attribute. May be used for accessibilty purposes.
    */

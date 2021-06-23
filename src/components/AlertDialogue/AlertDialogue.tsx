@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React, { useEffect } from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { AlertDialogueProps } from './AlertDialogue.types';
+import { IAlertDialogueProps } from './AlertDialogue.types';
 import './AlertDialogue.scss';
 import Typography from 'robust-react-ui/components/Typography';
 import Button from 'robust-react-ui/components/Button';
@@ -14,7 +14,7 @@ const AlertDialogue = ({
   cancelButtonText = 'Cancel',
   onCloseActionFunction,
   onConfirmActionFunction,
-}: AlertDialogueProps) => {
+}: IAlertDialogueProps) => {
   const ref = React.createRef<HTMLButtonElement>();
   const ref2 = React.createRef<HTMLButtonElement>();
   const focusOnButton = () => ref.current?.focus();

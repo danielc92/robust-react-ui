@@ -1,11 +1,14 @@
 ### Features
 
+- 286 icons available from the feather icon set.
+
 ### Default
 
 ```jsx
 import Icon from 'robust-react-ui/components/Icon';
+import CheckCircle from 'robust-react-ui/components/Icon/CheckCircle';
 <Icon>
-  <Icon.Box />
+  <CheckCircle />
 </Icon>;
 ```
 
@@ -13,27 +16,22 @@ import Icon from 'robust-react-ui/components/Icon';
 
 ```jsx
 import Icon from 'robust-react-ui/components/Icon/Base';
+import CheckCircle from 'robust-react-ui/components/Icon/CheckCircle';
+import Cloud from 'robust-react-ui/components/Icon/Cloud';
+import Clipboard from 'robust-react-ui/components/Icon/Clipboard';
+import ChevronUp from 'robust-react-ui/components/Icon/ChevronUp';
 <>
   <Icon>
-    <Icon.ArrowDown />
+    <CheckCircle />
   </Icon>
   <Icon>
-    <Icon.AlertTriangle />
+    <Cloud />
   </Icon>
   <Icon>
-    <Icon.Code />
+    <Clipboard />
   </Icon>
   <Icon>
-    <Icon.Home />
-  </Icon>
-  <Icon>
-    <Icon.Picture />
-  </Icon>
-  <Icon>
-    <Icon.Eye />
-  </Icon>
-  <Icon>
-    <Icon.EyeOff />
+    <ChevronUp />
   </Icon>
 </>;
 ```
@@ -57,24 +55,24 @@ import Icon from 'robust-react-ui/components/Icon/Base';
 The default is "primary"
 
 ```jsx
-import Code from 'robust-react-ui/components/Icon/Code';
+import Box from 'robust-react-ui/components/Icon/Box';
 import Icon from 'robust-react-ui/components/Icon/Base';
 <>
   <Icon>
-    <Code />
+    <Box />
   </Icon>
   <Icon variant="danger">
-    <Code />
+    <Box />
   </Icon>
 
   <Icon variant="success">
-    <Code />
+    <Box />
   </Icon>
   <Icon variant="dark">
-    <Code />
+    <Box />
   </Icon>
   <Icon variant="light">
-    <Code />
+    <Box />
   </Icon>
 </>;
 ```
@@ -82,20 +80,20 @@ import Icon from 'robust-react-ui/components/Icon/Base';
 ### Custom sizes
 
 ```jsx
-import Code from 'robust-react-ui/components/Icon/Code';
+import Box from 'robust-react-ui/components/Icon/Box';
 import Icon from 'robust-react-ui/components/Icon/Base';
 <>
   <Icon width={48} height={48}>
-    <Code />
+    <Box />
   </Icon>
   <Icon width={32} height={32}>
-    <Code />
+    <Box />
   </Icon>
   <Icon width={24} height={24}>
-    <Code />
+    <Box />
   </Icon>
   <Icon width={16} height={16}>
-    <Code />
+    <Box />
   </Icon>
 </>;
 ```

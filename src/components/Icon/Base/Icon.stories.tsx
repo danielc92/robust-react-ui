@@ -2,7 +2,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Icon from './Icon';
-import { IconProps } from './Icon.types';
+import { IIconProps } from './Icon.types';
 
 export default {
   title: 'Components/Icon',
@@ -10,9 +10,9 @@ export default {
   args: {
     // Insert default args here
   },
-} as Meta<IconProps>;
+} as Meta<IIconProps>;
 
-const Template: Story<IconProps> = (args) => {
+const Template: Story<IIconProps> = (args) => {
   return (
     <Icon {...args}>
       <Icon.Box />
@@ -20,17 +20,17 @@ const Template: Story<IconProps> = (args) => {
   );
 };
 
-export const Primary: Story<IconProps> = Template.bind({});
+export const Primary: Story<IIconProps> = Template.bind({});
 Primary.args = {};
-export const Danger: Story<IconProps> = Template.bind({});
+export const Danger: Story<IIconProps> = Template.bind({});
 Danger.args = {
   variant: 'danger',
 };
-export const Success: Story<IconProps> = Template.bind({});
+export const Success: Story<IIconProps> = Template.bind({});
 Success.args = {
   variant: 'success',
 };
-export const CustomSize: Story<IconProps> = Template.bind({});
+export const CustomSize: Story<IIconProps> = Template.bind({});
 CustomSize.args = {
   width: 50,
   height: 50,

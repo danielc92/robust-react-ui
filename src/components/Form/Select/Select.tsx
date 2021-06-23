@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { FormSelectProps } from './Select.types';
+import { IFormSelectProps } from './Select.types';
 import './Select.scss';
 
 const Select = ({
@@ -12,7 +12,7 @@ const Select = ({
   values,
   multiple,
   disabled,
-}: FormSelectProps) => (
+}: IFormSelectProps) => (
   <select
     data-testid="Select"
     value={selectedValue}

@@ -5,7 +5,7 @@ import { Story, Meta } from '@storybook/react';
 import FieldSet from 'robust-react-ui/components/Form/FieldSet';
 import Label from 'robust-react-ui/components/Form/Label';
 import Select from './Select';
-import { FormSelectProps } from './Select.types';
+import { IFormSelectProps } from './Select.types';
 
 export default {
   title: 'Components/Form/Select',
@@ -31,9 +31,9 @@ export default {
       },
     ],
   },
-} as Meta<FormSelectProps>;
+} as Meta<IFormSelectProps>;
 
-const Template: Story<FormSelectProps> = (args) => {
+const Template: Story<IFormSelectProps> = (args) => {
   const [value, setValue] = useState('');
   const onChangeFunction = (event: React.ChangeEvent<HTMLSelectElement>) =>
     setValue(event.target.value);
@@ -49,10 +49,10 @@ const Template: Story<FormSelectProps> = (args) => {
   );
 };
 
-export const Basic: Story<FormSelectProps> = Template.bind({});
+export const Basic: Story<IFormSelectProps> = Template.bind({});
 Basic.args = {};
 
-export const Disabled: Story<FormSelectProps> = Template.bind({});
+export const Disabled: Story<IFormSelectProps> = Template.bind({});
 Disabled.args = {
   disabled: true,
 };

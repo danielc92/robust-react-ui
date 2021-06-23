@@ -5,18 +5,23 @@
 :root {
   --button-padding-y-sm: 0.6rem;
   --button-padding-x-sm: 0.8rem;
-  --button-padding-y-md: 1rem;
-  --button-padding-x-md: 2rem;
-  --button-padding-y-lg: 1.2rem;
-  --button-padding-x-lg: 2.6rem;
+  --button-padding-y-md: 0.8rem;
+  --button-padding-x-md: 1.6rem;
+  --button-padding-y-lg: 1rem;
+  --button-padding-x-lg: 2rem;
   --button-font-size-sm: var(--font-size-sm);
   --button-font-size-md: var(--font-size-md);
   --button-font-size-lg: var(--font-size-lg);
   --button-display: block;
   --button-margin-bottom: var(--global-space-under);
+  --button-icon-margin-right: var(--space-xxs);
 }
 
 .dcui-button {
+  .dcui-icon {
+    margin-right: var(--button-icon-margin-right);
+  }
+
   border: 0;
   border-radius: var(--global-border-radius);
   display: var(--button-display);
@@ -45,6 +50,21 @@
   &--large {
     font-size: var(--button-font-size-lg);
     padding: var(--button-padding-y-lg) var(--button-padding-x-lg);
+  }
+
+  &--square {
+    .dcui-icon {
+      margin-right: 0;
+    }
+    &.dcui-button--small {
+      padding: var(--button-padding-y-sm) var(--button-padding-y-sm);
+    }
+    &.dcui-button--medium {
+      padding: var(--button-padding-y-md) var(--button-padding-y-md);
+    }
+    &.dcui-button--large {
+      padding: var(--button-padding-y-lg) var(--button-padding-y-lg);
+    }
   }
 
   // theming

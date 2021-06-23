@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import CheckboxGroup from './CheckboxGroup';
-import { FormCheckboxGroupProps } from './CheckboxGroup.types';
+import { IFormCheckboxGroupProps } from './CheckboxGroup.types';
 
 describe('Form Input Suite', () => {
-  let props: FormCheckboxGroupProps;
+  let props: IFormCheckboxGroupProps;
   beforeEach(() => {
     props = {
       values: [

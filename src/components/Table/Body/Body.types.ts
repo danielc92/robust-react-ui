@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
 
-export interface TableBodyProps {
+export interface ITableBodyProps {
   children: ReactNode;
 }

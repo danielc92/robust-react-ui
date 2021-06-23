@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { ContentInfoProps } from './ContentInfo.types';
+import { IContentInfoProps } from './ContentInfo.types';
 
-const ContentInfo = ({ children }: ContentInfoProps) => (
+const ContentInfo = ({ children }: IContentInfoProps) => (
   <footer data-testid="ContentInfo" className="dcui-landmark__contentinfo">
     {children}
   </footer>

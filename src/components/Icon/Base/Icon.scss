@@ -2,26 +2,43 @@
 @import '../../../variables.scss';
 @import '../../../typography.scss';
 
+:root {
+  --icon-color-primary: var(--color-primary);
+  --icon-color-danger: var(--color-danger);
+  --icon-color-success: var(--color-success);
+  --icon-color-light: var(--color-light-grey);
+  --icon-color-dark: var(--color-charcoal);
+  --icon-stroke-width: 2;
+  --icon-stroke-linecap: round;
+  --icon-stroke-linejoin: round;
+  --icon-display: block;
+}
+
 .dcui-icon {
+  display: var(--icon-display);
   fill: none;
   stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke-width: var(--icon-stroke-width);
+  stroke-linecap: var(--icon-stroke-linecap);
+  stroke-linejoin: var(--icon-stroke-linejoin);
 
   &--primary {
-    color: var(--color-primary);
+    color: var(--icon-color-primary);
   }
+
   &--success {
-    color: var(--color-success);
+    color: var(--icon-color-success);
   }
+
   &--danger {
-    color: var(--color-danger);
+    color: var(--icon-color-danger);
   }
+
   &--light {
-    color: var(--color-light-grey);
+    color: var(--icon-color-light);
   }
-  &--charcoal {
-    color: var(--color-charcoal);
+
+  &--dark {
+    color: var(--icon-color-dark);
   }
 }

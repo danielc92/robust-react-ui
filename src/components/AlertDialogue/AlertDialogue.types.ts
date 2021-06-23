@@ -1,5 +1,5 @@
 // Generated with util/create-component.js
-export interface AlertDialogueProps {
+export interface IAlertDialogueProps {
   /**
    * Used to control the visibility of the modal.
    */

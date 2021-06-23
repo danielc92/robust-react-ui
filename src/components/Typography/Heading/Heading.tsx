@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { HeadingProps } from './Heading.types';
+import { IHeadingProps } from './Heading.types';
 import './Heading.scss';
 
 const getHeaderClass = (level: 1 | 2 | 3 | 4 | 5 | 6, jumbo: boolean) =>
@@ -11,7 +11,7 @@ const getHeaderClass = (level: 1 | 2 | 3 | 4 | 5 | 6, jumbo: boolean) =>
     [`dcui-header__${level}--jumbo`]: jumbo,
   });
 
-const Heading = ({ children, level = 1, jumbo = false, id }: HeadingProps) => {
+const Heading = ({ children, level = 1, jumbo = false, id }: IHeadingProps) => {
   if (level === 2)
     return (
       <h2

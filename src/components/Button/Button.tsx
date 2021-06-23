@@ -2,18 +2,20 @@
 import React from 'react';
 
 import getClassNames from 'robust-react-ui/utils/getClassNames';
-import { ButtonProps } from './Button.types';
+import { IButtonProps } from './Button.types';
 import './Button.scss';
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
   (
     {
       children,
       id,
       ariaControls,
-      size,
-      variant,
+      size = 'medium',
+      variant = 'primary',
       tabIndex,
+      ariaLabel,
+      square = false,
       onClickFunction,
       onKeyDownFunction,
     },
@@ -23,6 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       type="button"
       onKeyDown={onKeyDownFunction || null}
       tabIndex={tabIndex || null}
+      aria-label={ariaLabel || null}
       aria-controls={ariaControls || null}
       id={id || null}
       data-testid="Button"
@@ -32,13 +35,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       ref={ref}
       className={getClassNames({
         'dcui-button': true,
-        'dcui-button--small': size === 'small',
-        'dcui-button--medium': !size || size === 'medium',
-        'dcui-button--large': size === 'large',
-        'dcui-button--primary': variant === 'primary' || !variant,
-        'dcui-button--danger': variant === 'danger',
-        'dcui-button--success': variant === 'success',
-        'dcui-button--secondary': variant === 'secondary',
+        'dcui-button--square': square,
+        [`dcui-button--${size}`]: true,
+        [`dcui-button--${variant}`]: true,
       })}
     >
       {children}

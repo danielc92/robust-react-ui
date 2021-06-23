@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Button from './Button';
-import { ButtonProps } from './Button.types';
+import { IButtonProps } from './Button.types';
 
 describe('Test Component', () => {
-  let props: ButtonProps;
+  let props: IButtonProps;
 
   beforeEach(() => {
     props = {

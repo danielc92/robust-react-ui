@@ -3,10 +3,10 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 
 import AutoComplete from './AutoComplete';
-import { AutoCompleteProps } from './AutoComplete.types';
+import { IAutoCompleteProps } from './AutoComplete.types';
 
 describe('Autocomplete Suite', () => {
-  let props: AutoCompleteProps;
+  let props: IAutoCompleteProps;
 
   beforeEach(() => {
     props = {

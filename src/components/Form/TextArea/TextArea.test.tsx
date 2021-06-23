@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import TextArea from './TextArea';
-import { FormTextAreaProps } from './TextArea.types';
+import { IFormTextAreaProps } from './TextArea.types';
 
 describe('Form TextArea Suite', () => {
-  let props: FormTextAreaProps;
+  let props: IFormTextAreaProps;
   beforeEach(() => {
     props = {
       value: 'welcome to the jungle',
@@ -25,13 +25,13 @@ describe('Form TextArea Suite', () => {
 
     expect(component).toHaveClass('dcui-form__textarea');
   });
-  it("TextArea should render with name attribute", ()=>{
+  it('TextArea should render with name attribute', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('TextArea');
 
     expect(component.getAttribute('name')).toEqual('sample-input-name');
-  })
+  });
   it('TextArea should render the correct value', () => {
     const { getByTestId } = renderComponent();
 

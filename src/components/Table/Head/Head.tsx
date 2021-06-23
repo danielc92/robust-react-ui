@@ -1,9 +1,9 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { TableHeadProps } from './Head.types';
+import { ITableHeadProps } from './Head.types';
 
-const Head = ({ children }: TableHeadProps) => (
+const Head = ({ children }: ITableHeadProps) => (
   <thead className="dcui-table__head">{children}</thead>
 );
 

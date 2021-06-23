@@ -1,9 +1,41 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
+@import '../../../breakpoints.scss';
 
 :root {
   --column-padding-x: 1rem;
+}
+
+.dcui-row.dcui-row--wrap {
+  .dcui-column {
+    &--one-half {
+      @include for-mobile {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    &--one-third {
+      @include for-laptop {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @include for-mobile {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    &--one-quarter {
+      @include for-laptop {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      @include for-mobile {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 .dcui-column {
@@ -23,5 +55,55 @@
   &--one-quarter {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+
+  &--padding-y-xxs {
+    padding-top: var(--space-xxs);
+    padding-bottom: var(--space-xxs);
+  }
+
+  &--padding-y-xs {
+    padding-top: var(--space-xs);
+    padding-bottom: var(--space-xs);
+  }
+
+  &--padding-y-s {
+    padding-top: var(--space-s);
+    padding-bottom: var(--space-s);
+  }
+
+  &--padding-y-m {
+    padding-top: var(--space-m);
+    padding-bottom: var(--space-m);
+  }
+
+  &--padding-y-l {
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
+  }
+
+  &--padding-x-xxs {
+    padding-right: var(--space-xxs);
+    padding-left: var(--space-xxs);
+  }
+
+  &--padding-x-xs {
+    padding-right: var(--space-xs);
+    padding-left: var(--space-xs);
+  }
+
+  &--padding-x-s {
+    padding-right: var(--space-s);
+    padding-left: var(--space-s);
+  }
+
+  &--padding-x-m {
+    padding-right: var(--space-m);
+    padding-left: var(--space-m);
+  }
+
+  &--padding-x-l {
+    padding-right: var(--space-l);
+    padding-left: var(--space-l);
   }
 }

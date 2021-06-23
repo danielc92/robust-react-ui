@@ -1,4 +1,4 @@
-export interface FormSubmitProps {
+export interface IFormSubmitProps {
   /**
    * Size setting for component.
    * @default medium

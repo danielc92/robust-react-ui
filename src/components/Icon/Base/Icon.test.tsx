@@ -3,10 +3,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Icon from './Icon';
-import { IconProps } from './Icon.types';
+import Box from '../Box';
+import { IIconProps } from './Icon.types';
 
 describe('Icon Suite', () => {
-  let props: Partial<IconProps>;
+  let props: Partial<IIconProps>;
 
   beforeEach(() => {
     props = {};
@@ -15,7 +16,7 @@ describe('Icon Suite', () => {
   const renderComponent = () =>
     render(
       <Icon {...props}>
-        <Icon.Box />
+        <Box />
       </Icon>
     );
 

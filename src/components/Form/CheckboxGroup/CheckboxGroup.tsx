@@ -1,7 +1,7 @@
 // Generated with util/create-component.js
 import React from 'react';
 
-import { FormCheckboxGroupProps } from './CheckboxGroup.types';
+import { IFormCheckboxGroupProps } from './CheckboxGroup.types';
 
 import './CheckboxGroup.scss';
 
@@ -10,7 +10,7 @@ const CheckboxGroup = ({
   values,
   ariaLabelledBy,
   onSelectFunction,
-}: FormCheckboxGroupProps) => (
+}: IFormCheckboxGroupProps) => (
   <div role="group" aria-labelledby={ariaLabelledBy} id={id || null}>
     <ul className="dcui-form__checkbox-group" data-testid="CheckboxGroup">
       {values.map((v) => (

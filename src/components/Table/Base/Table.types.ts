@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
 /**
- * Props for the Table (base) component.
+ * IProps for the Table (base) component.
  */
-export interface TableProps {
+export interface ITableProps {
   children: ReactNode;
   /**
    * Adds a striped background pattern to Rows.
