@@ -1,8 +1,8 @@
 ### Padding
 
 ```jsx
-import Grid from 'robust-react-ui/components/Layout/Grid';
-import Typography from 'robust-react-ui/components/Typography';
+import Grid from 'robust-react-ui/build/components/Layout/Grid';
+import Typography from 'robust-react-ui/build/components/Typography';
 const heading = 'Sunt cupidatat anim duis occaecat. Adipisicing aliqua';
 const paragraph =
   'Non pariatur incididunt eu culpa laboris ullamco ea. Magna culpa mollit in mollit. Sunt ea qui culpa ut labore Lorem est reprehenderit est eiusmod cupidatat eiusmod. Consequat fugiat aute ut sunt';
@@ -25,8 +25,8 @@ const paragraph =
 ### Variants
 
 ```jsx
-import Grid from 'robust-react-ui/components/Layout/Grid';
-import Typography from 'robust-react-ui/components/Typography';
+import Grid from 'robust-react-ui/build/components/Layout/Grid';
+import Typography from 'robust-react-ui/build/components/Typography';
 const heading = 'Sunt cupidatat anim duis occaecat. Adipisicing aliqua';
 const paragraph =
   'Non pariatur incididunt eu culpa laboris ullamco ea. Magna culpa mollit in mollit. Sunt ea qui culpa ut labore Lorem est reprehenderit est eiusmod cupidatat eiusmod. Consequat fugiat aute ut sunt';

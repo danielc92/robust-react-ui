@@ -9,7 +9,7 @@
 
 ```jsx
 import React from 'react';
-import Button from 'robust-react-ui/components/Button';
+import Button from 'robust-react-ui/build/components/Button';
 <>
   <Button variant="primary">Click me</Button>
   <Button variant="danger">Click me</Button>
@@ -22,7 +22,7 @@ import Button from 'robust-react-ui/components/Button';
 
 ```jsx
 import React from 'react';
-import Button from 'robust-react-ui/components/Button';
+import Button from 'robust-react-ui/build/components/Button';
 <>
   <Button size="large">Click me</Button>
   <Button size="medium">Click me</Button>
@@ -34,10 +34,10 @@ import Button from 'robust-react-ui/components/Button';
 
 ```jsx
 import React from 'react';
-import Button from 'robust-react-ui/components/Button';
-import Icon from 'robust-react-ui/components/Icon';
-import Box from 'robust-react-ui/components/Icon/Box';
-import Layout from 'robust-react-ui/components/Layout';
+import Button from 'robust-react-ui/build/components/Button';
+import Icon from 'robust-react-ui/build/components/Icon';
+import Box from 'robust-react-ui/build/components/Icon/Box';
+import Layout from 'robust-react-ui/build/components/Layout';
 const { Row } = Layout;
 
 <>
@@ -88,7 +88,7 @@ const { Row } = Layout;
 
 ```jsx
 import React from 'react';
-import Button from 'robust-react-ui/components/Button';
+import Button from 'robust-react-ui/build/components/Button';
 const onClickFunction = () => alert('Hello');
 <Button variant="secondary" onClickFunction={onClickFunction}>
   Click me

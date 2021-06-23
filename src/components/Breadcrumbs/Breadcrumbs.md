@@ -8,7 +8,7 @@
 
 ```jsx
 import React from 'react';
-import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
+import Breadcrumbs from 'robust-react-ui/build/components/Breadcrumbs';
 <Breadcrumbs
   size="small"
   data={[
@@ -40,7 +40,7 @@ import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
 
 ```jsx
 import React from 'react';
-import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
+import Breadcrumbs from 'robust-react-ui/build/components/Breadcrumbs';
 <Breadcrumbs
   size="medium"
   data={[
@@ -72,7 +72,7 @@ import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
 
 ```jsx
 import React from 'react';
-import Breadcrumbs from 'robust-react-ui/components/Breadcrumbs';
+import Breadcrumbs from 'robust-react-ui/build/components/Breadcrumbs';
 <Breadcrumbs
   size="large"
   data={[

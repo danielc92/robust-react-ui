@@ -13,7 +13,7 @@
 
 ```jsx
 import React from 'react';
-import AutoComplete from 'robust-react-ui/components/AutoComplete';
+import AutoComplete from 'robust-react-ui/build/components/AutoComplete';
 const [options, setOptions] = React.useState([]);
 const [mockData, setMockData] = React.useState([
   'apple',

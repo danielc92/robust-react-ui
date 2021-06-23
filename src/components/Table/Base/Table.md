@@ -10,7 +10,7 @@
 
 ```jsx
 import React from 'react';
-import Table from 'robust-react-ui/components/Table';
+import Table from 'robust-react-ui/build/components/Table';
 <Table>
   <Table.Head>
     <Table.Row>
@@ -46,7 +46,7 @@ import Table from 'robust-react-ui/components/Table';
 ### Full width
 
 ```jsx
-import Table from 'robust-react-ui/components/Table';
+import Table from 'robust-react-ui/build/components/Table';
 <Table fullWidth>
   <Table.Head>
     <Table.Row>
@@ -82,7 +82,7 @@ import Table from 'robust-react-ui/components/Table';
 ### Striped
 
 ```jsx
-import Table from 'robust-react-ui/components/Table';
+import Table from 'robust-react-ui/build/components/Table';
 <Table striped>
   <Table.Head>
     <Table.Row>
@@ -136,7 +136,7 @@ import Table from 'robust-react-ui/components/Table';
 ### Centered cells
 
 ```jsx
-import Table from 'robust-react-ui/components/Table';
+import Table from 'robust-react-ui/build/components/Table';
 <Table centerCellContent>
   <Table.Head>
     <Table.Row>
@@ -172,7 +172,7 @@ import Table from 'robust-react-ui/components/Table';
 ### Row Span
 
 ```jsx
-import Table from 'robust-react-ui/components/Table';
+import Table from 'robust-react-ui/build/components/Table';
 <Table>
   <Table.Head>
     <Table.Row>
@@ -221,7 +221,7 @@ import Table from 'robust-react-ui/components/Table';
 ### With Table.Foot
 
 ```jsx
-import Table from 'robust-react-ui/components/Table';
+import Table from 'robust-react-ui/build/components/Table';
 <Table>
   <Table.Head>
     <Table.Row>

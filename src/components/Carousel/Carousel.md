@@ -10,7 +10,7 @@
 
 ```jsx
 import React from 'react';
-import Carousel from 'robust-react-ui/components/Carousel';
+import Carousel from 'robust-react-ui/build/components/Carousel';
 <Carousel
   ariaLabel="Sample carousel"
   slides={[
@@ -46,7 +46,7 @@ import Carousel from 'robust-react-ui/components/Carousel';
 
 ```jsx
 import React from 'react';
-import Carousel from 'robust-react-ui/components/Carousel';
+import Carousel from 'robust-react-ui/build/components/Carousel';
 <Carousel
   ariaLabel="Sample carousel"
   autoplay
