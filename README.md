@@ -9,7 +9,6 @@ Click the [following link](https://develop--60b75a95d763ec0039b4429c.chromatic.c
 ## CI
 
 ![maintest](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![mainbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)
-![devtest](https://github.com/danielc92/dc-react-ui/actions/workflows/develop-test.yml/badge.svg) ![devbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/develop-build.yml/badge.svg)
 
 ## Getting started
 
