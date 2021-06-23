@@ -336,9 +336,12 @@ export default {
       processor: (css) => postcss([autoprefixer({})]),
       // Output both minified and uncompressed css
       output: function (styles, styleNodes) {
-        fs.writeFileSync('build/styles/main.css', styles);
+        fs.writeFileSync(__dirname + '/build/styles/main.css', styles);
         const minifiedStyles = new CleanCss().minify(styles).styles;
-        fs.writeFileSync('build/styles/main.min.css', minifiedStyles);
+        fs.writeFileSync(
+          __dirname + '/build/styles/main.min.css',
+          minifiedStyles
+        );
       },
     }),
     copy({
