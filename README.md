@@ -17,7 +17,7 @@ TBD.
 
 ## Documentation
 
-This library has been documented using React Styleguidist. Click [here to view the docs](https://danielc92.github.io/dc-react-ui/).
+This library has been documented using React Styleguidist. Click [here to view the docs](https://danielc92.github.io/robust-react-ui/).
 
 ## Maintainers
 
