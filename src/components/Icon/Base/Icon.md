@@ -5,8 +5,8 @@
 ### Default
 
 ```jsx
-import Icon from 'robust-react-ui/components/Icon';
-import CheckCircle from 'robust-react-ui/components/Icon/CheckCircle';
+import Icon from 'robust-react-ui/build/components/Icon';
+import CheckCircle from 'robust-react-ui/build/components/Icon/CheckCircle';
 <Icon>
   <CheckCircle />
 </Icon>;
@@ -15,11 +15,11 @@ import CheckCircle from 'robust-react-ui/components/Icon/CheckCircle';
 ### Using different icons
 
 ```jsx
-import Icon from 'robust-react-ui/components/Icon/Base';
-import CheckCircle from 'robust-react-ui/components/Icon/CheckCircle';
-import Cloud from 'robust-react-ui/components/Icon/Cloud';
-import Clipboard from 'robust-react-ui/components/Icon/Clipboard';
-import ChevronUp from 'robust-react-ui/components/Icon/ChevronUp';
+import Icon from 'robust-react-ui/build/components/Icon/Base';
+import CheckCircle from 'robust-react-ui/build/components/Icon/CheckCircle';
+import Cloud from 'robust-react-ui/build/components/Icon/Cloud';
+import Clipboard from 'robust-react-ui/build/components/Icon/Clipboard';
+import ChevronUp from 'robust-react-ui/build/components/Icon/ChevronUp';
 <>
   <Icon>
     <CheckCircle />
@@ -39,7 +39,7 @@ import ChevronUp from 'robust-react-ui/components/Icon/ChevronUp';
 ### Using custom paths
 
 ```jsx
-import Icon from 'robust-react-ui/components/Icon/Base';
+import Icon from 'robust-react-ui/build/components/Icon/Base';
 <Icon>
   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
   <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
@@ -55,8 +55,8 @@ import Icon from 'robust-react-ui/components/Icon/Base';
 The default is "primary"
 
 ```jsx
-import Box from 'robust-react-ui/components/Icon/Box';
-import Icon from 'robust-react-ui/components/Icon/Base';
+import Box from 'robust-react-ui/build/components/Icon/Box';
+import Icon from 'robust-react-ui/build/components/Icon/Base';
 <>
   <Icon>
     <Box />
@@ -80,8 +80,8 @@ import Icon from 'robust-react-ui/components/Icon/Base';
 ### Custom sizes
 
 ```jsx
-import Box from 'robust-react-ui/components/Icon/Box';
-import Icon from 'robust-react-ui/components/Icon/Base';
+import Box from 'robust-react-ui/build/components/Icon/Box';
+import Icon from 'robust-react-ui/build/components/Icon/Base';
 <>
   <Icon width={48} height={48}>
     <Box />

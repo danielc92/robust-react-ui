@@ -11,8 +11,8 @@
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
-import TabList from 'robust-react-ui/components/TabList';
+import Typography from 'robust-react-ui/build/components/Typography';
+import TabList from 'robust-react-ui/build/components/TabList';
 <TabList
   ariaLabel="Four planets"
   variant="primary"
@@ -75,8 +75,8 @@ import TabList from 'robust-react-ui/components/TabList';
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
-import TabList from 'robust-react-ui/components/TabList';
+import Typography from 'robust-react-ui/build/components/Typography';
+import TabList from 'robust-react-ui/build/components/TabList';
 <TabList
   ariaLabel="Four planets"
   variant="success"
@@ -139,8 +139,8 @@ import TabList from 'robust-react-ui/components/TabList';
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
-import TabList from 'robust-react-ui/components/TabList';
+import Typography from 'robust-react-ui/build/components/Typography';
+import TabList from 'robust-react-ui/build/components/TabList';
 <TabList
   ariaLabel="Four planets"
   variant="danger"
@@ -203,8 +203,8 @@ import TabList from 'robust-react-ui/components/TabList';
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
-import TabList from 'robust-react-ui/components/TabList';
+import Typography from 'robust-react-ui/build/components/Typography';
+import TabList from 'robust-react-ui/build/components/TabList';
 <TabList
   ariaLabel="Four planets"
   variant="secondary"

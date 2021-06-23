@@ -3,8 +3,8 @@
 - uses native html tags for accessibility### Default
 
 ```jsx
-import Landmark from 'robust-react-ui/components/Landmark';
-import Typography from 'robust-react-ui/components/Typography';
+import Landmark from 'robust-react-ui/build/components/Landmark';
+import Typography from 'robust-react-ui/build/components/Typography';
 
 <Landmark.ContentInfo>
   <Typography.Paragraph>

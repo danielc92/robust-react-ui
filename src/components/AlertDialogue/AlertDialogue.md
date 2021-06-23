@@ -11,7 +11,7 @@
 
 ```jsx
 import React from 'react';
-import Button from 'robust-react-ui/components/Button';
+import Button from 'robust-react-ui/build/components/Button';
 const [open, setOpen] = React.useState(false);
 const onCloseActionFunction = () => setOpen(false);
 const onConfirmActionFunction = () => setOpen(false);

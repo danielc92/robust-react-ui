@@ -3,6 +3,7 @@
     "module": "commonjs",
     "baseUrl": "./",
     "paths": {
+      "robust-react-ui/build/*": ["src/*"],
       "robust-react-ui/*": ["src/*"]
     },
     "target": "es5",

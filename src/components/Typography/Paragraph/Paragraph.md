@@ -8,7 +8,7 @@
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Typography.Paragraph>
   Dolor sunt pariatur laboris tempor enim id cupidatat sunt veniam. Id ullamco
   fugiat exercitation do adipisicing fugiat incididunt ut minim eiusmod qui.
@@ -23,7 +23,7 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Typography.Paragraph>
   Dolor sunt pariatur laboris tempor enim id cupidatat sunt veniam. Id ullamco
   fugiat exercitation <strong>do adipisicing fugiat</strong> incididunt ut minim
@@ -39,7 +39,7 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Typography.Paragraph bolded>
   Dolor sunt pariatur laboris tempor enim id cupidatat sunt veniam. Id ullamco
   fugiat exercitation do adipisicing fugiat incididunt ut minim eiusmod qui.
@@ -54,7 +54,7 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Typography.Paragraph size="small">
   Dolor sunt pariatur laboris tempor enim id cupidatat sunt veniam. Id ullamco
   fugiat exercitation do adipisicing fugiat incididunt ut minim eiusmod qui.
@@ -69,7 +69,7 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Typography from 'robust-react-ui/components/Typography';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Typography.Paragraph size="large">
   Dolor sunt pariatur laboris tempor enim id cupidatat sunt veniam. Id ullamco
   fugiat exercitation do adipisicing fugiat incididunt ut minim eiusmod qui.

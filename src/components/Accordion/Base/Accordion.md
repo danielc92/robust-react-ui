@@ -12,9 +12,9 @@
 
 ```jsx
 import React from 'react';
-import Accordion from 'robust-react-ui/components/Accordion';
-import Image from 'robust-react-ui/components/Image';
-import Typography from 'robust-react-ui/components/Typography';
+import Accordion from 'robust-react-ui/build/components/Accordion';
+import Image from 'robust-react-ui/build/components/Image';
+import Typography from 'robust-react-ui/build/components/Typography';
 const { Panel } = Accordion;
 const [activePanel, setActivePanel] = React.useState('1');
 const onSelectPanelFunction = (panelId) => setActivePanel(panelId);
@@ -73,9 +73,9 @@ const onSelectPanelFunction = (panelId) => setActivePanel(panelId);
 
 ```jsx
 import React from 'react';
-import Accordion from 'robust-react-ui/components/Accordion';
+import Accordion from 'robust-react-ui/build/components/Accordion';
 
-import Typography from 'robust-react-ui/components/Typography';
+import Typography from 'robust-react-ui/build/components/Typography';
 const { Panel } = Accordion;
 const [activePanel, setActivePanel] = React.useState('1');
 const onSelectPanelFunction = (panelId) => setActivePanel(panelId);

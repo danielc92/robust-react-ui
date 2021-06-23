@@ -3,7 +3,10 @@ const glob = require('glob');
 
 module.exports = {
   title: 'Robust React UI - by Daniel Corcoran',
-  version: '1.0.0',
+  version: '1.0.2',
+  usageMode: 'expand',
+  exampleMode: 'expand',
+  pagePerSection: true,
   theme: {
     color: {
       base: '#333',

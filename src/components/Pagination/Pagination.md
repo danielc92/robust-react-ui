@@ -7,7 +7,7 @@
 
 ```jsx
 import React from 'react';
-import Pagination from 'robust-react-ui/components/Pagination';
+import Pagination from 'robust-react-ui/build/components/Pagination';
 <Pagination
   data={[
     {
@@ -50,7 +50,7 @@ import Pagination from 'robust-react-ui/components/Pagination';
 
 ```jsx
 import React from 'react';
-import Pagination from 'robust-react-ui/components/Pagination';
+import Pagination from 'robust-react-ui/build/components/Pagination';
 <Pagination
   data={[
     {

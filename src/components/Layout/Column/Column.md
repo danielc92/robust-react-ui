@@ -8,8 +8,8 @@
 
 ```jsx
 import React from 'react';
-import Layout from 'robust-react-ui/components/Layout';
-import Typography from 'robust-react-ui/components/Typography';
+import Layout from 'robust-react-ui/build/components/Layout';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Layout.Row>
   <Layout.Column size="quarter">
     <Typography.Heading level={3}>
@@ -56,8 +56,8 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'robust-react-ui/components/Layout';
-import Typography from 'robust-react-ui/components/Typography';
+import Layout from 'robust-react-ui/build/components/Layout';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Layout.Row>
   <Layout.Column size="half">
     <Typography.Heading level={3}>
@@ -84,8 +84,8 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'robust-react-ui/components/Layout';
-import Typography from 'robust-react-ui/components/Typography';
+import Layout from 'robust-react-ui/build/components/Layout';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Layout.Row>
   <Layout.Column size="third">
     <Typography.Heading level={3}>
@@ -121,8 +121,8 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'robust-react-ui/components/Layout';
-import Typography from 'robust-react-ui/components/Typography';
+import Layout from 'robust-react-ui/build/components/Layout';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Layout.Row wrap={false}>
   <Layout.Column size="quarter">
     <Typography.Heading level={3}>
@@ -169,8 +169,8 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'robust-react-ui/components/Layout';
-import Typography from 'robust-react-ui/components/Typography';
+import Layout from 'robust-react-ui/build/components/Layout';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Layout.Row wrap={false}>
   <Layout.Column size="half">
     <Typography.Heading level={3}>
@@ -197,8 +197,8 @@ import Typography from 'robust-react-ui/components/Typography';
 
 ```jsx
 import React from 'react';
-import Layout from 'robust-react-ui/components/Layout';
-import Typography from 'robust-react-ui/components/Typography';
+import Layout from 'robust-react-ui/build/components/Layout';
+import Typography from 'robust-react-ui/build/components/Typography';
 <Layout.Row wrap={false}>
   <Layout.Column size="third">
     <Typography.Heading level={3}>
