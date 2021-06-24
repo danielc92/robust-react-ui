@@ -6,7 +6,7 @@ module.exports = {
   version: package.version,
   usageMode: 'expand',
   exampleMode: 'expand',
-  pagePerSection: true,
+  pagePerSection: false,
   theme: {
     color: {
       base: '#333',
