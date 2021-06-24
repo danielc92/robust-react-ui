@@ -5,7 +5,7 @@ import { IComplementaryProps } from './Complementary.types';
 const Complementary = ({ children, ariaLabelledBy }: IComplementaryProps) => (
   <aside
     data-testid="Complementary"
-    className="dcui-landmark__complementary"
+    className="rrui-landmark__complementary"
     aria-labelledby={ariaLabelledBy || ''}
   >
     {children}

@@ -31,7 +31,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('Button');
 
-    expect(component).toHaveClass('dcui-button');
+    expect(component).toHaveClass('rrui-button');
   });
 
   it('should render the correct variant class', () => {
@@ -40,7 +40,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('Button');
 
-    expect(component).toHaveClass('dcui-button--danger');
+    expect(component).toHaveClass('rrui-button--danger');
   });
 
   it('should render the correct variant class (2)', () => {
@@ -49,7 +49,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('Button');
 
-    expect(component).toHaveClass('dcui-button--success');
+    expect(component).toHaveClass('rrui-button--success');
   });
 
   it('should render the default primary modifier', () => {
@@ -57,7 +57,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('Button');
 
-    expect(component).toHaveClass('dcui-button--primary');
+    expect(component).toHaveClass('rrui-button--primary');
   });
 
   it('should render the secondary class modifier', () => {
@@ -66,6 +66,6 @@ describe('Test Component', () => {
 
     const component = getByTestId('Button');
 
-    expect(component).toHaveClass('dcui-button--secondary');
+    expect(component).toHaveClass('rrui-button--secondary');
   });
 });

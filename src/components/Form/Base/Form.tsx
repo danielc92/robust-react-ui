@@ -15,7 +15,7 @@ const Form = ({ children, onSubmitFunction, ariaDescribedBy }: IFormProps) => (
   <form
     aria-describedby={ariaDescribedBy || null}
     data-testid="Form"
-    className="dcui-form"
+    className="rrui-form"
     onSubmit={(event) => {
       event.preventDefault();
       onSubmitFunction();

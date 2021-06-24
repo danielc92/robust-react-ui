@@ -15,22 +15,22 @@ const Alert = ({
     data-testid="Alert"
     role="alert"
     className={getClassNames({
-      'dcui-alert': true,
-      [`dcui-alert--${variant}`]: true,
-      'dcui-alert--full-width': fullWidth,
-      'dcui-alert--hidden': visible === false,
+      'rrui-alert': true,
+      [`rrui-alert--${variant}`]: true,
+      'rrui-alert--full-width': fullWidth,
+      'rrui-alert--hidden': visible === false,
     })}
   >
     <button
       type="button"
-      className="dcui-alert__button"
+      className="rrui-alert__button"
       aria-label="close alert"
       onClick={() => {
         if (onCloseActionFunction) onCloseActionFunction(!visible);
       }}
     >
       <svg
-        className="dcui-alert__icon"
+        className="rrui-alert__icon"
         width="24"
         height="24"
         viewBox="0 0 24 24"

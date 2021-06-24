@@ -75,17 +75,17 @@ const Carousel = ({
       onBlur={() => setPolite(false)}
       onMouseLeave={() => setPolite(false)}
       id="myCarousel"
-      className="dcui-carousel"
+      className="rrui-carousel"
       aria-roledescription="carousel"
       aria-label={ariaLabel}
     >
-      <div className="dcui-carousel__inner">
-        <div className="dcui-carousel__controls">
+      <div className="rrui-carousel__inner">
+        <div className="rrui-carousel__controls">
           <button
             // onFocus={pause}
             onClick={toggle}
             type="button"
-            className="dcui-carousel__button dcui-carousel__button--play"
+            className="rrui-carousel__button rrui-carousel__button--play"
             aria-label="Start automatic slide show"
           >
             <svg
@@ -94,7 +94,7 @@ const Carousel = ({
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="dcui-carousel__icon"
+              className="rrui-carousel__icon"
             >
               {playing ? (
                 <>
@@ -118,7 +118,7 @@ const Carousel = ({
               onBeforeInputCapture={() => console.log('onBeforeInputCapture')}
               onClick={() => navigateSlide('prev')}
               type="button"
-              className="dcui-carousel__button dcui-carousel__button--prev"
+              className="rrui-carousel__button rrui-carousel__button--prev"
               aria-controls="myCarousel-items"
               aria-label="Previous Slide"
             >
@@ -130,7 +130,7 @@ const Carousel = ({
                 strokeWidth="1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="dcui-carousel__icon"
+                className="rrui-carousel__icon"
               >
                 <circle cx="12" cy="12" r="10" />
                 <polyline points="12 8 8 12 12 16" />
@@ -146,7 +146,7 @@ const Carousel = ({
               onBlur={() => setItemsFocused(true)}
               onClick={() => navigateSlide('next')}
               type="button"
-              className="dcui-carousel__button dcui-carousel__button--next"
+              className="rrui-carousel__button rrui-carousel__button--next"
               aria-controls="myCarousel-items"
               aria-label="Next Slide"
             >
@@ -156,7 +156,7 @@ const Carousel = ({
                 stroke="currentColor"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="dcui-carousel__icon"
+                className="rrui-carousel__icon"
               >
                 <circle cx="12" cy="12" r="10" />
                 <polyline points="12 16 16 12 12 8" />
@@ -169,8 +169,8 @@ const Carousel = ({
         <div
           id="myCarousel-items"
           className={getClassNames({
-            'dcui-carousel__items': true,
-            'dcui-carousel__items--focused': itemsFocused,
+            'rrui-carousel__items': true,
+            'rrui-carousel__items--focused': itemsFocused,
           })}
           aria-live={ariaLive}
         >
@@ -178,20 +178,20 @@ const Carousel = ({
             <div
               key={i.toString()}
               className={getClassNames({
-                'dcui-carousel__item': true,
-                'dcui-carousel__item--active': activeSlide === i,
+                'rrui-carousel__item': true,
+                'rrui-carousel__item--active': activeSlide === i,
               })}
               role="group"
               aria-roledescription="slide"
               aria-label={`${(i + 1).toString()} of ${slides.length}`}
             >
-              <div className="dcui-carousel__image">
+              <div className="rrui-carousel__image">
                 <a href={s.href}>
                   <img src={s.imageSrc} alt={s.imageAlt} />
                 </a>
               </div>
 
-              <div className="dcui-carousel__caption">
+              <div className="rrui-carousel__caption">
                 <Typography.Heading level={3}>
                   <a
                     onKeyDown={handleAnchorKeyDown}

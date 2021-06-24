@@ -3,7 +3,7 @@ import React from 'react';
 import { ITableCellProps } from './Cell.types';
 
 const Cell = ({ children }: ITableCellProps) => (
-  <td className="dcui-table__cell">{children}</td>
+  <td className="rrui-table__cell">{children}</td>
 );
 
 export default Cell;

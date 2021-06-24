@@ -12,7 +12,7 @@ import Alert from 'robust-react-ui/build/components/Alert';
 const [open, setOpen] = React.useState(true);
 const onCloseActionFunction = () => setOpen(false);
 <Alert onCloseActionFunction={onCloseActionFunction} visible={open}>
-  <p className="dcui-para dcui-para--medium">
+  <p className="rrui-para rrui-para--medium">
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
     proident adipisicing.
   </p>
@@ -31,7 +31,7 @@ const onCloseActionFunction = () => setOpen(false);
   onCloseActionFunction={onCloseActionFunction}
   visible={open}
 >
-  <p className="dcui-para dcui-para--medium">
+  <p className="rrui-para rrui-para--medium">
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
     proident adipisicing.
   </p>
@@ -50,7 +50,7 @@ const onCloseActionFunction = () => setOpen(false);
   onCloseActionFunction={onCloseActionFunction}
   visible={open}
 >
-  <p className="dcui-para dcui-para--medium">
+  <p className="rrui-para rrui-para--medium">
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
     proident adipisicing.
   </p>

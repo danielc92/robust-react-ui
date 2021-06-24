@@ -29,12 +29,12 @@ const GridItem = ({
     <div
       data-testid="GridItem"
       className={getClassNames({
-        'dcui-grid__item': true,
-        [`dcui-grid__item--${variant}`]: true,
-        [`dcui-grid__item--padding-x-${paddingX}`]: true,
-        [`dcui-grid__item--padding-y-${paddingY}`]: true,
-        'dcui-grid__item--shrink-tablet': shrinkOnTablet,
-        'dcui-grid__item--shrink-mobile': shrinkOnMobile && !shrinkOnTablet,
+        'rrui-grid__item': true,
+        [`rrui-grid__item--${variant}`]: true,
+        [`rrui-grid__item--padding-x-${paddingX}`]: true,
+        [`rrui-grid__item--padding-y-${paddingY}`]: true,
+        'rrui-grid__item--shrink-tablet': shrinkOnTablet,
+        'rrui-grid__item--shrink-mobile': shrinkOnMobile && !shrinkOnTablet,
       })}
       style={style}
     >

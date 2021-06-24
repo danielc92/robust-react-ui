@@ -25,7 +25,7 @@ describe('Icon Suite', () => {
 
     const component = getByTestId('Icon');
 
-    expect(component).toHaveClass('dcui-icon');
+    expect(component).toHaveClass('rrui-icon');
   });
 
   it('should render with primary variant class', () => {
@@ -33,7 +33,7 @@ describe('Icon Suite', () => {
 
     const component = getByTestId('Icon');
 
-    expect(component).toHaveClass('dcui-icon--primary');
+    expect(component).toHaveClass('rrui-icon--primary');
   });
 
   it('should render with primary danger class', () => {
@@ -42,7 +42,7 @@ describe('Icon Suite', () => {
 
     const component = getByTestId('Icon');
 
-    expect(component).toHaveClass('dcui-icon--danger');
+    expect(component).toHaveClass('rrui-icon--danger');
   });
 
   it('should render with dark danger class', () => {
@@ -51,7 +51,7 @@ describe('Icon Suite', () => {
 
     const component = getByTestId('Icon');
 
-    expect(component).toHaveClass('dcui-icon--dark');
+    expect(component).toHaveClass('rrui-icon--dark');
   });
 
   it('should render with success danger class', () => {
@@ -60,7 +60,7 @@ describe('Icon Suite', () => {
 
     const component = getByTestId('Icon');
 
-    expect(component).toHaveClass('dcui-icon--success');
+    expect(component).toHaveClass('rrui-icon--success');
   });
 
   it('should render with custom dimensions', () => {

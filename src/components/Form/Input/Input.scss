@@ -2,7 +2,7 @@
 @import '../../../variables.scss';
 @import '../../../typography.scss';
 
-.dcui-form {
+.rrui-form {
   &__input {
     margin-bottom: 0.5rem;
 
@@ -55,14 +55,14 @@
     box-sizing: border-box;
     border-style: var(--input-border-style);
 
-    &.dcui-form__input--disabled {
-      &.dcui-form__input--o {
+    &.rrui-form__input--disabled {
+      &.rrui-form__input--o {
         background-color: var(--input-background-color-disabled);
         border-color: var(--input-border-color-disabled);
       }
     }
 
-    &.dcui-form__input--has-error {
+    &.rrui-form__input--has-error {
       background-color: var(--input-background-color-error);
       border-color: var(--color-danger);
       color: var(--color-danger);

@@ -9,8 +9,8 @@ const Container = ({ children, size = 'medium' }: IContainerProps) => (
   <div
     data-testid="Container"
     className={getClassNames({
-      'dcui-container': true,
-      [`dcui-container--${size}`]: true,
+      'rrui-container': true,
+      [`rrui-container--${size}`]: true,
     })}
   >
     {children}

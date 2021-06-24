@@ -4,7 +4,7 @@ import React from 'react';
 import { ITableHeadProps } from './Head.types';
 
 const Head = ({ children }: ITableHeadProps) => (
-  <thead className="dcui-table__head">{children}</thead>
+  <thead className="rrui-table__head">{children}</thead>
 );
 
 export default Head;

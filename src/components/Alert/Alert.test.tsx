@@ -22,14 +22,14 @@ describe('Alert Suite', () => {
 
     const component = getByTestId('Alert');
 
-    expect(component).toHaveClass('dcui-alert');
+    expect(component).toHaveClass('rrui-alert');
   });
   it('should render primary modifier class', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Alert');
 
-    expect(component).toHaveClass('dcui-alert--primary');
+    expect(component).toHaveClass('rrui-alert--primary');
   });
   it('should render danger modifier class', () => {
     props.variant = 'danger';
@@ -37,7 +37,7 @@ describe('Alert Suite', () => {
 
     const component = getByTestId('Alert');
 
-    expect(component).toHaveClass('dcui-alert--danger');
+    expect(component).toHaveClass('rrui-alert--danger');
   });
   it('should render success modifier class', () => {
     props.variant = 'success';
@@ -45,7 +45,7 @@ describe('Alert Suite', () => {
 
     const component = getByTestId('Alert');
 
-    expect(component).toHaveClass('dcui-alert--success');
+    expect(component).toHaveClass('rrui-alert--success');
   });
   it('should render full width modifier class', () => {
     props.fullWidth = true;
@@ -53,7 +53,7 @@ describe('Alert Suite', () => {
 
     const component = getByTestId('Alert');
 
-    expect(component).toHaveClass('dcui-alert--full-width');
+    expect(component).toHaveClass('rrui-alert--full-width');
   });
 
   it('should render correct text', () => {

@@ -12,6 +12,12 @@ export interface IAlertProps {
    * Component will take up the full width available.
    */
   fullWidth?: boolean;
+  /**
+   * Controls the visibility of the Alert component
+   */
   visible?: boolean;
+  /**
+   * Function triggered when the close button is activated
+   */
   onCloseActionFunction?: (visibleState: boolean) => void;
 }

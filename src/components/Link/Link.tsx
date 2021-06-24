@@ -18,9 +18,9 @@ const Link = ({
     aria-describedby={ariaDescribedBy || null}
     data-testid="Link"
     className={getClassNames({
-      'dcui-link': true,
-      [`dcui-link--${size}`]: true,
-      'dcui-link--block': display === 'block',
+      'rrui-link': true,
+      [`rrui-link--${size}`]: true,
+      'rrui-link--block': display === 'block',
     })}
   >
     {children}

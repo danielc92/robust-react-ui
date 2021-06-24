@@ -36,13 +36,13 @@ describe('Table suite', () => {
 
     const component = getByTestId('Table');
 
-    expect(component).toHaveClass('dcui-table');
+    expect(component).toHaveClass('rrui-table');
   });
   it('should render with striped modifier class', () => {
     const { getByTestId } = renderComponent({ striped: true });
 
     const component = getByTestId('Table');
 
-    expect(component).toHaveClass('dcui-table--striped');
+    expect(component).toHaveClass('rrui-table--striped');
   });
 });

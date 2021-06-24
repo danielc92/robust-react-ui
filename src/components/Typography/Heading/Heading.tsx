@@ -6,9 +6,9 @@ import './Heading.scss';
 
 const getHeaderClass = (level: 1 | 2 | 3 | 4 | 5 | 6, jumbo: boolean) =>
   getClassNames({
-    'dcui-header': true,
-    [`dcui-header__${level}`]: true,
-    [`dcui-header__${level}--jumbo`]: jumbo,
+    'rrui-header': true,
+    [`rrui-header__${level}`]: true,
+    [`rrui-header__${level}--jumbo`]: jumbo,
   });
 
 const Heading = ({ children, level = 1, jumbo = false, id }: IHeadingProps) => {

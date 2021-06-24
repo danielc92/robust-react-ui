@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import '../../variables.scss';
+@import '../../typography.scss';
 
 :root {
   --link-font-size-sm: var(--font-size-sm);
@@ -12,7 +12,7 @@
   --link-font-color: var(--color-primary);
 }
 
-.dcui-link {
+.rrui-link {
   color: var(--link-font-color);
   font-family: var(--font-family-primary);
 

@@ -209,7 +209,7 @@ const NavigationBar = ({
 
   return (
     <nav
-      className="dcui-nav"
+      className="rrui-nav"
       data-testid="NavigationBar"
       aria-label={ariaLabel}
     >
@@ -222,9 +222,9 @@ const NavigationBar = ({
             <li
               role="none"
               className={getClassNames({
-                'dcui-nav__menu-item': true,
-                'dcui-nav__menu-item--expanded': n?.menuOpen,
-                'dcui-nav__menu-item--has-menu': n?.hasMenu,
+                'rrui-nav__menu-item': true,
+                'rrui-nav__menu-item--expanded': n?.menuOpen,
+                'rrui-nav__menu-item--has-menu': n?.hasMenu,
               })}
               key={a.linkName + _ai.toString()}
             >
@@ -266,7 +266,7 @@ const NavigationBar = ({
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className={getClassNames({
-                      'dcui-nav__chevron': true,
+                      'rrui-nav__chevron': true,
                     })}
                   >
                     <polyline points="9 18 15 12 9 6" />
@@ -277,8 +277,8 @@ const NavigationBar = ({
               {a.children && (
                 <ul
                   className={getClassNames({
-                    'dcui-nav__dropdown': true,
-                    'dcui-nav__dropdown--open': nodes.find(
+                    'rrui-nav__dropdown': true,
+                    'rrui-nav__dropdown--open': nodes.find(
                       (nodeToFind2) => nodeToFind2.id === a.id
                     )?.menuOpen,
                   })}
@@ -294,8 +294,8 @@ const NavigationBar = ({
                         <li
                           role="none"
                           className={getClassNames({
-                            'dcui-nav__dropdown-item': true,
-                            'dcui-nav__dropdown-item--expanded': n2?.menuOpen,
+                            'rrui-nav__dropdown-item': true,
+                            'rrui-nav__dropdown-item--expanded': n2?.menuOpen,
                           })}
                         >
                           <a
@@ -356,9 +356,9 @@ const NavigationBar = ({
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                                 className={getClassNames({
-                                  'dcui-nav__chevron': true,
-                                  'dcui-nav__chevron--submenu': true,
-                                  'dcui-nav__chevron--expanded': n2?.menuOpen,
+                                  'rrui-nav__chevron': true,
+                                  'rrui-nav__chevron--submenu': true,
+                                  'rrui-nav__chevron--expanded': n2?.menuOpen,
                                 })}
                               >
                                 <polyline points="9 18 15 12 9 6" />
@@ -369,9 +369,9 @@ const NavigationBar = ({
                           {b.children && (
                             <ul
                               className={getClassNames({
-                                'dcui-nav__dropdown': true,
-                                'dcui-nav__dropdown--nested': true,
-                                'dcui-nav__dropdown--open': nodes.find(
+                                'rrui-nav__dropdown': true,
+                                'rrui-nav__dropdown--nested': true,
+                                'rrui-nav__dropdown--open': nodes.find(
                                   (nodeToFind3) => nodeToFind3.id === b.id
                                 )?.menuOpen,
                               })}
@@ -388,7 +388,7 @@ const NavigationBar = ({
                                   >
                                     <li
                                       role="none"
-                                      className="dcui-nav__dropdown-item"
+                                      className="rrui-nav__dropdown-item"
                                     >
                                       <a
                                         onKeyDown={(e) => {
@@ -441,7 +441,7 @@ const NavigationBar = ({
                                     {c.hasSeparator && (
                                       <li
                                         role="separator"
-                                        className="dcui-nav__separator"
+                                        className="rrui-nav__separator"
                                       />
                                     )}
                                   </React.Fragment>
@@ -453,7 +453,7 @@ const NavigationBar = ({
                         {b.hasSeparator && (
                           <li
                             role="separator"
-                            className="dcui-nav__separator"
+                            className="rrui-nav__separator"
                           />
                         )}
                       </React.Fragment>

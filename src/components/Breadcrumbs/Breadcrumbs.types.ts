@@ -9,6 +9,9 @@ export interface IBreadcrumbsProps {
    * An accessible label.
    */
   ariaLabel?: string;
+  /**
+   * Data supporting an array of breadcrumbs
+   */
   data: Array<IBreadcrumbProps>;
   /**
    * Size setting for component.

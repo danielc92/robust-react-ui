@@ -38,7 +38,7 @@ describe('Form Input Suite', () => {
 
     const component = getByTestId('CheckboxGroup');
 
-    expect(component).toHaveClass('dcui-form__checkbox-group');
+    expect(component).toHaveClass('rrui-form__checkbox-group');
   });
 
   it('Should render 3 Checkboxes', () => {

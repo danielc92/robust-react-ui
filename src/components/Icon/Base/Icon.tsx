@@ -16,8 +16,8 @@ const Icon = ({
     height={height}
     viewBox={viewBox}
     className={getClassNames({
-      'dcui-icon': true,
-      [`dcui-icon--${variant}`]: true,
+      'rrui-icon': true,
+      [`rrui-icon--${variant}`]: true,
     })}
   >
     {children}

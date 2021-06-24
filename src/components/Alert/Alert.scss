@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import '../../variables.scss';
+@import '../../typography.scss';
 
 :root {
   --alert-padding-y: 1.6rem;
@@ -17,7 +17,7 @@
   --alert-success-background-color: var(--color-success);
 }
 
-.dcui-alert {
+.rrui-alert {
   box-sizing: border-box;
   border-radius: var(--alert-border-radius);
   padding: var(--alert-padding-y) var(--alert-padding-x);
@@ -62,8 +62,8 @@
   &--primary {
     background-color: var(--alert-primary-background-color);
 
-    .dcui-para,
-    .dcui-header {
+    .rrui-para,
+    .rrui-header {
       color: var(--alert-primary-color);
     }
   }
@@ -71,8 +71,8 @@
   &--success {
     background-color: var(--alert-success-background-color);
 
-    .dcui-para,
-    .dcui-header {
+    .rrui-para,
+    .rrui-header {
       color: var(--alert-success-color);
     }
   }
@@ -80,8 +80,8 @@
   &--danger {
     background-color: var(--alert-danger-background-color);
 
-    .dcui-para,
-    .dcui-header {
+    .rrui-para,
+    .rrui-header {
       color: var(--alert-danger-color);
     }
   }

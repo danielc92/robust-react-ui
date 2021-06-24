@@ -14,10 +14,10 @@ const Column = ({
   <div
     data-testid="Column"
     className={getClassNames({
-      'dcui-column': true,
-      [`dcui-column--one-${size}`]: true,
-      [`dcui-column--padding-x-${paddingX}`]: true,
-      [`dcui-column--padding-y-${paddingY}`]: true,
+      'rrui-column': true,
+      [`rrui-column--one-${size}`]: true,
+      [`rrui-column--padding-x-${paddingX}`]: true,
+      [`rrui-column--padding-y-${paddingY}`]: true,
     })}
   >
     {children}

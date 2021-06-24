@@ -31,7 +31,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('Grid');
 
-    expect(component).toHaveClass('dcui-grid');
+    expect(component).toHaveClass('rrui-grid');
   });
 
   it('should render gap modifier class', () => {
@@ -39,7 +39,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('Grid');
 
-    expect(component).toHaveClass('dcui-grid--gap-m');
+    expect(component).toHaveClass('rrui-grid--gap-m');
   });
   it('should render gap (l) modifier class', () => {
     props.gap = 'l';
@@ -47,14 +47,14 @@ describe('Test Component', () => {
 
     const component = getByTestId('Grid');
 
-    expect(component).toHaveClass('dcui-grid--gap-l');
+    expect(component).toHaveClass('rrui-grid--gap-l');
   });
   it('should render exactly 2 grid items ', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Grid');
 
-    expect(component.getElementsByClassName('dcui-grid__item').length).toEqual(
+    expect(component.getElementsByClassName('rrui-grid__item').length).toEqual(
       2
     );
   });

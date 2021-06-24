@@ -34,10 +34,10 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
       }}
       ref={ref}
       className={getClassNames({
-        'dcui-button': true,
-        'dcui-button--square': square,
-        [`dcui-button--${size}`]: true,
-        [`dcui-button--${variant}`]: true,
+        'rrui-button': true,
+        'rrui-button--square': square,
+        [`rrui-button--${size}`]: true,
+        [`rrui-button--${variant}`]: true,
       })}
     >
       {children}

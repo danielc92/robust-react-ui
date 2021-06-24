@@ -117,15 +117,15 @@ const TabList = ({
     <div
       data-testid="TabList"
       className={getClassNames({
-        'dcui-tablist': true,
-        'dcui-tablist--full-width': fullWidth,
-        [`dcui-tablist--${variant}`]: true,
+        'rrui-tablist': true,
+        'rrui-tablist--full-width': fullWidth,
+        [`rrui-tablist--${variant}`]: true,
       })}
     >
       <div
         role="tablist"
         aria-label={ariaLabel || null}
-        className={getClassNames({ 'dcui-tablist__button-group': true })}
+        className={getClassNames({ 'rrui-tablist__button-group': true })}
       >
         {tabs.map((t, index) => (
           <button
@@ -144,8 +144,8 @@ const TabList = ({
               })
             }
             className={getClassNames({
-              'dcui-tablist__button': true,
-              'dcui-tablist__button--active': activeTab?.tabName === t.tabId,
+              'rrui-tablist__button': true,
+              'rrui-tablist__button--active': activeTab?.tabName === t.tabId,
             })}
             role="tab"
             aria-selected={activeTab?.tabName === t.tabId ? 'true' : 'false'}
@@ -162,8 +162,8 @@ const TabList = ({
           ref={tabPanelRefs[i]}
           key={x.tabId}
           className={getClassNames({
-            'dcui-tablist__panel': true,
-            'dcui-tablist__panel--hidden': x.tabId !== activeTab?.tabName,
+            'rrui-tablist__panel': true,
+            'rrui-tablist__panel--hidden': x.tabId !== activeTab?.tabName,
           })}
           tabIndex={0}
           role="tabpanel"

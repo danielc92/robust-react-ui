@@ -17,7 +17,7 @@
 }
 
 /* .carousel */
-.dcui-carousel {
+.rrui-carousel {
   &__inner {
     position: relative;
   }
@@ -58,7 +58,7 @@
     left: 15%;
     text-align: center;
 
-    .dcui-header {
+    .rrui-header {
       a {
         &:focus,
         &:hover {
@@ -72,7 +72,7 @@
       }
     }
 
-    .dcui-para {
+    .rrui-para {
       color: var(--carousel-text-color);
       margin-bottom: 0;
     }
@@ -89,7 +89,7 @@
     justify-content: space-between;
     z-index: 10;
 
-    .dcui-carousel__button--next {
+    .rrui-carousel__button--next {
       margin-left: 0.5rem;
     }
   }

@@ -14,10 +14,10 @@ const Row = ({
   <div
     data-testid="Row"
     className={getClassNames({
-      'dcui-row': true,
-      'dcui-row--wrap': wrap,
-      [`dcui-row--align-x-${alignX}`]: true,
-      [`dcui-row--align-y-${alignY}`]: true,
+      'rrui-row': true,
+      'rrui-row--wrap': wrap,
+      [`rrui-row--align-x-${alignX}`]: true,
+      [`rrui-row--align-y-${alignY}`]: true,
     })}
   >
     {children}

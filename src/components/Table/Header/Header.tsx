@@ -4,7 +4,7 @@ import { ITableHeaderProps } from './Header.types';
 
 const Header = ({ children, colSpan, rowSpan, scope }: ITableHeaderProps) => (
   <th
-    className="dcui-table__header"
+    className="rrui-table__header"
     scope={scope || 'col'}
     rowSpan={rowSpan || null}
     colSpan={colSpan || null}

@@ -56,7 +56,7 @@ describe('Form Input Suite', () => {
 
     const component = getByTestId('Input');
 
-    expect(component).toHaveClass('dcui-form__input');
+    expect(component).toHaveClass('rrui-form__input');
   });
   it('Input should render the correct value', () => {
     const { getByTestId } = renderComponent();

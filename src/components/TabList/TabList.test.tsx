@@ -36,14 +36,14 @@ describe('TabList Suite', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('TabList');
-    expect(component).toHaveClass('dcui-tablist');
+    expect(component).toHaveClass('rrui-tablist');
   });
 
   it('Tab button should render with correct class', () => {
     const { getAllByTestId } = renderComponent();
     const component = getAllByTestId('TabListButton');
 
-    expect(component[0]).toHaveClass('dcui-tablist__button');
+    expect(component[0]).toHaveClass('rrui-tablist__button');
   });
 
   it('Tab button should be multiple (2)', () => {
@@ -82,7 +82,7 @@ describe('TabList Suite', () => {
   it('Panel should render correct class', () => {
     const { getAllByTestId } = renderComponent();
     const component = getAllByTestId('TabListPanel');
-    expect(component[0]).toHaveClass('dcui-tablist__panel');
+    expect(component[0]).toHaveClass('rrui-tablist__panel');
   });
   it("Should be 1 'tablist' role", () => {
     const { getAllByRole } = renderComponent();
@@ -104,7 +104,7 @@ describe('TabList Suite', () => {
     const buttons = getAllByTestId('TabListButton');
 
     expect(
-      expect(buttons[0]).toHaveClass('dcui-tablist__button--active')
+      expect(buttons[0]).toHaveClass('rrui-tablist__button--active')
     ).toBeFalsy();
   });
 
@@ -119,6 +119,6 @@ describe('TabList Suite', () => {
         cancelable: true,
       })
     );
-    expect(buttons[1]).toHaveClass('dcui-tablist__button--active');
+    expect(buttons[1]).toHaveClass('rrui-tablist__button--active');
   });
 });

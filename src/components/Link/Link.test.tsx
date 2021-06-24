@@ -46,6 +46,6 @@ describe('Test Component', () => {
 
     const component = getByTestId('Link');
 
-    expect(component).toHaveClass('dcui-link');
+    expect(component).toHaveClass('rrui-link');
   });
 });

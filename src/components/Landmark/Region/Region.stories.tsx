@@ -9,11 +9,11 @@ export default {
 
 export const Region = () => (
   <Default ariaLabelledBy="region-id">
-    <h2 className="dcui-header" id="region-id">
+    <h2 className="rrui-header" id="region-id">
       This is a Region landmark
     </h2>
 
-    <p className="dcui-para">
+    <p className="rrui-para">
       This landmark will render the <strong>section</strong> tag at the root
       level.
     </p>

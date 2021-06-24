@@ -6,7 +6,7 @@ import { IRegionProps } from './Region.types';
 const Region = ({ children, ariaLabelledBy, ariaLabel }: IRegionProps) => (
   <section
     data-testid="Region"
-    className="dcui-landmark__region"
+    className="rrui-landmark__region"
     aria-labelledby={
       ariaLabelledBy && ariaLabelledBy.length > 0 ? ariaLabelledBy : null
     }

@@ -1,13 +1,13 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
   // form
   --form-background-color: var(--color-white);
 }
 
-.dcui-form {
+.rrui-form {
   background: var(--form-background-color);
   padding: 0;
   box-sizing: border-box;

@@ -1,9 +1,8 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
-
   // label
   --label-font-size: var(--font-size-sm);
   --label-font-color: var(--color-charcoal);
@@ -13,7 +12,7 @@
   --label-required-font-color: var(--color-primary);
 }
 
-.dcui-form {
+.rrui-form {
   &__label {
     color: var(--label-font-color);
     display: block;

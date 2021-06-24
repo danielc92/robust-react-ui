@@ -3,7 +3,7 @@ import React from 'react';
 import { IMainProps } from './Main.types';
 
 const Main = ({ children }: IMainProps) => (
-  <main data-testid="Main" className="dcui-landmark__main">
+  <main data-testid="Main" className="rrui-landmark__main">
     {children}
   </main>
 );

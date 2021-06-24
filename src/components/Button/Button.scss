@@ -17,8 +17,8 @@
   --button-icon-margin-right: var(--space-xxs);
 }
 
-.dcui-button {
-  .dcui-icon {
+.rrui-button {
+  .rrui-icon {
     margin-right: var(--button-icon-margin-right);
   }
 
@@ -53,16 +53,16 @@
   }
 
   &--square {
-    .dcui-icon {
+    .rrui-icon {
       margin-right: 0;
     }
-    &.dcui-button--small {
+    &.rrui-button--small {
       padding: var(--button-padding-y-sm) var(--button-padding-y-sm);
     }
-    &.dcui-button--medium {
+    &.rrui-button--medium {
       padding: var(--button-padding-y-md) var(--button-padding-y-md);
     }
-    &.dcui-button--large {
+    &.rrui-button--large {
       padding: var(--button-padding-y-lg) var(--button-padding-y-lg);
     }
   }

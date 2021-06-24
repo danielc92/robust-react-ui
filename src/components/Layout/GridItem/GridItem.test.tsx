@@ -19,15 +19,15 @@ describe('Test Component', () => {
 
     const component = getByTestId('GridItem');
 
-    expect(component).toHaveClass('dcui-grid__item--primary');
+    expect(component).toHaveClass('rrui-grid__item--primary');
   });
   it('should render with padding class', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('GridItem');
 
-    expect(component).toHaveClass('dcui-grid__item--padding-x-s');
-    expect(component).toHaveClass('dcui-grid__item--padding-y-s');
+    expect(component).toHaveClass('rrui-grid__item--padding-x-s');
+    expect(component).toHaveClass('rrui-grid__item--padding-y-s');
   });
   it('should render with correct padding class when padding props present', () => {
     props.paddingX = 'l';
@@ -36,8 +36,8 @@ describe('Test Component', () => {
 
     const component = getByTestId('GridItem');
 
-    expect(component).toHaveClass('dcui-grid__item--padding-x-l');
-    expect(component).toHaveClass('dcui-grid__item--padding-y-xs');
+    expect(component).toHaveClass('rrui-grid__item--padding-x-l');
+    expect(component).toHaveClass('rrui-grid__item--padding-y-xs');
   });
   it('should render with danger class', () => {
     props.variant = 'danger';
@@ -45,7 +45,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('GridItem');
 
-    expect(component).toHaveClass('dcui-grid__item--danger');
+    expect(component).toHaveClass('rrui-grid__item--danger');
   });
   it('should render with dark class', () => {
     props.variant = 'dark';
@@ -53,7 +53,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('GridItem');
 
-    expect(component).toHaveClass('dcui-grid__item--dark');
+    expect(component).toHaveClass('rrui-grid__item--dark');
   });
   it('should render with light class', () => {
     props.variant = 'light';
@@ -61,7 +61,7 @@ describe('Test Component', () => {
 
     const component = getByTestId('GridItem');
 
-    expect(component).toHaveClass('dcui-grid__item--light');
+    expect(component).toHaveClass('rrui-grid__item--light');
   });
   it('should render with success class', () => {
     props.variant = 'success';
@@ -69,6 +69,6 @@ describe('Test Component', () => {
 
     const component = getByTestId('GridItem');
 
-    expect(component).toHaveClass('dcui-grid__item--success');
+    expect(component).toHaveClass('rrui-grid__item--success');
   });
 });

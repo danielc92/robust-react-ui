@@ -35,7 +35,7 @@ describe('Row/Column suite', () => {
 
     const component = getByTestId('Row');
 
-    expect(component).toHaveClass('dcui-row');
+    expect(component).toHaveClass('rrui-row');
   });
 
   it('should render row wrap class by default', () => {
@@ -43,7 +43,7 @@ describe('Row/Column suite', () => {
 
     const component = getByTestId('Row');
 
-    expect(component).toHaveClass('dcui-row--wrap');
+    expect(component).toHaveClass('rrui-row--wrap');
   });
   it('should render exactly 4 columns', () => {
     const { getAllByTestId } = renderComponent();
@@ -57,15 +57,15 @@ describe('Row/Column suite', () => {
 
     const component = getAllByTestId('Column');
 
-    expect(component[0]).toHaveClass('dcui-column');
+    expect(component[0]).toHaveClass('rrui-column');
   });
   it('column should have small padding by default', () => {
     const { getAllByTestId } = renderComponent();
 
     const component = getAllByTestId('Column');
 
-    expect(component[0]).toHaveClass('dcui-column--padding-x-s');
-    expect(component[0]).toHaveClass('dcui-column--padding-y-s');
+    expect(component[0]).toHaveClass('rrui-column--padding-x-s');
+    expect(component[0]).toHaveClass('rrui-column--padding-y-s');
   });
   it('column should have large padding modifier class', () => {
     props.paddingX = 'l';
@@ -74,8 +74,8 @@ describe('Row/Column suite', () => {
 
     const component = getAllByTestId('Column');
 
-    expect(component[0]).toHaveClass('dcui-column--padding-x-l');
-    expect(component[0]).toHaveClass('dcui-column--padding-y-l');
+    expect(component[0]).toHaveClass('rrui-column--padding-x-l');
+    expect(component[0]).toHaveClass('rrui-column--padding-y-l');
   });
   it('column should have medium padding modifier class', () => {
     props.paddingX = 'm';
@@ -84,15 +84,15 @@ describe('Row/Column suite', () => {
 
     const component = getAllByTestId('Column');
 
-    expect(component[0]).toHaveClass('dcui-column--padding-x-m');
-    expect(component[0]).toHaveClass('dcui-column--padding-y-m');
+    expect(component[0]).toHaveClass('rrui-column--padding-x-m');
+    expect(component[0]).toHaveClass('rrui-column--padding-y-m');
   });
   it('column should have quarter modifier by default', () => {
     const { getAllByTestId } = renderComponent();
 
     const component = getAllByTestId('Column');
 
-    expect(component[0]).toHaveClass('dcui-column--one-quarter');
+    expect(component[0]).toHaveClass('rrui-column--one-quarter');
   });
   it('column should have render with third modifier class', () => {
     props.size = 'third';
@@ -100,7 +100,7 @@ describe('Row/Column suite', () => {
 
     const component = getAllByTestId('Column');
 
-    expect(component[0]).toHaveClass('dcui-column--one-third');
+    expect(component[0]).toHaveClass('rrui-column--one-third');
   });
   it('column should have render with half modifier class', () => {
     props.size = 'half';
@@ -108,7 +108,7 @@ describe('Row/Column suite', () => {
 
     const component = getAllByTestId('Column');
 
-    expect(component[0]).toHaveClass('dcui-column--one-half');
+    expect(component[0]).toHaveClass('rrui-column--one-half');
   });
   it('should render exactly 4 columns', () => {
     const { getAllByTestId } = renderComponent();

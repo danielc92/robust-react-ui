@@ -35,7 +35,7 @@ describe('Form Select Suite', () => {
 
     const component = getByTestId('Select');
 
-    expect(component).toHaveClass('dcui-form__select');
+    expect(component).toHaveClass('rrui-form__select');
   });
   it('Select should render the correct value', () => {
     const { getByTestId } = renderComponent();
