@@ -2,6 +2,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import Icon from './Icon';
+import Box from '../Box';
 import { IIconProps } from './Icon.types';
 
 export default {
@@ -15,7 +16,7 @@ export default {
 const Template: Story<IIconProps> = (args) => {
   return (
     <Icon {...args}>
-      <Icon.Box />
+      <Box />
     </Icon>
   );
 };
