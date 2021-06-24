@@ -1,9 +1,9 @@
 const path = require('path');
 const glob = require('glob');
-
+const package = require('./package.json');
 module.exports = {
   title: 'Robust React UI - by Daniel Corcoran',
-  version: '1.0.3',
+  version: package.version,
   usageMode: 'expand',
   exampleMode: 'expand',
   pagePerSection: true,
