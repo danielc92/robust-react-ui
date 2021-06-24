@@ -23,12 +23,12 @@ const Image = ({
     data-testid="Image"
     src={src}
     className={getClassNames({
-      'dcui-image': true,
-      'dcui-image--responsive': scaling === 'unrestricted',
-      'dcui-image--responsive-restrict-width': scaling === 'restricted-width',
-      'dcui-image--circle': circle,
-      'dcui-image--bordered': bordered,
-      'dcui-image--blurred': blurred,
+      'rrui-image': true,
+      'rrui-image--responsive': scaling === 'unrestricted',
+      'rrui-image--responsive-restrict-width': scaling === 'restricted-width',
+      'rrui-image--circle': circle,
+      'rrui-image--bordered': bordered,
+      'rrui-image--blurred': blurred,
     })}
   />
 );

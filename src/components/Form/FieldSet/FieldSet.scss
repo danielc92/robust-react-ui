@@ -1,9 +1,8 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
-
   // fieldset
   --fieldset-font-size: var(--font-size-md);
   --fieldset-border: 1px solid #f2f2f2;
@@ -11,7 +10,7 @@
   --fieldset-color: var(--color-charcoal);
 }
 
-.dcui-form {
+.rrui-form {
   &__fieldset {
     border: var(--fieldset-border);
     color: var(--fieldset-color);

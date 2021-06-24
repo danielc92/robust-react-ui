@@ -24,9 +24,9 @@ const Table = ({
     aria-label={ariaLabel || null}
     data-testid="Table"
     className={getClassNames({
-      'dcui-table': true,
-      'dcui-table--striped': striped,
-      'dcui-table--center-cells': centerCellContent,
+      'rrui-table': true,
+      'rrui-table--striped': striped,
+      'rrui-table--center-cells': centerCellContent,
     })}
   >
     {children}

@@ -23,7 +23,7 @@ describe('Form TextArea Suite', () => {
 
     const component = getByTestId('TextArea');
 
-    expect(component).toHaveClass('dcui-form__textarea');
+    expect(component).toHaveClass('rrui-form__textarea');
   });
   it('TextArea should render with name attribute', () => {
     const { getByTestId } = renderComponent();
@@ -45,7 +45,7 @@ describe('Form TextArea Suite', () => {
 
     const component = getByTestId('TextAreaWrapper');
     expect(
-      component.getElementsByClassName('dcui-form__textarea-error')
+      component.getElementsByClassName('rrui-form__textarea-error')
     ).toHaveLength(1);
   });
   it('TextArea should render with error message', () => {
@@ -55,7 +55,7 @@ describe('Form TextArea Suite', () => {
 
     const component = getByTestId('TextAreaWrapper');
     expect(
-      component.getElementsByClassName('dcui-form__textarea-error')[0]
+      component.getElementsByClassName('rrui-form__textarea-error')[0]
     ).toHaveTextContent('an error has occured!');
   });
 });

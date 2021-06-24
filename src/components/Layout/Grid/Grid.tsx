@@ -10,13 +10,13 @@ const Grid = ({ children, gap = 's', type = 'fixed' }: IGridProps) => (
   <div
     data-testid="Grid"
     className={getClassNames({
-      'dcui-grid': true,
-      [`dcui-grid--${type}`]: true,
-      'dcui-grid--gap-xxs': gap === 'xxs',
-      'dcui-grid--gap-xs': gap === 'xs',
-      'dcui-grid--gap-s': gap === 's',
-      'dcui-grid--gap-m': gap === 'm',
-      'dcui-grid--gap-l': gap === 'l',
+      'rrui-grid': true,
+      [`rrui-grid--${type}`]: true,
+      'rrui-grid--gap-xxs': gap === 'xxs',
+      'rrui-grid--gap-xs': gap === 'xs',
+      'rrui-grid--gap-s': gap === 's',
+      'rrui-grid--gap-m': gap === 'm',
+      'rrui-grid--gap-l': gap === 'l',
     })}
   >
     {children}

@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import '../../variables.scss';
+@import '../../typography.scss';
 
 :root {
   --autocomplete-font-family: var(--font-family-primary);
@@ -10,7 +10,7 @@
   --autocomplete-result-padding-y: 0.75rem;
 }
 
-.dcui-autocomplete {
+.rrui-autocomplete {
   box-sizing: border-box;
   margin-bottom: var(--global-space-under);
 
@@ -34,8 +34,7 @@
     box-sizing: border-box;
     cursor: pointer;
     font-family: var(--autocomplete-font-family);
-    padding:
-      var(--autocomplete-result-padding-y)
+    padding: var(--autocomplete-result-padding-y)
       var(--autocomplete-result-padding-x);
 
     &--selected {

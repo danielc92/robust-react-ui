@@ -3,7 +3,7 @@
 @import '../../../typography.scss';
 @import '../../../breakpoints.scss';
 
-.dcui-grid {
+.rrui-grid {
   &__item {
     &--shrink-tablet {
       @include for-tablet {
@@ -85,8 +85,8 @@
     &--primary {
       background-color: var(--color-primary);
 
-      .dcui-header,
-      .dcui-para {
+      .rrui-header,
+      .rrui-para {
         color: var(--color-white);
       }
     }
@@ -94,8 +94,8 @@
     &--success {
       background-color: var(--color-success);
 
-      .dcui-header,
-      .dcui-para {
+      .rrui-header,
+      .rrui-para {
         color: var(--color-white);
       }
     }
@@ -103,8 +103,8 @@
     &--danger {
       background-color: var(--color-danger);
 
-      .dcui-header,
-      .dcui-para {
+      .rrui-header,
+      .rrui-para {
         color: var(--color-white);
       }
     }
@@ -112,8 +112,8 @@
     &--dark {
       background-color: var(--color-charcoal);
 
-      .dcui-header,
-      .dcui-para {
+      .rrui-header,
+      .rrui-para {
         color: var(--color-white);
       }
     }
@@ -121,8 +121,8 @@
     &--light {
       background-color: var(--color-light-grey);
 
-      .dcui-header,
-      .dcui-para {
+      .rrui-header,
+      .rrui-para {
         color: var(--color-charcoal);
       }
     }

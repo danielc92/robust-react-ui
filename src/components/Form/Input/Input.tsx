@@ -17,17 +17,17 @@ const Input = ({
   disabled,
   name,
 }: IFormInputProps) => (
-  <div className="dcui-form__input-wrapper" data-testid="InputWrapper">
+  <div className="rrui-form__input-wrapper" data-testid="InputWrapper">
     <input
       name={name}
       data-testid="Input"
       disabled={disabled}
       className={getClassNames({
-        'dcui-form__input': true,
-        'dcui-form__input--full-width': fullWidth,
-        'dcui-form__input--has-error': error,
-        'dcui-form__input--disabled': disabled,
-        'dcui-form__input--o': disabled,
+        'rrui-form__input': true,
+        'rrui-form__input--full-width': fullWidth,
+        'rrui-form__input--has-error': error,
+        'rrui-form__input--disabled': disabled,
+        'rrui-form__input--o': disabled,
       })}
       type={type}
       placeholder={placeholder}
@@ -38,8 +38,8 @@ const Input = ({
     />
     <p
       className={getClassNames({
-        'dcui-form__input-error': true,
-        'dcui-form__input-error--hidden': !error,
+        'rrui-form__input-error': true,
+        'rrui-form__input-error--hidden': !error,
       })}
     >
       {errorMessage}

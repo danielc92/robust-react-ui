@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
   --container-max-width-sm: 800px;
@@ -8,7 +8,7 @@
   --container-max-width-lg: 1300px;
 }
 
-.dcui-container {
+.rrui-container {
   margin: 0 auto;
 
   &--small {

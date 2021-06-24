@@ -21,21 +21,21 @@ describe('Progress Suite', () => {
 
     const component = getByTestId('ProgressBar');
 
-    expect(component).toHaveClass('dcui-progress');
+    expect(component).toHaveClass('rrui-progress');
   });
   it('should render correct class (2)', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('ProgressBar');
 
-    expect(component).toHaveClass('dcui-progress--primary');
+    expect(component).toHaveClass('rrui-progress--primary');
   });
   it('should render correct class (3)', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('ProgressBar');
 
-    expect(component).toHaveClass('dcui-progress--medium');
+    expect(component).toHaveClass('rrui-progress--medium');
   });
 
   it('should render correct class (4)', () => {
@@ -43,7 +43,7 @@ describe('Progress Suite', () => {
 
     const component = getByTestId('ProgressBarInner');
 
-    expect(component).toHaveClass('dcui-progress__inner');
+    expect(component).toHaveClass('rrui-progress__inner');
   });
 
   it('should render correct class (5)', () => {
@@ -52,7 +52,7 @@ describe('Progress Suite', () => {
 
     const component = getByTestId('ProgressBar');
 
-    expect(component).toHaveClass('dcui-progress--danger');
+    expect(component).toHaveClass('rrui-progress--danger');
   });
 
   it('changing max value should change aria-valuemax', () => {

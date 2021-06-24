@@ -27,6 +27,6 @@ describe('AlertDialogue Suite', () => {
 
     const component = getByTestId('AlertDialogue');
 
-    expect(component).toHaveClass('dcui-modal__overlay');
+    expect(component).toHaveClass('rrui-modal__overlay');
   });
 });

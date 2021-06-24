@@ -4,7 +4,7 @@ import { IFormLegendProps } from './Legend.types';
 import './Legend.scss';
 
 const Legend = ({ id, children }: IFormLegendProps) => (
-  <legend className="dcui-form__legend" id={id}>
+  <legend className="rrui-form__legend" id={id}>
     {children}
   </legend>
 );

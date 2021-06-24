@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
   --accordion-border-style: solid;
@@ -9,7 +9,7 @@
   --accordion-width: var(--global-box-width);
 }
 
-.dcui-accordion {
+.rrui-accordion {
   border-color: var(--accordion-border-color);
   border-style: var(--accordion-border-style);
   border-width: var(--accordion-border-width);

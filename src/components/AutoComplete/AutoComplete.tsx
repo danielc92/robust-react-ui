@@ -129,7 +129,7 @@ const AutoComplete = ({
     <div
       data-testid="AutoComplete"
       className={getClassNames({
-        'dcui-autocomplete': true,
+        'rrui-autocomplete': true,
       })}
       id="ex1"
     >
@@ -137,11 +137,11 @@ const AutoComplete = ({
         data-testid="AutoCompleteLabel"
         htmlFor="ex1-input"
         id={labelId}
-        className="dcui-autocomplete__label"
+        className="rrui-autocomplete__label"
       >
         {labelText}
       </label>
-      <div className="dcui-autocomplete__wrapper">
+      <div className="rrui-autocomplete__wrapper">
         <div
           // eslint-disable-next-line jsx-a11y/role-has-required-aria-props
           role="combobox"
@@ -172,8 +172,8 @@ const AutoComplete = ({
           role="listbox"
           id="ex1-listbox"
           className={getClassNames({
-            'dcui-autocomplete__listbox': true,
-            'dcui-autocomplete__listbox--show': open,
+            'rrui-autocomplete__listbox': true,
+            'rrui-autocomplete__listbox--show': open,
           })}
           data-testid="AutoCompleteListBox"
         >
@@ -200,8 +200,8 @@ const AutoComplete = ({
               }}
               key={item.id}
               className={getClassNames({
-                'dcui-autocomplete__result': true,
-                'dcui-autocomplete__result--selected':
+                'rrui-autocomplete__result': true,
+                'rrui-autocomplete__result--selected':
                   item.id === currentFocus?.id,
               })}
               role="option"

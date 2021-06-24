@@ -68,11 +68,11 @@ const AccordionPanel = React.forwardRef<
             onKeyDown={handleKeyDown}
             ref={ref}
             aria-expanded={isCurrent ? 'true' : 'false'}
-            className="dcui-accordion__trigger"
+            className="rrui-accordion__trigger"
             aria-controls={sectionId}
             id={panelId}
           >
-            <span className="dcui-accordion__title">
+            <span className="rrui-accordion__title">
               {panelTitle}
               <svg
                 width="24"
@@ -84,8 +84,8 @@ const AccordionPanel = React.forwardRef<
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 className={getClassNames({
-                  'dcui-accordion__icon': true,
-                  'dcui-accordion__icon--expanded': isCurrent,
+                  'rrui-accordion__icon': true,
+                  'rrui-accordion__icon--expanded': isCurrent,
                 })}
               >
                 {isCurrent ? (
@@ -109,7 +109,7 @@ const AccordionPanel = React.forwardRef<
           id={sectionId}
           role="region"
           aria-labelledby={panelId}
-          className="dcui-accordion__panel"
+          className="rrui-accordion__panel"
           hidden={!isCurrent}
         >
           <div>{children}</div>

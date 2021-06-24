@@ -77,8 +77,8 @@ const AlertDialogue = ({
       onKeyDown={handleKeyDown}
       data-testid="AlertDialogue"
       className={getClassNames({
-        'dcui-modal__overlay': true,
-        'dcui-modal__overlay--active': open,
+        'rrui-modal__overlay': true,
+        'rrui-modal__overlay--active': open,
       })}
     >
       <div
@@ -87,7 +87,7 @@ const AlertDialogue = ({
         aria-modal="true"
         aria-labelledby="dialog_label"
         aria-describedby="dialog_desc"
-        className="dcui-modal__content"
+        className="rrui-modal__content"
       >
         <Typography.Heading level={2} id="dialog_label">
           {titleText}
@@ -95,7 +95,7 @@ const AlertDialogue = ({
         <div id="dialog_desc" className="dialog_desc">
           <Typography.Paragraph>{bodyText}</Typography.Paragraph>
         </div>
-        <div className="dcui-modal__actions">
+        <div className="rrui-modal__actions">
           <Button
             onKeyDownFunction={handleCancelKeyDown}
             variant="secondary"

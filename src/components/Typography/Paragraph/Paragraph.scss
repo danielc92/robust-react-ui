@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
   --paragraph-font-size-sm: var(--font-size-sm);
@@ -12,7 +12,7 @@
   --paragraph-font-color: var(--color-charcoal);
 }
 
-.dcui-para {
+.rrui-para {
   color: var(--paragraph-font-color);
   font-family: var(--font-family-primary);
   margin: var(--font-margin);

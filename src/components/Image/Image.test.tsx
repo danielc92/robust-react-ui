@@ -23,7 +23,7 @@ describe('Test Component', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Image');
-    expect(component).toHaveClass('dcui-image');
+    expect(component).toHaveClass('rrui-image');
   });
 
   it('should render with correct bordered class', () => {
@@ -31,7 +31,7 @@ describe('Test Component', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Image');
-    expect(component).toHaveClass('dcui-image--bordered');
+    expect(component).toHaveClass('rrui-image--bordered');
   });
 
   it('should render with correct circle class', () => {
@@ -39,7 +39,7 @@ describe('Test Component', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Image');
-    expect(component).toHaveClass('dcui-image--circle');
+    expect(component).toHaveClass('rrui-image--circle');
   });
 
   it('should render with correct responsive class', () => {
@@ -47,7 +47,7 @@ describe('Test Component', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Image');
-    expect(component).toHaveClass('dcui-image--responsive');
+    expect(component).toHaveClass('rrui-image--responsive');
   });
 
   it('should render with correct responsive class (2)', () => {
@@ -55,6 +55,6 @@ describe('Test Component', () => {
     const { getByTestId } = renderComponent();
 
     const component = getByTestId('Image');
-    expect(component).toHaveClass('dcui-image--responsive-restrict-width');
+    expect(component).toHaveClass('rrui-image--responsive-restrict-width');
   });
 });

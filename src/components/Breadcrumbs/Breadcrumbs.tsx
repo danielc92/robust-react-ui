@@ -13,13 +13,13 @@ const Breadcrumbs = ({
     aria-label={ariaLabel || 'breadcrumbs'}
     data-testid="Breadcrumbs"
     className={getClassNames({
-      'dcui-breadcrumbs': true,
-      [`dcui-breadcrumbs--${size}`]: true,
+      'rrui-breadcrumbs': true,
+      [`rrui-breadcrumbs--${size}`]: true,
     })}
   >
-    <ol className="dcui-breadcrumbs__list">
+    <ol className="rrui-breadcrumbs__list">
       {data.map((b) => (
-        <li key={`breadcrumb_${b.linkText}`} className="dcui-breadcrumbs__item">
+        <li key={`breadcrumb_${b.linkText}`} className="rrui-breadcrumbs__item">
           <a
             href={b.linkHref || null}
             aria-current={b.isCurrent ? 'page' : null}

@@ -56,8 +56,8 @@ const Accordion = ({
       data-testid="Accordion"
       id="accordionGroup"
       className={getClassNames({
-        'dcui-accordion': true,
-        'dcui-accordion--full-width': fullWidth,
+        'rrui-accordion': true,
+        'rrui-accordion--full-width': fullWidth,
       })}
     >
       {React.Children.map(children, (child, index) =>

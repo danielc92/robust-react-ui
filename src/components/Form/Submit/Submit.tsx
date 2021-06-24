@@ -18,9 +18,9 @@ const Submit = ({
     id={id || null}
     data-testid="Button"
     className={getClassNames({
-      'dcui-form__submit': true,
-      [`dcui-form__submit--${variant}`]: true,
-      [`dcui-form__submit--${size}`]: true,
+      'rrui-form__submit': true,
+      [`rrui-form__submit--${variant}`]: true,
+      [`rrui-form__submit--${size}`]: true,
     })}
   />
 );

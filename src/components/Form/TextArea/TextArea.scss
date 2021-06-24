@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
-.dcui-form {
+.rrui-form {
   &__textarea-error {
     color: var(--color-danger);
     font-family: var(--input-font-family);
@@ -46,14 +46,14 @@
     border-style: var(--input-border-style);
     line-height: calc(var(--input-font-size) * 1.5);
 
-    &.dcui-form__textarea--has-error {
+    &.rrui-form__textarea--has-error {
       background-color: var(--input-background-color-error);
       border-color: var(--color-danger);
       color: var(--color-danger);
     }
 
-    &.dcui-form__textarea--disabled {
-      &.dcui-form__textarea--o {
+    &.rrui-form__textarea--disabled {
+      &.rrui-form__textarea--o {
         background-color: var(--input-background-color-disabled);
         border-color: var(--input-border-color-disabled);
       }

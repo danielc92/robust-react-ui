@@ -9,8 +9,8 @@ export default {
 
 export const Complementary = () => (
   <Default>
-    <h2 className="dcui-header">This is a Complementary landmark</h2>
-    <p className="dcui-para">
+    <h2 className="rrui-header">This is a Complementary landmark</h2>
+    <p className="rrui-para">
       This landmark will render the <strong>aside</strong> tag at the root
       level.
     </p>

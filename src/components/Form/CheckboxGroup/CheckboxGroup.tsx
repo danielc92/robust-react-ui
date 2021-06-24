@@ -12,7 +12,7 @@ const CheckboxGroup = ({
   onSelectFunction,
 }: IFormCheckboxGroupProps) => (
   <div role="group" aria-labelledby={ariaLabelledBy} id={id || null}>
-    <ul className="dcui-form__checkbox-group" data-testid="CheckboxGroup">
+    <ul className="rrui-form__checkbox-group" data-testid="CheckboxGroup">
       {values.map((v) => (
         <li key={`checkbox-item-${v.displayValue}`}>
           <div
@@ -24,7 +24,7 @@ const CheckboxGroup = ({
               }
             }}
             onClick={() => onSelectFunction(v.keyValue, !v.checked)}
-            className="dcui-form__checkbox"
+            className="rrui-form__checkbox"
             data-testid="Checkbox"
             role="checkbox"
             aria-checked={v.checked ? 'true' : 'false'}

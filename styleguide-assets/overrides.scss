@@ -1,0 +1,141 @@
+#rsg-root {
+  // logo
+  .rsg--logo-65 {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  //features list
+  .rsg--li-56::first-letter {
+    text-transform: capitalize;
+  }
+
+  // code snippets
+  .rsg--root-63 {
+    color: rgb(211, 34, 196) !important;
+    pre {
+      font-size: 16px !important;
+
+      // start https://github.com/PrismJS/prism-themes/blob/master/themes/prism-atom-dark.css
+
+      .token.comment,
+      .token.prolog,
+      .token.doctype,
+      .token.cdata {
+        color: #7c7c7c;
+      }
+
+      .token.punctuation {
+        color: #c5c8c6;
+      }
+
+      .namespace {
+        opacity: 0.7;
+      }
+
+      .token.property,
+      .token.keyword,
+      .token.tag {
+        color: #96cbfe;
+      }
+
+      .token.class-name {
+        color: rgb(211, 34, 196);
+        text-decoration: underline;
+      }
+
+      .token.boolean,
+      .token.constant {
+        color: #99cc99;
+      }
+
+      .token.symbol,
+      .token.deleted {
+        color: #f92672;
+      }
+
+      .token.number {
+        color: #ff73fd;
+      }
+
+      .token.selector,
+      .token.attr-name,
+      .token.string,
+      .token.char,
+      .token.builtin,
+      .token.inserted {
+        color: #a8ff60;
+      }
+
+      .token.variable {
+        color: #c6c5fe;
+      }
+
+      .token.operator {
+        color: #ededed;
+      }
+
+      .token.entity {
+        color: #ffffb6;
+        cursor: help;
+      }
+
+      .token.url {
+        color: #96cbfe;
+      }
+
+      .language-css .token.string,
+      .style .token.string {
+        color: #87c38a;
+      }
+
+      .token.atrule,
+      .token.attr-value {
+        color: #f9ee98;
+      }
+
+      .token.function {
+        color: #dad085;
+      }
+
+      .token.regex {
+        color: #e9c062;
+      }
+
+      .token.important {
+        color: #fd971f;
+      }
+
+      .token.important,
+      .token.bold {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+      // end https://github.com/PrismJS/prism-themes/blob/master/themes/prism-atom-dark.css
+    }
+  }
+  // props table
+  .rsg--button-31 {
+    text-transform: capitalize;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+  }
+  .rsg--para-51,
+  .rsg--code-50,
+  .rsg--type-39,
+  .rsg--text-40,
+  .rsg--name-37 {
+    font-size: 16px;
+  }
+  .rsg--code-50,
+  .rsg--type-39 {
+    white-space: nowrap;
+  }
+
+  .rsg--content-3 {
+    max-width: 1200px;
+  }
+}

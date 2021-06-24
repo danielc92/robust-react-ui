@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import '../../variables.scss';
+@import '../../typography.scss';
 
 :root {
   --tab-active-background-color: var(--color-white);
@@ -16,9 +16,9 @@
   --tab-list-max-width: var(--global-box-width);
 }
 
-.dcui-tablist {
+.rrui-tablist {
   &:focus-within {
-    .dcui-tablist__button-group {
+    .rrui-tablist__button-group {
       overflow-x: visible;
     }
   }
@@ -63,26 +63,26 @@
     }
   }
 
-  &.dcui-tablist--primary {
-    .dcui-tablist__button--active {
+  &.rrui-tablist--primary {
+    .rrui-tablist__button--active {
       border-top-color: var(--tab-border-color-active-primary);
     }
   }
 
-  &.dcui-tablist--success {
-    .dcui-tablist__button--active {
+  &.rrui-tablist--success {
+    .rrui-tablist__button--active {
       border-top-color: var(--tab-border-color-active-success);
     }
   }
 
-  &.dcui-tablist--danger {
-    .dcui-tablist__button--active {
+  &.rrui-tablist--danger {
+    .rrui-tablist__button--active {
       border-top-color: var(--tab-border-color-active-danger);
     }
   }
 
-  &.dcui-tablist--secondary {
-    .dcui-tablist__button--active {
+  &.rrui-tablist--secondary {
+    .rrui-tablist__button--active {
       border-top-color: var(--tab-border-color-active-secondary);
     }
   }

@@ -27,7 +27,7 @@ describe('Autocomplete Suite', () => {
 
     const component = getByTestId('AutoComplete');
 
-    expect(component).toHaveClass('dcui-autocomplete');
+    expect(component).toHaveClass('rrui-autocomplete');
   });
 
   it('should render 4 list elements', () => {
@@ -39,7 +39,7 @@ describe('Autocomplete Suite', () => {
   it('list results should have correct class', () => {
     const { getAllByTestId } = renderComponent();
     const components = getAllByTestId('AutoCompleteResult');
-    expect(components[0]).toHaveClass('dcui-autocomplete__result');
+    expect(components[0]).toHaveClass('rrui-autocomplete__result');
   });
   it('list result should have selected modifier class on mouse over event', () => {
     const { getAllByTestId } = renderComponent();
@@ -51,7 +51,7 @@ describe('Autocomplete Suite', () => {
         cancelable: true,
       })
     );
-    expect(components[0]).toHaveClass('dcui-autocomplete__result--selected');
+    expect(components[0]).toHaveClass('rrui-autocomplete__result--selected');
   });
   it("list result should have aria-selected 'true' on mouse over event", () => {
     const { getAllByTestId } = renderComponent();
@@ -75,7 +75,7 @@ describe('Autocomplete Suite', () => {
   it('Label should render with correct class', () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId('AutoCompleteLabel');
-    expect(component).toHaveClass('dcui-autocomplete__label');
+    expect(component).toHaveClass('rrui-autocomplete__label');
   });
 
   it('Input should render', () => {
@@ -88,12 +88,12 @@ describe('Autocomplete Suite', () => {
   it('Listbox should render with correct class', () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId('AutoCompleteListBox');
-    expect(component).toHaveClass('dcui-autocomplete__listbox');
+    expect(component).toHaveClass('rrui-autocomplete__listbox');
   });
 
   it('Listbox should render with --show modifier class', () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId('AutoCompleteListBox');
-    expect(component).toHaveClass('dcui-autocomplete__listbox--show');
+    expect(component).toHaveClass('rrui-autocomplete__listbox--show');
   });
 });

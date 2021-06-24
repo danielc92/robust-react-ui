@@ -1,8 +1,8 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
-.dcui-form {
+.rrui-form {
   &__select {
     box-shadow: var(--input-shadow);
     background-color: var(--input-background-color);
@@ -34,8 +34,8 @@
       width: 100%;
     }
 
-    &.dcui-form__select--disabled {
-      &.dcui-form__select--o {
+    &.rrui-form__select--disabled {
+      &.rrui-form__select--o {
         background-color: var(--input-background-color-disabled);
         border-color: var(--input-border-color-disabled);
       }

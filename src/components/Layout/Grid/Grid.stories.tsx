@@ -6,7 +6,7 @@ import Typography from '../../Typography';
 import { IGridProps } from './Grid.types';
 const { GridItem } = Grid;
 export default {
-  title: 'Grid',
+  title: 'Components/Grid',
   component: Grid,
   args: {
     // Insert default args here

@@ -37,7 +37,7 @@ describe('Pagination Suite', () => {
 
     const component = getByTestId('Pagination');
 
-    expect(component).toHaveClass('dcui-pagination');
+    expect(component).toHaveClass('rrui-pagination');
   });
 
   it('wrapper should render the correct class', () => {
@@ -45,7 +45,7 @@ describe('Pagination Suite', () => {
 
     const component = getByTestId('PaginationWrapper');
 
-    expect(component).toHaveClass('dcui-pagination__wrapper');
+    expect(component).toHaveClass('rrui-pagination__wrapper');
   });
 
   it('button should render the correct class', () => {
@@ -53,7 +53,7 @@ describe('Pagination Suite', () => {
 
     const components = getAllByTestId('PaginationButton');
 
-    expect(components[0]).toHaveClass('dcui-pagination__button');
+    expect(components[0]).toHaveClass('rrui-pagination__button');
   });
 
   it('button should render with the correct text', () => {
@@ -83,6 +83,6 @@ describe('Pagination Suite', () => {
 
     const components = getAllByTestId('PaginationButton');
 
-    expect(components[1]).toHaveClass('dcui-pagination__button--current');
+    expect(components[1]).toHaveClass('rrui-pagination__button--current');
   });
 });

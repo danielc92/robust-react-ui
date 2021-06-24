@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
   --table-background-color: var(--color-white);
@@ -15,7 +15,7 @@
   --table-foot-color: var(--color-white);
 }
 
-.dcui-table {
+.rrui-table {
   background-color: var(--table-background-color);
   border-color: var(--table-border-color);
   border-radius: var(--table-border-radius);
@@ -52,7 +52,7 @@
     }
   }
 
-  &__header[scope="column"] {
+  &__header[scope='column'] {
     background-color: var(--table-header-background-color);
     color: var(--table-header-color);
   }

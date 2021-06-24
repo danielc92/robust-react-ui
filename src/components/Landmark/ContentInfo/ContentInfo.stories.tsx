@@ -9,9 +9,9 @@ export default {
 
 export const ContentInfo = () => (
   <Default>
-    <h2 className="dcui-header">This is a ContentInfo landmark</h2>
+    <h2 className="rrui-header">This is a ContentInfo landmark</h2>
 
-    <p className="dcui-para">
+    <p className="rrui-para">
       This landmark will render the <strong>footer</strong> tag at the root
       level.
     </p>

@@ -24,6 +24,9 @@ export interface ITabListProps {
    * @default primary
    */
   variant?: 'primary' | 'danger' | 'success' | 'secondary';
+  /**
+   * Data supporting an array of tabs.
+   */
   tabs: Array<ITabListTabProps>;
   /**
    * Component will take up the full width available.

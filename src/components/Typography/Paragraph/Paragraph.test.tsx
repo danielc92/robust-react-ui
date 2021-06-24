@@ -26,18 +26,18 @@ describe('Paragraph Suite', () => {
   it('should contain correct base class', () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId('Paragraph');
-    expect(component).toHaveClass('dcui-para');
+    expect(component).toHaveClass('rrui-para');
   });
 
   it('should contain the large class modifier', () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId('Paragraph');
-    expect(component).toHaveClass('dcui-para--large');
+    expect(component).toHaveClass('rrui-para--large');
   });
   it('should render with bolded class modifier', () => {
     props.bolded = true;
     const { getByTestId } = renderComponent();
     const component = getByTestId('Paragraph');
-    expect(component).toHaveClass('dcui-para--bolded');
+    expect(component).toHaveClass('rrui-para--bolded');
   });
 });

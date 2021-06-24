@@ -14,16 +14,16 @@ const ProgressBar = ({
 }: IProgressBarProps) => (
   <div
     className={getClassNames({
-      'dcui-progress': true,
-      'dcui-progress--full-width': fullWidth,
-      [`dcui-progress--${variant}`]: true,
-      [`dcui-progress--${size}`]: true,
+      'rrui-progress': true,
+      'rrui-progress--full-width': fullWidth,
+      [`rrui-progress--${variant}`]: true,
+      [`rrui-progress--${size}`]: true,
     })}
     data-testid="ProgressBar"
   >
     <div
       data-testid="ProgressBarInner"
-      className="dcui-progress__inner"
+      className="rrui-progress__inner"
       role="progressbar"
       aria-valuenow={currentValue || 0}
       aria-valuemin={minimumValue || 0}

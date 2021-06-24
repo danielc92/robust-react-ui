@@ -6,7 +6,7 @@ import { IFormFieldSetProps } from './FieldSet.types';
 import './FieldSet.scss';
 
 const FieldSet = ({ children }: IFormFieldSetProps) => (
-  <fieldset className="dcui-form__fieldset">{children}</fieldset>
+  <fieldset className="rrui-form__fieldset">{children}</fieldset>
 );
 
 export default FieldSet;

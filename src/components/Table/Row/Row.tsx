@@ -4,7 +4,7 @@ import React from 'react';
 import { ITableRowProps } from './Row.types';
 
 const Row = ({ children }: ITableRowProps) => (
-  <tr className="dcui-table__row">{children}</tr>
+  <tr className="rrui-table__row">{children}</tr>
 );
 
 export default Row;

@@ -24,13 +24,13 @@ describe('Layout Suite', () => {
 
     const component = getByTestId('Row');
 
-    expect(component).toHaveClass('dcui-row');
+    expect(component).toHaveClass('rrui-row');
   });
   it('Container should render correct class', () => {
     const { getByTestId } = renderContainer();
 
     const component = getByTestId('Container');
 
-    expect(component).toHaveClass('dcui-container');
+    expect(component).toHaveClass('rrui-container');
   });
 });

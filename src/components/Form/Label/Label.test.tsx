@@ -17,7 +17,7 @@ describe('Label Suite', () => {
   it('Renders with base class', () => {
     const { getByTestId } = renderComponent();
     const component = getByTestId('Label');
-    expect(component).toHaveClass('dcui-form__label');
+    expect(component).toHaveClass('rrui-form__label');
   });
   it('Renders with correct text', () => {
     const { getByTestId } = renderComponent();

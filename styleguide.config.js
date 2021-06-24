@@ -1,9 +1,9 @@
 const path = require('path');
 const glob = require('glob');
-
+const package = require('./package.json');
 module.exports = {
   title: 'Robust React UI - by Daniel Corcoran',
-  version: '1.0.2',
+  version: package.version,
   usageMode: 'expand',
   exampleMode: 'expand',
   pagePerSection: true,
@@ -20,18 +20,17 @@ module.exports = {
       type: '#905',
       error: '#c00',
       baseBackground: '#fff',
-      codeBackground: '#f5f5f5',
       sidebarBackground: '#f8f8f8',
       ribbonBackground: '#e90',
       ribbonText: '#fff',
       // Based on default Prism theme
-      // codeBase: '#333',
+      codeBackground: '#1d1f21',
       // codeComment: '#6d6d6d',
       // codePunctuation: '#999',
       // codeProperty: '#905',
       // codeDeleted: '#905',
-      // codeString: '#690',
-      // codeInserted: '#690',
+      // codeString: 'red',
+      // codeInserted: 'blue',
       // codeOperator: '#9a6e3a',
       // codeKeyword: '#1673b1',
       // codeFunction: '#DD4A68',
@@ -58,6 +57,7 @@ module.exports = {
         'src/components/Link/**/*.tsx',
         'src/components/NavigationBar/**/*.tsx',
         'src/components/Pagination/**/*.tsx',
+        'src/components/ProgressBar/**/*.tsx',
         'src/components/TabList/**/*.tsx',
       ],
     },
@@ -86,6 +86,7 @@ module.exports = {
       components: 'src/components/Typography/**/*.tsx',
     },
   ],
+  require: [path.join(__dirname, 'styleguide-assets/overrides.scss')],
   resolver: require('react-docgen').resolver.findAllComponentDefinitions,
   propsParser: require('react-docgen-typescript').withCustomConfig(
     './tsconfig.webpack.json',

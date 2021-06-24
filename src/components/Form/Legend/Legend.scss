@@ -1,14 +1,13 @@
 // Generated with util/create-component.js
-@import "../../../variables.scss";
-@import "../../../typography.scss";
+@import '../../../variables.scss';
+@import '../../../typography.scss';
 
 :root {
-
   //legend
   --legend-font-weight: bold;
 }
 
-.dcui-form {
+.rrui-form {
   &__legend {
     font-weight: var(--legend-font-weight);
   }

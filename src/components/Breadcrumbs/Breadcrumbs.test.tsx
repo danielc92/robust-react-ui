@@ -42,6 +42,6 @@ describe('Breadcrumb suite', () => {
 
     const component = getByTestId('Breadcrumbs');
 
-    expect(component).toHaveClass('dcui-breadcrumbs');
+    expect(component).toHaveClass('rrui-breadcrumbs');
   });
 });

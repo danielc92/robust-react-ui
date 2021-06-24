@@ -15,7 +15,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+        # Removed version 15  - writeFileSync error due to breaking changes node 14 - > 15
+        node-version: [10.x, 12.x, 14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:

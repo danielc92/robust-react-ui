@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import '../../variables.scss';
+@import '../../typography.scss';
 
 :root {
   --progress-max-width: var(--global-box-width);
@@ -16,13 +16,13 @@
   --progress-inner-background-color-primary: var(--color-primary);
 }
 
-.dcui-progress {
+.rrui-progress {
   background-color: var(--progress-background-color);
   border-radius: var(--progress-border-radius);
   max-width: var(--progress-max-width);
   font-family: var(--progress-font-family);
 
-  &.dcui-progress--full-width {
+  &.rrui-progress--full-width {
     max-width: 100%;
   }
 
@@ -44,25 +44,25 @@
   }
 
   &--success {
-    .dcui-progress__inner {
+    .rrui-progress__inner {
       background-color: var(--progress-inner-background-color-success);
     }
   }
 
   &--secondary {
-    .dcui-progress__inner {
+    .rrui-progress__inner {
       background-color: var(--progress-inner-background-color-secondary);
     }
   }
 
   &--danger {
-    .dcui-progress__inner {
+    .rrui-progress__inner {
       background-color: var(--progress-inner-background-color-danger);
     }
   }
 
   &--primary {
-    .dcui-progress__inner {
+    .rrui-progress__inner {
       background-color: var(--progress-inner-background-color-primary);
     }
   }

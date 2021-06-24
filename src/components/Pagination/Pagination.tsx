@@ -10,20 +10,20 @@ const Pagination = ({ data, ariaLabel, rounded }: IPaginationProps) => {
 
   return (
     <nav
-      className="dcui-pagination"
+      className="rrui-pagination"
       data-testid="Pagination"
       role="navigation"
       aria-label={ariaLabel || defaultLabel}
     >
-      <ul className="dcui-pagination__wrapper" data-testid="PaginationWrapper">
+      <ul className="rrui-pagination__wrapper" data-testid="PaginationWrapper">
         {data.map((x, i) => (
           <li key={`page-key${i.toString()}`}>
             <a
               data-testid="PaginationButton"
               className={getClassNames({
-                'dcui-pagination__button': true,
-                'dcui-pagination__button--current': x.current,
-                'dcui-pagination__button--rounded': rounded,
+                'rrui-pagination__button': true,
+                'rrui-pagination__button--current': x.current,
+                'rrui-pagination__button--rounded': rounded,
               })}
               href={x.href}
               aria-label={

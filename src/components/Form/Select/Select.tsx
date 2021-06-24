@@ -19,9 +19,9 @@ const Select = ({
     id={id}
     multiple={multiple || null}
     className={getClassNames({
-      'dcui-form__select': true,
-      'dcui-form__select--disabled': disabled,
-      'dcui-form__select--o': disabled, // override class
+      'rrui-form__select': true,
+      'rrui-form__select--disabled': disabled,
+      'rrui-form__select--o': disabled, // override class
     })}
     disabled={disabled}
     onChange={onChangeFunction}

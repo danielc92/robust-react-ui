@@ -21,7 +21,7 @@ const Template: Story<IAlertProps> = (args) => {
       onCloseActionFunction={onCloseActionFunction}
       visible={visible}
     >
-      <p className="dcui-para dcui-para--medium">
+      <p className="rrui-para rrui-para--medium">
         Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad
         eiusmod proident adipisicing.
       </p>

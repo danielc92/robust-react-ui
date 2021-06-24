@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import '../../variables.scss';
+@import '../../typography.scss';
 
 :root {
   --modal-content-padding: var(--space-l) var(--space-xl);
@@ -9,7 +9,7 @@
   --modal-border-radius: var(--global-border-radius);
 }
 
-.dcui-modal {
+.rrui-modal {
   &__overlay {
     background: var(--modal-overlay-background);
     display: none;
@@ -39,7 +39,7 @@
     display: flex;
     justify-content: flex-end;
 
-    .dcui-button {
+    .rrui-button {
       margin-right: var(--space-m);
     }
   }

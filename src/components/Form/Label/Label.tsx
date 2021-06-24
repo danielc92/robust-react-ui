@@ -5,13 +5,13 @@ import './Label.scss';
 
 const Label = ({ children, id, htmlFor, required }: IFormLabelProps) => (
   <label
-    className="dcui-form__label"
+    className="rrui-form__label"
     htmlFor={htmlFor || null}
     id={id || null}
     data-testid="Label"
   >
     <span>{children}</span>
-    {required && <span className="dcui-form__label-required">*</span>}
+    {required && <span className="rrui-form__label-required">*</span>}
   </label>
 );
 

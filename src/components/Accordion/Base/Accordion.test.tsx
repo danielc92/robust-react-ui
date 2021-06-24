@@ -31,7 +31,7 @@ describe('Accordion Suite', () => {
 
     const component = getByTestId('Accordion');
 
-    expect(component).toHaveClass('dcui-accordion');
+    expect(component).toHaveClass('rrui-accordion');
   });
   it('2 panel should render ', () => {
     const { getAllByTestId } = renderComponent();
@@ -91,6 +91,6 @@ describe('Accordion Suite', () => {
 
     const component = getAllByTestId('AccordionTrigger');
 
-    expect(component[0]).toHaveClass('dcui-accordion__trigger');
+    expect(component[0]).toHaveClass('rrui-accordion__trigger');
   });
 });

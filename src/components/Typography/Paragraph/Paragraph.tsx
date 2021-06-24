@@ -12,11 +12,11 @@ const Paragraph = ({
 }: IParagraphProps) => (
   <p
     className={getClassNames({
-      'dcui-para': true,
-      'dcui-para--small': size === 'small',
-      'dcui-para--medium': size === 'medium',
-      'dcui-para--large': size === 'large',
-      'dcui-para--bolded': bolded,
+      'rrui-para': true,
+      'rrui-para--small': size === 'small',
+      'rrui-para--medium': size === 'medium',
+      'rrui-para--large': size === 'large',
+      'rrui-para--bolded': bolded,
     })}
     id={id || null}
     data-testid="Paragraph"

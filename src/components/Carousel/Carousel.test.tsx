@@ -48,6 +48,6 @@ describe('Test Component', () => {
 
     const component = getByTestId('Carousel');
 
-    expect(component).toHaveClass('dcui-carousel');
+    expect(component).toHaveClass('rrui-carousel');
   });
 });

@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
-@import "../../variables.scss";
-@import "../../typography.scss";
+@import '../../variables.scss';
+@import '../../typography.scss';
 
 :root {
   --breadcrumb-font-size-sm: var(--font-size-sm);
@@ -13,17 +13,17 @@
   --breadcrumb-separator-color: var(--color-charcoal);
 }
 
-.dcui-breadcrumbs {
+.rrui-breadcrumbs {
   font-family: var(--font-family-primary);
 
   &__item {
     list-style: none;
 
-    >a[aria-current="page"] {
+    > a[aria-current='page'] {
       color: var(--color-charcoal);
     }
 
-    >a {
+    > a {
       &:hover,
       &:focus {
         outline: 0;
