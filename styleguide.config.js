@@ -57,6 +57,7 @@ module.exports = {
         'src/components/Link/**/*.tsx',
         'src/components/NavigationBar/**/*.tsx',
         'src/components/Pagination/**/*.tsx',
+        'src/components/ProgressBar/**/*.tsx',
         'src/components/TabList/**/*.tsx',
       ],
     },
