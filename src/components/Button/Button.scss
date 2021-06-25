@@ -56,12 +56,15 @@
     .rrui-icon {
       margin-right: 0;
     }
+
     &.rrui-button--small {
       padding: var(--button-padding-y-sm) var(--button-padding-y-sm);
     }
+
     &.rrui-button--medium {
       padding: var(--button-padding-y-md) var(--button-padding-y-md);
     }
+
     &.rrui-button--large {
       padding: var(--button-padding-y-lg) var(--button-padding-y-lg);
     }

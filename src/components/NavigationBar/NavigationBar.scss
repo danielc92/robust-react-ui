@@ -88,6 +88,17 @@
     }
   }
 
+  @media screen and (prefers-reduced-motion: reduce) {
+    &__chevron {
+      color: var(--nav-chevron-color);
+      top: 50%;
+      transition: none;
+      transform: translateY(-50%) rotate(90deg);
+      right: 4px;
+      position: absolute;
+    }
+  }
+
   &__chevron {
     color: var(--nav-chevron-color);
     top: 50%;
