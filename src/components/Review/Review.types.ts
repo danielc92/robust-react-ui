@@ -1,4 +1,8 @@
 // Generated with util/create-component.js
 export interface ReviewProps {
-    foo: string;
+  /**
+   * The wrapping form's id
+   * @default star_rating
+   */
+  formId?: string;
 }
