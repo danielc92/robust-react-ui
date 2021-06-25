@@ -2,19 +2,39 @@
 @import '../../variables.scss';
 @import '../../typography.scss';
 
+:root {
+  --review-star-color: var(--color-primary);
+  --review-cross-color: var(--color-danger);
+  --review-star-inactive-color: var(--color-secondary);
+}
+
+.rrui-review {
+  &--vis-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    padding: 0;
+    position: absolute;
+    margin: -1px;
+    overflow: hidden;
+    width: 1px;
+  }
+}
+
 #star_rating svg {
-  width: 1em;
-  height: 1em;
-  fill: currentColor;
+  width: 64px;
+  height: 64px;
+  stroke-width: 1;
+  fill: transparent;
   stroke: currentColor;
 }
 #star_rating label,
 #star_rating output {
+  color: var(--review-star-color);
   display: block;
   float: left;
   font-size: 2em;
   height: 1.2em;
-  color: #036;
   cursor: pointer;
   /* Transparent border-bottom avoids jumping
 	   when a colored border is applied
@@ -26,29 +46,29 @@
   padding: 0 1em;
 }
 #star_rating input:checked ~ label {
-  color: #999;
+  color: hotpink;
 }
 #star_rating input:checked + label {
-  color: #036;
-  border-bottom-color: #036;
+  color: var(--review-star-color);
+  border-bottom-color: var(--review-star-color);
 }
 #star_rating input:focus + label {
   border-bottom-style: dotted;
 }
 #star_rating:hover input + label {
-  color: #036;
+  color: var(--review-star-color);
 }
 #star_rating input:hover ~ label,
 #star_rating input:focus ~ label,
 #star_rating input[id='star0'] + label {
-  color: #999;
+  color: var(--review-star-inactive-color);
 }
 #star_rating input:hover + label,
 #star_rating input:focus + label {
-  color: #036;
+  color: var(--review-star-color);
 }
 #star_rating input[id='star0']:checked + label {
-  color: #ff2d21;
+  color: var(--review-cross-color);
 }
 #star_rating [type='submit'] {
   float: none;
