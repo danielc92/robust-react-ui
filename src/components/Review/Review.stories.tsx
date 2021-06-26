@@ -5,7 +5,7 @@ import Review from './Review';
 import { ReviewProps } from './Review.types';
 
 export default {
-  title: 'Review',
+  title: 'Components/Review',
   component: Review,
   args: {
     // Insert default args here

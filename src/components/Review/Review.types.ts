@@ -17,4 +17,11 @@ export interface ReviewProps {
    * @default 0
    */
   currentValue: number;
+  /**
+   * Size of review stars
+   * @default medium
+   *
+   *
+   * */
+  size?: 'small' | 'medium' | 'large';
 }

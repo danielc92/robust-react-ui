@@ -7,6 +7,9 @@
   --review-star-background-color: var(--color-primary);
   --review-cross-color: var(--color-danger);
   --review-star-inactive-color: var(--color-secondary);
+  --review-star-size-small: 18px;
+  --review-star-size-medium: 24px;
+  --review-star-size-large: 30px;
 }
 
 .rrui-review {
@@ -23,9 +26,26 @@
   .rrui-review__checked {
     fill: var(--review-star-background-color);
   }
+
+  &--small {
+    svg {
+      width: var(--review-star-size-small);
+      height: var(--review-star-size-small);
+    }
+  }
+  &--medium {
+    svg {
+      width: var(--review-star-size-medium);
+      height: var(--review-star-size-medium);
+    }
+  }
+  &--large {
+    svg {
+      width: var(--review-star-size-large);
+      height: var(--review-star-size-large);
+    }
+  }
   svg {
-    width: 24px;
-    height: 24px;
     stroke-width: 1;
     fill: transparent;
     stroke: currentColor;
