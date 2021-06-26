@@ -1,0 +1,114 @@
+// Generated with util/create-component.js
+@import '../../variables.scss';
+@import '../../typography.scss';
+
+:root {
+  --review-star-color: var(--color-primary);
+  --review-star-background-color: var(--color-primary);
+  --review-cross-color: var(--color-danger);
+  --review-star-inactive-color: var(--color-secondary);
+  --review-star-size-small: 18px;
+  --review-star-size-medium: 24px;
+  --review-star-size-large: 30px;
+}
+
+.rrui-review {
+  &--vis-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    padding: 0;
+    position: absolute;
+    margin: -1px;
+    overflow: hidden;
+    width: 1px;
+  }
+  .rrui-review__checked {
+    fill: var(--review-star-background-color);
+  }
+
+  &--small {
+    svg {
+      width: var(--review-star-size-small);
+      height: var(--review-star-size-small);
+    }
+  }
+  &--medium {
+    svg {
+      width: var(--review-star-size-medium);
+      height: var(--review-star-size-medium);
+    }
+  }
+  &--large {
+    svg {
+      width: var(--review-star-size-large);
+      height: var(--review-star-size-large);
+    }
+  }
+  svg {
+    stroke-width: 1;
+    fill: transparent;
+    stroke: currentColor;
+  }
+
+  label,
+  output {
+    color: var(--review-star-color);
+    display: block;
+    float: left;
+    font-size: 2em;
+    height: 1.2em;
+    cursor: pointer;
+
+    /* Transparent border-bottom avoids jumping
+       when a colored border is applied
+       on :hover/:focus */
+    border-bottom: 2px solid transparent;
+  }
+
+  output {
+    font-size: 1.5em;
+    padding: 0 1em;
+  }
+
+  input:checked ~ label {
+    color: var(--review-star-color);
+    // unselected but filled
+    // svg {
+    //   fill: rgb(41, 38, 36);
+    // }
+  }
+
+  input:checked + label {
+    color: var(--review-star-color);
+    border-bottom-color: var(--review-star-color);
+  }
+
+  input:focus + label {
+    border-bottom-style: dotted;
+  }
+
+  :hover input + label,
+  :focus input + label {
+    color: var(--review-star-color);
+  }
+
+  input:hover ~ label,
+  input:focus ~ label,
+  input[id='star0'] + label {
+    color: var(--review-star-inactive-color);
+  }
+
+  input:hover + label,
+  input:focus + label {
+    color: var(--review-star-color);
+  }
+
+  input[id='star0']:checked + label {
+    color: var(--review-cross-color);
+  }
+
+  [type='submit'] {
+    float: none;
+  }
+}

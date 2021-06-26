@@ -6,6 +6,24 @@ Important information about the development workflow.
 
 Install node version 14 LTS. Preferably through NVM.
 
+## Git
+
+From 24/6/21 this table will be used to prefix git commits. Table is sourced from [here](https://github.com/pvdlg/conventional-changelog-metahub/edit/master/README.md)
+
+| Commit Type | Title                    | Description                                                                                                 | Emoji | Release                        | Include in changelog |
+| :---------: | ------------------------ | ----------------------------------------------------------------------------------------------------------- | :---: | ------------------------------ | :------------------: |
+|   `feat`    | Features                 | A new feature                                                                                               |  ✨   | `minor`                        |        `true`        |
+|    `fix`    | Bug Fixes                | A bug Fix                                                                                                   |  🐛   | `patch`                        |        `true`        |
+|   `docs`    | Documentation            | Documentation only changes                                                                                  |  📚   | `patch` if `scope` is `readme` |        `true`        |
+|   `style`   | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |  💎   | -                              |        `true`        |
+| `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   |  📦   | -                              |        `true`        |
+|   `perf`    | Performance Improvements | A code change that improves performance                                                                     |  🚀   | `patch`                        |        `true`        |
+|   `test`    | Tests                    | Adding missing tests or correcting existing tests                                                           |  🚨   | -                              |        `true`        |
+|   `build`   | Builds                   | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |   🛠   | `patch`                        |        `true`        |
+|    `ci`     | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |  ⚙️   | -                              |        `true`        |
+|   `chore`   | Chores                   | Other changes that don't modify src or test files                                                           |  ♻️   | -                              |        `true`        |
+|  `revert`   | Reverts                  | Reverts a previous commit                                                                                   |   🗑   | -                              |        `true`        |
+
 ## Linting
 
 Linting will be in place to ensure a higher level of code quality across the project. The Airbnb styleguide has been adopted in this project.
@@ -46,6 +64,7 @@ After running the above command, for the build to pass, the component must also 
 ### Splitting
 
 For the sake of orgsanisation, if a component has multiple compound components. The underlying folder structure can be as follow;
+
 ```
 index.ts
 - Base (e.g. Table)
@@ -65,9 +84,10 @@ Each component to have its own story, or set of stories in Storybook. This will 
 
 ## Styleguidist
 
-[React Styleguidist](https://react-styleguidist.js.org/) will be used in order to properly document the project's components in an efficient and streamline manner. 
+[React Styleguidist](https://react-styleguidist.js.org/) will be used in order to properly document the project's components in an efficient and streamline manner.
 
 Example of documentation for interfaces:
+
 ```
 export interface Person {
     /**
@@ -79,12 +99,13 @@ export interface Person {
 ```
 
 Example of documentation for components:
-*in Button.md (ignoring the # marks)*
-```
+_in Button.md (ignoring the # marks)_
+
+````
 #```jsx
 <Button>Click me</Button>
 #```
-```
+````
 
 ### Running the styleguidist server locally
 
@@ -133,6 +154,7 @@ Configuration for test resides in `jest.config.js`
 Alternatively, you can run in watch mode.
 
 `npm run test:watch`
+
 ## Building
 
 Before you build you must copy the right tsconfig into `tsconfig.json`
