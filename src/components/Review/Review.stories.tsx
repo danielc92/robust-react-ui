@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react';
 import Review from './Review';
-import { ReviewProps } from './Review.types';
+import { IReviewProps } from './Review.types';
 
 export default {
   title: 'Components/Review',
@@ -10,9 +10,9 @@ export default {
   args: {
     // Insert default args here
   },
-} as Meta<ReviewProps>;
+} as Meta<IReviewProps>;
 
-const Template: Story<ReviewProps> = (args) => {
+const Template: Story<IReviewProps> = (args) => {
   const [rating, setRating] = useState<number>(0);
   const onCrossClickFunction = () => {
     setRating(0);
@@ -29,5 +29,5 @@ const Template: Story<ReviewProps> = (args) => {
   );
 };
 
-export const Basic: Story<ReviewProps> = Template.bind({});
+export const Basic: Story<IReviewProps> = Template.bind({});
 Basic.args = {};

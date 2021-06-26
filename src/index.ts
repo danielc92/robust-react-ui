@@ -78,3 +78,6 @@ export {
   ITabListTabProps,
 } from './components/TabList/TabList.types';
 export { default as Typography } from './components/Typography';
+
+export { default as Review } from './components/Review';
+export { IReviewProps } from './components/Review/Review.types';

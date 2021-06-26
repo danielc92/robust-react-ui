@@ -1,5 +1,5 @@
 // Generated with util/create-component.js
-export interface ReviewProps {
+export interface IReviewProps {
   /**
    * The wrapping form's id
    * @default star_rating

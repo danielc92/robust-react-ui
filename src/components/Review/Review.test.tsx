@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import Review from './Review';
-import { ReviewProps } from './Review.types';
+import { IReviewProps } from './Review.types';
 
 describe('Test Component', () => {
-  let props: ReviewProps;
+  let props: IReviewProps;
 
   beforeEach(() => {
     props = {
