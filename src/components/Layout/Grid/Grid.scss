@@ -28,10 +28,11 @@
   }
 
   &--fluid {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(var(--grid-fluid-item-width), 1fr)
-    );
+    grid-template-columns:
+      repeat(
+        auto-fill,
+        minmax(var(--grid-fluid-item-width), 1fr)
+      );
   }
 
   &--gap-xxs {

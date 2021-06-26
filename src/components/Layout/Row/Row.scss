@@ -5,6 +5,7 @@
 .rrui-row {
   box-sizing: border-box;
   display: flex;
+
   &--wrap {
     flex-wrap: wrap;
   }
@@ -12,12 +13,15 @@
   &--align-x-even-between {
     justify-content: space-between;
   }
+
   &--align-x-left {
     justify-content: flex-start;
   }
+
   &--align-x-right {
     justify-content: flex-end;
   }
+
   &--align-x-even-around {
     justify-content: space-around;
   }
@@ -25,12 +29,15 @@
   &--align-y-top {
     align-items: flex-start;
   }
+
   &--align-y-stretch {
     align-items: stretch;
   }
+
   &--align-y-bottom {
     align-items: flex-end;
   }
+
   &--align-y-middle {
     align-items: center;
   }
