@@ -1,6 +1,6 @@
 // Generated with util/create-component.js
 import React from 'react';
-import { ReviewProps } from './Review.types';
+import { IReviewProps } from './Review.types';
 import './Review.scss';
 import Star from '../Icon/Star';
 import X from '../Icon/X';
@@ -12,7 +12,7 @@ const Review = ({
   onCrossClickFunction,
   onStarClickFunction,
   size = 'medium',
-}: ReviewProps) => {
+}: IReviewProps) => {
   return (
     <form
       data-testid="Review"
