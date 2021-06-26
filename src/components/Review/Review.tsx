@@ -1,12 +1,10 @@
 // Generated with util/create-component.js
 import React from 'react';
-
 import { ReviewProps } from './Review.types';
-
 import './Review.scss';
 import Star from '../Icon/Star';
 import X from '../Icon/X';
-import getClassNames from 'robust-react-ui/build/utils/getClassNames';
+import getClassNames from 'robust-react-ui/utils/getClassNames';
 
 const Review = ({
   formId = 'star_rating',
