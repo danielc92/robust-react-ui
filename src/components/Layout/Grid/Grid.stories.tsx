@@ -109,7 +109,7 @@ const Template2: Story<IGridProps> = (args) => {
 
 export const Fixed: Story<IGridProps> = Template.bind({});
 Fixed.args = {};
-export const Fluid: Story<IGridProps> = Template.bind({});
+export const Fluid: Story<IGridProps> = Template2.bind({});
 Fluid.args = {
   type: 'fluid',
 };

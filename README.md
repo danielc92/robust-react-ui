@@ -4,7 +4,7 @@ The goal is provide a react library of components, which are robust, extensible 
 
 ## Storybook
 
-Click the [following link](https://develop--60b75a95d763ec0039b4429c.chromatic.com/) to see the latest `develop` branch.
+Click the [following link](https://main--60b75a95d763ec0039b4429c.chromatic.com/) to see the latest chromatic/storybook deployment.
 
 ## CI
 
