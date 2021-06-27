@@ -22,7 +22,8 @@
     "tsconfig-cp:webpack": "copy tsconfig.webpack.json tsconfig.json",
     "tsconfig-cp:build": "copy tsconfig.build.json tsconfig.json",
     "predeploy": "npm run styleguidist build",
-    "deploy": "gh-pages -d styleguide"
+    "deploy": "gh-pages -d styleguide",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@storybook/addon-a11y": "^6.3.0",
     "@storybook/addon-essentials": "^6.3.0",
@@ -78,6 +81,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
     "gh-pages": "^3.2.1",
+    "husky": "^6.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.9.0",
     "node-sass": "^4.14.1",
