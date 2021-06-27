@@ -3,8 +3,8 @@
 @import '../../typography.scss';
 
 :root {
-  --alert-padding-y: 1.6rem;
-  --alert-padding-x: 2rem;
+  --alert-padding-y: var(--space-m);
+  --alert-padding-x: var(--space-m);
   --alert-border-radius: var(--global-border-radius);
   --alert-max-width: 760px;
   --alert-shadow: var(--global-shadow);
@@ -20,7 +20,11 @@
 .rrui-alert {
   box-sizing: border-box;
   border-radius: var(--alert-border-radius);
-  padding: var(--alert-padding-y) var(--alert-padding-x);
+  padding-bottom: var(--alert-padding-y);
+  padding-top: var(--alert-padding-y);
+  // include icon width of 24px
+  padding-right: calc(var(--alert-padding-x) + 24px + var(--alert-padding-x));
+  padding-left: var(--alert-padding-x);
   position: relative;
   margin-bottom: var(--global-space-under);
   max-width: var(--alert-max-width);
