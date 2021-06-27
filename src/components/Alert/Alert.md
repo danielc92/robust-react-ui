@@ -9,13 +9,14 @@
 ```jsx
 import React from 'react';
 import Alert from 'robust-react-ui/build/components/Alert';
+import Typography from 'robust-react-ui/build/components/Typography';
 const [open, setOpen] = React.useState(true);
 const onCloseActionFunction = () => setOpen(false);
 <Alert onCloseActionFunction={onCloseActionFunction} visible={open}>
-  <p className="rrui-para rrui-para--medium">
+  <Typography.Paragraph>
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
     proident adipisicing.
-  </p>
+  </Typography.Paragraph>
 </Alert>;
 ```
 
@@ -24,6 +25,7 @@ const onCloseActionFunction = () => setOpen(false);
 ```jsx
 import React from 'react';
 import Alert from 'robust-react-ui/build/components/Alert';
+import Typography from 'robust-react-ui/build/components/Typography';
 const [open, setOpen] = React.useState(true);
 const onCloseActionFunction = () => setOpen(false);
 <Alert
@@ -31,10 +33,10 @@ const onCloseActionFunction = () => setOpen(false);
   onCloseActionFunction={onCloseActionFunction}
   visible={open}
 >
-  <p className="rrui-para rrui-para--medium">
+  <Typography.Paragraph>
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
     proident adipisicing.
-  </p>
+  </Typography.Paragraph>
 </Alert>;
 ```
 
@@ -43,6 +45,7 @@ const onCloseActionFunction = () => setOpen(false);
 ```jsx
 import React from 'react';
 import Alert from 'robust-react-ui/build/components/Alert';
+import Typography from 'robust-react-ui/build/components/Typography';
 const [open, setOpen] = React.useState(true);
 const onCloseActionFunction = () => setOpen(false);
 <Alert
@@ -50,9 +53,9 @@ const onCloseActionFunction = () => setOpen(false);
   onCloseActionFunction={onCloseActionFunction}
   visible={open}
 >
-  <p className="rrui-para rrui-para--medium">
+  <Typography.Paragraph>
     Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad eiusmod
     proident adipisicing.
-  </p>
+  </Typography.Paragraph>
 </Alert>;
 ```

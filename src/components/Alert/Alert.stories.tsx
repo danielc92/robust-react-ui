@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 import Alert from './Alert';
 import { IAlertProps } from './Alert.types';
-
+import Typography from '../Typography';
 export default {
   title: 'Components/Alert',
   component: Alert,
@@ -21,10 +21,12 @@ const Template: Story<IAlertProps> = (args) => {
       onCloseActionFunction={onCloseActionFunction}
       visible={visible}
     >
-      <p className="rrui-para rrui-para--medium">
-        Et consectetur ex fugiat quis ipsum id aute adipisicing magna ex ad
-        eiusmod proident adipisicing.
-      </p>
+      <Typography.Paragraph>
+        Voluptate magna et cillum culpa sit minim non ad duis ipsum ea est anim.
+        Ea adipisicing do Lorem mollit ea ea aliquip ipsum aute aliqua esse
+        tempor pariatur labore. Tempor voluptate ad id qui sint in commodo
+        ullamco irure.Occaecat ipsum aute laborum exercitation tempor.
+      </Typography.Paragraph>
     </Alert>
   );
 };
