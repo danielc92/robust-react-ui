@@ -22,12 +22,20 @@ const Template: Story<IReviewProps> = (args) => {
   };
   return (
     <Review
+      {...args}
       currentValue={rating}
       onCrossClickFunction={onCrossClickFunction}
       onStarClickFunction={onStarClickFunction}
     />
   );
 };
-
-export const Basic: Story<IReviewProps> = Template.bind({});
-Basic.args = {};
+export const Small: Story<IReviewProps> = Template.bind({});
+Small.args = {
+  size: 'small',
+};
+export const Medium: Story<IReviewProps> = Template.bind({});
+Medium.args = {};
+export const Large: Story<IReviewProps> = Template.bind({});
+Large.args = {
+  size: 'large',
+};
