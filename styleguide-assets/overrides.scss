@@ -5,6 +5,13 @@
     font-weight: bold;
   }
 
+  pre.lang-shell {
+    color:rgb(211, 34, 196) ;
+    .token.function {
+      color:rgb(211, 34, 196) ;
+    }
+  }
+
   //features list
   .rsg--li-56::first-letter {
     text-transform: capitalize;
