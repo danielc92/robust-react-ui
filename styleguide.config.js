@@ -44,6 +44,22 @@ module.exports = {
   //   },
   sections: [
     {
+      name: "Robust React UI Docs",
+ 
+      sections: [
+        {
+          name: "Introduction",
+          content:  'src/docs/introduction.md',
+        }, {
+          name: "Quick Start",
+          content:  'src/docs/quick-start.md',
+        }, {
+          name: "How to use code splitting",
+          content:  'src/docs/how-to-code-splitting.md',
+        }
+      ]
+    },
+    {
       name: 'Components',
       components: [
         'src/components/Alert/**/*.tsx',

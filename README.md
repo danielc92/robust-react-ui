@@ -1,14 +1,11 @@
-# Robust React UI
+![test](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![build](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)
+# Robust React UI 
 
-The goal is provide a react library of components, which are robust, extensible and meet general accessibility guidelines.
+A react library of components, which are robust, well tested, extensible and meet general accessibility guidelines.
 
-## Storybook
+## Documentation
 
-Click the [following link](https://main--60b75a95d763ec0039b4429c.chromatic.com/) to see the latest chromatic/storybook deployment.
-
-## CI
-
-![maintest](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![mainbuild](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)
+To view the latest technical documentation please [click here](https://danielc92.github.io/robust-react-ui).
 
 ## Getting started
 
@@ -38,9 +35,6 @@ export default App;
 
 ```
 
-## Documentation
-
-This library has been documented using React Styleguidist. Click [here to view the docs](https://danielc92.github.io/robust-react-ui/).
 
 ## Maintainers
 
