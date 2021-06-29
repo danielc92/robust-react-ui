@@ -7,9 +7,9 @@
 
   pre.lang-shell {
     font-size: 14px;
-    color:rgb(211, 34, 196) ;
+    color: rgb(211, 34, 196);
     .token.function {
-      color:rgb(211, 34, 196) ;
+      color: rgb(211, 34, 196);
     }
   }
 
@@ -19,7 +19,8 @@
   }
 
   // code snippets
-  .rsg--root-63, .rsg--root-65 {
+  .rsg--root-63,
+  .rsg--root-65 {
     color: rgb(211, 34, 196) !important;
     textarea {
       font-size: 14px !important;
@@ -44,26 +45,26 @@
       .namespace {
         opacity: 0.7;
       }
-
+      .token.attr-name,
       .token.property,
-      .token.keyword,
-      .token.tag {
-        color: #96cbfe;
+      .token.keyword {
+        color: #e23c68;
       }
 
       .token.class-name {
-        color: rgb(211, 34, 196);
+        color: #92c52d;
         text-decoration: underline;
       }
 
+      .token.tag,
       .token.boolean,
       .token.constant {
-        color: #9c9;
+        color: lightseagreen;
       }
 
       .token.symbol,
       .token.deleted {
-        color: #f92672;
+        color: #a6e22e;
       }
 
       .token.number {
@@ -71,12 +72,11 @@
       }
 
       .token.selector,
-      .token.attr-name,
       .token.string,
       .token.char,
       .token.builtin,
       .token.inserted {
-        color: #a8ff60;
+        color: #d7b952;
       }
 
       .token.variable {
