@@ -13,7 +13,6 @@ import { Button, Link, Form } from 'robust-react-ui'
 This is the optimal way to import. However you may have to dig through `build` folder to find the component you're looking for. Note: this method must be used for the `Icon` component, as it has over 280 children fragments.
 
 ```shell
-
 import Button from 'robust-react-ui/build/components/Button';
 import Icon from 'robust-react-ui/build/components/Icon/Base';
 # import two icon fragments

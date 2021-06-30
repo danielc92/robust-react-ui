@@ -24,7 +24,7 @@ module.exports = {
       ribbonBackground: '#e90',
       ribbonText: '#fff',
       // Based on default Prism theme
-      codeBackground: '#1d1f21',
+      codeBackground: '#2F302D',
       // codeComment: '#6d6d6d',
       // codePunctuation: '#999',
       // codeProperty: '#905',

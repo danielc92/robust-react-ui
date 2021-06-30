@@ -32,6 +32,7 @@ const onChangeFunction = (newValue) => {
 const onSelectOptionFunction = (newValue) => setValue(newValue);
 const onClearOptionsFunction = () => setOptions([]);
 <AutoComplete
+  labelText="Autocomplete label"
   options={options}
   value={value}
   onClearOptionsFunction={onClearOptionsFunction}
