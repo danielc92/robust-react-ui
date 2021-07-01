@@ -2,7 +2,6 @@
 
 - Uses controlled component pattern
 - Pressing escape will close popup
-- Clicking away from popup will close the popup (blur)
 - Tab & shift tab to switch focus to next button
 - Close button auto focus on open
 - Focus is 'trapped' once open
