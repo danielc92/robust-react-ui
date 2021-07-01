@@ -4,21 +4,21 @@ Features split into two sections below;
 
 ### Fixed type
 
-- grid based layout.
-- default of 6 column layout
-- supports consistent spacing between GridItems, both horizontally and vertically
-- supports highly custom layouts
-- supports auto resizing on tablet and mobile breakpoints
-- on tablet layout changes to 4 columns
-- on mobile layout changes to 2 columns
-- uses media queries under the hood to achieve responsive layout
-- more suitable towards image gallerys or high level layouts
+- Grid based layout.
+- Default of 6 column layout
+- Supports consistent spacing between GridItems, both horizontally and vertically
+- Supports highly custom layouts
+- Supports auto resizing on tablet and mobile breakpoints
+- On tablet layout changes to 4 columns
+- On mobile layout changes to 2 columns
+- Uses media queries under the hood to achieve responsive layout
+- More suitable towards image gallerys or high level layouts
 
 ### Fluid type
 
-- media query free responsive grid items of a predefined size
-- does not use media queries to achieve responsive layout
-- more suitable for homogeous items, such as products or article listing
+- Media query free responsive grid items of a predefined size
+- Does not use media queries to achieve responsive layout
+- More suitable for homogeous items, such as products or article listing
 
 ### Fixed (default)
 

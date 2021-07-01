@@ -1,8 +1,8 @@
 ### Features
 
-- uses the controlled component design pattern
-- supports multiple links
-- support multiple sizes
+- Uses the controlled component design pattern
+- Supports multiple links
+- Support multiple sizes
 
 ### Small
 

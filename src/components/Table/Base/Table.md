@@ -1,10 +1,10 @@
 ### Features
 
-- uses the compound component design pattern
-- uses native html tags for accessibility
-- supports striped mode
-- supports grouping table headers together
-- support full width mode
+- Uses the compound component design pattern
+- Uses native html tags for accessibility
+- Supports striped mode
+- Supports grouping table headers together
+- Support full width mode
 
 ### Default
 

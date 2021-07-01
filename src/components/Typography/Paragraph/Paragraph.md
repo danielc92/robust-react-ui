@@ -1,8 +1,8 @@
 ### Features
 
-- uses native html tags for accessibility
-- supports multiple
-- support bolding text
+- Uses native html tags for accessibility
+- Supports multiple
+- Support bolding text
 
 ### Default
 

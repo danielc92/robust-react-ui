@@ -1,7 +1,7 @@
 ### Features
 
-- uses the controlled component pattern
-- support for rounded button theme
+- Uses the controlled component pattern
+- Support for rounded button theme
 
 ### Default
 

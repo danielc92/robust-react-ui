@@ -1,11 +1,11 @@
 ### Features
 
-- uses controlled component pattern
-- pressing left will move to previous tab
-- pressing right arrow will move to next tab
-- pressing tab will move focus to content area
-- pressing shift + tab will move focus back to tabs, from content area
-- supports multiple colour themes
+- Uses controlled component pattern
+- Pressing left will move to previous tab
+- Pressing right arrow will move to next tab
+- Pressing tab will move focus to content area
+- Pressing shift + tab will move focus back to tabs, from content area
+- Supports multiple colour themes
 
 ### Primary
 

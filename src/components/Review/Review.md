@@ -1,8 +1,8 @@
 ### Features
 
-- uses the controlled component design pattern
-- supports up to 5 star review
-- supports clearing review state
+- Uses the controlled component design pattern
+- Supports up to 5 star review
+- Supports clearing review state
 
 ### Default
 

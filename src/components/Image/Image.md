@@ -1,10 +1,10 @@
 ### Features
 
-- uses native html tags for accessibility
-- supports different scaling options
-- supports circular images
-- supports bordered images
-- supports blurred images
+- Uses native html tags for accessibility
+- Supports different scaling options
+- Supports circular images
+- Supports bordered images
+- Supports blurred images
 
 ### Default
 

@@ -1,12 +1,12 @@
 ### Features
 
-- uses the compound component design pattern
-- uses controlled component pattern
-- pressing down will move focus to next panel header
-- pressing up will move focus to previous panel header
-- pressing enter/space will open the current panel
-- contents can be inserted into panels via children
-- support for full width appearance
+- Uses the compound component design pattern
+- Uses controlled component pattern
+- Pressing down will move focus to next panel header
+- Pressing up will move focus to previous panel header
+- Pressing enter/space will open the current panel
+- Contents can be inserted into panels via children
+- Support for full width appearance
 
 ### Default
 

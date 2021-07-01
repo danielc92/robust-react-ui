@@ -1,6 +1,6 @@
 Code splitting is enabled in this library. Meaning you can import components directly in some cases, reducing your bundle size and increasing the overall performance of your application.
 
-### Example 1: Importing components without code splitting 
+### Example 1: Importing components without code splitting
 
 Using this method you get the benefit of intellisense. However it will import the full component, this may not be ideal especially in cases where the component is a compound component and has several children components.
 
@@ -14,9 +14,8 @@ This is the optimal way to import. However you may have to dig through `build` f
 
 ```shell
 import Button from 'robust-react-ui/build/components/Button';
-import Icon from 'robust-react-ui/build/components/Icon/Base';
+import Icon from 'robust-react-ui/build/components/Icon';
 # import two icon fragments
 import Map from 'robust-react-ui/build/components/Icon/Map';
 import Phone from 'robust-react-ui/build/components/Icon/Phone';
 ```
-
