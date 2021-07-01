@@ -17,4 +17,9 @@ export interface IProgressBarProps {
    * @default primary
    */
   variant?: 'primary' | 'secondary' | 'danger' | 'success';
+  /**
+   * An accessible label
+   * @default Progress bar
+   */
+  ariaLabel?: string;
 }
