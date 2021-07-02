@@ -20,6 +20,7 @@
     "chromatic": "npx chromatic",
     "eslint:fix": ".\\node_modules\\.bin\\eslint src --ext .ts,.tsx --fix",
     "tsconfig-cp:webpack": "copy tsconfig.webpack.json tsconfig.json",
+    "tsconfig-cp-linux:webpack": "cp tsconfig.webpack.json tsconfig.json",
     "tsconfig-cp:build": "copy tsconfig.build.json tsconfig.json",
     "predeploy": "npm run styleguidist build",
     "deploy": "gh-pages -d styleguide",
