@@ -1,4 +1,4 @@
-![test](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![build](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)
+![test](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![build](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)[![Netlify Status](https://api.netlify.com/api/v1/badges/32cdd572-cbba-4297-865d-9045926cd729/deploy-status)](https://app.netlify.com/sites/robust-react-ui/deploys)
 
 # Robust React UI
 
