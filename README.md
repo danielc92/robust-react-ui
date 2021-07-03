@@ -1,4 +1,4 @@
-![test](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![build](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)[![Netlify Status](https://api.netlify.com/api/v1/badges/32cdd572-cbba-4297-865d-9045926cd729/deploy-status)](https://app.netlify.com/sites/robust-react-ui/deploys)
+![test](https://github.com/danielc92/dc-react-ui/actions/workflows/test.yml/badge.svg) ![build](https://github.com/danielc92/dc-react-ui/actions/workflows/build.yml/badge.svg)[![Netlify Status](https://api.netlify.com/api/v1/badges/32cdd572-cbba-4297-865d-9045926cd729/deploy-status)](https://app.netlify.com/sites/robust-react-ui/deploys)
 
 # Robust React UI
 
@@ -18,11 +18,11 @@ or with yarn
 
 in app.tsx
 
-```
-import React from "react";
+```js
+import React from 'react';
 // Import css file
-import "robust-react-ui/build/styles/main.css";
-import { Button, Typography } from "robust-react-ui";
+import 'robust-react-ui/build/styles/main.css';
+import { Button, Typography } from 'robust-react-ui';
 function App() {
   return (
     <>
@@ -33,7 +33,6 @@ function App() {
 }
 
 export default App;
-
 ```
 
 ## Maintainers
