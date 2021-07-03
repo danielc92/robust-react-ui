@@ -8,12 +8,11 @@ module.exports = {
     head: {
       links: [
         {
-          rel="canonical",
-          href="https://robust-react-ui.netlify.app/"
-        }
+          rel: 'canonical',
+          href: 'https://robust-react-ui.netlify.app/',
+        },
       ],
       meta: [
-        
         {
           name: 'description',
           content:
