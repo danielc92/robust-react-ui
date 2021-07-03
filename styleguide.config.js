@@ -1,8 +1,32 @@
 const path = require('path');
 const glob = require('glob');
 const package = require('./package.json');
+
 module.exports = {
-  title: 'Robust React UI - by Daniel Corcoran',
+  title: 'Robust React UI | React, Typescript, HTML and CSS components',
+  template: {
+    head: {
+      links: [
+        {
+          rel="canonical",
+          href="https://robust-react-ui.netlify.app/"
+        }
+      ],
+      meta: [
+        
+        {
+          name: 'description',
+          content:
+            'Robust React UI is a collection of resusable, accessible, functional and extensible web components built with Typescript, Javascript HTML and CSS',
+        },
+        {
+          name: 'keywords',
+          content:
+            'ReactJs, React, Typescript, Javascript, HTML, CSS, SCSS, Components, Storybook, Styleguidist, Reusable, Robust, Function',
+        },
+      ],
+    },
+  },
   version: package.version,
   usageMode: 'expand',
   exampleMode: 'expand',
@@ -37,27 +61,24 @@ module.exports = {
       // codeVariable: '#e90',
     },
   },
-  // components() {
-  //   return glob
-  //     .sync(path.resolve(__dirname, 'src/**/*.tsx'))
-  //     .filter((module) => /\/[A-Z]\w*\.tsx$/.test(module));
-  //   },
   sections: [
     {
-      name: "Robust React UI Docs",
- 
+      name: 'Robust React UI Docs',
+
       sections: [
         {
-          name: "Introduction",
-          content:  'src/docs/introduction.md',
-        }, {
-          name: "Quick Start",
-          content:  'src/docs/quick-start.md',
-        }, {
-          name: "How to use code splitting",
-          content:  'src/docs/how-to-code-splitting.md',
-        }
-      ]
+          name: 'Introduction',
+          content: 'src/docs/introduction.md',
+        },
+        {
+          name: 'Quick Start',
+          content: 'src/docs/quick-start.md',
+        },
+        {
+          name: 'How to use code splitting',
+          content: 'src/docs/how-to-code-splitting.md',
+        },
+      ],
     },
     {
       name: 'Components',
