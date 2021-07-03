@@ -1,6 +1,6 @@
 ### Features
 
-- uses the compound component design pattern
+- Uses the compound component design pattern
 
 ### Full Example
 

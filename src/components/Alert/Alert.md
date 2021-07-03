@@ -1,8 +1,8 @@
 ### Features
 
-- close button accessible by keyboard
-- ability to pass in children
-- supports multiple colour themes
+- Close button accessible by keyboard
+- Ability to pass in children
+- Supports multiple colour themes
 
 ### Primary
 

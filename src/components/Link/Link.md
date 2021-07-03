@@ -1,6 +1,6 @@
 ### Features
 
-- supports multiple sizes
+- Supports multiple sizes
 
 ### Small
 

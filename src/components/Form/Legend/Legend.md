@@ -1,6 +1,6 @@
 ### Features
 
-- uses native html tags for accessibility
+- Uses native html tags for accessibility
 
 ### Default
 

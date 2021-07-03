@@ -16,6 +16,22 @@ describe('Progress Suite', () => {
 
   const renderComponent = () => render(<ProgressBar {...props} />);
 
+  it('should render with the default aria label', () => {
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId('ProgressBarInner');
+
+    expect(component.getAttribute('aria-label')).toEqual('Progress bar');
+  });
+  it('should render with the custom aria label', () => {
+    props.ariaLabel = 'daniels aria label';
+    const { getByTestId } = renderComponent();
+
+    const component = getByTestId('ProgressBarInner');
+
+    expect(component.getAttribute('aria-label')).toEqual('daniels aria label');
+  });
+
   it('should render correct class', () => {
     const { getByTestId } = renderComponent();
 

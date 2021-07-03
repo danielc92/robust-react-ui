@@ -1,11 +1,12 @@
-![test](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![build](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)
-# Robust React UI 
+![test](https://github.com/danielc92/dc-react-ui/actions/workflows/main-test.yml/badge.svg) ![build](https://github.com/danielc92/dc-react-ui/actions/workflows/main-build.yml/badge.svg)[![Netlify Status](https://api.netlify.com/api/v1/badges/32cdd572-cbba-4297-865d-9045926cd729/deploy-status)](https://app.netlify.com/sites/robust-react-ui/deploys)
+
+# Robust React UI
 
 A react library of components, which are robust, well tested, extensible and meet general accessibility guidelines.
 
 ## Documentation
 
-To view the latest technical documentation please [click here](https://danielc92.github.io/robust-react-ui).
+[Click here](https://robust-react-ui.netlify.app/) to view the latest documentation.
 
 ## Getting started
 
@@ -34,7 +35,6 @@ function App() {
 export default App;
 
 ```
-
 
 ## Maintainers
 

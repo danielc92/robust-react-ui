@@ -1,13 +1,13 @@
 ### Features
 
-- uses the controlled component design pattern
-- supports nested dropdowns 2 levels deep
-- hover to open menus
-- full keyboard support
-  - left arrow key to close current menu
+- Uses the controlled component design pattern
+- Supports nested dropdowns 2 levels deep
+- Hover to open menus
+- Full keyboard support
+  - Left arrow key to close current menu
   - right arrow key to open sub menu
-  - down arrow key
-  - escape to close all menus
+  - Down arrow key
+  - Escape to close all menus
 
 ### Default
 

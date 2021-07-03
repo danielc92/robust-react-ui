@@ -1,6 +1,6 @@
 ### Features
 
-- supports multiple sizes
+- A centered container with 3 size presets
 
 ### Small
 
@@ -17,7 +17,7 @@ import Typography from 'robust-react-ui/build/components/Typography';
 </Layout.Container>;
 ```
 
-### Default
+### Medium (default)
 
 ```jsx
 import React from 'react';

@@ -1,6 +1,8 @@
 ### Features
 
-- uses native html tags for accessibility### Default
+- Uses native html tags for accessibility
+
+### Default
 
 ```jsx
 import Landmark from 'robust-react-ui/build/components/Landmark';

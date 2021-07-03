@@ -1,8 +1,8 @@
 ### Features
 
-- flexbox based layout
-- different sizes quarter, third, half
-- by default, columns are responsive and wrap on laptop, tablet and mobile breakpoints
+- Flexbox based layout
+- Different sizes quarter, third, half
+- By default, columns are responsive and wrap on laptop, tablet and mobile breakpoints
 
 ### Quarter
 

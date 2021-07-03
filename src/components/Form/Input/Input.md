@@ -1,9 +1,9 @@
 ### Features
 
-- uses native html tags for accessibility
-- uses the controlled component pattern
-- supports multiple input types
-- supports disabled and error states
+- Uses native html tags for accessibility
+- Uses the controlled component pattern
+- Supports multiple input types
+- Supports disabled and error states
 
 ### Text
 

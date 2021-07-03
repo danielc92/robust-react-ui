@@ -11,6 +11,7 @@ const ProgressBar = ({
   size = 'medium',
   variant = 'primary',
   fullWidth,
+  ariaLabel = 'Progress bar',
 }: IProgressBarProps) => (
   <div
     className={getClassNames({
@@ -22,6 +23,7 @@ const ProgressBar = ({
     data-testid="ProgressBar"
   >
     <div
+      aria-label={ariaLabel}
       data-testid="ProgressBarInner"
       className="rrui-progress__inner"
       role="progressbar"

@@ -1,13 +1,13 @@
 ### Features
 
-- uses controlled component pattern
-- display a list of results from the parent component
-- pressing up or down key will focus and select
-- mouse hover will focus and select
-- if down is pressed and last item is selected, the first item will be selected
-- if up is pressed and first item is selected, the last item will be selected
-- pressing escape closes the popup
-- clicking away from popup will close the popup (blur)
+- Uses controlled component pattern
+- Display a list of results from the parent component
+- Pressing up or down key will focus and select
+- Mouse hover will focus and select
+- If down is pressed and last item is selected, the first item will be selected
+- If up is pressed and first item is selected, the last item will be selected
+- Pressing escape closes the popup
+- Clicking away from popup will close the popup (blur)
 
 ### Default
 

@@ -1,7 +1,7 @@
 ### Features
 
-- uses native html tags for accessibility
-- supports multiple sizes
+- Uses native html tags for accessibility
+- Supports multiple sizes
 
 ### Levels
 

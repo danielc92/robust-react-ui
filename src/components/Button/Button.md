@@ -1,9 +1,9 @@
 ### Features
 
-- uses native html tags for accessibility
-- supports multiple sizes
-- supports multiple colour themes
-- supports custom onClick function
+- Uses native html tags for accessibility
+- Supports multiple sizes
+- Supports multiple colour themes
+- Supports custom onClick function
 
 ### Themes
 

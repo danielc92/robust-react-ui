@@ -1,6 +1,9 @@
 ### Features
 
-- 286 icons available from the feather icon set.
+- Supports multiple colour and size themes
+- Supports approximately 286 icon fragments
+- Icon has the ability to use a custom icon
+- All icons are sourced from the [feather icon](https://feathericons.com/) set (currently using `v4.28.0`).
 
 ### Default
 
@@ -15,7 +18,7 @@ import CheckCircle from 'robust-react-ui/build/components/Icon/CheckCircle';
 ### Using different icons
 
 ```jsx
-import Icon from 'robust-react-ui/build/components/Icon/Base';
+import Icon from 'robust-react-ui/build/components/Icon';
 import CheckCircle from 'robust-react-ui/build/components/Icon/CheckCircle';
 import Cloud from 'robust-react-ui/build/components/Icon/Cloud';
 import Clipboard from 'robust-react-ui/build/components/Icon/Clipboard';
@@ -39,7 +42,7 @@ import ChevronUp from 'robust-react-ui/build/components/Icon/ChevronUp';
 ### Using custom paths
 
 ```jsx
-import Icon from 'robust-react-ui/build/components/Icon/Base';
+import Icon from 'robust-react-ui/build/components/Icon';
 <Icon>
   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
   <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
@@ -56,7 +59,7 @@ The default is "primary"
 
 ```jsx
 import Box from 'robust-react-ui/build/components/Icon/Box';
-import Icon from 'robust-react-ui/build/components/Icon/Base';
+import Icon from 'robust-react-ui/build/components/Icon';
 <>
   <Icon>
     <Box />
@@ -81,7 +84,7 @@ import Icon from 'robust-react-ui/build/components/Icon/Base';
 
 ```jsx
 import Box from 'robust-react-ui/build/components/Icon/Box';
-import Icon from 'robust-react-ui/build/components/Icon/Base';
+import Icon from 'robust-react-ui/build/components/Icon';
 <>
   <Icon width={48} height={48}>
     <Box />
