@@ -27,15 +27,17 @@ export interface ICarouselProps {
    */
   ariaLabel: string;
   /**
-   * An array of slides
+   * An array of slides.
    */
   slides: Array<ICarouselSlideProps>;
   /**
+   * Delay in between slide transitions (seconds).
    * @default 5
    */
   intervalSeconds?: number;
 
   /**
+   * Toggles autoplay.
    * @default false
    */
   autoplay?: boolean;
