@@ -6,6 +6,9 @@ export interface IParagraphProps {
    * Provides the component with an id attribute. May be used for accessibilty purposes.
    */
   id?: string;
+  /**
+   * Toggles font weight to bold
+   */
   bolded?: boolean;
   /**
    * Size setting for component.
