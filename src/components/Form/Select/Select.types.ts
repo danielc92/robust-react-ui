@@ -7,7 +7,7 @@ export interface IFormSelectOptionProps {
 
 export interface IFormSelectProps {
   /**
-   * Provides the component with an id attribute. May be used for accessibilty purposes.
+   * Provides the component with an id attribute. May be used for accessibility purposes.
    */
   id: string;
   multiple?: boolean;

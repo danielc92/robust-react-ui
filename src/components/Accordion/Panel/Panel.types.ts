@@ -4,7 +4,7 @@ export interface IAccordionPanelProps {
   children: ReactNode;
   panelTitle: string;
   /**
-   * Provides the component with an id attribute. May be used for accessibilty purposes.
+   * Provides the component with an id attribute. May be used for accessibility purposes.
    */
   panelId: string;
   activePanel?: string;

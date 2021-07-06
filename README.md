@@ -20,7 +20,7 @@ in app.tsx
 
 ```js
 import React from 'react';
-// Import css file
+// Import CSS file
 import 'robust-react-ui/build/styles/main.css';
 import { Button, Typography } from 'robust-react-ui';
 function App() {

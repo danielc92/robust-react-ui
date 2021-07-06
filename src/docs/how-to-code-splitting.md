@@ -2,7 +2,7 @@ Code splitting is enabled in this library. Meaning you can import components dir
 
 ### Example 1: Importing components without code splitting
 
-Using this method you get the benefit of intellisense. However it will import the full component, this may not be ideal especially in cases where the component is a compound component and has several children components.
+Using this method you get the benefit of IntelliSense. However it will import the full component, this may not be ideal especially in cases where the component is a compound component and has several children components.
 
 ```shell
 import { Button, Link, Form } from 'robust-react-ui'
