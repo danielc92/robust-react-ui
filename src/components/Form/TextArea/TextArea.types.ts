@@ -5,8 +5,14 @@ export interface IFormTextAreaProps {
    * Provides the component with an id attribute. May be used for accessibilty purposes.
    */
   id: string;
+  /**
+   * Maps to the name attribute
+   */
   name: string;
   value: string;
+  /**
+   * Placeholder text
+   */
   placeholder: string;
   onChangeFunction: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
   /**
