@@ -18,6 +18,9 @@ export interface IFormInputProps {
    */
   placeholder: string;
   type?: 'color' | 'text' | 'password' | 'date';
+  /**
+   * Function triggered interally, used when onChange event is activated.
+   */
   onChangeFunction: (event: React.ChangeEvent<HTMLInputElement>) => void;
   /**
    * A function triggered when component loses focus.

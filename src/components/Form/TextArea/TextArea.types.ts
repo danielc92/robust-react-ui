@@ -17,6 +17,9 @@ export interface IFormTextAreaProps {
    * Placeholder text
    */
   placeholder: string;
+  /**
+   * Function triggered interally, used when onChange event is activated.
+   */
   onChangeFunction: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
   /**
    * A function triggered when component loses focus.
