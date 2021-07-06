@@ -77,6 +77,10 @@ module.exports = {
           name: 'How to use code splitting',
           content: 'src/docs/how-to-code-splitting.md',
         },
+        {
+          name: 'How to access Typescript types',
+          content: 'src/docs/accessing-typescript-interfaces.md',
+        },
       ],
     },
     {
