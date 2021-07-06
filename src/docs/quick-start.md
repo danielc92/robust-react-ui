@@ -16,7 +16,7 @@ yarn add robust-react-ui
 
 ### Importing the styles
 
-Robust React UI comes with both compressed (minified) and uncompressed css. You will need to import either of these css files into the root of your react application.
+Robust React UI comes with both compressed (minified) and uncompressed css. You will need to import either of these CSS files into the root of your react application.
 
 ```shell
 import 'robust-react-ui/build/styles/main.css'

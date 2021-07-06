@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface IFormInputProps {
   /**
-   * Provides the component with an id attribute. May be used for accessibilty purposes.
+   * Provides the component with an id attribute. May be used for accessibility purposes.
    */
   id: string;
   /**
