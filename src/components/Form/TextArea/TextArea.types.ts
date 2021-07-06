@@ -9,6 +9,9 @@ export interface IFormTextAreaProps {
    * Maps to the name attribute
    */
   name: string;
+  /**
+   * Controlled value for the TextArea
+   */
   value: string;
   /**
    * Placeholder text

@@ -9,6 +9,9 @@ export interface IFormInputProps {
    * Maps to the name attribute
    */
   name: string;
+  /**
+   * Controlled value for the Input
+   */
   value: string;
   /**
    * Placeholder text
