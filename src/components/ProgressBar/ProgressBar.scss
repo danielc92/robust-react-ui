@@ -14,6 +14,7 @@
   --progress-inner-background-color-secondary: var(--color-secondary);
   --progress-inner-background-color-danger: var(--color-danger);
   --progress-inner-background-color-primary: var(--color-primary);
+  --progress-margin-bottom: var(--global-space-under);
 }
 
 .rrui-progress {
@@ -21,6 +22,7 @@
   border-radius: var(--progress-border-radius);
   max-width: var(--progress-max-width);
   font-family: var(--progress-font-family);
+  margin-bottom: var(--progress-margin-bottom);
 
   &.rrui-progress--full-width {
     max-width: 100%;

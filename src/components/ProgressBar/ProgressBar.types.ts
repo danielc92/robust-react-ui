@@ -1,7 +1,19 @@
 // Generated with util/create-component.js
 export interface IProgressBarProps {
+  /**
+   * Minimum value for the progress bar
+   * @default 0
+   */
   minimumValue?: number;
+  /**
+   * Maximum value for the progress bar
+   * @default 100
+   */
   maximumValue?: number;
+
+  /**
+   * Controlled value for progress bar
+   */
   currentValue: number;
   /**
    * Component will take up the full width available.

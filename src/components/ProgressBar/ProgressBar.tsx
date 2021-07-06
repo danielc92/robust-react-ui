@@ -5,36 +5,40 @@ import { IProgressBarProps } from './ProgressBar.types';
 import './ProgressBar.scss';
 
 const ProgressBar = ({
-  minimumValue,
-  maximumValue,
+  minimumValue = 0,
+  maximumValue = 100,
   currentValue,
   size = 'medium',
   variant = 'primary',
   fullWidth,
   ariaLabel = 'Progress bar',
-}: IProgressBarProps) => (
-  <div
-    className={getClassNames({
-      'rrui-progress': true,
-      'rrui-progress--full-width': fullWidth,
-      [`rrui-progress--${variant}`]: true,
-      [`rrui-progress--${size}`]: true,
-    })}
-    data-testid="ProgressBar"
-  >
+}: IProgressBarProps) => {
+  const percentage =
+    ((currentValue - minimumValue) / (maximumValue - minimumValue)) * 100;
+  return (
     <div
-      aria-label={ariaLabel}
-      data-testid="ProgressBarInner"
-      className="rrui-progress__inner"
-      role="progressbar"
-      aria-valuenow={currentValue || 0}
-      aria-valuemin={minimumValue || 0}
-      aria-valuemax={maximumValue || 100}
-      style={{ width: `${currentValue.toString()}%` }}
+      className={getClassNames({
+        'rrui-progress': true,
+        'rrui-progress--full-width': fullWidth,
+        [`rrui-progress--${variant}`]: true,
+        [`rrui-progress--${size}`]: true,
+      })}
+      data-testid="ProgressBar"
     >
-      {/* <span className="sr-only">{currentValue.toString() + "% Complete"}</span> */}
+      <div
+        aria-label={ariaLabel}
+        data-testid="ProgressBarInner"
+        className="rrui-progress__inner"
+        role="progressbar"
+        aria-valuenow={currentValue}
+        aria-valuemin={minimumValue}
+        aria-valuemax={maximumValue}
+        style={{ width: `${percentage.toString()}%` }}
+      >
+        {/* <span className="sr-only">{currentValue.toString() + "% Complete"}</span> */}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ProgressBar;
