@@ -17,6 +17,7 @@ const AutoComplete = ({
   const [moddedOptions, setModdedOptions] = useState<
     { option: string; i: number; selected: boolean; id: string }[]
   >([]);
+  const [open, setOpen] = useState<boolean>(false);
   const [mouseIn, setMouseIn] = useState<boolean>(false);
 
   const ref = useRef<HTMLInputElement>(null);
@@ -124,7 +125,14 @@ const AutoComplete = ({
   };
 
   const currentFocus = moddedOptions.find((x) => x.selected);
-  const open = moddedOptions.length > 0;
+
+  useEffect(() => {
+    if (options.length > 0) setOpen(true);
+  }, [options.length]);
+
+  useEffect(() => {
+    if (value.length === 0) setOpen(false);
+  }, [value]);
   return (
     <div
       data-testid="AutoComplete"
@@ -153,7 +161,13 @@ const AutoComplete = ({
           <input
             onBlur={(event: React.FocusEvent<HTMLInputElement>) => {
               event.preventDefault();
-              if (!mouseIn) onClearOptionsFunction();
+              if (!mouseIn) {
+                setOpen(false);
+              }
+            }}
+            onFocus={(event: React.FocusEvent<HTMLInputElement>) => {
+              event.preventDefault();
+              setOpen(true);
             }}
             data-testid="AutoCompleteInput"
             ref={ref}
