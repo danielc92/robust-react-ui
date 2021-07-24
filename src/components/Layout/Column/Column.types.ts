@@ -17,4 +17,21 @@ export interface IColumnProps {
    * @default s
    */
   paddingY?: 'xxs' | 'xs' | 's' | 'm' | 'l';
+  /**
+   * The tag name, defaults to <div>
+   * @default div
+   */
+  tagName?: 'div' | 'aside' | 'main' | 'section';
+  /**
+   * An accessible label via id of another element.
+   */
+  ariaLabelledBy?: string;
+  /**
+   * An accessible label.
+   */
+  ariaLabel?: string;
+  /**
+   * Unique id for the component
+   */
+  id?: string;
 }
