@@ -110,10 +110,7 @@ module.exports = {
       name: 'Form',
       components: 'src/components/Form/**/*.tsx',
     },
-    {
-      name: 'Landmark',
-      components: 'src/components/Landmark/**/*.tsx',
-    },
+
     {
       name: 'Layout',
       components: 'src/components/Layout/**/*.tsx',
