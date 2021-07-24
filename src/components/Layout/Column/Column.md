@@ -230,3 +230,33 @@ import Typography from 'robust-react-ui/build/components/Typography';
   </Layout.Column>
 </Layout.Row>;
 ```
+
+### Custom tags
+
+```jsx
+import React from 'react';
+import Layout from 'robust-react-ui/build/components/Layout';
+import Typography from 'robust-react-ui/build/components/Typography';
+<Layout.Row wrap={false}>
+  <Layout.Column size="half" tagName="main">
+    <Typography.Heading level={3}>
+      Cupidatat tempor deserunt in do nisi eiusmllit.
+    </Typography.Heading>
+    <Typography.Paragraph>
+      Anim commodo laborum eu anim sint officia reprehenderit commodo anim ea
+      officia esse occaecat. Laborum ipsum qui Lorem sint eiusmod Lorem. Ipsum
+      commodo elit cillum.
+    </Typography.Paragraph>
+  </Layout.Column>
+  <Layout.Column size="half" tagName="section" ariaLabelledBy="Cupidatat">
+    <Typography.Heading level={3} id="Cupidatat">
+      Cupidatat temollit.
+    </Typography.Heading>
+    <Typography.Paragraph>
+      Anim commodo laborum eu anim sint officia reprehenderit commodo anim ea
+      officia esse occaecat. Laborum ipsum qui Lorem sint eiusmod Lorem. Ipsum
+      commodo elit cillum.
+    </Typography.Paragraph>
+  </Layout.Column>
+</Layout.Row>;
+```
