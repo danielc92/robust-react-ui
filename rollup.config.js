@@ -17,7 +17,6 @@ export default {
     'src/components/Button/index.ts',
     'src/components/Form/index.ts',
     'src/components/Image/index.ts',
-    'src/components/Landmark/index.ts',
     'src/components/Layout/index.ts',
     'src/components/Link/index.ts',
     'src/components/ProgressBar/index.ts',
