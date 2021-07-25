@@ -10,6 +10,10 @@ const GridItem = ({
   variant = 'primary',
   paddingX = 's',
   paddingY = 's',
+  tagName = 'div',
+  id,
+  ariaLabel,
+  ariaLabelledBy,
 }: IGridItemProps) => {
   const style: React.CSSProperties = config
     ? {
@@ -25,21 +29,25 @@ const GridItem = ({
 
   // shrink when col exceeds mobil width (2 fr)
   const shrinkOnMobile = config && config.width > 1;
-  return (
-    <div
-      data-testid="GridItem"
-      className={getClassNames({
+
+  return React.createElement(
+    tagName,
+    {
+      'data-testid': 'GridItem',
+      className: getClassNames({
         'rrui-grid__item': true,
         [`rrui-grid__item--${variant}`]: true,
         [`rrui-grid__item--padding-x-${paddingX}`]: true,
         [`rrui-grid__item--padding-y-${paddingY}`]: true,
         'rrui-grid__item--shrink-tablet': shrinkOnTablet,
         'rrui-grid__item--shrink-mobile': shrinkOnMobile && !shrinkOnTablet,
-      })}
-      style={style}
-    >
-      {children}
-    </div>
+      }),
+      id,
+      'aria-labelledby': ariaLabelledBy,
+      'aria-label': ariaLabel,
+      style,
+    },
+    children
   );
 };
 

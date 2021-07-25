@@ -18,7 +18,7 @@ export interface IColumnProps {
    */
   paddingY?: 'xxs' | 'xs' | 's' | 'm' | 'l';
   /**
-   * The tag name, defaults to <div>
+   * The tag name, defaults to DIV tag
    * @default div
    */
   tagName?: 'div' | 'aside' | 'main' | 'section';

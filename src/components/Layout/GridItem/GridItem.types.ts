@@ -26,4 +26,21 @@ export interface IGridItemProps {
    * @default primary
    */
   variant?: 'primary' | 'dark' | 'light' | 'success' | 'danger';
+  /**
+   * The tag name, defaults to DIV tag
+   * @default div
+   */
+   tagName?: 'div' | 'aside' | 'main' | 'section';
+   /**
+    * An accessible label via id of another element.
+    */
+   ariaLabelledBy?: string;
+   /**
+    * An accessible label.
+    */
+   ariaLabel?: string;
+   /**
+    * Unique id for the component
+    */
+   id?: string;
 }
